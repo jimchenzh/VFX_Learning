@@ -4851,20 +4851,17 @@ cbuffer FEmitterParameters
 	float4 Constants_Emitter_InitializeParticle_Color;
 	float4 Constants_Emitter_InitializeParticle_SpriteSize;
 	float4 Constants_Emitter_InitializeParticle_MeshScale;
-	int Constants_Emitter_CylinderLocation_RandomSeed;
-	float Constants_Emitter_CylinderLocation_CylinderHeight;
-	float Constants_Emitter_CylinderLocation_CylinderRadius;
-	float Constants_Emitter_CylinderLocation_SurfaceOnlyBandThickness;
-	float4 Constants_Emitter_CylinderLocation_Offset;
-	float4 Constants_Emitter_CylinderLocation_NonUniformScale;
-	float4x4 Engine_Owner_SystemWorldToLocalTransposed;
-	float4x4 Engine_Owner_SystemLocalToWorldTransposed;
-	float4x4 Engine_Owner_SystemLocalToWorldNoScale;
-	float4x4 Engine_Owner_SystemWorldToLocalNoScale;
 	float Emitter_Age;
 	float4x4 Engine_Owner_SystemLocalToWorld;
 	float4x4 Engine_Owner_SystemWorldToLocal;
+	float4x4 Engine_Owner_SystemLocalToWorldNoScale;
+	float4x4 Engine_Owner_SystemWorldToLocalNoScale;
+	int Constants_Emitter_SampleSkeletalMeshSurface_RandomSeed;
+	int Constants_Emitter_SampleSkeletalMeshSurface_UVIndex;
 	float Engine_DeltaTime;
+	float Constants_Emitter_Color_ScaleAlpha;
+	float Emitter_AlphaScale;
+	float Constants_Emitter_FloatFromCurve001_ScaleCurve;
 	float Engine_Time;
 	float Engine_InverseDeltaTime;
 	int Engine_ExecutionCount;
@@ -4885,20 +4882,17 @@ cbuffer FEmitterParameters
 	float4 PREV_Constants_Emitter_InitializeParticle_Color;
 	float4 PREV_Constants_Emitter_InitializeParticle_SpriteSize;
 	float4 PREV_Constants_Emitter_InitializeParticle_MeshScale;
-	int PREV_Constants_Emitter_CylinderLocation_RandomSeed;
-	float PREV_Constants_Emitter_CylinderLocation_CylinderHeight;
-	float PREV_Constants_Emitter_CylinderLocation_CylinderRadius;
-	float PREV_Constants_Emitter_CylinderLocation_SurfaceOnlyBandThickness;
-	float4 PREV_Constants_Emitter_CylinderLocation_Offset;
-	float4 PREV_Constants_Emitter_CylinderLocation_NonUniformScale;
-	float4x4 PREV_Engine_Owner_SystemWorldToLocalTransposed;
-	float4x4 PREV_Engine_Owner_SystemLocalToWorldTransposed;
-	float4x4 PREV_Engine_Owner_SystemLocalToWorldNoScale;
-	float4x4 PREV_Engine_Owner_SystemWorldToLocalNoScale;
 	float PREV_Emitter_Age;
 	float4x4 PREV_Engine_Owner_SystemLocalToWorld;
 	float4x4 PREV_Engine_Owner_SystemWorldToLocal;
+	float4x4 PREV_Engine_Owner_SystemLocalToWorldNoScale;
+	float4x4 PREV_Engine_Owner_SystemWorldToLocalNoScale;
+	int PREV_Constants_Emitter_SampleSkeletalMeshSurface_RandomSeed;
+	int PREV_Constants_Emitter_SampleSkeletalMeshSurface_UVIndex;
 	float PREV_Engine_DeltaTime;
+	float PREV_Constants_Emitter_Color_ScaleAlpha;
+	float PREV_Emitter_AlphaScale;
+	float PREV_Constants_Emitter_FloatFromCurve001_ScaleCurve;
 	float PREV_Engine_Time;
 	float PREV_Engine_InverseDeltaTime;
 	int PREV_Engine_ExecutionCount;
@@ -4945,6 +4939,13 @@ struct FParamMap0_UniformRangedFloat003
 	int RandomSeed;
 };
 
+struct FParamMap0_SmoothLerpOverTime_Vector
+{
+	float ConvergenceRate;
+	float3 SmoothValue;
+	float3 TargetValue;
+};
+
 struct FParamMap0_SetVariables_C24DA8694ED1CFDB365D9582A5B9F487_Particles
 {
 	float3 Position;
@@ -4955,30 +4956,68 @@ struct FParamMap0_SetVariables_C24DA8694ED1CFDB365D9582A5B9F487
 	FParamMap0_SetVariables_C24DA8694ED1CFDB365D9582A5B9F487_Particles Particles;
 };
 
+struct FParamMap0_SetVariables_BFEEE889427C7205BC3445B62DDF3240_Particles
+{
+	float3 NewPosition_Skeletal;
+};
+
+struct FParamMap0_SetVariables_BFEEE889427C7205BC3445B62DDF3240
+{
+	FParamMap0_SetVariables_BFEEE889427C7205BC3445B62DDF3240_Particles Particles;
+};
+
+struct FParamMap0_SampleSkeletalMeshSurface
+{
+	MeshTriCoordinate DirectTriCoordinate;
+	bool FixedRandomSeed;
+	bool InterpolateSurfaceSampling;
+	bool OverrideSeed;
+	int RandomnessMode;
+	int RandomSeed;
+	int SampledPositionCoordinateSpace;
+	int SampledSurfaceCoordinateSpace;
+	int SampledVelocityCoordinateSpace;
+	int UVIndex;
+};
+
+struct FParamMap0_Particles_SampleSkeletalMeshSurface
+{
+	float3 MeshBitangent;
+	float4 MeshColor;
+	float3 MeshNormal;
+	float3 MeshPosition;
+	float3 MeshTangent;
+	float2 MeshUV;
+	float3 MeshVelocity;
+};
+
 struct FParamMap0_Particles
 {
 	float Age;
 	float4 Color;
+	bool DummyEmitterDeterminism;
 	float Lifetime;
 	float Mass;
 	float MaterialRandom;
 	float3 NewPosition;
+	float3 NewPosition_Skeletal;
 	float NormalizedAge;
 	float3 Position;
+	FParamMap0_Particles_SampleSkeletalMeshSurface SampleSkeletalMeshSurface;
 	float3 Scale;
 	float SpriteRotation;
 	float2 SpriteSize;
 	int UniqueID;
 };
 
-struct FParamMap0_OUTPUT_VAR_CylinderLocation
+struct FParamMap0_OUTPUT_VAR_SampleTexture
 {
-	float3 CylinderVector;
+	float4 SampledColor;
 };
 
 struct FParamMap0_OUTPUT_VAR
 {
-	FParamMap0_OUTPUT_VAR_CylinderLocation CylinderLocation;
+	FParamMap0_OUTPUT_VAR_SampleTexture SampleTexture;
 };
 
 struct FParamMap0_NormalizedAngleToDegrees001
@@ -4986,28 +5025,22 @@ struct FParamMap0_NormalizedAngleToDegrees001
 	float NormalizedAngle;
 };
 
-struct FParamMap0_Local_CylinderLocation
+struct FParamMap0_MakeVector3_FromColor001
 {
-	float CylinderHeight;
-	float CylinderRadius;
-	float3 CylinderVector;
-	float EndcapRatio;
-	float Endcaps;
-	float RandomAngle;
-	float3 RandomDirection;
-	float RandomRadius;
-	float RandomRatio;
-	float RandomZ;
-	bool SurfaceOnly;
-	float SurfaceOnlyZAxis;
-	bool UseEndcapsSurfaceOnly;
-	float XAxis;
-	float YAxis;
+	float4 Color;
+};
+
+struct FParamMap0_Local_SampleSkeletalMeshSurface
+{
+	MeshTriCoordinate MeshTriCoord;
+	bool PositionBool;
+	bool SurfaceBool;
+	bool VelocityBool;
 };
 
 struct FParamMap0_Local
 {
-	FParamMap0_Local_CylinderLocation CylinderLocation;
+	FParamMap0_Local_SampleSkeletalMeshSurface SampleSkeletalMeshSurface;
 };
 
 struct FParamMap0_Interpolation
@@ -5043,6 +5076,12 @@ struct FParamMap0_InitializeParticle
 	bool WriteSpriteSize;
 };
 
+struct FParamMap0_FloatFromCurve001
+{
+	float CurveIndex;
+	float ScaleCurve;
+};
+
 struct FParamMap0_Engine_System
 {
 	int TickCount;
@@ -5053,10 +5092,8 @@ struct FParamMap0_Engine_Owner
 	float3 Position;
 	float4x4 SystemLocalToWorld;
 	float4x4 SystemLocalToWorldNoScale;
-	float4x4 SystemLocalToWorldTransposed;
 	float4x4 SystemWorldToLocal;
 	float4x4 SystemWorldToLocalNoScale;
-	float4x4 SystemWorldToLocalTransposed;
 };
 
 struct FParamMap0_Engine_Emitter
@@ -5078,6 +5115,7 @@ struct FParamMap0_Engine
 struct FParamMap0_Emitter
 {
 	float Age;
+	float AlphaScale;
 	bool LocalSpace;
 	int RandomSeed;
 	float SpawnRate;
@@ -5086,27 +5124,6 @@ struct FParamMap0_Emitter
 struct FParamMap0_DataInstance
 {
 	bool Alive;
-};
-
-struct FParamMap0_CylinderLocation
-{
-	int CoordinateSpace;
-	float CylinderHeight;
-	float3 CylinderOrigin;
-	float CylinderRadius;
-	bool EnableLatheProfile;
-	bool HemisphereX;
-	bool HemisphereY;
-	float3 NonUniformScale;
-	float3 Offset;
-	int OrientationAxis;
-	bool OverrideRandomness;
-	bool OverrideSeed;
-	int RandomnessMode;
-	int RandomSeed;
-	bool SurfaceOnly;
-	float SurfaceOnlyBandThickness;
-	bool UseEndcapsInSurfaceOnlyMode;
 };
 
 struct FParamMap0_Constants_Emitter_UniformRangedFloat005
@@ -5130,6 +5147,12 @@ struct FParamMap0_Constants_Emitter_UniformRangedFloat003
 	int RandomSeed;
 };
 
+struct FParamMap0_Constants_Emitter_SampleSkeletalMeshSurface
+{
+	int RandomSeed;
+	int UVIndex;
+};
+
 struct FParamMap0_Constants_Emitter_InitializeParticle
 {
 	float4 Color;
@@ -5137,20 +5160,22 @@ struct FParamMap0_Constants_Emitter_InitializeParticle
 	float2 SpriteSize;
 };
 
-struct FParamMap0_Constants_Emitter_CylinderLocation
+struct FParamMap0_Constants_Emitter_FloatFromCurve001
 {
-	float CylinderHeight;
-	float CylinderRadius;
-	float3 NonUniformScale;
-	float3 Offset;
-	int RandomSeed;
-	float SurfaceOnlyBandThickness;
+	float ScaleCurve;
+};
+
+struct FParamMap0_Constants_Emitter_Color
+{
+	float ScaleAlpha;
 };
 
 struct FParamMap0_Constants_Emitter
 {
-	FParamMap0_Constants_Emitter_CylinderLocation CylinderLocation;
+	FParamMap0_Constants_Emitter_Color Color;
+	FParamMap0_Constants_Emitter_FloatFromCurve001 FloatFromCurve001;
 	FParamMap0_Constants_Emitter_InitializeParticle InitializeParticle;
+	FParamMap0_Constants_Emitter_SampleSkeletalMeshSurface SampleSkeletalMeshSurface;
 	FParamMap0_Constants_Emitter_UniformRangedFloat003 UniformRangedFloat003;
 	FParamMap0_Constants_Emitter_UniformRangedFloat004 UniformRangedFloat004;
 	FParamMap0_Constants_Emitter_UniformRangedFloat005 UniformRangedFloat005;
@@ -5161,20 +5186,38 @@ struct FParamMap0_Constants
 	FParamMap0_Constants_Emitter Emitter;
 };
 
+struct FParamMap0_ColorFromCurve
+{
+	float CurveIndex;
+};
+
+struct FParamMap0_Color
+{
+	float4 Color;
+	float ScaleAlpha;
+	float3 ScaleColor;
+};
+
 struct FParamMap0
 {
+	FParamMap0_Color Color;
+	FParamMap0_ColorFromCurve ColorFromCurve;
 	FParamMap0_Constants Constants;
-	FParamMap0_CylinderLocation CylinderLocation;
 	FParamMap0_DataInstance DataInstance;
 	FParamMap0_Emitter Emitter;
 	FParamMap0_Engine Engine;
+	FParamMap0_FloatFromCurve001 FloatFromCurve001;
 	FParamMap0_InitializeParticle InitializeParticle;
 	FParamMap0_Interpolation Interpolation;
 	FParamMap0_Local Local;
+	FParamMap0_MakeVector3_FromColor001 MakeVector3_FromColor001;
 	FParamMap0_NormalizedAngleToDegrees001 NormalizedAngleToDegrees001;
 	FParamMap0_OUTPUT_VAR OUTPUT_VAR;
 	FParamMap0_Particles Particles;
+	FParamMap0_SampleSkeletalMeshSurface SampleSkeletalMeshSurface;
+	FParamMap0_SetVariables_BFEEE889427C7205BC3445B62DDF3240 SetVariables_BFEEE889427C7205BC3445B62DDF3240;
 	FParamMap0_SetVariables_C24DA8694ED1CFDB365D9582A5B9F487 SetVariables_C24DA8694ED1CFDB365D9582A5B9F487;
+	FParamMap0_SmoothLerpOverTime_Vector SmoothLerpOverTime_Vector;
 	FParamMap0_UniformRangedFloat003 UniformRangedFloat003;
 	FParamMap0_UniformRangedFloat004 UniformRangedFloat004;
 	FParamMap0_UniformRangedFloat005 UniformRangedFloat005;
@@ -5198,30 +5241,41 @@ void UniformRangedFloat003_Emitter_Func_(out float Out_UniformRangedFloat, inout
 void InitializeParticle_SimulationPosition_Emitter_Func_(out float3 Out_OutPosition, inout FSimulationContext Context);
 void RandomRange_Func_(float In_Min, float In_Max, int In_Seed, int In_RandomnessMode, bool In_OverrideSeed, out float Out_Result, inout FSimulationContext Context);
 void InitializeParticle_Emitter_Func_(inout FSimulationContext Context);
-void RandomRange_Func_(float2 In_Min, float2 In_Max, int In_Seed, int In_RandomnessMode, bool In_OverrideSeed, bool In_FixedOverrideSeed, out float2 Out_Result, inout FSimulationContext Context);
-void RandomUnitVector_Func_(int In_Seed, int In_RandomnessMode, bool In_OverrideSeed, out float3 Out_UnitVector3D, out float2 Out_UnitVector2D, inout FSimulationContext Context);
-void RandomRange_Func_(float4 In_Min, float4 In_Max, int In_Seed, int In_RandomnessMode, bool In_OverrideSeed, out float4 Out_Result, inout FSimulationContext Context);
-void SampleCurve_LatheProfile(float In_X, out float Out_Value);
+void RandomTriCoord_ParticlesSkeletalMesh(NiagaraRandInfo In_RandomInfo, out MeshTriCoordinate Out_Coord);
+void GetSkinnedTriangleDataWS_ParticlesSkeletalMesh(MeshTriCoordinate In_Coord, out float3 Out_Position, out float3 Out_Velocity, out float3 Out_Normal, out float3 Out_Binormal, out float3 Out_Tangent);
 void TransformBase_Func_(int In_SourceSpace, int In_DestinationSpace, float4x4 In_LocalToWorldTransform, float4x4 In_WorldToLocalTransform, bool In_bLocalSpace, out bool Out_bUseOriginal, out float4x4 Out_OutTransform, inout FSimulationContext Context);
-void CylinderLocation_NF_TransformVector_Emitter_Func_(float3 In_InVector, int In_SourceSpace, int In_DestinationSpace, bool In_ApplyScale, out float3 Out_OutVector, inout FSimulationContext Context);
-void CylinderLocation_Emitter_Func_(inout FSimulationContext Context);
-void RandomTriCoord_ParticlesStaticMesh(out MeshTriCoordinate Out_Coord);
-void GetTriPositionWS_ParticlesStaticMesh(MeshTriCoordinate In_Coord, out float3 Out_Position);
-void SampleMeshScript001_TransformPosition_Emitter_Func_(float3 In_InPosition, int In_SourceSpace, int In_DestinationSpace, bool In_ApplyScale, out float3 Out_OutPosition, inout FSimulationContext Context);
+void SampleMeshScript_Skeletal_TransformPosition_Emitter_Func_(float3 In_InPosition, int In_SourceSpace, int In_DestinationSpace, bool In_ApplyScale, out float3 Out_OutPosition, inout FSimulationContext Context);
 void SelectV3Channel_Func_(float3 In_VECTOR_VAR, int In_TargetChannel, out float Out_Float, inout FSimulationContext Context);
 void SmoothLerpOverTime_Func_(float In_SmoothValue, float In_TargetValue, float In_ConvergenceRate, float In_DeltaTime, out float Out_NewSmoothValue, inout FSimulationContext Context);
-void SampleMeshScript001_Emitter_Func_(inout FSimulationContext Context);
-void SetVariables_C24DA8694ED1CFDB365D9582A5B9F487_Emitter_Func_(inout FSimulationContext Context);
+void SampleMeshScript_Skeletal_Emitter_Func_(inout FSimulationContext Context);
+void SetVariables_BFEEE889427C7205BC3445B62DDF3240_Emitter_Func_(inout FSimulationContext Context);
+void RandomTriCoord_Mesh(NiagaraRandInfo In_RandomInfo, out MeshTriCoordinate Out_Coord);
+void GetSkinnedTriangleDataInterpolated_Mesh(MeshTriCoordinate In_Coord, float In_Interp, out float3 Out_Position, out float3 Out_Velocity, out float3 Out_Normal, out float3 Out_Binormal, out float3 Out_Tangent);
+void GetSkinnedTriangleData_Mesh(MeshTriCoordinate In_Coord, out float3 Out_Position, out float3 Out_Velocity, out float3 Out_Normal, out float3 Out_Binormal, out float3 Out_Tangent);
+void GetSkinnedTriangleDataWSInterpolated_Mesh(MeshTriCoordinate In_Coord, float In_Interp, out float3 Out_Position, out float3 Out_Velocity, out float3 Out_Normal, out float3 Out_Binormal, out float3 Out_Tangent);
+void GetSkinnedTriangleDataWS_Mesh(MeshTriCoordinate In_Coord, out float3 Out_Position, out float3 Out_Velocity, out float3 Out_Normal, out float3 Out_Binormal, out float3 Out_Tangent);
+void GetTriUV_Mesh(MeshTriCoordinate In_Coord, int In_UVSet, out float2 Out_UV);
+void GetTriColor_Mesh(MeshTriCoordinate In_Coord, out float4 Out_Color);
+void SampleSkeletalMeshSurface_Emitter_Func_(inout FSimulationContext Context);
 void UpdateAge_Emitter_Func_(inout FSimulationContext Context);
+void SampleColorCurve_ColorColorCurve(float In_X, out float4 Out_Value);
+void ColorFromCurve_Emitter_Func_(out float4 Out_Value, inout FSimulationContext Context);
+void MakeVector3_FromColor001_Emitter_Func_(out float3 Out_Vector, inout FSimulationContext Context);
+void Color_Emitter_Func_(inout FSimulationContext Context);
+void SampleCurve_ConvergenceRateParticlesPositionFloatCurve(float In_X, out float Out_Value);
+void FloatFromCurve001_Emitter_Func_(out float Out_Value, inout FSimulationContext Context);
+void SmoothLerpOverTime_Func_(float3 In_SmoothValue, float3 In_TargetValue, float In_ConvergenceRate, float In_DeltaTime, out float3 Out_NewSmoothValue, inout FSimulationContext Context);
+void SmoothLerpOverTime_Vector_Emitter_Func_(out float3 Out_NewSmoothValue, inout FSimulationContext Context);
+void SetVariables_C24DA8694ED1CFDB365D9582A5B9F487_Emitter_Func_(inout FSimulationContext Context);
 float GetSpawnInterpolation();
 void GetRandomInfo_Emitter_Determinism_false_Particle_Particle_Particle_Func_(int In_Seed, int In_Engine_System_TickCount, bool In_OverrideSeed, int In_Particles_UniqueID, int In_Emitter_RandomSeed, bool In_FixedOverrideSeed, int In_RandomnessMode, out NiagaraRandInfo Out_RandomInfo, out bool Out_UseDeterministicRandoms, inout FSimulationContext Context)
 {
-	bool Constant20 = false;
-	int Constant21 = 0;
-	bool Result = In_RandomnessMode == Constant21;
-	bool Result1 = Constant20 && Result;
-	int Constant22 = 1;
-	bool Result2 = In_RandomnessMode == Constant22;
+	bool Constant29 = false;
+	int Constant30 = 0;
+	bool Result = In_RandomnessMode == Constant30;
+	bool Result1 = Constant29 && Result;
+	int Constant31 = 1;
+	bool Result2 = In_RandomnessMode == Constant31;
 	bool Result3 = Result1 || Result2;
 	int Seed_IfResult;
 	if(In_OverrideSeed)
@@ -5232,16 +5286,16 @@ void GetRandomInfo_Emitter_Determinism_false_Particle_Particle_Particle_Func_(in
 	{
 	Seed_IfResult = Context.MapSpawn.Emitter.RandomSeed;
 	}
-	int Constant23 = 0;
-	int Constant24 = 0;
+	int Constant32 = 0;
+	int Constant33 = 0;
 	int Seed1_IfResult;
 	int Seed2_IfResult;
 	int Seed3_IfResult;
 	if(In_FixedOverrideSeed)
 	{
 	Seed1_IfResult = Seed_IfResult;
-	Seed2_IfResult = Constant23;
-	Seed3_IfResult = Constant24;
+	Seed2_IfResult = Constant32;
+	Seed3_IfResult = Constant33;
 	}
 	else
 	{
@@ -5249,9 +5303,9 @@ void GetRandomInfo_Emitter_Determinism_false_Particle_Particle_Particle_Func_(in
 	Seed2_IfResult = Context.MapSpawn.Engine.System.TickCount;
 	Seed3_IfResult = Seed_IfResult;
 	}
-	int Constant25 = -1;
-	int Constant26 = -1;
-	int Constant27 = -1;
+	int Constant34 = -1;
+	int Constant35 = -1;
+	int Constant36 = -1;
 	int Seed1_IfResult1;
 	int Seed2_IfResult1;
 	int Seed3_IfResult1;
@@ -5263,9 +5317,9 @@ void GetRandomInfo_Emitter_Determinism_false_Particle_Particle_Particle_Func_(in
 	}
 	else
 	{
-	Seed1_IfResult1 = Constant25;
-	Seed2_IfResult1 = Constant26;
-	Seed3_IfResult1 = Constant27;
+	Seed1_IfResult1 = Constant34;
+	Seed2_IfResult1 = Constant35;
+	Seed3_IfResult1 = Constant36;
 	}
 	NiagaraRandInfo Output1;
 	Output1.Seed1 = Seed1_IfResult1;
@@ -5277,13 +5331,13 @@ void GetRandomInfo_Emitter_Determinism_false_Particle_Particle_Particle_Func_(in
 
 void RandomRange_Func_(float In_Min, float In_Max, int In_Seed, int In_RandomnessMode, bool In_OverrideSeed, bool In_FixedOverrideSeed, out float Out_Result, inout FSimulationContext Context)
 {
-	int Constant16 = (0);
-	bool Constant17 = false;
-	int Constant18 = 0;
-	int Constant19 = (0);
+	int Constant25 = (0);
+	bool Constant26 = false;
+	int Constant27 = 0;
+	int Constant28 = (0);
 	NiagaraRandInfo GetRandomInfo_Emitter_Determinism_false_Particle_Particle_Particle_Func_Output_RandomInfo;
 	bool GetRandomInfo_Emitter_Determinism_false_Particle_Particle_Particle_Func_Output_UseDeterministicRandoms;
-	GetRandomInfo_Emitter_Determinism_false_Particle_Particle_Particle_Func_(In_Seed, Constant16, In_OverrideSeed, Constant18, Constant19, In_FixedOverrideSeed, In_RandomnessMode, GetRandomInfo_Emitter_Determinism_false_Particle_Particle_Particle_Func_Output_RandomInfo, GetRandomInfo_Emitter_Determinism_false_Particle_Particle_Particle_Func_Output_UseDeterministicRandoms, Context);
+	GetRandomInfo_Emitter_Determinism_false_Particle_Particle_Particle_Func_(In_Seed, Constant25, In_OverrideSeed, Constant27, Constant28, In_FixedOverrideSeed, In_RandomnessMode, GetRandomInfo_Emitter_Determinism_false_Particle_Particle_Particle_Func_Output_RandomInfo, GetRandomInfo_Emitter_Determinism_false_Particle_Particle_Particle_Func_Output_UseDeterministicRandoms, Context);
 	float Result4 = In_Max - In_Min;
 	int Seed1;
 	int Seed2;
@@ -5308,8 +5362,8 @@ void RandomRange_Func_(float In_Min, float In_Max, int In_Seed, int In_Randomnes
 
 void UniformRangedFloat005_Emitter_Func_(out float Out_UniformRangedFloat, inout FSimulationContext Context)
 {
-	int Constant14 = 0;
-	bool Constant15 = false;
+	int Constant23 = 0;
+	bool Constant24 = false;
 	int Mode_IfResult;
 	bool Override_IfResult;
 	if(Context.MapSpawn.UniformRangedFloat005.OverrideRandomness)
@@ -5319,8 +5373,8 @@ void UniformRangedFloat005_Emitter_Func_(out float Out_UniformRangedFloat, inout
 	}
 	else
 	{
-	Mode_IfResult = Constant14;
-	Override_IfResult = Constant15;
+	Mode_IfResult = Constant23;
+	Override_IfResult = Constant24;
 	}
 	float RandomRange_Func_Output_Result;
 	RandomRange_Func_(Context.MapSpawn.Constants.Emitter.UniformRangedFloat005.Minimum, Context.MapSpawn.Constants.Emitter.UniformRangedFloat005.Maximum, Context.MapSpawn.Constants.Emitter.UniformRangedFloat005.RandomSeed, Mode_IfResult, Override_IfResult, Context.MapSpawn.UniformRangedFloat005.FixedRandomSeed, RandomRange_Func_Output_Result, Context);
@@ -5329,8 +5383,8 @@ void UniformRangedFloat005_Emitter_Func_(out float Out_UniformRangedFloat, inout
 
 void UniformRangedFloat004_Emitter_Func_(out float Out_UniformRangedFloat, inout FSimulationContext Context)
 {
-	int Constant32 = 0;
-	bool Constant33 = false;
+	int Constant41 = 0;
+	bool Constant42 = false;
 	int Mode_IfResult1;
 	bool Override_IfResult1;
 	if(Context.MapSpawn.UniformRangedFloat004.OverrideRandomness)
@@ -5340,8 +5394,8 @@ void UniformRangedFloat004_Emitter_Func_(out float Out_UniformRangedFloat, inout
 	}
 	else
 	{
-	Mode_IfResult1 = Constant32;
-	Override_IfResult1 = Constant33;
+	Mode_IfResult1 = Constant41;
+	Override_IfResult1 = Constant42;
 	}
 	float RandomRange_Func_Output_Result1;
 	RandomRange_Func_(Context.MapSpawn.Constants.Emitter.UniformRangedFloat004.Minimum, Context.MapSpawn.Constants.Emitter.UniformRangedFloat004.Maximum, Context.MapSpawn.Constants.Emitter.UniformRangedFloat004.RandomSeed, Mode_IfResult1, Override_IfResult1, Context.MapSpawn.UniformRangedFloat004.FixedRandomSeed, RandomRange_Func_Output_Result1, Context);
@@ -5350,19 +5404,19 @@ void UniformRangedFloat004_Emitter_Func_(out float Out_UniformRangedFloat, inout
 
 void NormalizedAngleToDegrees001_Emitter_Func_(out float Out_NewOutput, inout FSimulationContext Context)
 {
-	float Constant36 = 360;
-	float Result8 = Context.MapSpawn.NormalizedAngleToDegrees001.NormalizedAngle * Constant36;
+	float Constant45 = 360;
+	float Result8 = Context.MapSpawn.NormalizedAngleToDegrees001.NormalizedAngle * Constant45;
 	Out_NewOutput = Result8;
 }
 
 void ParticleOwnerPosition_Emitter_Func_(out float3 Out_OutPosition, inout FSimulationContext Context)
 {
-	bool Constant39 = false;
-	float3 Constant40 = float3(0,0,0);
+	bool Constant48 = false;
+	float3 Constant49 = float3(0,0,0);
 	float3 Vector_IfResult;
-	if(Constant39)
+	if(Constant48)
 	{
-	Vector_IfResult = Constant40;
+	Vector_IfResult = Constant49;
 	}
 	else
 	{
@@ -5373,8 +5427,8 @@ void ParticleOwnerPosition_Emitter_Func_(out float3 Out_OutPosition, inout FSimu
 
 void UniformRangedFloat003_Emitter_Func_(out float Out_UniformRangedFloat, inout FSimulationContext Context)
 {
-	int Constant47 = 0;
-	bool Constant48 = false;
+	int Constant56 = 0;
+	bool Constant57 = false;
 	int Mode_IfResult2;
 	bool Override_IfResult2;
 	if(Context.MapSpawn.UniformRangedFloat003.OverrideRandomness)
@@ -5384,8 +5438,8 @@ void UniformRangedFloat003_Emitter_Func_(out float Out_UniformRangedFloat, inout
 	}
 	else
 	{
-	Mode_IfResult2 = Constant47;
-	Override_IfResult2 = Constant48;
+	Mode_IfResult2 = Constant56;
+	Override_IfResult2 = Constant57;
 	}
 	float RandomRange_Func_Output_Result2;
 	RandomRange_Func_(Context.MapSpawn.Constants.Emitter.UniformRangedFloat003.Minimum, Context.MapSpawn.Constants.Emitter.UniformRangedFloat003.Maximum, Context.MapSpawn.Constants.Emitter.UniformRangedFloat003.RandomSeed, Mode_IfResult2, Override_IfResult2, Context.MapSpawn.UniformRangedFloat003.FixedRandomSeed, RandomRange_Func_Output_Result2, Context);
@@ -5394,12 +5448,12 @@ void UniformRangedFloat003_Emitter_Func_(out float Out_UniformRangedFloat, inout
 
 void InitializeParticle_SimulationPosition_Emitter_Func_(out float3 Out_OutPosition, inout FSimulationContext Context)
 {
-	bool Constant51 = false;
-	float3 Constant52 = float3(0,0,0);
+	bool Constant60 = false;
+	float3 Constant61 = float3(0,0,0);
 	float3 Vector_IfResult1;
-	if(Constant51)
+	if(Constant60)
 	{
-	Vector_IfResult1 = Constant52;
+	Vector_IfResult1 = Constant61;
 	}
 	else
 	{
@@ -5410,14 +5464,14 @@ void InitializeParticle_SimulationPosition_Emitter_Func_(out float3 Out_OutPosit
 
 void RandomRange_Func_(float In_Min, float In_Max, int In_Seed, int In_RandomnessMode, bool In_OverrideSeed, out float Out_Result, inout FSimulationContext Context)
 {
-	int Constant59 = (0);
-	bool Constant60 = false;
-	int Constant61 = 0;
-	int Constant62 = (0);
-	bool Constant63 = false;
+	int Constant68 = (0);
+	bool Constant69 = false;
+	int Constant70 = 0;
+	int Constant71 = (0);
+	bool Constant72 = false;
 	NiagaraRandInfo GetRandomInfo_Emitter_Determinism_false_Particle_Particle_Particle_Func_Output_RandomInfo1;
 	bool GetRandomInfo_Emitter_Determinism_false_Particle_Particle_Particle_Func_Output_UseDeterministicRandoms1;
-	GetRandomInfo_Emitter_Determinism_false_Particle_Particle_Particle_Func_(In_Seed, Constant59, In_OverrideSeed, Constant61, Constant62, Constant63, In_RandomnessMode, GetRandomInfo_Emitter_Determinism_false_Particle_Particle_Particle_Func_Output_RandomInfo1, GetRandomInfo_Emitter_Determinism_false_Particle_Particle_Particle_Func_Output_UseDeterministicRandoms1, Context);
+	GetRandomInfo_Emitter_Determinism_false_Particle_Particle_Particle_Func_(In_Seed, Constant68, In_OverrideSeed, Constant70, Constant71, Constant72, In_RandomnessMode, GetRandomInfo_Emitter_Determinism_false_Particle_Particle_Particle_Func_Output_RandomInfo1, GetRandomInfo_Emitter_Determinism_false_Particle_Particle_Particle_Func_Output_UseDeterministicRandoms1, Context);
 	float Result9 = In_Max - In_Min;
 	int Seed11;
 	int Seed21;
@@ -5524,144 +5578,43 @@ void InitializeParticle_Emitter_Func_(inout FSimulationContext Context)
 	Context.MapSpawn.Particles.MaterialRandom = MaterialRandom_IfResult;
 }
 
-void RandomRange_Func_(float2 In_Min, float2 In_Max, int In_Seed, int In_RandomnessMode, bool In_OverrideSeed, bool In_FixedOverrideSeed, out float2 Out_Result, inout FSimulationContext Context)
-{
-	int Constant94 = (0);
-	bool Constant95 = false;
-	int Constant96 = 0;
-	int Constant97 = (0);
-	NiagaraRandInfo GetRandomInfo_Emitter_Determinism_false_Particle_Particle_Particle_Func_Output_RandomInfo2;
-	bool GetRandomInfo_Emitter_Determinism_false_Particle_Particle_Particle_Func_Output_UseDeterministicRandoms2;
-	GetRandomInfo_Emitter_Determinism_false_Particle_Particle_Particle_Func_(In_Seed, Constant94, In_OverrideSeed, Constant96, Constant97, In_FixedOverrideSeed, In_RandomnessMode, GetRandomInfo_Emitter_Determinism_false_Particle_Particle_Particle_Func_Output_RandomInfo2, GetRandomInfo_Emitter_Determinism_false_Particle_Particle_Particle_Func_Output_UseDeterministicRandoms2, Context);
-	float2 Result13 = In_Max - In_Min;
-	int Seed12;
-	int Seed22;
-	int Seed32;
-	Seed12 = GetRandomInfo_Emitter_Determinism_false_Particle_Particle_Particle_Func_Output_RandomInfo2.Seed1;
-	Seed22 = GetRandomInfo_Emitter_Determinism_false_Particle_Particle_Particle_Func_Output_RandomInfo2.Seed2;
-	Seed32 = GetRandomInfo_Emitter_Determinism_false_Particle_Particle_Particle_Func_Output_RandomInfo2.Seed3;
-	float2 Result14 = rand(Result13, Seed12, Seed22, Seed32);
-	float2 Result15 = rand(Result13);
-	float2 Random_IfResult2;
-	if(GetRandomInfo_Emitter_Determinism_false_Particle_Particle_Particle_Func_Output_UseDeterministicRandoms2)
-	{
-	Random_IfResult2 = Result14;
-	}
-	else
-	{
-	Random_IfResult2 = Result15;
-	}
-	float2 Result16 = In_Min + Random_IfResult2;
-	Out_Result = Result16;
-}
-
-void RandomUnitVector_Func_(int In_Seed, int In_RandomnessMode, bool In_OverrideSeed, out float3 Out_UnitVector3D, out float2 Out_UnitVector2D, inout FSimulationContext Context)
-{
-	float2 Constant91 = float2(0,-1);
-	float2 Constant92 = float2(6.28319,1);
-	bool Constant93 = false;
-	float2 RandomRange_Func_Output_Result4;
-	RandomRange_Func_(Constant91, Constant92, In_Seed, In_RandomnessMode, In_OverrideSeed, Constant93, RandomRange_Func_Output_Result4, Context);
-	float Phi;
-	float CosASC40ThetaASC41;
-	Phi = RandomRange_Func_Output_Result4.x;
-	CosASC40ThetaASC41 = RandomRange_Func_Output_Result4.y;
-	float Result17 = cos(Phi);
-	float Result18 = CosASC40ThetaASC41 * CosASC40ThetaASC41;
-	float Result19 = 1 - Result18;
-	float Result20 = sqrt(Result19);
-	float Result21 = Result17 * Result20;
-	float Result22 = sin(Phi);
-	float Result23 = Result22 * Result20;
-	float3 PositionOnSphere;
-	PositionOnSphere.x = Result21;
-	PositionOnSphere.y = Result23;
-	PositionOnSphere.z = CosASC40ThetaASC41;
-	float Constant98 = 0;
-	float Constant99 = 6.28319;
-	int Constant100 = -1;
-	int Constant101 = 0;
-	bool Constant102 = false;
-	float RandomRange_Func_Output_Result5;
-	RandomRange_Func_(Constant98, Constant99, Constant100, Constant101, Constant102, RandomRange_Func_Output_Result5, Context);
-	float Result24 = cos(RandomRange_Func_Output_Result5);
-	float Result25 = sin(RandomRange_Func_Output_Result5);
-	float2 PositionOnCircle;
-	PositionOnCircle.x = Result24;
-	PositionOnCircle.y = Result25;
-	Out_UnitVector3D = PositionOnSphere;
-	Out_UnitVector2D = PositionOnCircle;
-}
-
-void RandomRange_Func_(float4 In_Min, float4 In_Max, int In_Seed, int In_RandomnessMode, bool In_OverrideSeed, out float4 Out_Result, inout FSimulationContext Context)
-{
-	int Constant106 = (0);
-	bool Constant107 = false;
-	int Constant108 = 0;
-	int Constant109 = (0);
-	bool Constant110 = false;
-	NiagaraRandInfo GetRandomInfo_Emitter_Determinism_false_Particle_Particle_Particle_Func_Output_RandomInfo3;
-	bool GetRandomInfo_Emitter_Determinism_false_Particle_Particle_Particle_Func_Output_UseDeterministicRandoms3;
-	GetRandomInfo_Emitter_Determinism_false_Particle_Particle_Particle_Func_(In_Seed, Constant106, In_OverrideSeed, Constant108, Constant109, Constant110, In_RandomnessMode, GetRandomInfo_Emitter_Determinism_false_Particle_Particle_Particle_Func_Output_RandomInfo3, GetRandomInfo_Emitter_Determinism_false_Particle_Particle_Particle_Func_Output_UseDeterministicRandoms3, Context);
-	float4 Result26 = In_Max - In_Min;
-	int Seed13;
-	int Seed23;
-	int Seed33;
-	Seed13 = GetRandomInfo_Emitter_Determinism_false_Particle_Particle_Particle_Func_Output_RandomInfo3.Seed1;
-	Seed23 = GetRandomInfo_Emitter_Determinism_false_Particle_Particle_Particle_Func_Output_RandomInfo3.Seed2;
-	Seed33 = GetRandomInfo_Emitter_Determinism_false_Particle_Particle_Particle_Func_Output_RandomInfo3.Seed3;
-	float4 Result27 = rand(Result26, Seed13, Seed23, Seed33);
-	float4 Result28 = rand(Result26);
-	float4 Random_IfResult3;
-	if(GetRandomInfo_Emitter_Determinism_false_Particle_Particle_Particle_Func_Output_UseDeterministicRandoms3)
-	{
-	Random_IfResult3 = Result27;
-	}
-	else
-	{
-	Random_IfResult3 = Result28;
-	}
-	float4 Result29 = In_Min + Random_IfResult3;
-	Out_Result = Result29;
-}
-
 void TransformBase_Func_(int In_SourceSpace, int In_DestinationSpace, float4x4 In_LocalToWorldTransform, float4x4 In_WorldToLocalTransform, bool In_bLocalSpace, out bool Out_bUseOriginal, out float4x4 Out_OutTransform, inout FSimulationContext Context)
 {
-	int Constant129 = 0;
-	bool Result63 = In_SourceSpace == Constant129;
-	int Constant130 = 0;
-	bool Result64 = In_DestinationSpace == Constant130;
-	bool Result65 = Result63 && Result64;
-	int Constant131 = 1;
-	bool Result66 = In_SourceSpace == Constant131;
-	int Constant132 = 1;
-	bool Result67 = In_DestinationSpace == Constant132;
-	bool Result68 = Result66 && Result67;
-	bool Result69 = Result65 || Result68;
-	int Constant133 = 2;
-	bool Result70 = In_SourceSpace == Constant133;
-	int Constant134 = 2;
-	bool Result71 = In_DestinationSpace == Constant134;
-	bool Result72 = Result70 && Result71;
-	bool Result73 = Result69 || Result72;
-	bool Result74 = Result63 && Result71;
-	bool Result75 = Result70 && Result64;
-	bool Result76 = Result74 || Result75;
-	bool Result77 = In_bLocalSpace && Result76;
-	bool Result78 = Result73 || Result77;
-	bool Result79 = !In_bLocalSpace;
-	bool Result80 = Result63 && Result67;
-	bool Result81 = Result66 && Result64;
-	bool Result82 = Result80 || Result81;
-	bool Result83 = Result79 && Result82;
-	bool Result84 = Result78 || Result83;
-	bool Result85 = In_bLocalSpace && Result80;
-	bool Result86 = Result70 && Result67;
-	bool Result87 = Result85 || Result86;
-	bool Result88 = Result79 && Result75;
-	bool Result89 = Result87 || Result88;
+	int Constant78 = 0;
+	bool Result13 = In_SourceSpace == Constant78;
+	int Constant79 = 0;
+	bool Result14 = In_DestinationSpace == Constant79;
+	bool Result15 = Result13 && Result14;
+	int Constant80 = 1;
+	bool Result16 = In_SourceSpace == Constant80;
+	int Constant81 = 1;
+	bool Result17 = In_DestinationSpace == Constant81;
+	bool Result18 = Result16 && Result17;
+	bool Result19 = Result15 || Result18;
+	int Constant82 = 2;
+	bool Result20 = In_SourceSpace == Constant82;
+	int Constant83 = 2;
+	bool Result21 = In_DestinationSpace == Constant83;
+	bool Result22 = Result20 && Result21;
+	bool Result23 = Result19 || Result22;
+	bool Result24 = Result13 && Result21;
+	bool Result25 = Result20 && Result14;
+	bool Result26 = Result24 || Result25;
+	bool Result27 = In_bLocalSpace && Result26;
+	bool Result28 = Result23 || Result27;
+	bool Result29 = !In_bLocalSpace;
+	bool Result30 = Result13 && Result17;
+	bool Result31 = Result16 && Result14;
+	bool Result32 = Result30 || Result31;
+	bool Result33 = Result29 && Result32;
+	bool Result34 = Result28 || Result33;
+	bool Result35 = In_bLocalSpace && Result30;
+	bool Result36 = Result20 && Result17;
+	bool Result37 = Result35 || Result36;
+	bool Result38 = Result29 && Result25;
+	bool Result39 = Result37 || Result38;
 	float4x4 Matrix_IfResult1;
-	if(Result89)
+	if(Result39)
 	{
 	Matrix_IfResult1 = In_LocalToWorldTransform;
 	}
@@ -5669,19 +5622,19 @@ void TransformBase_Func_(int In_SourceSpace, int In_DestinationSpace, float4x4 I
 	{
 	Matrix_IfResult1 = In_WorldToLocalTransform;
 	}
-	Out_bUseOriginal = Result84;
+	Out_bUseOriginal = Result34;
 	Out_OutTransform = Matrix_IfResult1;
 }
 
-void CylinderLocation_NF_TransformVector_Emitter_Func_(float3 In_InVector, int In_SourceSpace, int In_DestinationSpace, bool In_ApplyScale, out float3 Out_OutVector, inout FSimulationContext Context)
+void SampleMeshScript_Skeletal_TransformPosition_Emitter_Func_(float3 In_InPosition, int In_SourceSpace, int In_DestinationSpace, bool In_ApplyScale, out float3 Out_OutPosition, inout FSimulationContext Context)
 {
-	bool Constant128 = false;
+	bool Constant77 = false;
 	float4x4 Matrix_IfResult;
 	float4x4 Matrix001_IfResult;
 	if(In_ApplyScale)
 	{
-	Matrix_IfResult = Context.MapSpawn.Engine.Owner.SystemWorldToLocalTransposed;
-	Matrix001_IfResult = Context.MapSpawn.Engine.Owner.SystemLocalToWorldTransposed;
+	Matrix_IfResult = Context.MapSpawn.Engine.Owner.SystemLocalToWorld;
+	Matrix001_IfResult = Context.MapSpawn.Engine.Owner.SystemWorldToLocal;
 	}
 	else
 	{
@@ -5690,403 +5643,400 @@ void CylinderLocation_NF_TransformVector_Emitter_Func_(float3 In_InVector, int I
 	}
 	bool TransformBase_Func_Output_bUseOriginal;
 	float4x4 TransformBase_Func_Output_OutTransform;
-	TransformBase_Func_(In_SourceSpace, In_DestinationSpace, Matrix_IfResult, Matrix001_IfResult, Constant128, TransformBase_Func_Output_bUseOriginal, TransformBase_Func_Output_OutTransform, Context);
-	float3 Result90 = mul(float4(In_InVector,0.0),TransformBase_Func_Output_OutTransform).xyz;
-	float3 Vector_IfResult8;
+	TransformBase_Func_(In_SourceSpace, In_DestinationSpace, Matrix_IfResult, Matrix001_IfResult, Constant77, TransformBase_Func_Output_bUseOriginal, TransformBase_Func_Output_OutTransform, Context);
+	float3 Result40 = mul(float4(In_InPosition,1.0),TransformBase_Func_Output_OutTransform).xyz;
+	float3 Vector_IfResult2;
 	if(TransformBase_Func_Output_bUseOriginal)
 	{
-	Vector_IfResult8 = In_InVector;
+	Vector_IfResult2 = In_InPosition;
 	}
 	else
 	{
-	Vector_IfResult8 = Result90;
+	Vector_IfResult2 = Result40;
 	}
-	Out_OutVector = Vector_IfResult8;
-}
-
-void CylinderLocation_Emitter_Func_(inout FSimulationContext Context)
-{
-	int Constant89 = 0;
-	bool Constant90 = false;
-	int Mode_IfResult3;
-	bool Override_IfResult3;
-	if(Context.MapSpawn.CylinderLocation.OverrideRandomness)
-	{
-	Mode_IfResult3 = Context.MapSpawn.CylinderLocation.RandomnessMode;
-	Override_IfResult3 = Context.MapSpawn.CylinderLocation.OverrideSeed;
-	}
-	else
-	{
-	Mode_IfResult3 = Constant89;
-	Override_IfResult3 = Constant90;
-	}
-	float3 RandomUnitVector_Func_Output_UnitVector3D;
-	float2 RandomUnitVector_Func_Output_UnitVector2D;
-	RandomUnitVector_Func_(Context.MapSpawn.Constants.Emitter.CylinderLocation.RandomSeed, Mode_IfResult3, Override_IfResult3, RandomUnitVector_Func_Output_UnitVector3D, RandomUnitVector_Func_Output_UnitVector2D, Context);
-	float3 Constant103 = float3(0,0,1);
-	float3 Rand_IfResult;
-	if(Context.MapSpawn.CylinderLocation.SurfaceOnly)
-	{
-	Rand_IfResult = RandomUnitVector_Func_Output_UnitVector3D;
-	}
-	else
-	{
-	Rand_IfResult = Constant103;
-	}
-	float4 Constant104 = float4(0,0,-1,0);
-	float4 Constant105 = float4(1,1,1,1);
-	float4 RandomRange_Func_Output_Result6;
-	RandomRange_Func_(Constant104, Constant105, Context.MapSpawn.Constants.Emitter.CylinderLocation.RandomSeed, Mode_IfResult3, Override_IfResult3, RandomRange_Func_Output_Result6, Context);
-	float X;
-	float Y;
-	float Z;
-	float W;
-	X = RandomRange_Func_Output_Result6.x;
-	Y = RandomRange_Func_Output_Result6.y;
-	Z = RandomRange_Func_Output_Result6.z;
-	W = RandomRange_Func_Output_Result6.w;
-	Context.MapSpawn.Local.CylinderLocation.RandomDirection = Rand_IfResult;
-	Context.MapSpawn.Local.CylinderLocation.RandomRatio = X;
-	Context.MapSpawn.Local.CylinderLocation.RandomAngle = Y;
-	Context.MapSpawn.Local.CylinderLocation.RandomZ = Z;
-	Context.MapSpawn.Local.CylinderLocation.RandomRadius = W;
-	Context.MapSpawn.Local.CylinderLocation.SurfaceOnly = Context.MapSpawn.CylinderLocation.SurfaceOnly;
-	Context.MapSpawn.Local.CylinderLocation.UseEndcapsSurfaceOnly = Context.MapSpawn.CylinderLocation.UseEndcapsInSurfaceOnlyMode;
-	Context.MapSpawn.Local.CylinderLocation.CylinderHeight = Context.MapSpawn.Constants.Emitter.CylinderLocation.CylinderHeight;
-	Context.MapSpawn.Local.CylinderLocation.CylinderRadius = Context.MapSpawn.Constants.Emitter.CylinderLocation.CylinderRadius;
-	bool Result30 = Context.MapSpawn.Constants.Emitter.CylinderLocation.CylinderHeight > Context.MapSpawn.Constants.Emitter.CylinderLocation.CylinderRadius;
-	float Result31 = sqrt(Context.MapSpawn.Constants.Emitter.CylinderLocation.CylinderHeight);
-	float Result32 = min(Context.MapSpawn.Constants.Emitter.CylinderLocation.CylinderRadius, Result31);
-	float Result33 = max(Result31, Context.MapSpawn.Constants.Emitter.CylinderLocation.CylinderRadius);
-	float Result34 = Result32 / Result33;
-	float Result35 = Context.MapSpawn.Local.CylinderLocation.RandomRatio - Result34;
-	float Result36 = 1 - Result35;
-	float float_IfResult;
-	if(Result30)
-	{
-	float_IfResult = Result35;
-	}
-	else
-	{
-	float_IfResult = Result36;
-	}
-	float Result37 = round(float_IfResult);
-	float Constant111 = 0;
-	float Constant112 = 1;
-	float Result38 = clamp(Result37,Constant111,Constant112);
-	Context.MapSpawn.Local.CylinderLocation.EndcapRatio = Result38;
-	float Constant113 = 1;
-	float Result39 = sin(Context.MapSpawn.Local.CylinderLocation.RandomAngle*(TWO_PI/Constant113));
-	float Result40 = abs(Result39);
-	float float_IfResult1;
-	if(Context.MapSpawn.CylinderLocation.HemisphereX)
-	{
-	float_IfResult1 = Result40;
-	}
-	else
-	{
-	float_IfResult1 = Result39;
-	}
-	float Constant114 = 1;
-	float Result41 = cos(Context.MapSpawn.Local.CylinderLocation.RandomAngle*(TWO_PI/Constant114));
-	float Result42 = abs(Result41);
-	float float_IfResult2;
-	if(Context.MapSpawn.CylinderLocation.HemisphereY)
-	{
-	float_IfResult2 = Result42;
-	}
-	else
-	{
-	float_IfResult2 = Result41;
-	}
-	Context.MapSpawn.Local.CylinderLocation.XAxis = float_IfResult1;
-	Context.MapSpawn.Local.CylinderLocation.YAxis = float_IfResult2;
-	float Constant115 = 0.0001;
-	float Constant116 = 1;
-	float Result43 = clamp(Context.MapSpawn.Local.CylinderLocation.RandomZ,Constant115,Constant116);
-	float Result44 = ceil(Result43);
-	float Result45 = sign(Context.MapSpawn.Local.CylinderLocation.RandomZ);
-	float Result46 = Result44 * Result45;
-	float Result47 = lerp(Context.MapSpawn.Local.CylinderLocation.RandomZ,Result46,Context.MapSpawn.Local.CylinderLocation.EndcapRatio);
-	float Endcaps_IfResult;
-	if(Context.MapSpawn.Local.CylinderLocation.UseEndcapsSurfaceOnly)
-	{
-	Endcaps_IfResult = Result47;
-	}
-	else
-	{
-	Endcaps_IfResult = Context.MapSpawn.Local.CylinderLocation.RandomZ;
-	}
-	float SurfaceOnlyZ_IfResult;
-	if(Context.MapSpawn.Local.CylinderLocation.SurfaceOnly)
-	{
-	SurfaceOnlyZ_IfResult = Endcaps_IfResult;
-	}
-	else
-	{
-	SurfaceOnlyZ_IfResult = Context.MapSpawn.Local.CylinderLocation.RandomZ;
-	}
-	Context.MapSpawn.Local.CylinderLocation.SurfaceOnlyZAxis = SurfaceOnlyZ_IfResult;
-	Context.MapSpawn.Local.CylinderLocation.Endcaps = Endcaps_IfResult;
-	float3 Output11;
-	Output11.x = Context.MapSpawn.Local.CylinderLocation.XAxis;
-	Output11.y = Context.MapSpawn.Local.CylinderLocation.YAxis;
-	Output11.z = Context.MapSpawn.Local.CylinderLocation.SurfaceOnlyZAxis;
-	float Result48 = abs(Context.MapSpawn.Local.CylinderLocation.Endcaps);
-	float Constant117 = 1;
-	bool Result49 = Result48 == Constant117;
-	float Result50 = sqrt(Context.MapSpawn.Local.CylinderLocation.RandomRadius);
-	float Constant118 = 1;
-	float3 Output0;
-	Output0.x = Result50;
-	Output0.y = Result50;
-	Output0.z = Constant118;
-	float3 Constant119 = float3(1,1,1);
-	float3 Vector_IfResult2;
-	if(Result49)
-	{
-	Vector_IfResult2 = Output0;
-	}
-	else
-	{
-	Vector_IfResult2 = Constant119;
-	}
-	float3 Vector_IfResult3;
-	if(Context.MapSpawn.Local.CylinderLocation.SurfaceOnly)
-	{
-	Vector_IfResult3 = Vector_IfResult2;
-	}
-	else
-	{
-	Vector_IfResult3 = Output0;
-	}
-	float3 Result51 = Output11 * Vector_IfResult3;
-	Context.MapSpawn.Local.CylinderLocation.CylinderVector = Result51;
-	float Constant120 = 0.5;
-	float Constant121 = 0.5;
-	float Result52 = Context.MapSpawn.Local.CylinderLocation.SurfaceOnlyZAxis * Constant120 + Constant121;
-	float SampleCurve_LatheProfileOutput_Value;
-	SampleCurve_LatheProfile(Result52, SampleCurve_LatheProfileOutput_Value);
-	float Result53 = SampleCurve_LatheProfileOutput_Value * Context.MapSpawn.Local.CylinderLocation.CylinderRadius;
-	float float_IfResult3;
-	if(Context.MapSpawn.CylinderLocation.EnableLatheProfile)
-	{
-	float_IfResult3 = Result53;
-	}
-	else
-	{
-	float_IfResult3 = Context.MapSpawn.Local.CylinderLocation.CylinderRadius;
-	}
-	float3 Output12;
-	Output12.x = float_IfResult3;
-	Output12.y = float_IfResult3;
-	Output12.z = Context.MapSpawn.Local.CylinderLocation.CylinderHeight;
-	float3 Result54 = Output12 * Context.MapSpawn.Local.CylinderLocation.CylinderVector;
-	Context.MapSpawn.Local.CylinderLocation.CylinderVector = Result54;
-	float3 Constant122 = float3(1,1,1);
-	float3 Constant123 = float3(1,1,0);
-	float3 Vector_IfResult4;
-	if(Context.MapSpawn.Local.CylinderLocation.UseEndcapsSurfaceOnly)
-	{
-	Vector_IfResult4 = Constant122;
-	}
-	else
-	{
-	Vector_IfResult4 = Constant123;
-	}
-	float3 Result55 = Context.MapSpawn.Local.CylinderLocation.RandomDirection * Vector_IfResult4;
-	float3 Result56 = Context.MapSpawn.Constants.Emitter.CylinderLocation.SurfaceOnlyBandThickness * Result55;
-	float3 Result57 = Context.MapSpawn.Local.CylinderLocation.CylinderVector + Result56;
-	float3 Vector_IfResult5;
-	if(Context.MapSpawn.Local.CylinderLocation.SurfaceOnly)
-	{
-	Vector_IfResult5 = Result57;
-	}
-	else
-	{
-	Vector_IfResult5 = Context.MapSpawn.Local.CylinderLocation.CylinderVector;
-	}
-	Context.MapSpawn.Local.CylinderLocation.CylinderVector = Vector_IfResult5;
-	int Constant124 = 0;
-	bool Result58 = Context.MapSpawn.CylinderLocation.OrientationAxis == Constant124;
-	int Constant125 = 1;
-	bool Result59 = Context.MapSpawn.CylinderLocation.OrientationAxis == Constant125;
-	bool Result60 = Result58 || Result59;
-	float3 Output01;
-	Output01.x = Context.MapSpawn.Local.CylinderLocation.CylinderVector.z;
-	Output01.y = Context.MapSpawn.Local.CylinderLocation.CylinderVector.x;
-	Output01.z = Context.MapSpawn.Local.CylinderLocation.CylinderVector.y;
-	float3 Output02;
-	Output02.z = Context.MapSpawn.Local.CylinderLocation.CylinderVector.y;
-	Output02.y = Context.MapSpawn.Local.CylinderLocation.CylinderVector.z;
-	Output02.x = Context.MapSpawn.Local.CylinderLocation.CylinderVector.x;
-	float3 Vector_IfResult6;
-	if(Result58)
-	{
-	Vector_IfResult6 = Output01;
-	}
-	else
-	{
-	Vector_IfResult6 = Output02;
-	}
-	float3 Vector_IfResult7;
-	if(Result60)
-	{
-	Vector_IfResult7 = Vector_IfResult6;
-	}
-	else
-	{
-	Vector_IfResult7 = Context.MapSpawn.Local.CylinderLocation.CylinderVector;
-	}
-	Context.MapSpawn.Local.CylinderLocation.CylinderVector = Vector_IfResult7;
-	float3 Result61 = Context.MapSpawn.CylinderLocation.CylinderOrigin + Context.MapSpawn.Constants.Emitter.CylinderLocation.Offset;
-	float3 Result62 = Context.MapSpawn.Local.CylinderLocation.CylinderVector * Context.MapSpawn.Constants.Emitter.CylinderLocation.NonUniformScale;
-	int Constant126 = 0;
-	bool Constant127 = true;
-	float3 CylinderLocation_NF_TransformVector_Emitter_Func_Output_OutVector;
-	CylinderLocation_NF_TransformVector_Emitter_Func_(Result62, Context.MapSpawn.CylinderLocation.CoordinateSpace, Constant126, Constant127, CylinderLocation_NF_TransformVector_Emitter_Func_Output_OutVector, Context);
-	float3 Result91 = Result61 + CylinderLocation_NF_TransformVector_Emitter_Func_Output_OutVector;
-	Context.MapSpawn.Particles.Position = Result91;
-	Context.MapSpawn.OUTPUT_VAR.CylinderLocation.CylinderVector = Result91;
-}
-
-void SampleMeshScript001_TransformPosition_Emitter_Func_(float3 In_InPosition, int In_SourceSpace, int In_DestinationSpace, bool In_ApplyScale, out float3 Out_OutPosition, inout FSimulationContext Context)
-{
-	bool Constant138 = false;
-	float4x4 Matrix_IfResult2;
-	float4x4 Matrix001_IfResult1;
-	if(In_ApplyScale)
-	{
-	Matrix_IfResult2 = Context.MapSpawn.Engine.Owner.SystemLocalToWorld;
-	Matrix001_IfResult1 = Context.MapSpawn.Engine.Owner.SystemWorldToLocal;
-	}
-	else
-	{
-	Matrix_IfResult2 = Context.MapSpawn.Engine.Owner.SystemLocalToWorldNoScale;
-	Matrix001_IfResult1 = Context.MapSpawn.Engine.Owner.SystemWorldToLocalNoScale;
-	}
-	bool TransformBase_Func_Output_bUseOriginal1;
-	float4x4 TransformBase_Func_Output_OutTransform1;
-	TransformBase_Func_(In_SourceSpace, In_DestinationSpace, Matrix_IfResult2, Matrix001_IfResult1, Constant138, TransformBase_Func_Output_bUseOriginal1, TransformBase_Func_Output_OutTransform1, Context);
-	float3 Result92 = mul(float4(In_InPosition,1.0),TransformBase_Func_Output_OutTransform1).xyz;
-	float3 Vector_IfResult9;
-	if(TransformBase_Func_Output_bUseOriginal1)
-	{
-	Vector_IfResult9 = In_InPosition;
-	}
-	else
-	{
-	Vector_IfResult9 = Result92;
-	}
-	Out_OutPosition = Vector_IfResult9;
+	Out_OutPosition = Vector_IfResult2;
 }
 
 void SelectV3Channel_Func_(float3 In_VECTOR_VAR, int In_TargetChannel, out float Out_Float, inout FSimulationContext Context)
 {
-	int Constant140 = 0;
-	bool Result93 = In_TargetChannel == Constant140;
-	float X1;
-	float Y1;
-	float Z1;
-	X1 = In_VECTOR_VAR.x;
-	Y1 = In_VECTOR_VAR.y;
-	Z1 = In_VECTOR_VAR.z;
-	int Constant141 = 1;
-	bool Result94 = In_TargetChannel == Constant141;
-	float float_IfResult4;
-	if(Result94)
+	int Constant85 = 0;
+	bool Result41 = In_TargetChannel == Constant85;
+	float X;
+	float Y;
+	float Z;
+	X = In_VECTOR_VAR.x;
+	Y = In_VECTOR_VAR.y;
+	Z = In_VECTOR_VAR.z;
+	int Constant86 = 1;
+	bool Result42 = In_TargetChannel == Constant86;
+	float float_IfResult;
+	if(Result42)
 	{
-	float_IfResult4 = Y1;
+	float_IfResult = Y;
 	}
 	else
 	{
-	float_IfResult4 = Z1;
+	float_IfResult = Z;
 	}
-	float float_IfResult5;
-	if(Result93)
+	float float_IfResult1;
+	if(Result41)
 	{
-	float_IfResult5 = X1;
+	float_IfResult1 = X;
 	}
 	else
 	{
-	float_IfResult5 = float_IfResult4;
+	float_IfResult1 = float_IfResult;
 	}
-	Out_Float = float_IfResult5;
+	Out_Float = float_IfResult1;
 }
 
 void SmoothLerpOverTime_Func_(float In_SmoothValue, float In_TargetValue, float In_ConvergenceRate, float In_DeltaTime, out float Out_NewSmoothValue, inout FSimulationContext Context)
 {
-	float Result95 = In_ConvergenceRate * In_DeltaTime;
-	float Constant145 = 0;
-	float Constant146 = 1;
-	float Result96 = clamp(Result95,Constant145,Constant146);
-	float Result97 = lerp(In_SmoothValue,In_TargetValue,Result96);
-	Out_NewSmoothValue = Result97;
+	float Result43 = In_ConvergenceRate * In_DeltaTime;
+	float Constant90 = 0;
+	float Constant91 = 1;
+	float Result44 = clamp(Result43,Constant90,Constant91);
+	float Result45 = lerp(In_SmoothValue,In_TargetValue,Result44);
+	Out_NewSmoothValue = Result45;
 }
 
-void SampleMeshScript001_Emitter_Func_(inout FSimulationContext Context)
+void SampleMeshScript_Skeletal_Emitter_Func_(inout FSimulationContext Context)
 {
-	MeshTriCoordinate RandomTriCoord_ParticlesStaticMeshOutput_Coord;
-	RandomTriCoord_ParticlesStaticMesh(RandomTriCoord_ParticlesStaticMeshOutput_Coord);
-	float3 GetTriPositionWS_ParticlesStaticMeshOutput_Position;
-	GetTriPositionWS_ParticlesStaticMesh(RandomTriCoord_ParticlesStaticMeshOutput_Coord, GetTriPositionWS_ParticlesStaticMeshOutput_Position);
-	int Constant135 = 1;
-	int Constant136 = 2;
-	bool Constant137 = false;
-	float3 SampleMeshScript001_TransformPosition_Emitter_Func_Output_OutPosition;
-	SampleMeshScript001_TransformPosition_Emitter_Func_(GetTriPositionWS_ParticlesStaticMeshOutput_Position, Constant135, Constant136, Constant137, SampleMeshScript001_TransformPosition_Emitter_Func_Output_OutPosition, Context);
-	int Constant139 = 2;
+	NiagaraRandInfo Constant73 = (NiagaraRandInfo)0;
+	MeshTriCoordinate RandomTriCoord_ParticlesSkeletalMeshOutput_Coord;
+	RandomTriCoord_ParticlesSkeletalMesh(Constant73, RandomTriCoord_ParticlesSkeletalMeshOutput_Coord);
+	float3 GetSkinnedTriangleDataWS_ParticlesSkeletalMeshOutput_Position;
+	float3 GetSkinnedTriangleDataWS_ParticlesSkeletalMeshOutput_Velocity;
+	float3 GetSkinnedTriangleDataWS_ParticlesSkeletalMeshOutput_Normal;
+	float3 GetSkinnedTriangleDataWS_ParticlesSkeletalMeshOutput_Binormal;
+	float3 GetSkinnedTriangleDataWS_ParticlesSkeletalMeshOutput_Tangent;
+	GetSkinnedTriangleDataWS_ParticlesSkeletalMesh(RandomTriCoord_ParticlesSkeletalMeshOutput_Coord, GetSkinnedTriangleDataWS_ParticlesSkeletalMeshOutput_Position, GetSkinnedTriangleDataWS_ParticlesSkeletalMeshOutput_Velocity, GetSkinnedTriangleDataWS_ParticlesSkeletalMeshOutput_Normal, GetSkinnedTriangleDataWS_ParticlesSkeletalMeshOutput_Binormal, GetSkinnedTriangleDataWS_ParticlesSkeletalMeshOutput_Tangent);
+	int Constant74 = 1;
+	int Constant75 = 2;
+	bool Constant76 = false;
+	float3 SampleMeshScript_Skeletal_TransformPosition_Emitter_Func_Output_OutPosition;
+	SampleMeshScript_Skeletal_TransformPosition_Emitter_Func_(GetSkinnedTriangleDataWS_ParticlesSkeletalMeshOutput_Position, Constant74, Constant75, Constant76, SampleMeshScript_Skeletal_TransformPosition_Emitter_Func_Output_OutPosition, Context);
+	int Constant84 = 2;
 	float SelectV3Channel_Func_Output_Float;
-	SelectV3Channel_Func_(SampleMeshScript001_TransformPosition_Emitter_Func_Output_OutPosition, Constant139, SelectV3Channel_Func_Output_Float, Context);
-	float Constant142 = 0;
-	float Output13;
-	Output13 = Constant142;
-	float Constant143 = 200;
-	float Output14;
-	Output14 = Constant143;
-	float Constant144 = 0.3;
+	SelectV3Channel_Func_(SampleMeshScript_Skeletal_TransformPosition_Emitter_Func_Output_OutPosition, Constant84, SelectV3Channel_Func_Output_Float, Context);
+	float Constant87 = 0;
+	float Output11;
+	Output11 = Constant87;
+	float Constant88 = 200;
+	float Output12;
+	Output12 = Constant88;
+	float Constant89 = 0.3;
 	float SmoothLerpOverTime_Func_Output_NewSmoothValue;
-	SmoothLerpOverTime_Func_(Output13, Output14, Constant144, Context.MapSpawn.Emitter.Age, SmoothLerpOverTime_Func_Output_NewSmoothValue, Context);
-	bool Result98 = SelectV3Channel_Func_Output_Float < SmoothLerpOverTime_Func_Output_NewSmoothValue;
-	float3 Vector_IfResult10;
-	if(Result98)
+	SmoothLerpOverTime_Func_(Output11, Output12, Constant89, Context.MapSpawn.Emitter.Age, SmoothLerpOverTime_Func_Output_NewSmoothValue, Context);
+	bool Result46 = SelectV3Channel_Func_Output_Float < SmoothLerpOverTime_Func_Output_NewSmoothValue;
+	float3 Vector_IfResult3;
+	if(Result46)
 	{
-	Vector_IfResult10 = GetTriPositionWS_ParticlesStaticMeshOutput_Position;
+	Vector_IfResult3 = GetSkinnedTriangleDataWS_ParticlesSkeletalMeshOutput_Position;
 	}
 	else
 	{
-	Vector_IfResult10 = Context.MapSpawn.Engine.Owner.Position;
+	Vector_IfResult3 = Context.MapSpawn.Engine.Owner.Position;
 	}
-	Context.MapSpawn.Particles.NewPosition = Vector_IfResult10;
+	Context.MapSpawn.Particles.NewPosition_Skeletal = Vector_IfResult3;
 }
 
-void SetVariables_C24DA8694ED1CFDB365D9582A5B9F487_Emitter_Func_(inout FSimulationContext Context)
+void SetVariables_BFEEE889427C7205BC3445B62DDF3240_Emitter_Func_(inout FSimulationContext Context)
 {
-	Context.MapSpawn.Particles.Position = Context.MapSpawn.SetVariables_C24DA8694ED1CFDB365D9582A5B9F487.Particles.Position;
+	Context.MapSpawn.Particles.NewPosition_Skeletal = Context.MapSpawn.SetVariables_BFEEE889427C7205BC3445B62DDF3240.Particles.NewPosition_Skeletal;
+}
+
+void SampleSkeletalMeshSurface_Emitter_Func_(inout FSimulationContext Context)
+{
+	int Constant105 = (0);
+	bool Constant106 = false;
+	int Constant107 = 0;
+	int Constant108 = (0);
+	NiagaraRandInfo GetRandomInfo_Emitter_Determinism_false_Particle_Particle_Particle_Func_Output_RandomInfo2;
+	bool GetRandomInfo_Emitter_Determinism_false_Particle_Particle_Particle_Func_Output_UseDeterministicRandoms2;
+	GetRandomInfo_Emitter_Determinism_false_Particle_Particle_Particle_Func_(Context.MapSpawn.Constants.Emitter.SampleSkeletalMeshSurface.RandomSeed, Constant105, Context.MapSpawn.SampleSkeletalMeshSurface.OverrideSeed, Constant107, Constant108, Context.MapSpawn.SampleSkeletalMeshSurface.FixedRandomSeed, Context.MapSpawn.SampleSkeletalMeshSurface.RandomnessMode, GetRandomInfo_Emitter_Determinism_false_Particle_Particle_Particle_Func_Output_RandomInfo2, GetRandomInfo_Emitter_Determinism_false_Particle_Particle_Particle_Func_Output_UseDeterministicRandoms2, Context);
+	MeshTriCoordinate RandomTriCoord_MeshOutput_Coord;
+	RandomTriCoord_Mesh(GetRandomInfo_Emitter_Determinism_false_Particle_Particle_Particle_Func_Output_RandomInfo2, RandomTriCoord_MeshOutput_Coord);
+	bool Constant109 = false;
+	Context.MapSpawn.Local.SampleSkeletalMeshSurface.MeshTriCoord = RandomTriCoord_MeshOutput_Coord;
+	Context.MapSpawn.Particles.DummyEmitterDeterminism = Constant109;
+	bool Constant110 = false;
+	int Constant111 = 0;
+	bool Result47 = Context.MapSpawn.SampleSkeletalMeshSurface.SampledPositionCoordinateSpace == Constant111;
+	int Constant112 = 2;
+	bool Result48 = Context.MapSpawn.SampleSkeletalMeshSurface.SampledPositionCoordinateSpace == Constant112;
+	bool Constant113 = true;
+	bool Constant114 = false;
+	bool bool_IfResult;
+	if(Result48)
+	{
+	bool_IfResult = Constant113;
+	}
+	else
+	{
+	bool_IfResult = Constant114;
+	}
+	bool bool_IfResult1;
+	if(Result47)
+	{
+	bool_IfResult1 = Constant110;
+	}
+	else
+	{
+	bool_IfResult1 = bool_IfResult;
+	}
+	int Constant115 = 0;
+	bool Result49 = Context.MapSpawn.SampleSkeletalMeshSurface.SampledVelocityCoordinateSpace == Constant115;
+	int Constant116 = 2;
+	bool Result50 = Context.MapSpawn.SampleSkeletalMeshSurface.SampledVelocityCoordinateSpace == Constant116;
+	bool Constant117 = true;
+	bool Constant118 = false;
+	bool bool_IfResult2;
+	if(Result50)
+	{
+	bool_IfResult2 = Constant117;
+	}
+	else
+	{
+	bool_IfResult2 = Constant118;
+	}
+	bool bool_IfResult3;
+	if(Result49)
+	{
+	bool_IfResult3 = Constant110;
+	}
+	else
+	{
+	bool_IfResult3 = bool_IfResult2;
+	}
+	int Constant119 = 0;
+	bool Result51 = Context.MapSpawn.SampleSkeletalMeshSurface.SampledSurfaceCoordinateSpace == Constant119;
+	bool Constant120 = false;
+	int Constant121 = 2;
+	bool Result52 = Context.MapSpawn.SampleSkeletalMeshSurface.SampledSurfaceCoordinateSpace == Constant121;
+	bool Constant122 = true;
+	bool Constant123 = false;
+	bool bool_IfResult4;
+	if(Result52)
+	{
+	bool_IfResult4 = Constant122;
+	}
+	else
+	{
+	bool_IfResult4 = Constant123;
+	}
+	bool bool_IfResult5;
+	if(Result51)
+	{
+	bool_IfResult5 = Constant120;
+	}
+	else
+	{
+	bool_IfResult5 = bool_IfResult4;
+	}
+	Context.MapSpawn.Local.SampleSkeletalMeshSurface.PositionBool = bool_IfResult1;
+	Context.MapSpawn.Local.SampleSkeletalMeshSurface.VelocityBool = bool_IfResult3;
+	Context.MapSpawn.Local.SampleSkeletalMeshSurface.SurfaceBool = bool_IfResult5;
+	float Result53 = GetSpawnInterpolation();
+	float3 GetSkinnedTriangleDataInterpolated_MeshOutput_Position;
+	float3 GetSkinnedTriangleDataInterpolated_MeshOutput_Velocity;
+	float3 GetSkinnedTriangleDataInterpolated_MeshOutput_Normal;
+	float3 GetSkinnedTriangleDataInterpolated_MeshOutput_Binormal;
+	float3 GetSkinnedTriangleDataInterpolated_MeshOutput_Tangent;
+	GetSkinnedTriangleDataInterpolated_Mesh(Context.MapSpawn.Local.SampleSkeletalMeshSurface.MeshTriCoord, Result53, GetSkinnedTriangleDataInterpolated_MeshOutput_Position, GetSkinnedTriangleDataInterpolated_MeshOutput_Velocity, GetSkinnedTriangleDataInterpolated_MeshOutput_Normal, GetSkinnedTriangleDataInterpolated_MeshOutput_Binormal, GetSkinnedTriangleDataInterpolated_MeshOutput_Tangent);
+	float3 GetSkinnedTriangleData_MeshOutput_Position;
+	float3 GetSkinnedTriangleData_MeshOutput_Velocity;
+	float3 GetSkinnedTriangleData_MeshOutput_Normal;
+	float3 GetSkinnedTriangleData_MeshOutput_Binormal;
+	float3 GetSkinnedTriangleData_MeshOutput_Tangent;
+	GetSkinnedTriangleData_Mesh(Context.MapSpawn.Local.SampleSkeletalMeshSurface.MeshTriCoord, GetSkinnedTriangleData_MeshOutput_Position, GetSkinnedTriangleData_MeshOutput_Velocity, GetSkinnedTriangleData_MeshOutput_Normal, GetSkinnedTriangleData_MeshOutput_Binormal, GetSkinnedTriangleData_MeshOutput_Tangent);
+	float3 Position_IfResult;
+	float3 Velocity_IfResult;
+	float3 Normal_IfResult;
+	float3 Binormal_IfResult;
+	float3 Tangent_IfResult;
+	if(Context.MapSpawn.SampleSkeletalMeshSurface.InterpolateSurfaceSampling)
+	{
+	Position_IfResult = GetSkinnedTriangleDataInterpolated_MeshOutput_Position;
+	Velocity_IfResult = GetSkinnedTriangleDataInterpolated_MeshOutput_Velocity;
+	Normal_IfResult = GetSkinnedTriangleDataInterpolated_MeshOutput_Normal;
+	Binormal_IfResult = GetSkinnedTriangleDataInterpolated_MeshOutput_Binormal;
+	Tangent_IfResult = GetSkinnedTriangleDataInterpolated_MeshOutput_Tangent;
+	}
+	else
+	{
+	Position_IfResult = GetSkinnedTriangleData_MeshOutput_Position;
+	Velocity_IfResult = GetSkinnedTriangleData_MeshOutput_Velocity;
+	Normal_IfResult = GetSkinnedTriangleData_MeshOutput_Normal;
+	Binormal_IfResult = GetSkinnedTriangleData_MeshOutput_Binormal;
+	Tangent_IfResult = GetSkinnedTriangleData_MeshOutput_Tangent;
+	}
+	float3 GetSkinnedTriangleDataWSInterpolated_MeshOutput_Position;
+	float3 GetSkinnedTriangleDataWSInterpolated_MeshOutput_Velocity;
+	float3 GetSkinnedTriangleDataWSInterpolated_MeshOutput_Normal;
+	float3 GetSkinnedTriangleDataWSInterpolated_MeshOutput_Binormal;
+	float3 GetSkinnedTriangleDataWSInterpolated_MeshOutput_Tangent;
+	GetSkinnedTriangleDataWSInterpolated_Mesh(Context.MapSpawn.Local.SampleSkeletalMeshSurface.MeshTriCoord, Result53, GetSkinnedTriangleDataWSInterpolated_MeshOutput_Position, GetSkinnedTriangleDataWSInterpolated_MeshOutput_Velocity, GetSkinnedTriangleDataWSInterpolated_MeshOutput_Normal, GetSkinnedTriangleDataWSInterpolated_MeshOutput_Binormal, GetSkinnedTriangleDataWSInterpolated_MeshOutput_Tangent);
+	float3 GetSkinnedTriangleDataWS_MeshOutput_Position;
+	float3 GetSkinnedTriangleDataWS_MeshOutput_Velocity;
+	float3 GetSkinnedTriangleDataWS_MeshOutput_Normal;
+	float3 GetSkinnedTriangleDataWS_MeshOutput_Binormal;
+	float3 GetSkinnedTriangleDataWS_MeshOutput_Tangent;
+	GetSkinnedTriangleDataWS_Mesh(Context.MapSpawn.Local.SampleSkeletalMeshSurface.MeshTriCoord, GetSkinnedTriangleDataWS_MeshOutput_Position, GetSkinnedTriangleDataWS_MeshOutput_Velocity, GetSkinnedTriangleDataWS_MeshOutput_Normal, GetSkinnedTriangleDataWS_MeshOutput_Binormal, GetSkinnedTriangleDataWS_MeshOutput_Tangent);
+	float3 Position_IfResult1;
+	float3 Velocity_IfResult1;
+	float3 Normal_IfResult1;
+	float3 Binormal_IfResult1;
+	float3 Tangent_IfResult1;
+	if(Context.MapSpawn.SampleSkeletalMeshSurface.InterpolateSurfaceSampling)
+	{
+	Position_IfResult1 = GetSkinnedTriangleDataWSInterpolated_MeshOutput_Position;
+	Velocity_IfResult1 = GetSkinnedTriangleDataWSInterpolated_MeshOutput_Velocity;
+	Normal_IfResult1 = GetSkinnedTriangleDataWSInterpolated_MeshOutput_Normal;
+	Binormal_IfResult1 = GetSkinnedTriangleDataWSInterpolated_MeshOutput_Binormal;
+	Tangent_IfResult1 = GetSkinnedTriangleDataWSInterpolated_MeshOutput_Tangent;
+	}
+	else
+	{
+	Position_IfResult1 = GetSkinnedTriangleDataWS_MeshOutput_Position;
+	Velocity_IfResult1 = GetSkinnedTriangleDataWS_MeshOutput_Velocity;
+	Normal_IfResult1 = GetSkinnedTriangleDataWS_MeshOutput_Normal;
+	Binormal_IfResult1 = GetSkinnedTriangleDataWS_MeshOutput_Binormal;
+	Tangent_IfResult1 = GetSkinnedTriangleDataWS_MeshOutput_Tangent;
+	}
+	float3 Position_IfResult2;
+	if(Context.MapSpawn.Local.SampleSkeletalMeshSurface.PositionBool)
+	{
+	Position_IfResult2 = Position_IfResult;
+	}
+	else
+	{
+	Position_IfResult2 = Position_IfResult1;
+	}
+	float3 Velocity_IfResult2;
+	if(Context.MapSpawn.Local.SampleSkeletalMeshSurface.VelocityBool)
+	{
+	Velocity_IfResult2 = Velocity_IfResult;
+	}
+	else
+	{
+	Velocity_IfResult2 = Velocity_IfResult1;
+	}
+	float3 Normal_IfResult2;
+	float3 Binormal_IfResult2;
+	float3 Tangent_IfResult2;
+	if(Context.MapSpawn.Local.SampleSkeletalMeshSurface.SurfaceBool)
+	{
+	Normal_IfResult2 = Normal_IfResult;
+	Binormal_IfResult2 = Binormal_IfResult;
+	Tangent_IfResult2 = Tangent_IfResult;
+	}
+	else
+	{
+	Normal_IfResult2 = Normal_IfResult1;
+	Binormal_IfResult2 = Binormal_IfResult1;
+	Tangent_IfResult2 = Tangent_IfResult1;
+	}
+	float2 GetTriUV_MeshOutput_UV;
+	GetTriUV_Mesh(Context.MapSpawn.Local.SampleSkeletalMeshSurface.MeshTriCoord, Context.MapSpawn.Constants.Emitter.SampleSkeletalMeshSurface.UVIndex, GetTriUV_MeshOutput_UV);
+	float4 GetTriColor_MeshOutput_Color;
+	GetTriColor_Mesh(Context.MapSpawn.Local.SampleSkeletalMeshSurface.MeshTriCoord, GetTriColor_MeshOutput_Color);
+	Context.MapSpawn.Particles.SampleSkeletalMeshSurface.MeshPosition = Position_IfResult2;
+	Context.MapSpawn.Particles.SampleSkeletalMeshSurface.MeshVelocity = Velocity_IfResult2;
+	Context.MapSpawn.Particles.SampleSkeletalMeshSurface.MeshNormal = Normal_IfResult2;
+	Context.MapSpawn.Particles.SampleSkeletalMeshSurface.MeshBitangent = Binormal_IfResult2;
+	Context.MapSpawn.Particles.SampleSkeletalMeshSurface.MeshTangent = Tangent_IfResult2;
+	Context.MapSpawn.Particles.SampleSkeletalMeshSurface.MeshUV = GetTriUV_MeshOutput_UV;
+	Context.MapSpawn.Particles.SampleSkeletalMeshSurface.MeshColor = GetTriColor_MeshOutput_Color;
 }
 
 void UpdateAge_Emitter_Func_(inout FSimulationContext Context)
 {
-	float Result99 = Context.MapUpdate.Particles.Age + Context.MapUpdate.UpdateAge.DeltaTime;
-	float Constant148 = 1e-05;
-	float Result100 = max(Context.MapUpdate.UpdateAge.Lifetime, Constant148);
-	float Constant149 = 0.0001;
-	float Result101 = Result100 - Constant149;
-	bool Result102 = Result99 < Result101;
-	bool Constant150 = false;
-	bool bool_IfResult;
-	if(Result102)
+	float Result54 = Context.MapUpdate.Particles.Age + Context.MapUpdate.UpdateAge.DeltaTime;
+	float Constant125 = 1e-05;
+	float Result55 = max(Context.MapUpdate.UpdateAge.Lifetime, Constant125);
+	float Constant126 = 0.0001;
+	float Result56 = Result55 - Constant126;
+	bool Result57 = Result54 < Result56;
+	bool Constant127 = false;
+	bool bool_IfResult6;
+	if(Result57)
 	{
-	bool_IfResult = Context.MapUpdate.DataInstance.Alive;
+	bool_IfResult6 = Context.MapUpdate.DataInstance.Alive;
 	}
 	else
 	{
-	bool_IfResult = Constant150;
+	bool_IfResult6 = Constant127;
 	}
-	float Result103 = Result99 / Result100;
-	Context.MapUpdate.DataInstance.Alive = bool_IfResult;
-	Context.MapUpdate.Particles.Age = Result99;
-	Context.MapUpdate.Particles.NormalizedAge = Result103;
+	float Result58 = Result54 / Result55;
+	Context.MapUpdate.DataInstance.Alive = bool_IfResult6;
+	Context.MapUpdate.Particles.Age = Result54;
+	Context.MapUpdate.Particles.NormalizedAge = Result58;
+}
+
+void ColorFromCurve_Emitter_Func_(out float4 Out_Value, inout FSimulationContext Context)
+{
+	float4 SampleColorCurve_ColorColorCurveOutput_Value;
+	SampleColorCurve_ColorColorCurve(Context.MapUpdate.ColorFromCurve.CurveIndex, SampleColorCurve_ColorColorCurveOutput_Value);
+	Out_Value = SampleColorCurve_ColorColorCurveOutput_Value;
+}
+
+void MakeVector3_FromColor001_Emitter_Func_(out float3 Out_Vector, inout FSimulationContext Context)
+{
+	float3 VECTOR_VAR;
+	VECTOR_VAR.x = Context.MapUpdate.MakeVector3_FromColor001.Color.r;
+	VECTOR_VAR.y = Context.MapUpdate.MakeVector3_FromColor001.Color.g;
+	VECTOR_VAR.z = Context.MapUpdate.MakeVector3_FromColor001.Color.b;
+	Out_Vector = VECTOR_VAR;
+}
+
+void Color_Emitter_Func_(inout FSimulationContext Context)
+{
+	float3 Output0;
+	float Output2;
+	Output0.x = Context.MapUpdate.Color.Color.r;
+	Output0.y = Context.MapUpdate.Color.Color.g;
+	Output0.z = Context.MapUpdate.Color.Color.b;
+	Output2 = Context.MapUpdate.Color.Color.a;
+	float3 Result59 = Output0 * Context.MapUpdate.Color.ScaleColor;
+	float Result60 = Output2 * Context.MapUpdate.Constants.Emitter.Color.ScaleAlpha;
+	float Result61 = Result60 * Context.MapUpdate.Emitter.AlphaScale;
+	float4 Output01;
+	Output01.g = Result59.y;
+	Output01.a = Result61;
+	Output01.r = Result59.x;
+	Output01.b = Result59.z;
+	Context.MapUpdate.Particles.Color = Output01;
+}
+
+void FloatFromCurve001_Emitter_Func_(out float Out_Value, inout FSimulationContext Context)
+{
+	float SampleCurve_ConvergenceRateParticlesPositionFloatCurveOutput_Value;
+	SampleCurve_ConvergenceRateParticlesPositionFloatCurve(Context.MapUpdate.FloatFromCurve001.CurveIndex, SampleCurve_ConvergenceRateParticlesPositionFloatCurveOutput_Value);
+	float Result62 = SampleCurve_ConvergenceRateParticlesPositionFloatCurveOutput_Value * Context.MapUpdate.Constants.Emitter.FloatFromCurve001.ScaleCurve;
+	Out_Value = Result62;
+}
+
+void SmoothLerpOverTime_Func_(float3 In_SmoothValue, float3 In_TargetValue, float In_ConvergenceRate, float In_DeltaTime, out float3 Out_NewSmoothValue, inout FSimulationContext Context)
+{
+	float Result63 = In_ConvergenceRate * In_DeltaTime;
+	float Constant129 = 0;
+	float Constant130 = 1;
+	float Result64 = clamp(Result63,Constant129,Constant130);
+	float3 Result65 = lerp(In_SmoothValue,In_TargetValue,Result64);
+	Out_NewSmoothValue = Result65;
+}
+
+void SmoothLerpOverTime_Vector_Emitter_Func_(out float3 Out_NewSmoothValue, inout FSimulationContext Context)
+{
+	float3 SmoothLerpOverTime_Func_Output_NewSmoothValue1;
+	SmoothLerpOverTime_Func_(Context.MapUpdate.SmoothLerpOverTime_Vector.SmoothValue, Context.MapUpdate.SmoothLerpOverTime_Vector.TargetValue, Context.MapUpdate.SmoothLerpOverTime_Vector.ConvergenceRate, Context.MapUpdate.Engine.DeltaTime, SmoothLerpOverTime_Func_Output_NewSmoothValue1, Context);
+	Out_NewSmoothValue = SmoothLerpOverTime_Func_Output_NewSmoothValue1;
+}
+
+void SetVariables_C24DA8694ED1CFDB365D9582A5B9F487_Emitter_Func_(inout FSimulationContext Context)
+{
+	Context.MapUpdate.Particles.Position = Context.MapUpdate.SetVariables_C24DA8694ED1CFDB365D9582A5B9F487.Particles.Position;
 }
 
 float GetSpawnInterpolation()
@@ -6115,6 +6065,7 @@ void InterpolateParameters(inout FSimulationContext Context)
 	Context.MapSpawn.Interpolation.Emitter_SpawnGroup = Emitter_SpawnGroup;
 	Context.MapSpawn.Engine.Owner.Position = lerp(PREV_Engine_Owner_Position.xyz, Engine_Owner_Position.xyz, SpawnInterp);
 	Context.MapSpawn.Emitter.Age = lerp(PREV_Emitter_Age, Emitter_Age, SpawnInterp);
+	Context.MapSpawn.Emitter.AlphaScale = lerp(PREV_Emitter_AlphaScale, Emitter_AlphaScale, SpawnInterp);
 	Context.MapSpawn.Engine.Time = lerp(PREV_Engine_Time, Engine_Time, SpawnInterp);
 	Context.MapSpawn.Engine.DeltaTime = 0.0f;
 	Context.MapSpawn.Engine.InverseDeltaTime = 0.0f;
@@ -6149,142 +6100,137 @@ void SimulateMapSpawn(inout FSimulationContext Context)
 	float Constant6 = 0;
 	Context.MapSpawn.Particles.MaterialRandom = Constant6;
 	float3 Constant7 = float3(0.0,0.0,0.0);
-	Context.MapSpawn.Particles.NewPosition = Constant7;
-	float Constant8 = 0;
-	Context.MapSpawn.Particles.Age = Constant8;
-	float Constant9 = (0.0);
-	Context.MapSpawn.Particles.NormalizedAge = Constant9;
+	Context.MapSpawn.Particles.NewPosition_Skeletal = Constant7;
+	bool Constant8 = (false);
+	Context.MapSpawn.Particles.DummyEmitterDeterminism = Constant8;
+	float3 Constant9 = float3(0.0,0.0,0.0);
+	Context.MapSpawn.Particles.SampleSkeletalMeshSurface.MeshPosition = Constant9;
+	float3 Constant10 = float3(0.0,0.0,0.0);
+	Context.MapSpawn.Particles.SampleSkeletalMeshSurface.MeshVelocity = Constant10;
+	float3 Constant11 = float3(0.0,0.0,0.0);
+	Context.MapSpawn.Particles.SampleSkeletalMeshSurface.MeshNormal = Constant11;
+	float3 Constant12 = float3(0.0,0.0,0.0);
+	Context.MapSpawn.Particles.SampleSkeletalMeshSurface.MeshBitangent = Constant12;
+	float3 Constant13 = float3(0.0,0.0,0.0);
+	Context.MapSpawn.Particles.SampleSkeletalMeshSurface.MeshTangent = Constant13;
+	float2 Constant14 = float2(0.0,0.0);
+	Context.MapSpawn.Particles.SampleSkeletalMeshSurface.MeshUV = Constant14;
+	float4 Constant15 = float4(1.0,1.0,1.0,1.0);
+	Context.MapSpawn.Particles.SampleSkeletalMeshSurface.MeshColor = Constant15;
+	float Constant16 = 0;
+	Context.MapSpawn.Particles.Age = Constant16;
+	float Constant17 = (0.0);
+	Context.MapSpawn.Particles.NormalizedAge = Constant17;
+	float3 Constant18 = float3(0,0,0);
+	Context.MapSpawn.Particles.NewPosition = Constant18;
 
-	bool Constant10 = false;
-	Context.MapSpawn.UniformRangedFloat005.OverrideRandomness = Constant10;
-	int Constant11 = 0;
-	Context.MapSpawn.UniformRangedFloat005.RandomnessMode = Constant11;
-	bool Constant12 = false;
-	Context.MapSpawn.UniformRangedFloat005.OverrideSeed = Constant12;
-	bool Constant13 = false;
-	Context.MapSpawn.UniformRangedFloat005.FixedRandomSeed = Constant13;
+	bool Constant19 = false;
+	Context.MapSpawn.UniformRangedFloat005.OverrideRandomness = Constant19;
+	int Constant20 = 0;
+	Context.MapSpawn.UniformRangedFloat005.RandomnessMode = Constant20;
+	bool Constant21 = false;
+	Context.MapSpawn.UniformRangedFloat005.OverrideSeed = Constant21;
+	bool Constant22 = false;
+	Context.MapSpawn.UniformRangedFloat005.FixedRandomSeed = Constant22;
 	float UniformRangedFloat005_Emitter_Func_Output_UniformRangedFloat;
 	UniformRangedFloat005_Emitter_Func_(UniformRangedFloat005_Emitter_Func_Output_UniformRangedFloat, Context);
 	Context.MapSpawn.NormalizedAngleToDegrees001.NormalizedAngle = UniformRangedFloat005_Emitter_Func_Output_UniformRangedFloat;
-	bool Constant28 = false;
-	Context.MapSpawn.UniformRangedFloat004.OverrideRandomness = Constant28;
-	int Constant29 = 0;
-	Context.MapSpawn.UniformRangedFloat004.RandomnessMode = Constant29;
-	bool Constant30 = false;
-	Context.MapSpawn.UniformRangedFloat004.OverrideSeed = Constant30;
-	bool Constant31 = false;
-	Context.MapSpawn.UniformRangedFloat004.FixedRandomSeed = Constant31;
+	bool Constant37 = false;
+	Context.MapSpawn.UniformRangedFloat004.OverrideRandomness = Constant37;
+	int Constant38 = 0;
+	Context.MapSpawn.UniformRangedFloat004.RandomnessMode = Constant38;
+	bool Constant39 = false;
+	Context.MapSpawn.UniformRangedFloat004.OverrideSeed = Constant39;
+	bool Constant40 = false;
+	Context.MapSpawn.UniformRangedFloat004.FixedRandomSeed = Constant40;
 	float UniformRangedFloat004_Emitter_Func_Output_UniformRangedFloat;
 	UniformRangedFloat004_Emitter_Func_(UniformRangedFloat004_Emitter_Func_Output_UniformRangedFloat, Context);
-	bool Constant34 = true;
-	bool Constant35 = true;
+	bool Constant43 = true;
+	bool Constant44 = true;
 	float NormalizedAngleToDegrees001_Emitter_Func_Output_NewOutput;
 	NormalizedAngleToDegrees001_Emitter_Func_(NormalizedAngleToDegrees001_Emitter_Func_Output_NewOutput, Context);
-	bool Constant37 = false;
-	bool Constant38 = false;
+	bool Constant46 = false;
+	bool Constant47 = false;
 	float3 ParticleOwnerPosition_Emitter_Func_Output_OutPosition;
 	ParticleOwnerPosition_Emitter_Func_(ParticleOwnerPosition_Emitter_Func_Output_OutPosition, Context);
-	bool Constant41 = false;
-	bool Constant42 = true;
-	bool Constant43 = false;
-	Context.MapSpawn.UniformRangedFloat003.OverrideRandomness = Constant43;
-	int Constant44 = 0;
-	Context.MapSpawn.UniformRangedFloat003.RandomnessMode = Constant44;
-	bool Constant45 = false;
-	Context.MapSpawn.UniformRangedFloat003.OverrideSeed = Constant45;
-	bool Constant46 = false;
-	Context.MapSpawn.UniformRangedFloat003.FixedRandomSeed = Constant46;
+	bool Constant50 = false;
+	bool Constant51 = true;
+	bool Constant52 = false;
+	Context.MapSpawn.UniformRangedFloat003.OverrideRandomness = Constant52;
+	int Constant53 = 0;
+	Context.MapSpawn.UniformRangedFloat003.RandomnessMode = Constant53;
+	bool Constant54 = false;
+	Context.MapSpawn.UniformRangedFloat003.OverrideSeed = Constant54;
+	bool Constant55 = false;
+	Context.MapSpawn.UniformRangedFloat003.FixedRandomSeed = Constant55;
 	float UniformRangedFloat003_Emitter_Func_Output_UniformRangedFloat;
 	UniformRangedFloat003_Emitter_Func_(UniformRangedFloat003_Emitter_Func_Output_UniformRangedFloat, Context);
 	Context.MapSpawn.InitializeParticle.Mass = UniformRangedFloat004_Emitter_Func_Output_UniformRangedFloat;
-	Context.MapSpawn.InitializeParticle.WriteColor = Constant34;
-	Context.MapSpawn.InitializeParticle.WriteSpriteRotation = Constant35;
+	Context.MapSpawn.InitializeParticle.WriteColor = Constant43;
+	Context.MapSpawn.InitializeParticle.WriteSpriteRotation = Constant44;
 	Context.MapSpawn.InitializeParticle.SpriteRotation = NormalizedAngleToDegrees001_Emitter_Func_Output_NewOutput;
-	Context.MapSpawn.InitializeParticle.WritePosition = Constant37;
+	Context.MapSpawn.InitializeParticle.WritePosition = Constant46;
 	Context.MapSpawn.InitializeParticle.Position = ParticleOwnerPosition_Emitter_Func_Output_OutPosition;
-	Context.MapSpawn.InitializeParticle.WriteMass = Constant41;
-	Context.MapSpawn.InitializeParticle.WriteSpriteSize = Constant42;
+	Context.MapSpawn.InitializeParticle.WriteMass = Constant50;
+	Context.MapSpawn.InitializeParticle.WriteSpriteSize = Constant51;
 	Context.MapSpawn.InitializeParticle.Lifetime = UniformRangedFloat003_Emitter_Func_Output_UniformRangedFloat;
-	bool Constant49 = true;
-	Context.MapSpawn.InitializeParticle.WriteLifetime = Constant49;
-	bool Constant50 = false;
-	Context.MapSpawn.InitializeParticle.WriteScale = Constant50;
+	bool Constant58 = true;
+	Context.MapSpawn.InitializeParticle.WriteLifetime = Constant58;
+	bool Constant59 = false;
+	Context.MapSpawn.InitializeParticle.WriteScale = Constant59;
 	float3 InitializeParticle_SimulationPosition_Emitter_Func_Output_OutPosition;
 	InitializeParticle_SimulationPosition_Emitter_Func_(InitializeParticle_SimulationPosition_Emitter_Func_Output_OutPosition, Context);
 	Context.MapSpawn.Particles.Position = InitializeParticle_SimulationPosition_Emitter_Func_Output_OutPosition;
-	bool Constant53 = true;
-	Context.MapSpawn.InitializeParticle.WriteMaterialRandom = Constant53;
-	float Constant54 = 0;
-	float Constant55 = 1;
-	int Constant56 = -1;
-	int Constant57 = 0;
-	bool Constant58 = false;
+	bool Constant62 = true;
+	Context.MapSpawn.InitializeParticle.WriteMaterialRandom = Constant62;
+	float Constant63 = 0;
+	float Constant64 = 1;
+	int Constant65 = -1;
+	int Constant66 = 0;
+	bool Constant67 = false;
 	float RandomRange_Func_Output_Result3;
-	RandomRange_Func_(Constant54, Constant55, Constant56, Constant57, Constant58, RandomRange_Func_Output_Result3, Context);
+	RandomRange_Func_(Constant63, Constant64, Constant65, Constant66, Constant67, RandomRange_Func_Output_Result3, Context);
 	Context.MapSpawn.InitializeParticle.MaterialRandom = RandomRange_Func_Output_Result3;
 	EnterStatScope(1 );
 	InitializeParticle_Emitter_Func_(Context);
 	ExitStatScope( );
-	bool Constant64 = true;
-	bool Constant65 = false;
-	Context.MapSpawn.CylinderLocation.SurfaceOnly = Constant64;
-	Context.MapSpawn.CylinderLocation.UseEndcapsInSurfaceOnlyMode = Constant65;
-	bool Constant66 = false;
-	Context.MapSpawn.CylinderLocation.OverrideSeed = Constant66;
-	bool Constant67 = false;
-	Context.MapSpawn.CylinderLocation.OverrideRandomness = Constant67;
-	int Constant68 = 0;
-	Context.MapSpawn.CylinderLocation.RandomnessMode = Constant68;
-	float3 Constant69 = float3(0.0,0.0,0.0);
-	Context.MapSpawn.Local.CylinderLocation.RandomDirection = Constant69;
-	float Constant70 = (0.0);
-	Context.MapSpawn.Local.CylinderLocation.RandomRatio = Constant70;
-	float Constant71 = (0.0);
-	Context.MapSpawn.Local.CylinderLocation.RandomAngle = Constant71;
-	float Constant72 = (0.0);
-	Context.MapSpawn.Local.CylinderLocation.RandomZ = Constant72;
-	float Constant73 = (0.0);
-	Context.MapSpawn.Local.CylinderLocation.RandomRadius = Constant73;
-	bool Constant74 = (false);
-	Context.MapSpawn.Local.CylinderLocation.SurfaceOnly = Constant74;
-	bool Constant75 = (false);
-	Context.MapSpawn.Local.CylinderLocation.UseEndcapsSurfaceOnly = Constant75;
-	float Constant76 = (0.0);
-	Context.MapSpawn.Local.CylinderLocation.CylinderHeight = Constant76;
-	float Constant77 = (0.0);
-	Context.MapSpawn.Local.CylinderLocation.CylinderRadius = Constant77;
-	float Constant78 = (0.0);
-	Context.MapSpawn.Local.CylinderLocation.EndcapRatio = Constant78;
-	bool Constant79 = false;
-	Context.MapSpawn.CylinderLocation.HemisphereX = Constant79;
-	bool Constant80 = false;
-	Context.MapSpawn.CylinderLocation.HemisphereY = Constant80;
-	float Constant81 = (0.0);
-	Context.MapSpawn.Local.CylinderLocation.XAxis = Constant81;
-	float Constant82 = (0.0);
-	Context.MapSpawn.Local.CylinderLocation.YAxis = Constant82;
-	float Constant83 = (0.0);
-	Context.MapSpawn.Local.CylinderLocation.SurfaceOnlyZAxis = Constant83;
-	float Constant84 = (0.0);
-	Context.MapSpawn.Local.CylinderLocation.Endcaps = Constant84;
-	float3 Constant85 = float3(0.0,0.0,0.0);
-	Context.MapSpawn.Local.CylinderLocation.CylinderVector = Constant85;
-	bool Constant86 = false;
-	Context.MapSpawn.CylinderLocation.EnableLatheProfile = Constant86;
-	int Constant87 = 2;
-	Context.MapSpawn.CylinderLocation.OrientationAxis = Constant87;
-	Context.MapSpawn.CylinderLocation.CylinderOrigin = Context.MapSpawn.Particles.Position;
-	int Constant88 = 2;
-	Context.MapSpawn.CylinderLocation.CoordinateSpace = Constant88;
 	EnterStatScope(2 );
-	CylinderLocation_Emitter_Func_(Context);
+	SampleMeshScript_Skeletal_Emitter_Func_(Context);
 	ExitStatScope( );
+	Context.MapSpawn.SetVariables_BFEEE889427C7205BC3445B62DDF3240.Particles.NewPosition_Skeletal = Context.MapSpawn.Particles.NewPosition_Skeletal;
 	EnterStatScope(3 );
-	SampleMeshScript001_Emitter_Func_(Context);
+	SetVariables_BFEEE889427C7205BC3445B62DDF3240_Emitter_Func_(Context);
 	ExitStatScope( );
-	Context.MapSpawn.SetVariables_C24DA8694ED1CFDB365D9582A5B9F487.Particles.Position = Context.MapSpawn.Particles.NewPosition;
+	int Constant92 = 0;
+	float3 Constant93 = float3(0.5,0.5,0.5);
+	MeshTriCoordinate Output13;
+	Output13.Tri = Constant92;
+	Output13.BaryCoord = Constant93;
+	Context.MapSpawn.SampleSkeletalMeshSurface.DirectTriCoordinate = Output13;
+	int Constant94 = 0;
+	Context.MapSpawn.SampleSkeletalMeshSurface.RandomnessMode = Constant94;
+	bool Constant95 = false;
+	Context.MapSpawn.SampleSkeletalMeshSurface.OverrideSeed = Constant95;
+	bool Constant96 = false;
+	Context.MapSpawn.SampleSkeletalMeshSurface.FixedRandomSeed = Constant96;
+	MeshTriCoordinate Constant97 = (MeshTriCoordinate)0;
+	Context.MapSpawn.Local.SampleSkeletalMeshSurface.MeshTriCoord = Constant97;
+	int Constant98 = 0;
+	Context.MapSpawn.SampleSkeletalMeshSurface.SampledPositionCoordinateSpace = Constant98;
+	int Constant99 = 0;
+	Context.MapSpawn.SampleSkeletalMeshSurface.SampledVelocityCoordinateSpace = Constant99;
+	int Constant100 = 0;
+	Context.MapSpawn.SampleSkeletalMeshSurface.SampledSurfaceCoordinateSpace = Constant100;
+	bool Constant101 = (false);
+	Context.MapSpawn.Local.SampleSkeletalMeshSurface.PositionBool = Constant101;
+	bool Constant102 = (false);
+	Context.MapSpawn.Local.SampleSkeletalMeshSurface.VelocityBool = Constant102;
+	bool Constant103 = (false);
+	Context.MapSpawn.Local.SampleSkeletalMeshSurface.SurfaceBool = Constant103;
+	bool Constant104 = true;
+	Context.MapSpawn.SampleSkeletalMeshSurface.InterpolateSurfaceSampling = Constant104;
 	EnterStatScope(4 );
-	SetVariables_C24DA8694ED1CFDB365D9582A5B9F487_Emitter_Func_(Context);
+	SampleSkeletalMeshSurface_Emitter_Func_(Context);
 	ExitStatScope( );
 
 
@@ -6297,207 +6243,537 @@ void SimulateMapSpawn(inout FSimulationContext Context)
 void SimulateMapUpdate(inout FSimulationContext Context)
 {
 
-	bool Constant147 = true;
-	Context.MapUpdate.DataInstance.Alive = Constant147;
+	bool Constant124 = true;
+	Context.MapUpdate.DataInstance.Alive = Constant124;
 	Context.MapUpdate.UpdateAge.DeltaTime = Context.MapUpdate.Engine.DeltaTime;
 	Context.MapUpdate.UpdateAge.Lifetime = Context.MapUpdate.Particles.Lifetime;
 	EnterStatScope(5 );
 	UpdateAge_Emitter_Func_(Context);
 	ExitStatScope( );
+	float4 Constant128 = float4(1,1,1,1);
+	Context.MapUpdate.OUTPUT_VAR.SampleTexture.SampledColor = Constant128;
+	Context.MapUpdate.MakeVector3_FromColor001.Color = Context.MapUpdate.OUTPUT_VAR.SampleTexture.SampledColor;
+	Context.MapUpdate.ColorFromCurve.CurveIndex = Context.MapUpdate.Particles.NormalizedAge;
+	float4 ColorFromCurve_Emitter_Func_Output_Value;
+	ColorFromCurve_Emitter_Func_(ColorFromCurve_Emitter_Func_Output_Value, Context);
+	float3 MakeVector3_FromColor001_Emitter_Func_Output_Vector;
+	MakeVector3_FromColor001_Emitter_Func_(MakeVector3_FromColor001_Emitter_Func_Output_Vector, Context);
+	Context.MapUpdate.Color.Color = ColorFromCurve_Emitter_Func_Output_Value;
+	Context.MapUpdate.Color.ScaleColor = MakeVector3_FromColor001_Emitter_Func_Output_Vector;
+	EnterStatScope(6 );
+	Color_Emitter_Func_(Context);
+	ExitStatScope( );
+	Context.MapUpdate.FloatFromCurve001.CurveIndex = Context.MapUpdate.Particles.NormalizedAge;
+	float FloatFromCurve001_Emitter_Func_Output_Value;
+	FloatFromCurve001_Emitter_Func_(FloatFromCurve001_Emitter_Func_Output_Value, Context);
+	Context.MapUpdate.SmoothLerpOverTime_Vector.SmoothValue = Context.MapUpdate.Particles.Position;
+	Context.MapUpdate.SmoothLerpOverTime_Vector.TargetValue = Context.MapUpdate.Particles.NewPosition;
+	Context.MapUpdate.SmoothLerpOverTime_Vector.ConvergenceRate = FloatFromCurve001_Emitter_Func_Output_Value;
+	float3 SmoothLerpOverTime_Vector_Emitter_Func_Output_NewSmoothValue;
+	SmoothLerpOverTime_Vector_Emitter_Func_(SmoothLerpOverTime_Vector_Emitter_Func_Output_NewSmoothValue, Context);
+	Context.MapUpdate.SetVariables_C24DA8694ED1CFDB365D9582A5B9F487.Particles.Position = SmoothLerpOverTime_Vector_Emitter_Func_Output_NewSmoothValue;
+	EnterStatScope(7 );
+	SetVariables_C24DA8694ED1CFDB365D9582A5B9F487_Emitter_Func_(Context);
+	ExitStatScope( );
 
 
 
 }
-
-Buffer<float> CurveLUT_LatheProfile;
-float MinTime_LatheProfile;
-float MaxTime_LatheProfile;
-float InvTimeRange_LatheProfile;
-
-float TimeToLUTFraction_LatheProfile(float T)
+#line 1459 "/Engine/Generated/NiagaraEmitterInstance.ush"
+#line 1 "/Plugin/FX/Niagara/Private/NiagaraDataInterfaceSkeletalMesh.ush"
+#line 9 "/Plugin/FX/Niagara/Private/NiagaraDataInterfaceSkeletalMesh.ush"
+struct FDISkelMeshContext
 {
-	return saturate((T - MinTime_LatheProfile) * InvTimeRange_LatheProfile);
+	Buffer<uint> MeshIndexBuffer;
+	Buffer<float> MeshVertexBuffer;
+	Buffer<uint> MeshSkinWeightBuffer;
+	Buffer<float4> MeshCurrBonesBuffer;
+	Buffer<float4> MeshPrevBonesBuffer;
+	Buffer<float4> MeshCurrSamplingBonesBuffer;
+    Buffer<float4> MeshPrevSamplingBonesBuffer;
+	Buffer<float4> MeshTangentBuffer;
+	Buffer<float2> MeshTexCoordBuffer;
+    Buffer<float4> MeshColorBuffer;
+	Buffer<float> MeshTriangleSamplerProbaBuffer;
+	Buffer<uint> MeshTriangleSamplerAliasBuffer;
+	Buffer<uint> MeshTriangleMatricesOffsetBuffer;
+	uint MeshTriangleCount;
+	uint MeshVertexCount;
+    uint MeshWeightStride;
+	uint MeshNumTexCoord;
+	uint MeshNumWeights;
+	uint NumSpecificBones;
+	Buffer<uint> SpecificBones;
+	uint NumSpecificSockets;
+	uint SpecificSocketBoneOffset;
+	float4x4 InstanceTransform;
+	float4x4 InstancePrevTransform;
+	float InstanceInvDeltaTime;
+	bool UniformTriangleSamplingEnable;
+};
+
+
+
+
+struct FDISkelMeshSkinnedVertex
+{
+	float3 Position;
+	float3 PrevPosition;
+	float3 TangentX;
+	float3 TangentY;
+	float3 TangentZ;
+};
+
+float3x4 DISkelMesh_GetPrevBoneSkinningMatrix(in FDISkelMeshContext DIContext, uint Bone)
+{
+    return float3x4(DIContext.MeshPrevBonesBuffer[Bone * 3], DIContext.MeshPrevBonesBuffer[Bone * 3 + 1], DIContext.MeshPrevBonesBuffer[Bone * 3 + 2]);
 }
-float SampleCurve_LatheProfile(float T)
+
+float3x4 DISkelMesh_GetPrevSkinningMatrix(in FDISkelMeshContext DIContext, uint VertexIndex, int4 BlendIndices, float4 BlendWeights)
 {
-	return CurveLUT_LatheProfile[(uint)T];
+
+    uint MatrixOffset = DIContext.MeshTriangleMatricesOffsetBuffer[VertexIndex];
+
+	float3x4 Result;
+    Result = DISkelMesh_GetPrevBoneSkinningMatrix(DIContext, MatrixOffset + BlendIndices.x) * BlendWeights.x;
+    Result += DISkelMesh_GetPrevBoneSkinningMatrix(DIContext, MatrixOffset + BlendIndices.y) * BlendWeights.y;
+    Result += DISkelMesh_GetPrevBoneSkinningMatrix(DIContext, MatrixOffset + BlendIndices.z) * BlendWeights.z;
+    Result += DISkelMesh_GetPrevBoneSkinningMatrix(DIContext, MatrixOffset + BlendIndices.w) * BlendWeights.w;
+	return Result;
 }
 
-Buffer<uint> IndexBuffer_Particles_StaticMesh;
-Buffer<float> VertexBuffer_Particles_StaticMesh;
-Buffer<float4> TangentBuffer_Particles_StaticMesh;
-Buffer<float2> TexCoordBuffer_Particles_StaticMesh;
-Buffer<float4> ColorBuffer_Particles_StaticMesh;
-Buffer<uint4> SectionBuffer_Particles_StaticMesh;
-Buffer<uint4> TriangleBuffer_Particles_StaticMesh;
-uint SectionCount_Particles_StaticMesh;
-float4x4 InstanceTransform_Particles_StaticMesh;
-float4x4 InstanceTransformInverseTransposed_Particles_StaticMesh;
-float4x4 InstancePrevTransform_Particles_StaticMesh;
-float InstanceInvDeltaTime_Particles_StaticMesh;
-float4 InstanceWorldVelocity_Particles_StaticMesh;
-uint AreaWeightedSamplingName_Particles_StaticMesh;
-uint NumTexCoordName_Particles_StaticMesh;
-Buffer<uint> IndexBuffer_Particles_StaticMesh001;
-Buffer<float> VertexBuffer_Particles_StaticMesh001;
-Buffer<float4> TangentBuffer_Particles_StaticMesh001;
-Buffer<float2> TexCoordBuffer_Particles_StaticMesh001;
-Buffer<float4> ColorBuffer_Particles_StaticMesh001;
-Buffer<uint4> SectionBuffer_Particles_StaticMesh001;
-Buffer<uint4> TriangleBuffer_Particles_StaticMesh001;
-uint SectionCount_Particles_StaticMesh001;
-float4x4 InstanceTransform_Particles_StaticMesh001;
-float4x4 InstanceTransformInverseTransposed_Particles_StaticMesh001;
-float4x4 InstancePrevTransform_Particles_StaticMesh001;
-float InstanceInvDeltaTime_Particles_StaticMesh001;
-float4 InstanceWorldVelocity_Particles_StaticMesh001;
-uint AreaWeightedSamplingName_Particles_StaticMesh001;
-uint NumTexCoordName_Particles_StaticMesh001;
-void SampleCurve_LatheProfile(in float In_X, out float Out_Value)
+float3x4 DISkelMesh_GetCurrBoneSkinningMatrix(in FDISkelMeshContext DIContext, uint Bone)
 {
-	float RemappedX = TimeToLUTFraction_LatheProfile(In_X) * 127;
+	return float3x4(DIContext.MeshCurrBonesBuffer[Bone * 3], DIContext.MeshCurrBonesBuffer[Bone * 3 + 1], DIContext.MeshCurrBonesBuffer[Bone * 3 + 2]);
+}
+
+float3x4 DISkelMesh_GetCurrSkinningMatrix(in FDISkelMeshContext DIContext, uint VertexIndex, int4 BlendIndices, float4 BlendWeights)
+{
+
+	uint MatrixOffset = DIContext.MeshTriangleMatricesOffsetBuffer[VertexIndex];
+
+	float3x4 Result;
+    Result = DISkelMesh_GetCurrBoneSkinningMatrix(DIContext, MatrixOffset + BlendIndices.x) * BlendWeights.x;
+    Result += DISkelMesh_GetCurrBoneSkinningMatrix(DIContext, MatrixOffset + BlendIndices.y) * BlendWeights.y;
+    Result += DISkelMesh_GetCurrBoneSkinningMatrix(DIContext, MatrixOffset + BlendIndices.z) * BlendWeights.z;
+    Result += DISkelMesh_GetCurrBoneSkinningMatrix(DIContext, MatrixOffset + BlendIndices.w) * BlendWeights.w;
+	return Result;
+}
+
+int4 DISkelMesh_UnpackIndices4(uint Packed)
+{
+	return int4(Packed & 0xff, Packed >> 8 & 0xff, Packed >> 16 & 0xff, Packed >> 24 & 0xff);
+}
+
+float4 DISkelMesh_UnpackWeights4(uint Packed)
+{
+	return float4(Packed & 0xff, Packed >> 8 & 0xff, Packed >> 16 & 0xff, Packed >> 24 & 0xff) / 255.0f;
+}
+
+FDISkelMeshSkinnedVertex DISkelMesh_GetSkinnedVertex(in FDISkelMeshContext DIContext, uint VertexIndex)
+{
+
+	float3 CurrPosition = float3(DIContext.MeshVertexBuffer[VertexIndex * 3], DIContext.MeshVertexBuffer[VertexIndex * 3 + 1], DIContext.MeshVertexBuffer[VertexIndex * 3 + 2]);
+	float3 PrevPosition = CurrPosition;
+
+	float3 TangentX =  (DIContext.MeshTangentBuffer[VertexIndex * 2 ].xyz) ;
+	float4 TangentZ =  (DIContext.MeshTangentBuffer[VertexIndex * 2 + 1].xyzw) ;
+
+	if ( DIContext.MeshNumWeights > 0 )
+	{
+		float3x4 PrevBoneMatrix;
+		float3x4 CurrBoneMatrix;
+#line 126 "/Plugin/FX/Niagara/Private/NiagaraDataInterfaceSkeletalMesh.ush"
+        int4 BlendIndices = DISkelMesh_UnpackIndices4(DIContext.MeshSkinWeightBuffer[VertexIndex * DIContext.MeshWeightStride]);
+        float4 BlendWeights = DISkelMesh_UnpackWeights4(DIContext.MeshSkinWeightBuffer[VertexIndex * DIContext.MeshWeightStride + 1]);
+        CurrBoneMatrix = DISkelMesh_GetCurrSkinningMatrix(DIContext, VertexIndex, BlendIndices, BlendWeights);
+        PrevBoneMatrix = DISkelMesh_GetPrevSkinningMatrix(DIContext, VertexIndex, BlendIndices, BlendWeights);
+
+
+		CurrPosition = mul(CurrBoneMatrix, float4(CurrPosition, 1.0f)).xyz;
+		PrevPosition = mul(PrevBoneMatrix, float4(PrevPosition, 1.0f)).xyz;
+
+
+		TangentX.xyz = mul(CurrBoneMatrix, float4(TangentX.xyz, 0.0f)).xyz;
+		TangentZ.xyz = mul(CurrBoneMatrix, float4(TangentZ.xyz, 0.0f)).xyz;
+	}
+
+	FDISkelMeshSkinnedVertex SkinnedVertex;
+	SkinnedVertex.Position = CurrPosition;
+	SkinnedVertex.PrevPosition = PrevPosition;
+	SkinnedVertex.TangentX = TangentX;
+	SkinnedVertex.TangentY = cross(TangentZ.xyz, TangentX.xyz);
+	SkinnedVertex.TangentZ = TangentZ.xyz;
+	return SkinnedVertex;
+}
+
+FDISkelMeshSkinnedVertex DISkelMesh_GetSkinnedPointOnTriangle(in FDISkelMeshContext DIContext, uint TriangleIndex, float3 BaryCoord)
+{
+	uint IndexBufferOffset = TriangleIndex * 3;
+	uint VertexIndex0 = DIContext.MeshIndexBuffer[IndexBufferOffset];
+	uint VertexIndex1 = DIContext.MeshIndexBuffer[IndexBufferOffset + 1];
+	uint VertexIndex2 = DIContext.MeshIndexBuffer[IndexBufferOffset + 2];
+
+	FDISkelMeshSkinnedVertex SkinnedVertex0 = DISkelMesh_GetSkinnedVertex(DIContext, VertexIndex0);
+	FDISkelMeshSkinnedVertex SkinnedVertex1 = DISkelMesh_GetSkinnedVertex(DIContext, VertexIndex1);
+	FDISkelMeshSkinnedVertex SkinnedVertex2 = DISkelMesh_GetSkinnedVertex(DIContext, VertexIndex2);
+
+	FDISkelMeshSkinnedVertex FinalVertex;
+	FinalVertex.Position = (SkinnedVertex0.Position * BaryCoord.x) + (SkinnedVertex1.Position * BaryCoord.y) + (SkinnedVertex2.Position * BaryCoord.z);
+	FinalVertex.PrevPosition = (SkinnedVertex0.PrevPosition * BaryCoord.x) + (SkinnedVertex1.PrevPosition * BaryCoord.y) + (SkinnedVertex2.PrevPosition * BaryCoord.z);
+	FinalVertex.TangentX = (SkinnedVertex0.TangentX * BaryCoord.x) + (SkinnedVertex1.TangentX * BaryCoord.y) + (SkinnedVertex2.TangentX * BaryCoord.z);
+	FinalVertex.TangentY = (SkinnedVertex0.TangentY * BaryCoord.x) + (SkinnedVertex1.TangentY * BaryCoord.y) + (SkinnedVertex2.TangentY * BaryCoord.z);
+	FinalVertex.TangentZ = (SkinnedVertex0.TangentZ * BaryCoord.x) + (SkinnedVertex1.TangentZ * BaryCoord.y) + (SkinnedVertex2.TangentZ * BaryCoord.z);
+
+	return FinalVertex;
+}
+
+FDISkelMeshSkinnedVertex DISkelMesh_GetSkinnedPointOnTriangleWS(in FDISkelMeshContext DIContext, uint TriangleIndex, float3 BaryCoord)
+{
+	FDISkelMeshSkinnedVertex FinalVertex = DISkelMesh_GetSkinnedPointOnTriangle(DIContext, TriangleIndex, BaryCoord);
+	FinalVertex.Position = mul(float4(FinalVertex.Position, 1.0f), DIContext.InstanceTransform).xyz;
+	FinalVertex.PrevPosition = mul(float4(FinalVertex.PrevPosition, 1.0f), DIContext.InstancePrevTransform).xyz;
+	FinalVertex.TangentX = mul(float4(FinalVertex.TangentX, 0.0f), DIContext.InstanceTransform).xyz;
+	FinalVertex.TangentY = mul(float4(FinalVertex.TangentY, 0.0f), DIContext.InstanceTransform).xyz;
+	FinalVertex.TangentZ = mul(float4(FinalVertex.TangentZ, 0.0f), DIContext.InstanceTransform).xyz;
+
+	return FinalVertex;
+}
+
+void DISKelMesh_RandomTriCoord(in FDISkelMeshContext DIContext, out uint OutTriangle, out float3 OutBaryCoord)
+{
+	float RandT0 = NiagaraInternalNoise(1, 2, 3);
+
+	[branch]
+	if ( !DIContext.UniformTriangleSamplingEnable )
+	{
+
+		OutTriangle = min(uint(RandT0 * float(DIContext.MeshTriangleCount)), DIContext.MeshTriangleCount - 1);
+	}
+	else
+	{
+
+		uint TriangleIndex = min(uint(RandT0*float(DIContext.MeshTriangleCount)), DIContext.MeshTriangleCount - 1);
+		float TriangleProbability = DIContext.MeshTriangleSamplerProbaBuffer[TriangleIndex];
+
+
+		float RandT1 = NiagaraInternalNoise(1, 2, 3);
+		if( RandT1 > TriangleProbability )
+		{
+			TriangleIndex = DIContext.MeshTriangleSamplerAliasBuffer[TriangleIndex];
+		}
+		OutTriangle = TriangleIndex;
+	}
+
+	float r0 = NiagaraInternalNoise(1, 2, 3);
+	float r1 = NiagaraInternalNoise(1, 2, 3);
+	float sqrt0 = sqrt(r0);
+	float sqrt1 = sqrt(r1);
+	OutBaryCoord = float3(1.0f - sqrt0, sqrt0 * (1.0 - r1), r1 * sqrt0);
+}
+
+void DISKelMesh_GetSkinnedTriangleDataWS(in FDISkelMeshContext DIContext, in uint TriangleIndex, in float3 BaryCoord, out float3 OutPosition, out float3 OutVelocity, out float3 OutNormal, out float3 OutBinormal, out float3 OutTangent)
+{
+    FDISkelMeshSkinnedVertex SkinnedVertex = DISkelMesh_GetSkinnedPointOnTriangleWS(DIContext, TriangleIndex, BaryCoord);
+	OutPosition = SkinnedVertex.Position;
+	OutVelocity = (SkinnedVertex.Position - SkinnedVertex.PrevPosition) * DIContext.InstanceInvDeltaTime;
+	OutNormal = normalize(SkinnedVertex.TangentZ);
+	OutBinormal = normalize(SkinnedVertex.TangentY);
+	OutTangent = normalize(SkinnedVertex.TangentX);
+}
+
+void DISKelMesh_GetSkinnedTriangleData(in FDISkelMeshContext DIContext, in uint TriangleIndex, in float3 BaryCoord, out float3 OutPosition, out float3 OutVelocity, out float3 OutNormal, out float3 OutBinormal, out float3 OutTangent)
+{
+    FDISkelMeshSkinnedVertex SkinnedVertex = DISkelMesh_GetSkinnedPointOnTriangle(DIContext, TriangleIndex, BaryCoord);
+	OutPosition = SkinnedVertex.Position;
+	OutVelocity = (SkinnedVertex.Position - SkinnedVertex.PrevPosition) * DIContext.InstanceInvDeltaTime;
+	OutNormal = normalize(SkinnedVertex.TangentZ);
+	OutBinormal = normalize(SkinnedVertex.TangentY);
+	OutTangent = normalize(SkinnedVertex.TangentX);
+}
+
+void DISKelMesh_GetSkinnedTriangleDataInterpolatedWS(in FDISkelMeshContext DIContext, in uint TriangleIndex, in float3 BaryCoord, in float Interp, out float3 OutPosition, out float3 OutVelocity, out float3 OutNormal, out float3 OutBinormal, out float3 OutTangent)
+{
+    FDISkelMeshSkinnedVertex SkinnedVertex = DISkelMesh_GetSkinnedPointOnTriangleWS(DIContext, TriangleIndex, BaryCoord);
+	OutPosition = lerp(SkinnedVertex.PrevPosition, SkinnedVertex.Position, Interp);
+	OutVelocity = (SkinnedVertex.Position - SkinnedVertex.PrevPosition) * DIContext.InstanceInvDeltaTime;
+	OutNormal = normalize(SkinnedVertex.TangentZ);
+	OutBinormal = normalize(SkinnedVertex.TangentY);
+	OutTangent = normalize(SkinnedVertex.TangentX);
+}
+
+void DISKelMesh_GetSkinnedTriangleDataInterpolated(in FDISkelMeshContext DIContext, in uint TriangleIndex, in float3 BaryCoord, in float Interp, out float3 OutPosition, out float3 OutVelocity, out float3 OutNormal, out float3 OutBinormal, out float3 OutTangent)
+{
+    FDISkelMeshSkinnedVertex SkinnedVertex = DISkelMesh_GetSkinnedPointOnTriangle(DIContext, TriangleIndex, BaryCoord);
+	OutPosition = lerp(SkinnedVertex.PrevPosition, SkinnedVertex.Position, Interp);
+	OutVelocity = (SkinnedVertex.Position - SkinnedVertex.PrevPosition) * DIContext.InstanceInvDeltaTime;
+	OutNormal = normalize(SkinnedVertex.TangentZ);
+	OutBinormal = normalize(SkinnedVertex.TangentY);
+	OutTangent = normalize(SkinnedVertex.TangentX);
+}
+
+void DISKelMesh_GetTriUV(in FDISkelMeshContext DIContext, in uint TriangleIndex, in float3 BaryCoord, in int UVSet, out float2 OutUV)
+{
+    if (DIContext.MeshNumTexCoord > 0)
+	{
+        uint IndexBufferOffset = TriangleIndex * 3;
+		uint VertexIndex0 = DIContext.MeshIndexBuffer[IndexBufferOffset ];
+		uint VertexIndex1 = DIContext.MeshIndexBuffer[IndexBufferOffset+1];
+		uint VertexIndex2 = DIContext.MeshIndexBuffer[IndexBufferOffset+2];
+
+        uint Stride = DIContext.MeshNumTexCoord;
+        uint SelectedUVSet = clamp((uint) UVSet, 0, DIContext.MeshNumTexCoord - 1);
+		float2 UV0 = DIContext.MeshTexCoordBuffer[VertexIndex0 * Stride + SelectedUVSet];
+		float2 UV1 = DIContext.MeshTexCoordBuffer[VertexIndex1 * Stride + SelectedUVSet];
+		float2 UV2 = DIContext.MeshTexCoordBuffer[VertexIndex2 * Stride + SelectedUVSet];
+
+		OutUV = UV0 * BaryCoord.x + UV1 * BaryCoord.y + UV2 * BaryCoord.z;
+	}
+	else
+	{
+		OutUV = 0.0f;
+	}
+}
+
+
+
+
+float4 QuatSlerp(float4 Quat1, float4 Quat2, float Slerp)
+{
+    const float RawCosom = dot(Quat1, Quat2);
+    const float Cosom = abs(RawCosom);
+
+    float Scale0, Scale1;
+    if (Cosom < 0.9999f)
+    {
+        const float Omega = acos(Cosom);
+        const float InvSin = 1.f / sin(Omega);
+        Scale0 = sin((1.f - Slerp) * Omega) * InvSin;
+        Scale1 = sin(Slerp * Omega) * InvSin;
+    }
+    else
+    {
+        Scale0 = 1.0f - Slerp;
+        Scale1 = Slerp;
+    }
+
+
+    Scale1 = RawCosom >= 0.0f ? Scale1 : -Scale1;
+
+    return (Scale0 * Quat1) + (Scale1 * Quat2);
+}
+
+void DISkelMesh_GetSkinnedBoneCommon(in FDISkelMeshContext DIContext, in int Bone, in float Interp, in bool bWorldSpace, out float3 OutPosition, out float4 OutRotation, out float3 OutVelocity)
+{
+    float3 PrevPosition = DIContext.MeshPrevSamplingBonesBuffer[Bone * 2].xyz;
+    float4 PrevRotation = DIContext.MeshPrevSamplingBonesBuffer[Bone * 2 + 1];
+    float3 CurrPosition = DIContext.MeshCurrSamplingBonesBuffer[Bone * 2].xyz;
+    float4 CurrRotation = DIContext.MeshCurrSamplingBonesBuffer[Bone * 2 + 1];
+
+    if (bWorldSpace)
+    {
+        PrevPosition = mul(float4(PrevPosition, 1), DIContext.InstancePrevTransform).xyz;
+        CurrPosition = mul(float4(CurrPosition, 1), DIContext.InstanceTransform).xyz;
+    }
+    CurrPosition = lerp(PrevPosition, CurrPosition, Interp);
+
+    OutPosition = CurrPosition;
+    OutRotation = QuatSlerp(PrevRotation, CurrRotation, Interp);
+    OutVelocity = (CurrPosition - PrevPosition) * DIContext.InstanceInvDeltaTime;
+}
+
+void DISkelMesh_GetSkinnedBone(in FDISkelMeshContext DIContext, in int Bone, out float3 OutPosition, out float4 OutRotation, out float3 OutVelocity)
+{
+    DISkelMesh_GetSkinnedBoneCommon(DIContext, Bone, 1.0f, false, OutPosition, OutRotation, OutVelocity);
+}
+
+void DISkelMesh_GetSkinnedBoneInterpolated(in FDISkelMeshContext DIContext, in int Bone, in float Interp, out float3 OutPosition, out float4 OutRotation, out float3 OutVelocity)
+{
+    DISkelMesh_GetSkinnedBoneCommon(DIContext, Bone, Interp, false, OutPosition, OutRotation, OutVelocity);
+}
+
+void DISkelMesh_GetSkinnedBoneWS(in FDISkelMeshContext DIContext, in int Bone, out float3 OutPosition, out float4 OutRotation, out float3 OutVelocity)
+{
+    DISkelMesh_GetSkinnedBoneCommon(DIContext, Bone, 1.0f, true, OutPosition, OutRotation, OutVelocity);
+}
+
+void DISkelMesh_GetSkinnedBoneInterpolatedWS(in FDISkelMeshContext DIContext, in int Bone, in float Interp, out float3 OutPosition, out float4 OutRotation, out float3 OutVelocity)
+{
+    DISkelMesh_GetSkinnedBoneCommon(DIContext, Bone, Interp, true, OutPosition, OutRotation, OutVelocity);
+}
+
+
+
+
+void DISkelMesh_GetTriVertices(in FDISkelMeshContext DIContext, in uint TriangleIndex, out int VertexIndex0, out int VertexIndex1, out int VertexIndex2)
+{
+    uint IndexBufferOffset = TriangleIndex * 3;
+    VertexIndex0 = DIContext.MeshIndexBuffer[IndexBufferOffset];
+    VertexIndex1 = DIContext.MeshIndexBuffer[IndexBufferOffset + 1];
+    VertexIndex2 = DIContext.MeshIndexBuffer[IndexBufferOffset + 2];
+}
+
+void DISkelMesh_GetTriColor(in FDISkelMeshContext DIContext, in uint TriangleIndex, in float3 BaryCoord, out float4 OutColor)
+{
+    uint IndexBufferOffset = TriangleIndex * 3;
+    uint VertexIndex0 = DIContext.MeshIndexBuffer[IndexBufferOffset];
+    uint VertexIndex1 = DIContext.MeshIndexBuffer[IndexBufferOffset + 1];
+    uint VertexIndex2 = DIContext.MeshIndexBuffer[IndexBufferOffset + 2];
+    OutColor = (DIContext.MeshColorBuffer[VertexIndex0] * BaryCoord.x) + (DIContext.MeshColorBuffer[VertexIndex1] * BaryCoord.y) + (DIContext.MeshColorBuffer[VertexIndex2] * BaryCoord.z);
+}
+
+void DISkelMesh_GetRandomVertex(in FDISkelMeshContext DIContext, out int OutVertex)
+{
+    float RandT0 = NiagaraInternalNoise(1, 2, 3);
+    OutVertex = min(uint(RandT0 * float(DIContext.MeshVertexCount)), DIContext.MeshVertexCount - 1);
+}
+
+void DISkelMesh_IsValidVertex(in FDISkelMeshContext DIContext, in int Vertex, out bool IsValid)
+{
+    IsValid = Vertex < (int)DIContext.MeshVertexCount;
+}
+
+void DISkelMesh_GetSkinnedVertex(in FDISkelMeshContext DIContext, in int VertexIndex, out float3 OutPosition, out float3 OutVelocity)
+{
+    FDISkelMeshSkinnedVertex SkinnedVertex = DISkelMesh_GetSkinnedVertex(DIContext, VertexIndex);
+    OutPosition = SkinnedVertex.Position;
+    OutVelocity = (SkinnedVertex.Position - SkinnedVertex.PrevPosition) * DIContext.InstanceInvDeltaTime;
+}
+
+void DISkelMesh_GetSkinnedVertexWS(in FDISkelMeshContext DIContext, in int VertexIndex, out float3 OutPosition, out float3 OutVelocity)
+{
+    FDISkelMeshSkinnedVertex SkinnedVertex = DISkelMesh_GetSkinnedVertex(DIContext, VertexIndex);
+    OutPosition = mul(float4(SkinnedVertex.Position, 1.0f), DIContext.InstanceTransform).xyz;
+    float3 PrevPosition = mul(float4(SkinnedVertex.PrevPosition, 1.0f), DIContext.InstancePrevTransform).xyz;
+    OutVelocity = (OutPosition - PrevPosition) * DIContext.InstanceInvDeltaTime;
+}
+
+void DISkelMesh_GetVertexColor(in FDISkelMeshContext DIContext, in int VertexIndex, out float4 OutColor)
+{
+    OutColor = DIContext.MeshColorBuffer[VertexIndex];
+}
+
+void DISkelMesh_GetVertexUV(in FDISkelMeshContext DIContext, in int VertexIndex, in int UVSet, out float2 OutUV)
+{
+    if (DIContext.MeshNumTexCoord > 0)
+    {
+        uint Stride = DIContext.MeshNumTexCoord;
+        uint SelectedUVSet = clamp((uint) UVSet, 0, DIContext.MeshNumTexCoord - 1);
+        OutUV = DIContext.MeshTexCoordBuffer[VertexIndex * Stride + SelectedUVSet];
+    }
+    else
+    {
+        OutUV = 0.0f;
+    }
+}
+
+
+
+void DISkelMesh_GetSpecificBoneCount(in FDISkelMeshContext DIContext, out int Count)
+{
+    Count = DIContext.NumSpecificBones;
+}
+
+void DISkelMesh_GetSpecificBoneAt(in FDISkelMeshContext DIContext, in int InBoneIndex, out int Bone)
+{
+    Bone = (int)DIContext.SpecificBones[InBoneIndex];
+}
+
+void DISkelMesh_RandomSpecificBone(in FDISkelMeshContext DIContext, out int Bone)
+{
+    float RandT0 = NiagaraInternalNoise(1, 2, 3);
+    Bone = min(uint(RandT0 * float(DIContext.NumSpecificBones)), DIContext.NumSpecificBones - 1);
+}
+
+void DISkelMesh_GetSpecificSocketCount(in FDISkelMeshContext DIContext, out int Count)
+{
+    Count = DIContext.NumSpecificSockets;
+}
+
+void DISkelMesh_GetSpecificSocketBoneAt(in FDISkelMeshContext DIContext, in int InSocketIndex, out int Bone)
+{
+    Bone = (int)DIContext.SpecificSocketBoneOffset + clamp(InSocketIndex, 0, (int)DIContext.NumSpecificSockets);
+}
+
+void DISkelMesh_RandomSpecificSocketBone(in FDISkelMeshContext DIContext, out int SocketBone)
+{
+    float RandT0 = NiagaraInternalNoise(1, 2, 3);
+    SocketBone = min(uint(RandT0 * float(DIContext.NumSpecificSockets)), DIContext.NumSpecificSockets - 1);
+}
+#line 1460 "/Engine/Generated/NiagaraEmitterInstance.ush"
+Buffer<uint> MeshIndexBuffer_Particles_SkeletalMesh ; Buffer<float> MeshVertexBuffer_Particles_SkeletalMesh ; Buffer<uint> MeshSkinWeightBuffer_Particles_SkeletalMesh ; Buffer<float4> MeshCurrBonesBuffer_Particles_SkeletalMesh ; Buffer<float4> MeshPrevBonesBuffer_Particles_SkeletalMesh ; Buffer<float4> MeshCurrSamplingBonesBuffer_Particles_SkeletalMesh ; Buffer<float4> MeshPrevSamplingBonesBuffer_Particles_SkeletalMesh ; Buffer<float4> MeshTangentBuffer_Particles_SkeletalMesh ; Buffer<float2> MeshTexCoordBuffer_Particles_SkeletalMesh ; Buffer<float4> MeshColorBuffer_Particles_SkeletalMesh ; Buffer<float> MeshTriangleSamplerProbaBuffer_Particles_SkeletalMesh ; Buffer<uint> MeshTriangleSamplerAliasBuffer_Particles_SkeletalMesh ; Buffer<uint> MeshTriangleMatricesOffsetBuffer_Particles_SkeletalMesh ; uint MeshTriangleCount_Particles_SkeletalMesh ; uint MeshVertexCount_Particles_SkeletalMesh ; uint MeshWeightStride_Particles_SkeletalMesh ; uint MeshNumTexCoord_Particles_SkeletalMesh ; uint MeshNumWeights_Particles_SkeletalMesh ; uint NumSpecificBones_Particles_SkeletalMesh ; Buffer<uint> SpecificBones_Particles_SkeletalMesh ; uint NumSpecificSockets_Particles_SkeletalMesh ; uint SpecificSocketBoneOffset_Particles_SkeletalMesh ; float4x4 InstanceTransform_Particles_SkeletalMesh ; float4x4 InstancePrevTransform_Particles_SkeletalMesh ; float InstanceInvDeltaTime_Particles_SkeletalMesh ; uint EnabledFeatures_Particles_SkeletalMesh ;
+Buffer<uint> MeshIndexBuffer_Mesh ; Buffer<float> MeshVertexBuffer_Mesh ; Buffer<uint> MeshSkinWeightBuffer_Mesh ; Buffer<float4> MeshCurrBonesBuffer_Mesh ; Buffer<float4> MeshPrevBonesBuffer_Mesh ; Buffer<float4> MeshCurrSamplingBonesBuffer_Mesh ; Buffer<float4> MeshPrevSamplingBonesBuffer_Mesh ; Buffer<float4> MeshTangentBuffer_Mesh ; Buffer<float2> MeshTexCoordBuffer_Mesh ; Buffer<float4> MeshColorBuffer_Mesh ; Buffer<float> MeshTriangleSamplerProbaBuffer_Mesh ; Buffer<uint> MeshTriangleSamplerAliasBuffer_Mesh ; Buffer<uint> MeshTriangleMatricesOffsetBuffer_Mesh ; uint MeshTriangleCount_Mesh ; uint MeshVertexCount_Mesh ; uint MeshWeightStride_Mesh ; uint MeshNumTexCoord_Mesh ; uint MeshNumWeights_Mesh ; uint NumSpecificBones_Mesh ; Buffer<uint> SpecificBones_Mesh ; uint NumSpecificSockets_Mesh ; uint SpecificSocketBoneOffset_Mesh ; float4x4 InstanceTransform_Mesh ; float4x4 InstancePrevTransform_Mesh ; float InstanceInvDeltaTime_Mesh ; uint EnabledFeatures_Mesh ;
+
+Buffer<float> CurveLUT_Color_ColorCurve;
+float MinTime_Color_ColorCurve;
+float MaxTime_Color_ColorCurve;
+float InvTimeRange_Color_ColorCurve;
+
+float TimeToLUTFraction_Color_ColorCurve(float T)
+{
+	return saturate((T - MinTime_Color_ColorCurve) * InvTimeRange_Color_ColorCurve);
+}
+float SampleCurve_Color_ColorCurve(float T)
+{
+	return CurveLUT_Color_ColorCurve[(uint)T];
+}
+
+
+Buffer<float> CurveLUT_ConvergenceRate_Particles_Position_FloatCurve;
+float MinTime_ConvergenceRate_Particles_Position_FloatCurve;
+float MaxTime_ConvergenceRate_Particles_Position_FloatCurve;
+float InvTimeRange_ConvergenceRate_Particles_Position_FloatCurve;
+
+float TimeToLUTFraction_ConvergenceRate_Particles_Position_FloatCurve(float T)
+{
+	return saturate((T - MinTime_ConvergenceRate_Particles_Position_FloatCurve) * InvTimeRange_ConvergenceRate_Particles_Position_FloatCurve);
+}
+float SampleCurve_ConvergenceRate_Particles_Position_FloatCurve(float T)
+{
+	return CurveLUT_ConvergenceRate_Particles_Position_FloatCurve[(uint)T];
+}
+
+void RandomTriCoord_ParticlesSkeletalMesh (out MeshTriCoordinate OutCoord) {  FDISkelMeshContext DIContext; DIContext.MeshIndexBuffer = MeshIndexBuffer_Particles_SkeletalMesh ; DIContext.MeshVertexBuffer = MeshVertexBuffer_Particles_SkeletalMesh ; DIContext.MeshSkinWeightBuffer = MeshSkinWeightBuffer_Particles_SkeletalMesh ; DIContext.MeshCurrBonesBuffer = MeshCurrBonesBuffer_Particles_SkeletalMesh ; DIContext.MeshPrevBonesBuffer = MeshPrevBonesBuffer_Particles_SkeletalMesh ; DIContext.MeshCurrSamplingBonesBuffer = MeshCurrSamplingBonesBuffer_Particles_SkeletalMesh ; DIContext.MeshPrevSamplingBonesBuffer = MeshPrevSamplingBonesBuffer_Particles_SkeletalMesh ; DIContext.MeshTangentBuffer = MeshTangentBuffer_Particles_SkeletalMesh ; DIContext.MeshTexCoordBuffer = MeshTexCoordBuffer_Particles_SkeletalMesh ; DIContext.MeshColorBuffer = MeshColorBuffer_Particles_SkeletalMesh ; DIContext.MeshTriangleSamplerProbaBuffer = MeshTriangleSamplerProbaBuffer_Particles_SkeletalMesh ; DIContext.MeshTriangleSamplerAliasBuffer = MeshTriangleSamplerAliasBuffer_Particles_SkeletalMesh ; DIContext.MeshTriangleMatricesOffsetBuffer = MeshTriangleMatricesOffsetBuffer_Particles_SkeletalMesh ; DIContext.MeshTriangleCount = MeshTriangleCount_Particles_SkeletalMesh ; DIContext.MeshVertexCount = MeshVertexCount_Particles_SkeletalMesh ; DIContext.MeshNumTexCoord = MeshNumTexCoord_Particles_SkeletalMesh ; DIContext.MeshNumWeights = MeshNumWeights_Particles_SkeletalMesh ; DIContext.NumSpecificBones = NumSpecificBones_Particles_SkeletalMesh ; DIContext.SpecificBones = SpecificBones_Particles_SkeletalMesh ; DIContext.NumSpecificSockets = NumSpecificSockets_Particles_SkeletalMesh ; DIContext.SpecificSocketBoneOffset = SpecificSocketBoneOffset_Particles_SkeletalMesh ; DIContext.MeshWeightStride = MeshWeightStride_Particles_SkeletalMesh ; DIContext.InstanceTransform = InstanceTransform_Particles_SkeletalMesh ; DIContext.InstancePrevTransform = InstancePrevTransform_Particles_SkeletalMesh ; DIContext.InstanceInvDeltaTime = InstanceInvDeltaTime_Particles_SkeletalMesh ; DIContext.UniformTriangleSamplingEnable = EnabledFeatures_Particles_SkeletalMesh & 0x1;  DISKelMesh_RandomTriCoord(DIContext, OutCoord.Tri, OutCoord.BaryCoord); }
+void GetSkinnedTriangleDataWS_ParticlesSkeletalMesh (in MeshTriCoordinate InCoord, out float3 OutPosition, out float3 OutVelocity, out float3 OutNormal, out float3 OutBinormal, out float3 OutTangent) {  FDISkelMeshContext DIContext; DIContext.MeshIndexBuffer = MeshIndexBuffer_Particles_SkeletalMesh ; DIContext.MeshVertexBuffer = MeshVertexBuffer_Particles_SkeletalMesh ; DIContext.MeshSkinWeightBuffer = MeshSkinWeightBuffer_Particles_SkeletalMesh ; DIContext.MeshCurrBonesBuffer = MeshCurrBonesBuffer_Particles_SkeletalMesh ; DIContext.MeshPrevBonesBuffer = MeshPrevBonesBuffer_Particles_SkeletalMesh ; DIContext.MeshCurrSamplingBonesBuffer = MeshCurrSamplingBonesBuffer_Particles_SkeletalMesh ; DIContext.MeshPrevSamplingBonesBuffer = MeshPrevSamplingBonesBuffer_Particles_SkeletalMesh ; DIContext.MeshTangentBuffer = MeshTangentBuffer_Particles_SkeletalMesh ; DIContext.MeshTexCoordBuffer = MeshTexCoordBuffer_Particles_SkeletalMesh ; DIContext.MeshColorBuffer = MeshColorBuffer_Particles_SkeletalMesh ; DIContext.MeshTriangleSamplerProbaBuffer = MeshTriangleSamplerProbaBuffer_Particles_SkeletalMesh ; DIContext.MeshTriangleSamplerAliasBuffer = MeshTriangleSamplerAliasBuffer_Particles_SkeletalMesh ; DIContext.MeshTriangleMatricesOffsetBuffer = MeshTriangleMatricesOffsetBuffer_Particles_SkeletalMesh ; DIContext.MeshTriangleCount = MeshTriangleCount_Particles_SkeletalMesh ; DIContext.MeshVertexCount = MeshVertexCount_Particles_SkeletalMesh ; DIContext.MeshNumTexCoord = MeshNumTexCoord_Particles_SkeletalMesh ; DIContext.MeshNumWeights = MeshNumWeights_Particles_SkeletalMesh ; DIContext.NumSpecificBones = NumSpecificBones_Particles_SkeletalMesh ; DIContext.SpecificBones = SpecificBones_Particles_SkeletalMesh ; DIContext.NumSpecificSockets = NumSpecificSockets_Particles_SkeletalMesh ; DIContext.SpecificSocketBoneOffset = SpecificSocketBoneOffset_Particles_SkeletalMesh ; DIContext.MeshWeightStride = MeshWeightStride_Particles_SkeletalMesh ; DIContext.InstanceTransform = InstanceTransform_Particles_SkeletalMesh ; DIContext.InstancePrevTransform = InstancePrevTransform_Particles_SkeletalMesh ; DIContext.InstanceInvDeltaTime = InstanceInvDeltaTime_Particles_SkeletalMesh ; DIContext.UniformTriangleSamplingEnable = EnabledFeatures_Particles_SkeletalMesh & 0x1;  DISKelMesh_GetSkinnedTriangleDataWS(DIContext, InCoord.Tri, InCoord.BaryCoord, OutPosition, OutVelocity, OutNormal, OutBinormal, OutTangent); }
+void GetSkinnedTriangleDataInterpolated_ParticlesSkeletalMesh (in MeshTriCoordinate InCoord, in float InInterp, out float3 OutPosition, out float3 OutVelocity, out float3 OutNormal, out float3 OutBinormal, out float3 OutTangent) {  FDISkelMeshContext DIContext; DIContext.MeshIndexBuffer = MeshIndexBuffer_Particles_SkeletalMesh ; DIContext.MeshVertexBuffer = MeshVertexBuffer_Particles_SkeletalMesh ; DIContext.MeshSkinWeightBuffer = MeshSkinWeightBuffer_Particles_SkeletalMesh ; DIContext.MeshCurrBonesBuffer = MeshCurrBonesBuffer_Particles_SkeletalMesh ; DIContext.MeshPrevBonesBuffer = MeshPrevBonesBuffer_Particles_SkeletalMesh ; DIContext.MeshCurrSamplingBonesBuffer = MeshCurrSamplingBonesBuffer_Particles_SkeletalMesh ; DIContext.MeshPrevSamplingBonesBuffer = MeshPrevSamplingBonesBuffer_Particles_SkeletalMesh ; DIContext.MeshTangentBuffer = MeshTangentBuffer_Particles_SkeletalMesh ; DIContext.MeshTexCoordBuffer = MeshTexCoordBuffer_Particles_SkeletalMesh ; DIContext.MeshColorBuffer = MeshColorBuffer_Particles_SkeletalMesh ; DIContext.MeshTriangleSamplerProbaBuffer = MeshTriangleSamplerProbaBuffer_Particles_SkeletalMesh ; DIContext.MeshTriangleSamplerAliasBuffer = MeshTriangleSamplerAliasBuffer_Particles_SkeletalMesh ; DIContext.MeshTriangleMatricesOffsetBuffer = MeshTriangleMatricesOffsetBuffer_Particles_SkeletalMesh ; DIContext.MeshTriangleCount = MeshTriangleCount_Particles_SkeletalMesh ; DIContext.MeshVertexCount = MeshVertexCount_Particles_SkeletalMesh ; DIContext.MeshNumTexCoord = MeshNumTexCoord_Particles_SkeletalMesh ; DIContext.MeshNumWeights = MeshNumWeights_Particles_SkeletalMesh ; DIContext.NumSpecificBones = NumSpecificBones_Particles_SkeletalMesh ; DIContext.SpecificBones = SpecificBones_Particles_SkeletalMesh ; DIContext.NumSpecificSockets = NumSpecificSockets_Particles_SkeletalMesh ; DIContext.SpecificSocketBoneOffset = SpecificSocketBoneOffset_Particles_SkeletalMesh ; DIContext.MeshWeightStride = MeshWeightStride_Particles_SkeletalMesh ; DIContext.InstanceTransform = InstanceTransform_Particles_SkeletalMesh ; DIContext.InstancePrevTransform = InstancePrevTransform_Particles_SkeletalMesh ; DIContext.InstanceInvDeltaTime = InstanceInvDeltaTime_Particles_SkeletalMesh ; DIContext.UniformTriangleSamplingEnable = EnabledFeatures_Particles_SkeletalMesh & 0x1;  DISKelMesh_GetSkinnedTriangleDataInterpolated(DIContext, InCoord.Tri, InCoord.BaryCoord, InInterp, OutPosition, OutVelocity, OutNormal, OutBinormal, OutTangent); }
+void GetSkinnedTriangleData_ParticlesSkeletalMesh (in MeshTriCoordinate InCoord, out float3 OutPosition, out float3 OutVelocity, out float3 OutNormal, out float3 OutBinormal, out float3 OutTangent) {  FDISkelMeshContext DIContext; DIContext.MeshIndexBuffer = MeshIndexBuffer_Particles_SkeletalMesh ; DIContext.MeshVertexBuffer = MeshVertexBuffer_Particles_SkeletalMesh ; DIContext.MeshSkinWeightBuffer = MeshSkinWeightBuffer_Particles_SkeletalMesh ; DIContext.MeshCurrBonesBuffer = MeshCurrBonesBuffer_Particles_SkeletalMesh ; DIContext.MeshPrevBonesBuffer = MeshPrevBonesBuffer_Particles_SkeletalMesh ; DIContext.MeshCurrSamplingBonesBuffer = MeshCurrSamplingBonesBuffer_Particles_SkeletalMesh ; DIContext.MeshPrevSamplingBonesBuffer = MeshPrevSamplingBonesBuffer_Particles_SkeletalMesh ; DIContext.MeshTangentBuffer = MeshTangentBuffer_Particles_SkeletalMesh ; DIContext.MeshTexCoordBuffer = MeshTexCoordBuffer_Particles_SkeletalMesh ; DIContext.MeshColorBuffer = MeshColorBuffer_Particles_SkeletalMesh ; DIContext.MeshTriangleSamplerProbaBuffer = MeshTriangleSamplerProbaBuffer_Particles_SkeletalMesh ; DIContext.MeshTriangleSamplerAliasBuffer = MeshTriangleSamplerAliasBuffer_Particles_SkeletalMesh ; DIContext.MeshTriangleMatricesOffsetBuffer = MeshTriangleMatricesOffsetBuffer_Particles_SkeletalMesh ; DIContext.MeshTriangleCount = MeshTriangleCount_Particles_SkeletalMesh ; DIContext.MeshVertexCount = MeshVertexCount_Particles_SkeletalMesh ; DIContext.MeshNumTexCoord = MeshNumTexCoord_Particles_SkeletalMesh ; DIContext.MeshNumWeights = MeshNumWeights_Particles_SkeletalMesh ; DIContext.NumSpecificBones = NumSpecificBones_Particles_SkeletalMesh ; DIContext.SpecificBones = SpecificBones_Particles_SkeletalMesh ; DIContext.NumSpecificSockets = NumSpecificSockets_Particles_SkeletalMesh ; DIContext.SpecificSocketBoneOffset = SpecificSocketBoneOffset_Particles_SkeletalMesh ; DIContext.MeshWeightStride = MeshWeightStride_Particles_SkeletalMesh ; DIContext.InstanceTransform = InstanceTransform_Particles_SkeletalMesh ; DIContext.InstancePrevTransform = InstancePrevTransform_Particles_SkeletalMesh ; DIContext.InstanceInvDeltaTime = InstanceInvDeltaTime_Particles_SkeletalMesh ; DIContext.UniformTriangleSamplingEnable = EnabledFeatures_Particles_SkeletalMesh & 0x1;  DISKelMesh_GetSkinnedTriangleData(DIContext, InCoord.Tri, InCoord.BaryCoord, OutPosition, OutVelocity, OutNormal, OutBinormal, OutTangent); }
+void GetSkinnedTriangleDataWSInterpolated_ParticlesSkeletalMesh (in MeshTriCoordinate InCoord, in float InInterp, out float3 OutPosition, out float3 OutVelocity, out float3 OutNormal, out float3 OutBinormal, out float3 OutTangent) {  FDISkelMeshContext DIContext; DIContext.MeshIndexBuffer = MeshIndexBuffer_Particles_SkeletalMesh ; DIContext.MeshVertexBuffer = MeshVertexBuffer_Particles_SkeletalMesh ; DIContext.MeshSkinWeightBuffer = MeshSkinWeightBuffer_Particles_SkeletalMesh ; DIContext.MeshCurrBonesBuffer = MeshCurrBonesBuffer_Particles_SkeletalMesh ; DIContext.MeshPrevBonesBuffer = MeshPrevBonesBuffer_Particles_SkeletalMesh ; DIContext.MeshCurrSamplingBonesBuffer = MeshCurrSamplingBonesBuffer_Particles_SkeletalMesh ; DIContext.MeshPrevSamplingBonesBuffer = MeshPrevSamplingBonesBuffer_Particles_SkeletalMesh ; DIContext.MeshTangentBuffer = MeshTangentBuffer_Particles_SkeletalMesh ; DIContext.MeshTexCoordBuffer = MeshTexCoordBuffer_Particles_SkeletalMesh ; DIContext.MeshColorBuffer = MeshColorBuffer_Particles_SkeletalMesh ; DIContext.MeshTriangleSamplerProbaBuffer = MeshTriangleSamplerProbaBuffer_Particles_SkeletalMesh ; DIContext.MeshTriangleSamplerAliasBuffer = MeshTriangleSamplerAliasBuffer_Particles_SkeletalMesh ; DIContext.MeshTriangleMatricesOffsetBuffer = MeshTriangleMatricesOffsetBuffer_Particles_SkeletalMesh ; DIContext.MeshTriangleCount = MeshTriangleCount_Particles_SkeletalMesh ; DIContext.MeshVertexCount = MeshVertexCount_Particles_SkeletalMesh ; DIContext.MeshNumTexCoord = MeshNumTexCoord_Particles_SkeletalMesh ; DIContext.MeshNumWeights = MeshNumWeights_Particles_SkeletalMesh ; DIContext.NumSpecificBones = NumSpecificBones_Particles_SkeletalMesh ; DIContext.SpecificBones = SpecificBones_Particles_SkeletalMesh ; DIContext.NumSpecificSockets = NumSpecificSockets_Particles_SkeletalMesh ; DIContext.SpecificSocketBoneOffset = SpecificSocketBoneOffset_Particles_SkeletalMesh ; DIContext.MeshWeightStride = MeshWeightStride_Particles_SkeletalMesh ; DIContext.InstanceTransform = InstanceTransform_Particles_SkeletalMesh ; DIContext.InstancePrevTransform = InstancePrevTransform_Particles_SkeletalMesh ; DIContext.InstanceInvDeltaTime = InstanceInvDeltaTime_Particles_SkeletalMesh ; DIContext.UniformTriangleSamplingEnable = EnabledFeatures_Particles_SkeletalMesh & 0x1;  DISKelMesh_GetSkinnedTriangleDataInterpolatedWS(DIContext, InCoord.Tri, InCoord.BaryCoord, InInterp, OutPosition, OutVelocity, OutNormal, OutBinormal, OutTangent); }
+void GetTriUV_ParticlesSkeletalMesh (in MeshTriCoordinate InCoord, in int InUVSet, out float2 OutUV) {  FDISkelMeshContext DIContext; DIContext.MeshIndexBuffer = MeshIndexBuffer_Particles_SkeletalMesh ; DIContext.MeshVertexBuffer = MeshVertexBuffer_Particles_SkeletalMesh ; DIContext.MeshSkinWeightBuffer = MeshSkinWeightBuffer_Particles_SkeletalMesh ; DIContext.MeshCurrBonesBuffer = MeshCurrBonesBuffer_Particles_SkeletalMesh ; DIContext.MeshPrevBonesBuffer = MeshPrevBonesBuffer_Particles_SkeletalMesh ; DIContext.MeshCurrSamplingBonesBuffer = MeshCurrSamplingBonesBuffer_Particles_SkeletalMesh ; DIContext.MeshPrevSamplingBonesBuffer = MeshPrevSamplingBonesBuffer_Particles_SkeletalMesh ; DIContext.MeshTangentBuffer = MeshTangentBuffer_Particles_SkeletalMesh ; DIContext.MeshTexCoordBuffer = MeshTexCoordBuffer_Particles_SkeletalMesh ; DIContext.MeshColorBuffer = MeshColorBuffer_Particles_SkeletalMesh ; DIContext.MeshTriangleSamplerProbaBuffer = MeshTriangleSamplerProbaBuffer_Particles_SkeletalMesh ; DIContext.MeshTriangleSamplerAliasBuffer = MeshTriangleSamplerAliasBuffer_Particles_SkeletalMesh ; DIContext.MeshTriangleMatricesOffsetBuffer = MeshTriangleMatricesOffsetBuffer_Particles_SkeletalMesh ; DIContext.MeshTriangleCount = MeshTriangleCount_Particles_SkeletalMesh ; DIContext.MeshVertexCount = MeshVertexCount_Particles_SkeletalMesh ; DIContext.MeshNumTexCoord = MeshNumTexCoord_Particles_SkeletalMesh ; DIContext.MeshNumWeights = MeshNumWeights_Particles_SkeletalMesh ; DIContext.NumSpecificBones = NumSpecificBones_Particles_SkeletalMesh ; DIContext.SpecificBones = SpecificBones_Particles_SkeletalMesh ; DIContext.NumSpecificSockets = NumSpecificSockets_Particles_SkeletalMesh ; DIContext.SpecificSocketBoneOffset = SpecificSocketBoneOffset_Particles_SkeletalMesh ; DIContext.MeshWeightStride = MeshWeightStride_Particles_SkeletalMesh ; DIContext.InstanceTransform = InstanceTransform_Particles_SkeletalMesh ; DIContext.InstancePrevTransform = InstancePrevTransform_Particles_SkeletalMesh ; DIContext.InstanceInvDeltaTime = InstanceInvDeltaTime_Particles_SkeletalMesh ; DIContext.UniformTriangleSamplingEnable = EnabledFeatures_Particles_SkeletalMesh & 0x1;  DISKelMesh_GetTriUV(DIContext, InCoord.Tri, InCoord.BaryCoord, InUVSet, OutUV); }
+void GetTriColor_ParticlesSkeletalMesh (in MeshTriCoordinate InCoord, out float4 OutColor) {  FDISkelMeshContext DIContext; DIContext.MeshIndexBuffer = MeshIndexBuffer_Particles_SkeletalMesh ; DIContext.MeshVertexBuffer = MeshVertexBuffer_Particles_SkeletalMesh ; DIContext.MeshSkinWeightBuffer = MeshSkinWeightBuffer_Particles_SkeletalMesh ; DIContext.MeshCurrBonesBuffer = MeshCurrBonesBuffer_Particles_SkeletalMesh ; DIContext.MeshPrevBonesBuffer = MeshPrevBonesBuffer_Particles_SkeletalMesh ; DIContext.MeshCurrSamplingBonesBuffer = MeshCurrSamplingBonesBuffer_Particles_SkeletalMesh ; DIContext.MeshPrevSamplingBonesBuffer = MeshPrevSamplingBonesBuffer_Particles_SkeletalMesh ; DIContext.MeshTangentBuffer = MeshTangentBuffer_Particles_SkeletalMesh ; DIContext.MeshTexCoordBuffer = MeshTexCoordBuffer_Particles_SkeletalMesh ; DIContext.MeshColorBuffer = MeshColorBuffer_Particles_SkeletalMesh ; DIContext.MeshTriangleSamplerProbaBuffer = MeshTriangleSamplerProbaBuffer_Particles_SkeletalMesh ; DIContext.MeshTriangleSamplerAliasBuffer = MeshTriangleSamplerAliasBuffer_Particles_SkeletalMesh ; DIContext.MeshTriangleMatricesOffsetBuffer = MeshTriangleMatricesOffsetBuffer_Particles_SkeletalMesh ; DIContext.MeshTriangleCount = MeshTriangleCount_Particles_SkeletalMesh ; DIContext.MeshVertexCount = MeshVertexCount_Particles_SkeletalMesh ; DIContext.MeshNumTexCoord = MeshNumTexCoord_Particles_SkeletalMesh ; DIContext.MeshNumWeights = MeshNumWeights_Particles_SkeletalMesh ; DIContext.NumSpecificBones = NumSpecificBones_Particles_SkeletalMesh ; DIContext.SpecificBones = SpecificBones_Particles_SkeletalMesh ; DIContext.NumSpecificSockets = NumSpecificSockets_Particles_SkeletalMesh ; DIContext.SpecificSocketBoneOffset = SpecificSocketBoneOffset_Particles_SkeletalMesh ; DIContext.MeshWeightStride = MeshWeightStride_Particles_SkeletalMesh ; DIContext.InstanceTransform = InstanceTransform_Particles_SkeletalMesh ; DIContext.InstancePrevTransform = InstancePrevTransform_Particles_SkeletalMesh ; DIContext.InstanceInvDeltaTime = InstanceInvDeltaTime_Particles_SkeletalMesh ; DIContext.UniformTriangleSamplingEnable = EnabledFeatures_Particles_SkeletalMesh & 0x1;  DISkelMesh_GetTriColor(DIContext, InCoord.Tri, InCoord.BaryCoord, OutColor); }
+void RandomTriCoord_Mesh (out MeshTriCoordinate OutCoord) {  FDISkelMeshContext DIContext; DIContext.MeshIndexBuffer = MeshIndexBuffer_Mesh ; DIContext.MeshVertexBuffer = MeshVertexBuffer_Mesh ; DIContext.MeshSkinWeightBuffer = MeshSkinWeightBuffer_Mesh ; DIContext.MeshCurrBonesBuffer = MeshCurrBonesBuffer_Mesh ; DIContext.MeshPrevBonesBuffer = MeshPrevBonesBuffer_Mesh ; DIContext.MeshCurrSamplingBonesBuffer = MeshCurrSamplingBonesBuffer_Mesh ; DIContext.MeshPrevSamplingBonesBuffer = MeshPrevSamplingBonesBuffer_Mesh ; DIContext.MeshTangentBuffer = MeshTangentBuffer_Mesh ; DIContext.MeshTexCoordBuffer = MeshTexCoordBuffer_Mesh ; DIContext.MeshColorBuffer = MeshColorBuffer_Mesh ; DIContext.MeshTriangleSamplerProbaBuffer = MeshTriangleSamplerProbaBuffer_Mesh ; DIContext.MeshTriangleSamplerAliasBuffer = MeshTriangleSamplerAliasBuffer_Mesh ; DIContext.MeshTriangleMatricesOffsetBuffer = MeshTriangleMatricesOffsetBuffer_Mesh ; DIContext.MeshTriangleCount = MeshTriangleCount_Mesh ; DIContext.MeshVertexCount = MeshVertexCount_Mesh ; DIContext.MeshNumTexCoord = MeshNumTexCoord_Mesh ; DIContext.MeshNumWeights = MeshNumWeights_Mesh ; DIContext.NumSpecificBones = NumSpecificBones_Mesh ; DIContext.SpecificBones = SpecificBones_Mesh ; DIContext.NumSpecificSockets = NumSpecificSockets_Mesh ; DIContext.SpecificSocketBoneOffset = SpecificSocketBoneOffset_Mesh ; DIContext.MeshWeightStride = MeshWeightStride_Mesh ; DIContext.InstanceTransform = InstanceTransform_Mesh ; DIContext.InstancePrevTransform = InstancePrevTransform_Mesh ; DIContext.InstanceInvDeltaTime = InstanceInvDeltaTime_Mesh ; DIContext.UniformTriangleSamplingEnable = EnabledFeatures_Mesh & 0x1;  DISKelMesh_RandomTriCoord(DIContext, OutCoord.Tri, OutCoord.BaryCoord); }
+void GetSkinnedTriangleDataWS_Mesh (in MeshTriCoordinate InCoord, out float3 OutPosition, out float3 OutVelocity, out float3 OutNormal, out float3 OutBinormal, out float3 OutTangent) {  FDISkelMeshContext DIContext; DIContext.MeshIndexBuffer = MeshIndexBuffer_Mesh ; DIContext.MeshVertexBuffer = MeshVertexBuffer_Mesh ; DIContext.MeshSkinWeightBuffer = MeshSkinWeightBuffer_Mesh ; DIContext.MeshCurrBonesBuffer = MeshCurrBonesBuffer_Mesh ; DIContext.MeshPrevBonesBuffer = MeshPrevBonesBuffer_Mesh ; DIContext.MeshCurrSamplingBonesBuffer = MeshCurrSamplingBonesBuffer_Mesh ; DIContext.MeshPrevSamplingBonesBuffer = MeshPrevSamplingBonesBuffer_Mesh ; DIContext.MeshTangentBuffer = MeshTangentBuffer_Mesh ; DIContext.MeshTexCoordBuffer = MeshTexCoordBuffer_Mesh ; DIContext.MeshColorBuffer = MeshColorBuffer_Mesh ; DIContext.MeshTriangleSamplerProbaBuffer = MeshTriangleSamplerProbaBuffer_Mesh ; DIContext.MeshTriangleSamplerAliasBuffer = MeshTriangleSamplerAliasBuffer_Mesh ; DIContext.MeshTriangleMatricesOffsetBuffer = MeshTriangleMatricesOffsetBuffer_Mesh ; DIContext.MeshTriangleCount = MeshTriangleCount_Mesh ; DIContext.MeshVertexCount = MeshVertexCount_Mesh ; DIContext.MeshNumTexCoord = MeshNumTexCoord_Mesh ; DIContext.MeshNumWeights = MeshNumWeights_Mesh ; DIContext.NumSpecificBones = NumSpecificBones_Mesh ; DIContext.SpecificBones = SpecificBones_Mesh ; DIContext.NumSpecificSockets = NumSpecificSockets_Mesh ; DIContext.SpecificSocketBoneOffset = SpecificSocketBoneOffset_Mesh ; DIContext.MeshWeightStride = MeshWeightStride_Mesh ; DIContext.InstanceTransform = InstanceTransform_Mesh ; DIContext.InstancePrevTransform = InstancePrevTransform_Mesh ; DIContext.InstanceInvDeltaTime = InstanceInvDeltaTime_Mesh ; DIContext.UniformTriangleSamplingEnable = EnabledFeatures_Mesh & 0x1;  DISKelMesh_GetSkinnedTriangleDataWS(DIContext, InCoord.Tri, InCoord.BaryCoord, OutPosition, OutVelocity, OutNormal, OutBinormal, OutTangent); }
+void GetSkinnedTriangleDataInterpolated_Mesh (in MeshTriCoordinate InCoord, in float InInterp, out float3 OutPosition, out float3 OutVelocity, out float3 OutNormal, out float3 OutBinormal, out float3 OutTangent) {  FDISkelMeshContext DIContext; DIContext.MeshIndexBuffer = MeshIndexBuffer_Mesh ; DIContext.MeshVertexBuffer = MeshVertexBuffer_Mesh ; DIContext.MeshSkinWeightBuffer = MeshSkinWeightBuffer_Mesh ; DIContext.MeshCurrBonesBuffer = MeshCurrBonesBuffer_Mesh ; DIContext.MeshPrevBonesBuffer = MeshPrevBonesBuffer_Mesh ; DIContext.MeshCurrSamplingBonesBuffer = MeshCurrSamplingBonesBuffer_Mesh ; DIContext.MeshPrevSamplingBonesBuffer = MeshPrevSamplingBonesBuffer_Mesh ; DIContext.MeshTangentBuffer = MeshTangentBuffer_Mesh ; DIContext.MeshTexCoordBuffer = MeshTexCoordBuffer_Mesh ; DIContext.MeshColorBuffer = MeshColorBuffer_Mesh ; DIContext.MeshTriangleSamplerProbaBuffer = MeshTriangleSamplerProbaBuffer_Mesh ; DIContext.MeshTriangleSamplerAliasBuffer = MeshTriangleSamplerAliasBuffer_Mesh ; DIContext.MeshTriangleMatricesOffsetBuffer = MeshTriangleMatricesOffsetBuffer_Mesh ; DIContext.MeshTriangleCount = MeshTriangleCount_Mesh ; DIContext.MeshVertexCount = MeshVertexCount_Mesh ; DIContext.MeshNumTexCoord = MeshNumTexCoord_Mesh ; DIContext.MeshNumWeights = MeshNumWeights_Mesh ; DIContext.NumSpecificBones = NumSpecificBones_Mesh ; DIContext.SpecificBones = SpecificBones_Mesh ; DIContext.NumSpecificSockets = NumSpecificSockets_Mesh ; DIContext.SpecificSocketBoneOffset = SpecificSocketBoneOffset_Mesh ; DIContext.MeshWeightStride = MeshWeightStride_Mesh ; DIContext.InstanceTransform = InstanceTransform_Mesh ; DIContext.InstancePrevTransform = InstancePrevTransform_Mesh ; DIContext.InstanceInvDeltaTime = InstanceInvDeltaTime_Mesh ; DIContext.UniformTriangleSamplingEnable = EnabledFeatures_Mesh & 0x1;  DISKelMesh_GetSkinnedTriangleDataInterpolated(DIContext, InCoord.Tri, InCoord.BaryCoord, InInterp, OutPosition, OutVelocity, OutNormal, OutBinormal, OutTangent); }
+void GetSkinnedTriangleData_Mesh (in MeshTriCoordinate InCoord, out float3 OutPosition, out float3 OutVelocity, out float3 OutNormal, out float3 OutBinormal, out float3 OutTangent) {  FDISkelMeshContext DIContext; DIContext.MeshIndexBuffer = MeshIndexBuffer_Mesh ; DIContext.MeshVertexBuffer = MeshVertexBuffer_Mesh ; DIContext.MeshSkinWeightBuffer = MeshSkinWeightBuffer_Mesh ; DIContext.MeshCurrBonesBuffer = MeshCurrBonesBuffer_Mesh ; DIContext.MeshPrevBonesBuffer = MeshPrevBonesBuffer_Mesh ; DIContext.MeshCurrSamplingBonesBuffer = MeshCurrSamplingBonesBuffer_Mesh ; DIContext.MeshPrevSamplingBonesBuffer = MeshPrevSamplingBonesBuffer_Mesh ; DIContext.MeshTangentBuffer = MeshTangentBuffer_Mesh ; DIContext.MeshTexCoordBuffer = MeshTexCoordBuffer_Mesh ; DIContext.MeshColorBuffer = MeshColorBuffer_Mesh ; DIContext.MeshTriangleSamplerProbaBuffer = MeshTriangleSamplerProbaBuffer_Mesh ; DIContext.MeshTriangleSamplerAliasBuffer = MeshTriangleSamplerAliasBuffer_Mesh ; DIContext.MeshTriangleMatricesOffsetBuffer = MeshTriangleMatricesOffsetBuffer_Mesh ; DIContext.MeshTriangleCount = MeshTriangleCount_Mesh ; DIContext.MeshVertexCount = MeshVertexCount_Mesh ; DIContext.MeshNumTexCoord = MeshNumTexCoord_Mesh ; DIContext.MeshNumWeights = MeshNumWeights_Mesh ; DIContext.NumSpecificBones = NumSpecificBones_Mesh ; DIContext.SpecificBones = SpecificBones_Mesh ; DIContext.NumSpecificSockets = NumSpecificSockets_Mesh ; DIContext.SpecificSocketBoneOffset = SpecificSocketBoneOffset_Mesh ; DIContext.MeshWeightStride = MeshWeightStride_Mesh ; DIContext.InstanceTransform = InstanceTransform_Mesh ; DIContext.InstancePrevTransform = InstancePrevTransform_Mesh ; DIContext.InstanceInvDeltaTime = InstanceInvDeltaTime_Mesh ; DIContext.UniformTriangleSamplingEnable = EnabledFeatures_Mesh & 0x1;  DISKelMesh_GetSkinnedTriangleData(DIContext, InCoord.Tri, InCoord.BaryCoord, OutPosition, OutVelocity, OutNormal, OutBinormal, OutTangent); }
+void GetSkinnedTriangleDataWSInterpolated_Mesh (in MeshTriCoordinate InCoord, in float InInterp, out float3 OutPosition, out float3 OutVelocity, out float3 OutNormal, out float3 OutBinormal, out float3 OutTangent) {  FDISkelMeshContext DIContext; DIContext.MeshIndexBuffer = MeshIndexBuffer_Mesh ; DIContext.MeshVertexBuffer = MeshVertexBuffer_Mesh ; DIContext.MeshSkinWeightBuffer = MeshSkinWeightBuffer_Mesh ; DIContext.MeshCurrBonesBuffer = MeshCurrBonesBuffer_Mesh ; DIContext.MeshPrevBonesBuffer = MeshPrevBonesBuffer_Mesh ; DIContext.MeshCurrSamplingBonesBuffer = MeshCurrSamplingBonesBuffer_Mesh ; DIContext.MeshPrevSamplingBonesBuffer = MeshPrevSamplingBonesBuffer_Mesh ; DIContext.MeshTangentBuffer = MeshTangentBuffer_Mesh ; DIContext.MeshTexCoordBuffer = MeshTexCoordBuffer_Mesh ; DIContext.MeshColorBuffer = MeshColorBuffer_Mesh ; DIContext.MeshTriangleSamplerProbaBuffer = MeshTriangleSamplerProbaBuffer_Mesh ; DIContext.MeshTriangleSamplerAliasBuffer = MeshTriangleSamplerAliasBuffer_Mesh ; DIContext.MeshTriangleMatricesOffsetBuffer = MeshTriangleMatricesOffsetBuffer_Mesh ; DIContext.MeshTriangleCount = MeshTriangleCount_Mesh ; DIContext.MeshVertexCount = MeshVertexCount_Mesh ; DIContext.MeshNumTexCoord = MeshNumTexCoord_Mesh ; DIContext.MeshNumWeights = MeshNumWeights_Mesh ; DIContext.NumSpecificBones = NumSpecificBones_Mesh ; DIContext.SpecificBones = SpecificBones_Mesh ; DIContext.NumSpecificSockets = NumSpecificSockets_Mesh ; DIContext.SpecificSocketBoneOffset = SpecificSocketBoneOffset_Mesh ; DIContext.MeshWeightStride = MeshWeightStride_Mesh ; DIContext.InstanceTransform = InstanceTransform_Mesh ; DIContext.InstancePrevTransform = InstancePrevTransform_Mesh ; DIContext.InstanceInvDeltaTime = InstanceInvDeltaTime_Mesh ; DIContext.UniformTriangleSamplingEnable = EnabledFeatures_Mesh & 0x1;  DISKelMesh_GetSkinnedTriangleDataInterpolatedWS(DIContext, InCoord.Tri, InCoord.BaryCoord, InInterp, OutPosition, OutVelocity, OutNormal, OutBinormal, OutTangent); }
+void GetTriUV_Mesh (in MeshTriCoordinate InCoord, in int InUVSet, out float2 OutUV) {  FDISkelMeshContext DIContext; DIContext.MeshIndexBuffer = MeshIndexBuffer_Mesh ; DIContext.MeshVertexBuffer = MeshVertexBuffer_Mesh ; DIContext.MeshSkinWeightBuffer = MeshSkinWeightBuffer_Mesh ; DIContext.MeshCurrBonesBuffer = MeshCurrBonesBuffer_Mesh ; DIContext.MeshPrevBonesBuffer = MeshPrevBonesBuffer_Mesh ; DIContext.MeshCurrSamplingBonesBuffer = MeshCurrSamplingBonesBuffer_Mesh ; DIContext.MeshPrevSamplingBonesBuffer = MeshPrevSamplingBonesBuffer_Mesh ; DIContext.MeshTangentBuffer = MeshTangentBuffer_Mesh ; DIContext.MeshTexCoordBuffer = MeshTexCoordBuffer_Mesh ; DIContext.MeshColorBuffer = MeshColorBuffer_Mesh ; DIContext.MeshTriangleSamplerProbaBuffer = MeshTriangleSamplerProbaBuffer_Mesh ; DIContext.MeshTriangleSamplerAliasBuffer = MeshTriangleSamplerAliasBuffer_Mesh ; DIContext.MeshTriangleMatricesOffsetBuffer = MeshTriangleMatricesOffsetBuffer_Mesh ; DIContext.MeshTriangleCount = MeshTriangleCount_Mesh ; DIContext.MeshVertexCount = MeshVertexCount_Mesh ; DIContext.MeshNumTexCoord = MeshNumTexCoord_Mesh ; DIContext.MeshNumWeights = MeshNumWeights_Mesh ; DIContext.NumSpecificBones = NumSpecificBones_Mesh ; DIContext.SpecificBones = SpecificBones_Mesh ; DIContext.NumSpecificSockets = NumSpecificSockets_Mesh ; DIContext.SpecificSocketBoneOffset = SpecificSocketBoneOffset_Mesh ; DIContext.MeshWeightStride = MeshWeightStride_Mesh ; DIContext.InstanceTransform = InstanceTransform_Mesh ; DIContext.InstancePrevTransform = InstancePrevTransform_Mesh ; DIContext.InstanceInvDeltaTime = InstanceInvDeltaTime_Mesh ; DIContext.UniformTriangleSamplingEnable = EnabledFeatures_Mesh & 0x1;  DISKelMesh_GetTriUV(DIContext, InCoord.Tri, InCoord.BaryCoord, InUVSet, OutUV); }
+void GetTriColor_Mesh (in MeshTriCoordinate InCoord, out float4 OutColor) {  FDISkelMeshContext DIContext; DIContext.MeshIndexBuffer = MeshIndexBuffer_Mesh ; DIContext.MeshVertexBuffer = MeshVertexBuffer_Mesh ; DIContext.MeshSkinWeightBuffer = MeshSkinWeightBuffer_Mesh ; DIContext.MeshCurrBonesBuffer = MeshCurrBonesBuffer_Mesh ; DIContext.MeshPrevBonesBuffer = MeshPrevBonesBuffer_Mesh ; DIContext.MeshCurrSamplingBonesBuffer = MeshCurrSamplingBonesBuffer_Mesh ; DIContext.MeshPrevSamplingBonesBuffer = MeshPrevSamplingBonesBuffer_Mesh ; DIContext.MeshTangentBuffer = MeshTangentBuffer_Mesh ; DIContext.MeshTexCoordBuffer = MeshTexCoordBuffer_Mesh ; DIContext.MeshColorBuffer = MeshColorBuffer_Mesh ; DIContext.MeshTriangleSamplerProbaBuffer = MeshTriangleSamplerProbaBuffer_Mesh ; DIContext.MeshTriangleSamplerAliasBuffer = MeshTriangleSamplerAliasBuffer_Mesh ; DIContext.MeshTriangleMatricesOffsetBuffer = MeshTriangleMatricesOffsetBuffer_Mesh ; DIContext.MeshTriangleCount = MeshTriangleCount_Mesh ; DIContext.MeshVertexCount = MeshVertexCount_Mesh ; DIContext.MeshNumTexCoord = MeshNumTexCoord_Mesh ; DIContext.MeshNumWeights = MeshNumWeights_Mesh ; DIContext.NumSpecificBones = NumSpecificBones_Mesh ; DIContext.SpecificBones = SpecificBones_Mesh ; DIContext.NumSpecificSockets = NumSpecificSockets_Mesh ; DIContext.SpecificSocketBoneOffset = SpecificSocketBoneOffset_Mesh ; DIContext.MeshWeightStride = MeshWeightStride_Mesh ; DIContext.InstanceTransform = InstanceTransform_Mesh ; DIContext.InstancePrevTransform = InstancePrevTransform_Mesh ; DIContext.InstanceInvDeltaTime = InstanceInvDeltaTime_Mesh ; DIContext.UniformTriangleSamplingEnable = EnabledFeatures_Mesh & 0x1;  DISkelMesh_GetTriColor(DIContext, InCoord.Tri, InCoord.BaryCoord, OutColor); }
+void SampleColorCurve_ColorColorCurve(in float In_X, out float4 Out_Value)
+{
+	float RemappedX = TimeToLUTFraction_Color_ColorCurve(In_X) * 127;
 	float Prev = floor(RemappedX);
 	float Next = Prev < 127 ? Prev + 1.0 : Prev;
 	float Interp = RemappedX - Prev;
-	float A = SampleCurve_LatheProfile(Prev);
-	float B = SampleCurve_LatheProfile(Next);
+	Prev *= 4;
+	Next *= 4;
+	float4 A = float4(SampleCurve_Color_ColorCurve(Prev), SampleCurve_Color_ColorCurve(Prev + 1), SampleCurve_Color_ColorCurve(Prev + 2), SampleCurve_Color_ColorCurve(Prev + 3));
+	float4 B = float4(SampleCurve_Color_ColorCurve(Next), SampleCurve_Color_ColorCurve(Next + 1), SampleCurve_Color_ColorCurve(Next + 2), SampleCurve_Color_ColorCurve(Next + 3));
 	Out_Value = lerp(A, B, Interp);
 }
-
-			void RandomTriCoord_ParticlesStaticMesh (out MeshTriCoordinate Out_Coord)
-			{
-				float RandS0 = NiagaraInternalNoise(1, 2, 3);
-
-
-				uint SectionIndex = min(uint(RandS0 * float(SectionCount_Particles_StaticMesh)), SectionCount_Particles_StaticMesh-1);
-				uint4 SectionData = SectionBuffer_Particles_StaticMesh[SectionIndex];
-
-
-				float RandS1 = NiagaraInternalNoise(1, 2, 3);
-				if( RandS1 > asfloat(SectionData.z) )
-				{
-					SectionData = SectionBuffer_Particles_StaticMesh[SectionData.w];
-				}
-
-				uint SectionFirstTriangle = SectionData.x;
-				uint SectionTriangleCount = SectionData.y;
-
-				float RandT0 = NiagaraInternalNoise(1, 2, 3);
-				[branch]
-				if(AreaWeightedSamplingName_Particles_StaticMesh==0)
-				{
-
-					Out_Coord.Tri = SectionFirstTriangle + min(uint(RandT0*float(SectionTriangleCount)), SectionTriangleCount-1);
-				}
-				else
-				{
-
-					uint TriangleIndex = min(uint(RandT0*float(SectionTriangleCount)), SectionTriangleCount-1);
-					uint4 TriangleData = TriangleBuffer_Particles_StaticMesh[SectionFirstTriangle + TriangleIndex];
-
-
-					float RandT1 = NiagaraInternalNoise(1, 2, 3);
-					if( RandT1 > asfloat(TriangleData.x) )
-					{
-						TriangleIndex = TriangleData.y;
-					}
-					Out_Coord.Tri = SectionFirstTriangle + TriangleIndex;
-				}
-
-				float r0 = NiagaraInternalNoise(1, 2, 3);
-				float r1 = NiagaraInternalNoise(1, 2, 3);
-				float sqrt0 = sqrt(r0);
-				float sqrt1 = sqrt(r1);
-				Out_Coord.BaryCoord = float3(1.0f - sqrt0, sqrt0 * (1.0 - r1), r1 * sqrt0);
-			}
-
-
-			void GetTriPositionWS_ParticlesStaticMesh (in MeshTriCoordinate In_Coord, out float3 Out_Position)
-			{
-				uint TriangleIndex = In_Coord.Tri * 3;
-				uint VertexIndex0 = IndexBuffer_Particles_StaticMesh[TriangleIndex ] * 3;
-				uint VertexIndex1 = IndexBuffer_Particles_StaticMesh[TriangleIndex+1] * 3;
-				uint VertexIndex2 = IndexBuffer_Particles_StaticMesh[TriangleIndex+2] * 3;
-
-
-				float3 vertex0 = float3(VertexBuffer_Particles_StaticMesh[VertexIndex0], VertexBuffer_Particles_StaticMesh[VertexIndex0+1], VertexBuffer_Particles_StaticMesh[VertexIndex0+2]);
-				float3 vertex1 = float3(VertexBuffer_Particles_StaticMesh[VertexIndex1], VertexBuffer_Particles_StaticMesh[VertexIndex1+1], VertexBuffer_Particles_StaticMesh[VertexIndex1+2]);
-				float3 vertex2 = float3(VertexBuffer_Particles_StaticMesh[VertexIndex2], VertexBuffer_Particles_StaticMesh[VertexIndex2+1], VertexBuffer_Particles_StaticMesh[VertexIndex2+2]);
-				float3 Position = vertex0 * In_Coord.BaryCoord.x + vertex1 * In_Coord.BaryCoord.y + vertex2 * In_Coord.BaryCoord.z;
-
-				Out_Position = mul(float4(Position, 1.0), InstanceTransform_Particles_StaticMesh).xyz;
-			}
-
-
-			void RandomTriCoord_ParticlesStaticMesh001 (out MeshTriCoordinate Out_Coord)
-			{
-				float RandS0 = NiagaraInternalNoise(1, 2, 3);
-
-
-				uint SectionIndex = min(uint(RandS0 * float(SectionCount_Particles_StaticMesh001)), SectionCount_Particles_StaticMesh001-1);
-				uint4 SectionData = SectionBuffer_Particles_StaticMesh001[SectionIndex];
-
-
-				float RandS1 = NiagaraInternalNoise(1, 2, 3);
-				if( RandS1 > asfloat(SectionData.z) )
-				{
-					SectionData = SectionBuffer_Particles_StaticMesh001[SectionData.w];
-				}
-
-				uint SectionFirstTriangle = SectionData.x;
-				uint SectionTriangleCount = SectionData.y;
-
-				float RandT0 = NiagaraInternalNoise(1, 2, 3);
-				[branch]
-				if(AreaWeightedSamplingName_Particles_StaticMesh001==0)
-				{
-
-					Out_Coord.Tri = SectionFirstTriangle + min(uint(RandT0*float(SectionTriangleCount)), SectionTriangleCount-1);
-				}
-				else
-				{
-
-					uint TriangleIndex = min(uint(RandT0*float(SectionTriangleCount)), SectionTriangleCount-1);
-					uint4 TriangleData = TriangleBuffer_Particles_StaticMesh001[SectionFirstTriangle + TriangleIndex];
-
-
-					float RandT1 = NiagaraInternalNoise(1, 2, 3);
-					if( RandT1 > asfloat(TriangleData.x) )
-					{
-						TriangleIndex = TriangleData.y;
-					}
-					Out_Coord.Tri = SectionFirstTriangle + TriangleIndex;
-				}
-
-				float r0 = NiagaraInternalNoise(1, 2, 3);
-				float r1 = NiagaraInternalNoise(1, 2, 3);
-				float sqrt0 = sqrt(r0);
-				float sqrt1 = sqrt(r1);
-				Out_Coord.BaryCoord = float3(1.0f - sqrt0, sqrt0 * (1.0 - r1), r1 * sqrt0);
-			}
-
-
-			void GetTriPositionWS_ParticlesStaticMesh001 (in MeshTriCoordinate In_Coord, out float3 Out_Position)
-			{
-				uint TriangleIndex = In_Coord.Tri * 3;
-				uint VertexIndex0 = IndexBuffer_Particles_StaticMesh001[TriangleIndex ] * 3;
-				uint VertexIndex1 = IndexBuffer_Particles_StaticMesh001[TriangleIndex+1] * 3;
-				uint VertexIndex2 = IndexBuffer_Particles_StaticMesh001[TriangleIndex+2] * 3;
-
-
-				float3 vertex0 = float3(VertexBuffer_Particles_StaticMesh001[VertexIndex0], VertexBuffer_Particles_StaticMesh001[VertexIndex0+1], VertexBuffer_Particles_StaticMesh001[VertexIndex0+2]);
-				float3 vertex1 = float3(VertexBuffer_Particles_StaticMesh001[VertexIndex1], VertexBuffer_Particles_StaticMesh001[VertexIndex1+1], VertexBuffer_Particles_StaticMesh001[VertexIndex1+2]);
-				float3 vertex2 = float3(VertexBuffer_Particles_StaticMesh001[VertexIndex2], VertexBuffer_Particles_StaticMesh001[VertexIndex2+1], VertexBuffer_Particles_StaticMesh001[VertexIndex2+2]);
-				float3 Position = vertex0 * In_Coord.BaryCoord.x + vertex1 * In_Coord.BaryCoord.y + vertex2 * In_Coord.BaryCoord.z;
-
-				Out_Position = mul(float4(Position, 1.0), InstanceTransform_Particles_StaticMesh001).xyz;
-			}
-
+void SampleCurve_ConvergenceRateParticlesPositionFloatCurve(in float In_X, out float Out_Value)
+{
+	float RemappedX = TimeToLUTFraction_ConvergenceRate_Particles_Position_FloatCurve(In_X) * 127;
+	float Prev = floor(RemappedX);
+	float Next = Prev < 127 ? Prev + 1.0 : Prev;
+	float Interp = RemappedX - Prev;
+	float A = SampleCurve_ConvergenceRate_Particles_Position_FloatCurve(Prev);
+	float B = SampleCurve_ConvergenceRate_Particles_Position_FloatCurve(Next);
+	Out_Value = lerp(A, B, Interp);
+}
 void SimulateMain(in int InstanceIdx, in int InEventIndex, in int Phase)
 {
 
 			float RandomSeedInitialisation = NiagaraInternalNoise(InstanceIdx*16384, InEventIndex*8196, Phase*4096 + EmitterTickCounter);
-		EnterStatScope(6 );
+		EnterStatScope(8 );
 
 	FSimulationContext Context = (FSimulationContext)0;
 	if (Phase == 0)
@@ -6511,16 +6787,41 @@ void SimulateMain(in int InstanceIdx, in int InEventIndex, in int Phase)
 	Context.MapSpawn.Particles.Color.g = 0.0f;
 	Context.MapSpawn.Particles.Color.b = 0.0f;
 	Context.MapSpawn.Particles.Color.a = 0.0f;
+	Context.MapSpawn.Particles.DummyEmitterDeterminism = false;
 	Context.MapSpawn.Particles.Lifetime = 0.0f;
 	Context.MapSpawn.Particles.Mass = 0.0f;
 	Context.MapSpawn.Particles.MaterialRandom = 0.0f;
 	Context.MapSpawn.Particles.NewPosition.x = 0.0f;
 	Context.MapSpawn.Particles.NewPosition.y = 0.0f;
 	Context.MapSpawn.Particles.NewPosition.z = 0.0f;
+	Context.MapSpawn.Particles.NewPosition_Skeletal.x = 0.0f;
+	Context.MapSpawn.Particles.NewPosition_Skeletal.y = 0.0f;
+	Context.MapSpawn.Particles.NewPosition_Skeletal.z = 0.0f;
 	Context.MapSpawn.Particles.NormalizedAge = 0.0f;
 	Context.MapSpawn.Particles.Position.x = 0.0f;
 	Context.MapSpawn.Particles.Position.y = 0.0f;
 	Context.MapSpawn.Particles.Position.z = 0.0f;
+	Context.MapSpawn.Particles.SampleSkeletalMeshSurface.MeshBitangent.x = 0.0f;
+	Context.MapSpawn.Particles.SampleSkeletalMeshSurface.MeshBitangent.y = 0.0f;
+	Context.MapSpawn.Particles.SampleSkeletalMeshSurface.MeshBitangent.z = 0.0f;
+	Context.MapSpawn.Particles.SampleSkeletalMeshSurface.MeshColor.r = 0.0f;
+	Context.MapSpawn.Particles.SampleSkeletalMeshSurface.MeshColor.g = 0.0f;
+	Context.MapSpawn.Particles.SampleSkeletalMeshSurface.MeshColor.b = 0.0f;
+	Context.MapSpawn.Particles.SampleSkeletalMeshSurface.MeshColor.a = 0.0f;
+	Context.MapSpawn.Particles.SampleSkeletalMeshSurface.MeshNormal.x = 0.0f;
+	Context.MapSpawn.Particles.SampleSkeletalMeshSurface.MeshNormal.y = 0.0f;
+	Context.MapSpawn.Particles.SampleSkeletalMeshSurface.MeshNormal.z = 0.0f;
+	Context.MapSpawn.Particles.SampleSkeletalMeshSurface.MeshPosition.x = 0.0f;
+	Context.MapSpawn.Particles.SampleSkeletalMeshSurface.MeshPosition.y = 0.0f;
+	Context.MapSpawn.Particles.SampleSkeletalMeshSurface.MeshPosition.z = 0.0f;
+	Context.MapSpawn.Particles.SampleSkeletalMeshSurface.MeshTangent.x = 0.0f;
+	Context.MapSpawn.Particles.SampleSkeletalMeshSurface.MeshTangent.y = 0.0f;
+	Context.MapSpawn.Particles.SampleSkeletalMeshSurface.MeshTangent.z = 0.0f;
+	Context.MapSpawn.Particles.SampleSkeletalMeshSurface.MeshUV.x = 0.0f;
+	Context.MapSpawn.Particles.SampleSkeletalMeshSurface.MeshUV.y = 0.0f;
+	Context.MapSpawn.Particles.SampleSkeletalMeshSurface.MeshVelocity.x = 0.0f;
+	Context.MapSpawn.Particles.SampleSkeletalMeshSurface.MeshVelocity.y = 0.0f;
+	Context.MapSpawn.Particles.SampleSkeletalMeshSurface.MeshVelocity.z = 0.0f;
 	Context.MapSpawn.Particles.Scale.x = 0.0f;
 	Context.MapSpawn.Particles.Scale.y = 0.0f;
 	Context.MapSpawn.Particles.Scale.z = 0.0f;
@@ -6536,23 +6837,48 @@ void SimulateMain(in int InstanceIdx, in int InEventIndex, in int Phase)
 	Context.MapUpdate.Particles.Color.g = InputDataFloat(0, 2, InstanceIdx);
 	Context.MapUpdate.Particles.Color.b = InputDataFloat(0, 3, InstanceIdx);
 	Context.MapUpdate.Particles.Color.a = InputDataFloat(0, 4, InstanceIdx);
+	Context.MapUpdate.Particles.DummyEmitterDeterminism = InputDataBool(0, 0, InstanceIdx);
 	Context.MapUpdate.Particles.Lifetime = InputDataFloat(0, 5, InstanceIdx);
 	Context.MapUpdate.Particles.Mass = InputDataFloat(0, 6, InstanceIdx);
 	Context.MapUpdate.Particles.MaterialRandom = InputDataFloat(0, 7, InstanceIdx);
 	Context.MapUpdate.Particles.NewPosition.x = InputDataFloat(0, 8, InstanceIdx);
 	Context.MapUpdate.Particles.NewPosition.y = InputDataFloat(0, 9, InstanceIdx);
 	Context.MapUpdate.Particles.NewPosition.z = InputDataFloat(0, 10, InstanceIdx);
-	Context.MapUpdate.Particles.NormalizedAge = InputDataFloat(0, 11, InstanceIdx);
-	Context.MapUpdate.Particles.Position.x = InputDataFloat(0, 12, InstanceIdx);
-	Context.MapUpdate.Particles.Position.y = InputDataFloat(0, 13, InstanceIdx);
-	Context.MapUpdate.Particles.Position.z = InputDataFloat(0, 14, InstanceIdx);
-	Context.MapUpdate.Particles.Scale.x = InputDataFloat(0, 15, InstanceIdx);
-	Context.MapUpdate.Particles.Scale.y = InputDataFloat(0, 16, InstanceIdx);
-	Context.MapUpdate.Particles.Scale.z = InputDataFloat(0, 17, InstanceIdx);
-	Context.MapUpdate.Particles.SpriteRotation = InputDataFloat(0, 18, InstanceIdx);
-	Context.MapUpdate.Particles.SpriteSize.x = InputDataFloat(0, 19, InstanceIdx);
-	Context.MapUpdate.Particles.SpriteSize.y = InputDataFloat(0, 20, InstanceIdx);
-	Context.MapUpdate.Particles.UniqueID = InputDataInt(0, 0, InstanceIdx);
+	Context.MapUpdate.Particles.NewPosition_Skeletal.x = InputDataFloat(0, 11, InstanceIdx);
+	Context.MapUpdate.Particles.NewPosition_Skeletal.y = InputDataFloat(0, 12, InstanceIdx);
+	Context.MapUpdate.Particles.NewPosition_Skeletal.z = InputDataFloat(0, 13, InstanceIdx);
+	Context.MapUpdate.Particles.NormalizedAge = InputDataFloat(0, 14, InstanceIdx);
+	Context.MapUpdate.Particles.Position.x = InputDataFloat(0, 15, InstanceIdx);
+	Context.MapUpdate.Particles.Position.y = InputDataFloat(0, 16, InstanceIdx);
+	Context.MapUpdate.Particles.Position.z = InputDataFloat(0, 17, InstanceIdx);
+	Context.MapUpdate.Particles.SampleSkeletalMeshSurface.MeshBitangent.x = InputDataFloat(0, 18, InstanceIdx);
+	Context.MapUpdate.Particles.SampleSkeletalMeshSurface.MeshBitangent.y = InputDataFloat(0, 19, InstanceIdx);
+	Context.MapUpdate.Particles.SampleSkeletalMeshSurface.MeshBitangent.z = InputDataFloat(0, 20, InstanceIdx);
+	Context.MapUpdate.Particles.SampleSkeletalMeshSurface.MeshColor.r = InputDataFloat(0, 21, InstanceIdx);
+	Context.MapUpdate.Particles.SampleSkeletalMeshSurface.MeshColor.g = InputDataFloat(0, 22, InstanceIdx);
+	Context.MapUpdate.Particles.SampleSkeletalMeshSurface.MeshColor.b = InputDataFloat(0, 23, InstanceIdx);
+	Context.MapUpdate.Particles.SampleSkeletalMeshSurface.MeshColor.a = InputDataFloat(0, 24, InstanceIdx);
+	Context.MapUpdate.Particles.SampleSkeletalMeshSurface.MeshNormal.x = InputDataFloat(0, 25, InstanceIdx);
+	Context.MapUpdate.Particles.SampleSkeletalMeshSurface.MeshNormal.y = InputDataFloat(0, 26, InstanceIdx);
+	Context.MapUpdate.Particles.SampleSkeletalMeshSurface.MeshNormal.z = InputDataFloat(0, 27, InstanceIdx);
+	Context.MapUpdate.Particles.SampleSkeletalMeshSurface.MeshPosition.x = InputDataFloat(0, 28, InstanceIdx);
+	Context.MapUpdate.Particles.SampleSkeletalMeshSurface.MeshPosition.y = InputDataFloat(0, 29, InstanceIdx);
+	Context.MapUpdate.Particles.SampleSkeletalMeshSurface.MeshPosition.z = InputDataFloat(0, 30, InstanceIdx);
+	Context.MapUpdate.Particles.SampleSkeletalMeshSurface.MeshTangent.x = InputDataFloat(0, 31, InstanceIdx);
+	Context.MapUpdate.Particles.SampleSkeletalMeshSurface.MeshTangent.y = InputDataFloat(0, 32, InstanceIdx);
+	Context.MapUpdate.Particles.SampleSkeletalMeshSurface.MeshTangent.z = InputDataFloat(0, 33, InstanceIdx);
+	Context.MapUpdate.Particles.SampleSkeletalMeshSurface.MeshUV.x = InputDataFloat(0, 34, InstanceIdx);
+	Context.MapUpdate.Particles.SampleSkeletalMeshSurface.MeshUV.y = InputDataFloat(0, 35, InstanceIdx);
+	Context.MapUpdate.Particles.SampleSkeletalMeshSurface.MeshVelocity.x = InputDataFloat(0, 36, InstanceIdx);
+	Context.MapUpdate.Particles.SampleSkeletalMeshSurface.MeshVelocity.y = InputDataFloat(0, 37, InstanceIdx);
+	Context.MapUpdate.Particles.SampleSkeletalMeshSurface.MeshVelocity.z = InputDataFloat(0, 38, InstanceIdx);
+	Context.MapUpdate.Particles.Scale.x = InputDataFloat(0, 39, InstanceIdx);
+	Context.MapUpdate.Particles.Scale.y = InputDataFloat(0, 40, InstanceIdx);
+	Context.MapUpdate.Particles.Scale.z = InputDataFloat(0, 41, InstanceIdx);
+	Context.MapUpdate.Particles.SpriteRotation = InputDataFloat(0, 42, InstanceIdx);
+	Context.MapUpdate.Particles.SpriteSize.x = InputDataFloat(0, 43, InstanceIdx);
+	Context.MapUpdate.Particles.SpriteSize.y = InputDataFloat(0, 44, InstanceIdx);
+	Context.MapUpdate.Particles.UniqueID = InputDataInt(0, 1, InstanceIdx);
 
 	}
 	if (Phase == 0)
@@ -6574,20 +6900,17 @@ void SimulateMain(in int InstanceIdx, in int InEventIndex, in int Phase)
 	Context.MapSpawn.Constants.Emitter.InitializeParticle.Color = Constants_Emitter_InitializeParticle_Color;
 	Context.MapSpawn.Constants.Emitter.InitializeParticle.SpriteSize = Constants_Emitter_InitializeParticle_SpriteSize.xy;
 	Context.MapSpawn.Constants.Emitter.InitializeParticle.MeshScale = Constants_Emitter_InitializeParticle_MeshScale.xyz;
-	Context.MapSpawn.Constants.Emitter.CylinderLocation.RandomSeed = Constants_Emitter_CylinderLocation_RandomSeed;
-	Context.MapSpawn.Constants.Emitter.CylinderLocation.CylinderHeight = Constants_Emitter_CylinderLocation_CylinderHeight;
-	Context.MapSpawn.Constants.Emitter.CylinderLocation.CylinderRadius = Constants_Emitter_CylinderLocation_CylinderRadius;
-	Context.MapSpawn.Constants.Emitter.CylinderLocation.SurfaceOnlyBandThickness = Constants_Emitter_CylinderLocation_SurfaceOnlyBandThickness;
-	Context.MapSpawn.Constants.Emitter.CylinderLocation.Offset = Constants_Emitter_CylinderLocation_Offset.xyz;
-	Context.MapSpawn.Constants.Emitter.CylinderLocation.NonUniformScale = Constants_Emitter_CylinderLocation_NonUniformScale.xyz;
-	Context.MapSpawn.Engine.Owner.SystemWorldToLocalTransposed = Engine_Owner_SystemWorldToLocalTransposed;
-	Context.MapSpawn.Engine.Owner.SystemLocalToWorldTransposed = Engine_Owner_SystemLocalToWorldTransposed;
-	Context.MapSpawn.Engine.Owner.SystemLocalToWorldNoScale = Engine_Owner_SystemLocalToWorldNoScale;
-	Context.MapSpawn.Engine.Owner.SystemWorldToLocalNoScale = Engine_Owner_SystemWorldToLocalNoScale;
 	Context.MapSpawn.Emitter.Age = Emitter_Age;
 	Context.MapSpawn.Engine.Owner.SystemLocalToWorld = Engine_Owner_SystemLocalToWorld;
 	Context.MapSpawn.Engine.Owner.SystemWorldToLocal = Engine_Owner_SystemWorldToLocal;
+	Context.MapSpawn.Engine.Owner.SystemLocalToWorldNoScale = Engine_Owner_SystemLocalToWorldNoScale;
+	Context.MapSpawn.Engine.Owner.SystemWorldToLocalNoScale = Engine_Owner_SystemWorldToLocalNoScale;
+	Context.MapSpawn.Constants.Emitter.SampleSkeletalMeshSurface.RandomSeed = Constants_Emitter_SampleSkeletalMeshSurface_RandomSeed;
+	Context.MapSpawn.Constants.Emitter.SampleSkeletalMeshSurface.UVIndex = Constants_Emitter_SampleSkeletalMeshSurface_UVIndex;
 	Context.MapUpdate.Engine.DeltaTime = Engine_DeltaTime;
+	Context.MapUpdate.Constants.Emitter.Color.ScaleAlpha = Constants_Emitter_Color_ScaleAlpha;
+	Context.MapUpdate.Emitter.AlphaScale = Emitter_AlphaScale;
+	Context.MapUpdate.Constants.Emitter.FloatFromCurve001.ScaleCurve = Constants_Emitter_FloatFromCurve001_ScaleCurve;
 	Context.MapUpdate.Engine.Time = Engine_Time;
 	Context.MapUpdate.Engine.InverseDeltaTime = Engine_InverseDeltaTime;
 	Context.MapUpdate.Engine.ExecutionCount = Engine_ExecutionCount;
@@ -6630,23 +6953,48 @@ void SimulateMain(in int InstanceIdx, in int InEventIndex, in int Phase)
 	OutputDataFloat(0, 2, TmpWriteIndex, Context.MapUpdate.Particles.Color.g);
 	OutputDataFloat(0, 3, TmpWriteIndex, Context.MapUpdate.Particles.Color.b);
 	OutputDataFloat(0, 4, TmpWriteIndex, Context.MapUpdate.Particles.Color.a);
+	OutputDataBool(0, 0, TmpWriteIndex, Context.MapUpdate.Particles.DummyEmitterDeterminism);
 	OutputDataFloat(0, 5, TmpWriteIndex, Context.MapUpdate.Particles.Lifetime);
 	OutputDataFloat(0, 6, TmpWriteIndex, Context.MapUpdate.Particles.Mass);
 	OutputDataFloat(0, 7, TmpWriteIndex, Context.MapUpdate.Particles.MaterialRandom);
 	OutputDataFloat(0, 8, TmpWriteIndex, Context.MapUpdate.Particles.NewPosition.x);
 	OutputDataFloat(0, 9, TmpWriteIndex, Context.MapUpdate.Particles.NewPosition.y);
 	OutputDataFloat(0, 10, TmpWriteIndex, Context.MapUpdate.Particles.NewPosition.z);
-	OutputDataFloat(0, 11, TmpWriteIndex, Context.MapUpdate.Particles.NormalizedAge);
-	OutputDataFloat(0, 12, TmpWriteIndex, Context.MapUpdate.Particles.Position.x);
-	OutputDataFloat(0, 13, TmpWriteIndex, Context.MapUpdate.Particles.Position.y);
-	OutputDataFloat(0, 14, TmpWriteIndex, Context.MapUpdate.Particles.Position.z);
-	OutputDataFloat(0, 15, TmpWriteIndex, Context.MapUpdate.Particles.Scale.x);
-	OutputDataFloat(0, 16, TmpWriteIndex, Context.MapUpdate.Particles.Scale.y);
-	OutputDataFloat(0, 17, TmpWriteIndex, Context.MapUpdate.Particles.Scale.z);
-	OutputDataFloat(0, 18, TmpWriteIndex, Context.MapUpdate.Particles.SpriteRotation);
-	OutputDataFloat(0, 19, TmpWriteIndex, Context.MapUpdate.Particles.SpriteSize.x);
-	OutputDataFloat(0, 20, TmpWriteIndex, Context.MapUpdate.Particles.SpriteSize.y);
-	OutputDataInt(0, 0, TmpWriteIndex, Context.MapUpdate.Particles.UniqueID);
+	OutputDataFloat(0, 11, TmpWriteIndex, Context.MapUpdate.Particles.NewPosition_Skeletal.x);
+	OutputDataFloat(0, 12, TmpWriteIndex, Context.MapUpdate.Particles.NewPosition_Skeletal.y);
+	OutputDataFloat(0, 13, TmpWriteIndex, Context.MapUpdate.Particles.NewPosition_Skeletal.z);
+	OutputDataFloat(0, 14, TmpWriteIndex, Context.MapUpdate.Particles.NormalizedAge);
+	OutputDataFloat(0, 15, TmpWriteIndex, Context.MapUpdate.Particles.Position.x);
+	OutputDataFloat(0, 16, TmpWriteIndex, Context.MapUpdate.Particles.Position.y);
+	OutputDataFloat(0, 17, TmpWriteIndex, Context.MapUpdate.Particles.Position.z);
+	OutputDataFloat(0, 18, TmpWriteIndex, Context.MapUpdate.Particles.SampleSkeletalMeshSurface.MeshBitangent.x);
+	OutputDataFloat(0, 19, TmpWriteIndex, Context.MapUpdate.Particles.SampleSkeletalMeshSurface.MeshBitangent.y);
+	OutputDataFloat(0, 20, TmpWriteIndex, Context.MapUpdate.Particles.SampleSkeletalMeshSurface.MeshBitangent.z);
+	OutputDataFloat(0, 21, TmpWriteIndex, Context.MapUpdate.Particles.SampleSkeletalMeshSurface.MeshColor.r);
+	OutputDataFloat(0, 22, TmpWriteIndex, Context.MapUpdate.Particles.SampleSkeletalMeshSurface.MeshColor.g);
+	OutputDataFloat(0, 23, TmpWriteIndex, Context.MapUpdate.Particles.SampleSkeletalMeshSurface.MeshColor.b);
+	OutputDataFloat(0, 24, TmpWriteIndex, Context.MapUpdate.Particles.SampleSkeletalMeshSurface.MeshColor.a);
+	OutputDataFloat(0, 25, TmpWriteIndex, Context.MapUpdate.Particles.SampleSkeletalMeshSurface.MeshNormal.x);
+	OutputDataFloat(0, 26, TmpWriteIndex, Context.MapUpdate.Particles.SampleSkeletalMeshSurface.MeshNormal.y);
+	OutputDataFloat(0, 27, TmpWriteIndex, Context.MapUpdate.Particles.SampleSkeletalMeshSurface.MeshNormal.z);
+	OutputDataFloat(0, 28, TmpWriteIndex, Context.MapUpdate.Particles.SampleSkeletalMeshSurface.MeshPosition.x);
+	OutputDataFloat(0, 29, TmpWriteIndex, Context.MapUpdate.Particles.SampleSkeletalMeshSurface.MeshPosition.y);
+	OutputDataFloat(0, 30, TmpWriteIndex, Context.MapUpdate.Particles.SampleSkeletalMeshSurface.MeshPosition.z);
+	OutputDataFloat(0, 31, TmpWriteIndex, Context.MapUpdate.Particles.SampleSkeletalMeshSurface.MeshTangent.x);
+	OutputDataFloat(0, 32, TmpWriteIndex, Context.MapUpdate.Particles.SampleSkeletalMeshSurface.MeshTangent.y);
+	OutputDataFloat(0, 33, TmpWriteIndex, Context.MapUpdate.Particles.SampleSkeletalMeshSurface.MeshTangent.z);
+	OutputDataFloat(0, 34, TmpWriteIndex, Context.MapUpdate.Particles.SampleSkeletalMeshSurface.MeshUV.x);
+	OutputDataFloat(0, 35, TmpWriteIndex, Context.MapUpdate.Particles.SampleSkeletalMeshSurface.MeshUV.y);
+	OutputDataFloat(0, 36, TmpWriteIndex, Context.MapUpdate.Particles.SampleSkeletalMeshSurface.MeshVelocity.x);
+	OutputDataFloat(0, 37, TmpWriteIndex, Context.MapUpdate.Particles.SampleSkeletalMeshSurface.MeshVelocity.y);
+	OutputDataFloat(0, 38, TmpWriteIndex, Context.MapUpdate.Particles.SampleSkeletalMeshSurface.MeshVelocity.z);
+	OutputDataFloat(0, 39, TmpWriteIndex, Context.MapUpdate.Particles.Scale.x);
+	OutputDataFloat(0, 40, TmpWriteIndex, Context.MapUpdate.Particles.Scale.y);
+	OutputDataFloat(0, 41, TmpWriteIndex, Context.MapUpdate.Particles.Scale.z);
+	OutputDataFloat(0, 42, TmpWriteIndex, Context.MapUpdate.Particles.SpriteRotation);
+	OutputDataFloat(0, 43, TmpWriteIndex, Context.MapUpdate.Particles.SpriteSize.x);
+	OutputDataFloat(0, 44, TmpWriteIndex, Context.MapUpdate.Particles.SpriteSize.y);
+	OutputDataInt(0, 1, TmpWriteIndex, Context.MapUpdate.Particles.UniqueID);
 	}
 ExitStatScope( );
 }
