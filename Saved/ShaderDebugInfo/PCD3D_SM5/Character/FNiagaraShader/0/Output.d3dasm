@@ -60,216 +60,6 @@
 //
 // }
 //
-// cbuffer View
-// {
-//
-//   row_major float4x4 View_TranslatedWorldToClip;// Offset:    0 Size:    64
-//   row_major float4x4 View_WorldToClip;// Offset:   64 Size:    64 [unused]
-//   row_major float4x4 View_ClipToWorld;// Offset:  128 Size:    64 [unused]
-//   row_major float4x4 View_TranslatedWorldToView;// Offset:  192 Size:    64 [unused]
-//   row_major float4x4 View_ViewToTranslatedWorld;// Offset:  256 Size:    64 [unused]
-//   row_major float4x4 View_TranslatedWorldToCameraView;// Offset:  320 Size:    64 [unused]
-//   row_major float4x4 View_CameraViewToTranslatedWorld;// Offset:  384 Size:    64 [unused]
-//   row_major float4x4 View_ViewToClip;// Offset:  448 Size:    64 [unused]
-//   row_major float4x4 View_ViewToClipNoAA;// Offset:  512 Size:    64 [unused]
-//   row_major float4x4 View_ClipToView;// Offset:  576 Size:    64 [unused]
-//   row_major float4x4 View_ClipToTranslatedWorld;// Offset:  640 Size:    64 [unused]
-//   row_major float4x4 View_SVPositionToTranslatedWorld;// Offset:  704 Size:    64 [unused]
-//   row_major float4x4 View_ScreenToWorld;// Offset:  768 Size:    64
-//   row_major float4x4 View_ScreenToTranslatedWorld;// Offset:  832 Size:    64 [unused]
-//   row_major float4x4 View_MobileMultiviewShadowTransform;// Offset:  896 Size:    64 [unused]
-//   float3 View_ViewForward;           // Offset:  960 Size:    12 [unused]
-//   float PrePadding_View_972;         // Offset:  972 Size:     4 [unused]
-//   float3 View_ViewUp;                // Offset:  976 Size:    12 [unused]
-//   float PrePadding_View_988;         // Offset:  988 Size:     4 [unused]
-//   float3 View_ViewRight;             // Offset:  992 Size:    12 [unused]
-//   float PrePadding_View_1004;        // Offset: 1004 Size:     4 [unused]
-//   float3 View_HMDViewNoRollUp;       // Offset: 1008 Size:    12 [unused]
-//   float PrePadding_View_1020;        // Offset: 1020 Size:     4 [unused]
-//   float3 View_HMDViewNoRollRight;    // Offset: 1024 Size:    12 [unused]
-//   float PrePadding_View_1036;        // Offset: 1036 Size:     4 [unused]
-//   float4 View_InvDeviceZToWorldZTransform;// Offset: 1040 Size:    16
-//   float4 View_ScreenPositionScaleBias;// Offset: 1056 Size:    16
-//   float3 View_WorldCameraOrigin;     // Offset: 1072 Size:    12
-//   float PrePadding_View_1084;        // Offset: 1084 Size:     4 [unused]
-//   float3 View_TranslatedWorldCameraOrigin;// Offset: 1088 Size:    12 [unused]
-//   float PrePadding_View_1100;        // Offset: 1100 Size:     4 [unused]
-//   float3 View_WorldViewOrigin;       // Offset: 1104 Size:    12 [unused]
-//   float PrePadding_View_1116;        // Offset: 1116 Size:     4 [unused]
-//   float3 View_PreViewTranslation;    // Offset: 1120 Size:    12
-//   float PrePadding_View_1132;        // Offset: 1132 Size:     4 [unused]
-//   row_major float4x4 View_PrevProjection;// Offset: 1136 Size:    64 [unused]
-//   row_major float4x4 View_PrevViewProj;// Offset: 1200 Size:    64 [unused]
-//   row_major float4x4 View_PrevViewRotationProj;// Offset: 1264 Size:    64 [unused]
-//   row_major float4x4 View_PrevViewToClip;// Offset: 1328 Size:    64 [unused]
-//   row_major float4x4 View_PrevClipToView;// Offset: 1392 Size:    64 [unused]
-//   row_major float4x4 View_PrevTranslatedWorldToClip;// Offset: 1456 Size:    64 [unused]
-//   row_major float4x4 View_PrevTranslatedWorldToView;// Offset: 1520 Size:    64 [unused]
-//   row_major float4x4 View_PrevViewToTranslatedWorld;// Offset: 1584 Size:    64 [unused]
-//   row_major float4x4 View_PrevTranslatedWorldToCameraView;// Offset: 1648 Size:    64 [unused]
-//   row_major float4x4 View_PrevCameraViewToTranslatedWorld;// Offset: 1712 Size:    64 [unused]
-//   float3 View_PrevWorldCameraOrigin; // Offset: 1776 Size:    12 [unused]
-//   float PrePadding_View_1788;        // Offset: 1788 Size:     4 [unused]
-//   float3 View_PrevWorldViewOrigin;   // Offset: 1792 Size:    12 [unused]
-//   float PrePadding_View_1804;        // Offset: 1804 Size:     4 [unused]
-//   float3 View_PrevPreViewTranslation;// Offset: 1808 Size:    12 [unused]
-//   float PrePadding_View_1820;        // Offset: 1820 Size:     4 [unused]
-//   row_major float4x4 View_PrevInvViewProj;// Offset: 1824 Size:    64 [unused]
-//   row_major float4x4 View_PrevScreenToTranslatedWorld;// Offset: 1888 Size:    64 [unused]
-//   row_major float4x4 View_ClipToPrevClip;// Offset: 1952 Size:    64 [unused]
-//   float4 View_TemporalAAJitter;      // Offset: 2016 Size:    16 [unused]
-//   float4 View_GlobalClippingPlane;   // Offset: 2032 Size:    16 [unused]
-//   float2 View_FieldOfViewWideAngles; // Offset: 2048 Size:     8 [unused]
-//   float2 View_PrevFieldOfViewWideAngles;// Offset: 2056 Size:     8 [unused]
-//   float4 View_ViewRectMin;           // Offset: 2064 Size:    16 [unused]
-//   float4 View_ViewSizeAndInvSize;    // Offset: 2080 Size:    16 [unused]
-//   float4 View_BufferSizeAndInvSize;  // Offset: 2096 Size:    16 [unused]
-//   float4 View_BufferBilinearUVMinMax;// Offset: 2112 Size:    16 [unused]
-//   float4 View_ScreenToViewSpace;     // Offset: 2128 Size:    16 [unused]
-//   int View_NumSceneColorMSAASamples; // Offset: 2144 Size:     4 [unused]
-//   float View_PreExposure;            // Offset: 2148 Size:     4 [unused]
-//   float View_OneOverPreExposure;     // Offset: 2152 Size:     4 [unused]
-//   float PrePadding_View_2156;        // Offset: 2156 Size:     4 [unused]
-//   float4 View_DiffuseOverrideParameter;// Offset: 2160 Size:    16 [unused]
-//   float4 View_SpecularOverrideParameter;// Offset: 2176 Size:    16 [unused]
-//   float4 View_NormalOverrideParameter;// Offset: 2192 Size:    16 [unused]
-//   float2 View_RoughnessOverrideParameter;// Offset: 2208 Size:     8 [unused]
-//   float View_PrevFrameGameTime;      // Offset: 2216 Size:     4 [unused]
-//   float View_PrevFrameRealTime;      // Offset: 2220 Size:     4 [unused]
-//   float View_OutOfBoundsMask;        // Offset: 2224 Size:     4 [unused]
-//   float PrePadding_View_2228;        // Offset: 2228 Size:     4 [unused]
-//   float PrePadding_View_2232;        // Offset: 2232 Size:     4 [unused]
-//   float PrePadding_View_2236;        // Offset: 2236 Size:     4 [unused]
-//   float3 View_WorldCameraMovementSinceLastFrame;// Offset: 2240 Size:    12 [unused]
-//   float View_CullingSign;            // Offset: 2252 Size:     4 [unused]
-//   float View_NearPlane;              // Offset: 2256 Size:     4 [unused]
-//   float View_AdaptiveTessellationFactor;// Offset: 2260 Size:     4 [unused]
-//   float View_GameTime;               // Offset: 2264 Size:     4 [unused]
-//   float View_RealTime;               // Offset: 2268 Size:     4 [unused]
-//   float View_DeltaTime;              // Offset: 2272 Size:     4 [unused]
-//   float View_MaterialTextureMipBias; // Offset: 2276 Size:     4 [unused]
-//   float View_MaterialTextureDerivativeMultiply;// Offset: 2280 Size:     4 [unused]
-//   uint View_Random;                  // Offset: 2284 Size:     4 [unused]
-//   uint View_FrameNumber;             // Offset: 2288 Size:     4 [unused]
-//   uint View_StateFrameIndexMod8;     // Offset: 2292 Size:     4 [unused]
-//   uint View_StateFrameIndex;         // Offset: 2296 Size:     4 [unused]
-//   float View_CameraCut;              // Offset: 2300 Size:     4 [unused]
-//   float View_UnlitViewmodeMask;      // Offset: 2304 Size:     4 [unused]
-//   float PrePadding_View_2308;        // Offset: 2308 Size:     4 [unused]
-//   float PrePadding_View_2312;        // Offset: 2312 Size:     4 [unused]
-//   float PrePadding_View_2316;        // Offset: 2316 Size:     4 [unused]
-//   float4 View_DirectionalLightColor; // Offset: 2320 Size:    16 [unused]
-//   float3 View_DirectionalLightDirection;// Offset: 2336 Size:    12 [unused]
-//   float PrePadding_View_2348;        // Offset: 2348 Size:     4 [unused]
-//   float4 View_TranslucencyLightingVolumeMin[2];// Offset: 2352 Size:    32 [unused]
-//   float4 View_TranslucencyLightingVolumeInvSize[2];// Offset: 2384 Size:    32 [unused]
-//   float4 View_TemporalAAParams;      // Offset: 2416 Size:    16 [unused]
-//   float4 View_CircleDOFParams;       // Offset: 2432 Size:    16 [unused]
-//   float View_DepthOfFieldSensorWidth;// Offset: 2448 Size:     4 [unused]
-//   float View_DepthOfFieldFocalDistance;// Offset: 2452 Size:     4 [unused]
-//   float View_DepthOfFieldScale;      // Offset: 2456 Size:     4 [unused]
-//   float View_DepthOfFieldFocalLength;// Offset: 2460 Size:     4 [unused]
-//   float View_DepthOfFieldFocalRegion;// Offset: 2464 Size:     4 [unused]
-//   float View_DepthOfFieldNearTransitionRegion;// Offset: 2468 Size:     4 [unused]
-//   float View_DepthOfFieldFarTransitionRegion;// Offset: 2472 Size:     4 [unused]
-//   float View_MotionBlurNormalizedToPixel;// Offset: 2476 Size:     4 [unused]
-//   float View_bSubsurfacePostprocessEnabled;// Offset: 2480 Size:     4 [unused]
-//   float View_GeneralPurposeTweak;    // Offset: 2484 Size:     4 [unused]
-//   float View_DemosaicVposOffset;     // Offset: 2488 Size:     4 [unused]
-//   float PrePadding_View_2492;        // Offset: 2492 Size:     4 [unused]
-//   float3 View_IndirectLightingColorScale;// Offset: 2496 Size:    12 [unused]
-//   float View_HDR32bppEncodingMode;   // Offset: 2508 Size:     4 [unused]
-//   float View_AtmosphericFogSunPower; // Offset: 2512 Size:     4 [unused]
-//   float View_AtmosphericFogPower;    // Offset: 2516 Size:     4 [unused]
-//   float View_AtmosphericFogDensityScale;// Offset: 2520 Size:     4 [unused]
-//   float View_AtmosphericFogDensityOffset;// Offset: 2524 Size:     4 [unused]
-//   float View_AtmosphericFogGroundOffset;// Offset: 2528 Size:     4 [unused]
-//   float View_AtmosphericFogDistanceScale;// Offset: 2532 Size:     4 [unused]
-//   float View_AtmosphericFogAltitudeScale;// Offset: 2536 Size:     4 [unused]
-//   float View_AtmosphericFogHeightScaleRayleigh;// Offset: 2540 Size:     4 [unused]
-//   float View_AtmosphericFogStartDistance;// Offset: 2544 Size:     4 [unused]
-//   float View_AtmosphericFogDistanceOffset;// Offset: 2548 Size:     4 [unused]
-//   float View_AtmosphericFogSunDiscScale;// Offset: 2552 Size:     4 [unused]
-//   float PrePadding_View_2556;        // Offset: 2556 Size:     4 [unused]
-//   float4 View_AtmosphereLightDirection[2];// Offset: 2560 Size:    32 [unused]
-//   float4 View_AtmosphereLightColor[2];// Offset: 2592 Size:    32 [unused]
-//   float4 View_AtmosphereLightColorGlobalPostTransmittance[2];// Offset: 2624 Size:    32 [unused]
-//   float4 View_AtmosphereLightDiscLuminance[2];// Offset: 2656 Size:    32 [unused]
-//   float4 View_AtmosphereLightDiscCosHalfApexAngle[2];// Offset: 2688 Size:    32 [unused]
-//   float4 View_SkyViewLutSizeAndInvSize;// Offset: 2720 Size:    16 [unused]
-//   float3 View_SkyWorldCameraOrigin;  // Offset: 2736 Size:    12 [unused]
-//   float PrePadding_View_2748;        // Offset: 2748 Size:     4 [unused]
-//   float4 View_SkyAtmosphereSkyLuminanceFactor;// Offset: 2752 Size:    16 [unused]
-//   float View_SkyAtmosphereHeightFogContribution;// Offset: 2768 Size:     4 [unused]
-//   float View_SkyAtmosphereBottomRadius;// Offset: 2772 Size:     4 [unused]
-//   float View_SkyAtmosphereTopRadius; // Offset: 2776 Size:     4 [unused]
-//   float View_SkyAtmosphereAerialPerspectiveStartDepth;// Offset: 2780 Size:     4 [unused]
-//   float View_SkyAtmosphereCameraAerialPerspectiveVolumeDepthResolution;// Offset: 2784 Size:     4 [unused]
-//   float View_SkyAtmosphereCameraAerialPerspectiveVolumeDepthResolutionInv;// Offset: 2788 Size:     4 [unused]
-//   float View_SkyAtmosphereCameraAerialPerspectiveVolumeDepthSliceLength;// Offset: 2792 Size:     4 [unused]
-//   float View_SkyAtmosphereCameraAerialPerspectiveVolumeDepthSliceLengthInv;// Offset: 2796 Size:     4 [unused]
-//   float View_SkyAtmosphereApplyCameraAerialPerspectiveVolume;// Offset: 2800 Size:     4 [unused]
-//   uint View_AtmosphericFogRenderMask;// Offset: 2804 Size:     4 [unused]
-//   uint View_AtmosphericFogInscatterAltitudeSampleNum;// Offset: 2808 Size:     4 [unused]
-//   uint PrePadding_View_2812;         // Offset: 2812 Size:     4 [unused]
-//   float3 View_NormalCurvatureToRoughnessScaleBias;// Offset: 2816 Size:    12 [unused]
-//   float View_RenderingReflectionCaptureMask;// Offset: 2828 Size:     4 [unused]
-//   float4 View_AmbientCubemapTint;    // Offset: 2832 Size:    16 [unused]
-//   float View_AmbientCubemapIntensity;// Offset: 2848 Size:     4 [unused]
-//   float View_SkyLightApplyPrecomputedBentNormalShadowingFlag;// Offset: 2852 Size:     4 [unused]
-//   float View_SkyLightAffectReflectionFlag;// Offset: 2856 Size:     4 [unused]
-//   float View_SkyLightAffectGlobalIlluminationFlag;// Offset: 2860 Size:     4 [unused]
-//   float4 View_SkyLightColor;         // Offset: 2864 Size:    16 [unused]
-//   float4 View_SkyIrradianceEnvironmentMap[7];// Offset: 2880 Size:   112 [unused]
-//   float View_MobilePreviewMode;      // Offset: 2992 Size:     4 [unused]
-//   float View_HMDEyePaddingOffset;    // Offset: 2996 Size:     4 [unused]
-//   float View_ReflectionCubemapMaxMip;// Offset: 3000 Size:     4 [unused]
-//   float View_ShowDecalsMask;         // Offset: 3004 Size:     4 [unused]
-//   uint View_DistanceFieldAOSpecularOcclusionMode;// Offset: 3008 Size:     4 [unused]
-//   float View_IndirectCapsuleSelfShadowingIntensity;// Offset: 3012 Size:     4 [unused]
-//   float PrePadding_View_3016;        // Offset: 3016 Size:     4 [unused]
-//   float PrePadding_View_3020;        // Offset: 3020 Size:     4 [unused]
-//   float3 View_ReflectionEnvironmentRoughnessMixingScaleBiasAndLargestWeight;// Offset: 3024 Size:    12 [unused]
-//   int View_StereoPassIndex;          // Offset: 3036 Size:     4 [unused]
-//   float4 View_GlobalVolumeCenterAndExtent[4];// Offset: 3040 Size:    64 [unused]
-//   float4 View_GlobalVolumeWorldToUVAddAndMul[4];// Offset: 3104 Size:    64 [unused]
-//   float View_GlobalVolumeDimension;  // Offset: 3168 Size:     4 [unused]
-//   float View_GlobalVolumeTexelSize;  // Offset: 3172 Size:     4 [unused]
-//   float View_MaxGlobalDistance;      // Offset: 3176 Size:     4 [unused]
-//   float PrePadding_View_3180;        // Offset: 3180 Size:     4 [unused]
-//   int2 View_CursorPosition;          // Offset: 3184 Size:     8 [unused]
-//   float View_bCheckerboardSubsurfaceProfileRendering;// Offset: 3192 Size:     4 [unused]
-//   float PrePadding_View_3196;        // Offset: 3196 Size:     4 [unused]
-//   float3 View_VolumetricFogInvGridSize;// Offset: 3200 Size:    12 [unused]
-//   float PrePadding_View_3212;        // Offset: 3212 Size:     4 [unused]
-//   float3 View_VolumetricFogGridZParams;// Offset: 3216 Size:    12 [unused]
-//   float PrePadding_View_3228;        // Offset: 3228 Size:     4 [unused]
-//   float2 View_VolumetricFogSVPosToVolumeUV;// Offset: 3232 Size:     8 [unused]
-//   float View_VolumetricFogMaxDistance;// Offset: 3240 Size:     4 [unused]
-//   float PrePadding_View_3244;        // Offset: 3244 Size:     4 [unused]
-//   float3 View_VolumetricLightmapWorldToUVScale;// Offset: 3248 Size:    12 [unused]
-//   float PrePadding_View_3260;        // Offset: 3260 Size:     4 [unused]
-//   float3 View_VolumetricLightmapWorldToUVAdd;// Offset: 3264 Size:    12 [unused]
-//   float PrePadding_View_3276;        // Offset: 3276 Size:     4 [unused]
-//   float3 View_VolumetricLightmapIndirectionTextureSize;// Offset: 3280 Size:    12 [unused]
-//   float View_VolumetricLightmapBrickSize;// Offset: 3292 Size:     4 [unused]
-//   float3 View_VolumetricLightmapBrickTexelSize;// Offset: 3296 Size:    12 [unused]
-//   float View_StereoIPD;              // Offset: 3308 Size:     4 [unused]
-//   float View_IndirectLightingCacheShowFlag;// Offset: 3312 Size:     4 [unused]
-//   float View_EyeToPixelSpreadAngle;  // Offset: 3316 Size:     4 [unused]
-//   float PrePadding_View_3320;        // Offset: 3320 Size:     4 [unused]
-//   float PrePadding_View_3324;        // Offset: 3324 Size:     4 [unused]
-//   row_major float4x4 View_WorldToVirtualTexture;// Offset: 3328 Size:    64 [unused]
-//   float4 View_VirtualTextureParams;  // Offset: 3392 Size:    16 [unused]
-//   float4 View_XRPassthroughCameraUVs[2];// Offset: 3408 Size:    32 [unused]
-//   int View_FarShadowStaticMeshLODBias;// Offset: 3440 Size:     4 [unused]
-//   float View_MinRoughness;           // Offset: 3444 Size:     4 [unused]
-//   float View_ConstantWaterDepth;     // Offset: 3448 Size:     4 [unused]
-//   float PrePadding_View_3452;        // Offset: 3452 Size:     4 [unused]
-//   float4 View_HairRenderInfo;        // Offset: 3456 Size:    16 [unused]
-//
-// }
-//
 // cbuffer FEmitterParameters
 // {
 //
@@ -297,76 +87,44 @@
 //   float Constants_Emitter_Color_ScaleAlpha;// Offset:  388 Size:     4
 //   float Emitter_AlphaScale;          // Offset:  392 Size:     4
 //   float Constants_Emitter_FloatFromCurve001_ScaleCurve;// Offset:  396 Size:     4
-//   float Constants_Emitter_Collision_ParticleRadiusScale;// Offset:  400 Size:     4
-//   row_major float4x4 Engine_Owner_SystemWorldToLocalTransposed;// Offset:  416 Size:    64 [unused]
-//   row_major float4x4 Engine_Owner_SystemLocalToWorldTransposed;// Offset:  480 Size:    64 [unused]
-//   float Constants_Emitter_Collision_Friction;// Offset:  544 Size:     4
-//   float Constants_Emitter_Collision_StaticFriction;// Offset:  548 Size:     4 [unused]
-//   float Constants_Emitter_Collision_StaticFrictionEngagementSpeed;// Offset:  552 Size:     4 [unused]
-//   float Constants_Emitter_Collision_Restitution;// Offset:  556 Size:     4
-//   float Constants_Emitter_Collision_RandomizeCollisionNormal;// Offset:  560 Size:     4 [unused]
-//   float Constants_Emitter_Collision_FrictionDuringaBounce;// Offset:  564 Size:     4
-//   float Constants_Emitter_Collision_Maximumtimeoffscreen;// Offset:  568 Size:     4
-//   float Constants_Emitter_Collision_PercentageofPenetrationBeforeRest;// Offset:  572 Size:     4 [unused]
-//   float Constants_Emitter_Collision_RestStateTimeRange;// Offset:  576 Size:     4
-//   float Constants_Emitter_Collision_MaximumPenetrationCorrectionDistance;// Offset:  580 Size:     4 [unused]
-//   float4 Constants_Emitter_Collision_ValidCollisionPlaneNormalForRest;// Offset:  592 Size:    16 [unused]
-//   float Constants_Emitter_Collision_MinimumCollisionNormalASC47RestNormalAlignmentPercentage;// Offset:  608 Size:     4 [unused]
-//   float Constants_Emitter_Collision_AdvancedAgingRate;// Offset:  612 Size:     4 [unused]
-//   float Constants_Emitter_SolveForcesAndVelocity_SpeedLimit;// Offset:  616 Size:     4 [unused]
-//   float Constants_Emitter_SolveForcesAndVelocity_AccelerationLimit;// Offset:  620 Size:     4 [unused]
-//   float Engine_Time;                 // Offset:  624 Size:     4 [unused]
-//   float Engine_InverseDeltaTime;     // Offset:  628 Size:     4
-//   int Engine_ExecutionCount;         // Offset:  632 Size:     4 [unused]
-//   float Emitter_SpawnRate;           // Offset:  636 Size:     4 [unused]
-//   int Engine_Emitter_TotalSpawnedParticles;// Offset:  640 Size:     4
-//   float PREV_Constants_Emitter_UniformRangedFloat005_Minimum;// Offset:  644 Size:     4 [unused]
-//   float PREV_Constants_Emitter_UniformRangedFloat005_Maximum;// Offset:  648 Size:     4 [unused]
-//   int PREV_Constants_Emitter_UniformRangedFloat005_RandomSeed;// Offset:  652 Size:     4 [unused]
-//   int PREV_Emitter_RandomSeed;       // Offset:  656 Size:     4 [unused]
-//   int PREV_Engine_System_TickCount;  // Offset:  660 Size:     4 [unused]
-//   float PREV_Constants_Emitter_UniformRangedFloat004_Minimum;// Offset:  664 Size:     4 [unused]
-//   float PREV_Constants_Emitter_UniformRangedFloat004_Maximum;// Offset:  668 Size:     4 [unused]
-//   int PREV_Constants_Emitter_UniformRangedFloat004_RandomSeed;// Offset:  672 Size:     4 [unused]
-//   float4 PREV_Engine_Owner_Position; // Offset:  688 Size:    16
-//   float PREV_Constants_Emitter_UniformRangedFloat003_Minimum;// Offset:  704 Size:     4 [unused]
-//   float PREV_Constants_Emitter_UniformRangedFloat003_Maximum;// Offset:  708 Size:     4 [unused]
-//   int PREV_Constants_Emitter_UniformRangedFloat003_RandomSeed;// Offset:  712 Size:     4 [unused]
-//   float4 PREV_Constants_Emitter_InitializeParticle_Color;// Offset:  720 Size:    16 [unused]
-//   float4 PREV_Constants_Emitter_InitializeParticle_SpriteSize;// Offset:  736 Size:    16 [unused]
-//   float4 PREV_Constants_Emitter_InitializeParticle_MeshScale;// Offset:  752 Size:    16 [unused]
-//   float PREV_Emitter_Age;            // Offset:  768 Size:     4
-//   row_major float4x4 PREV_Engine_Owner_SystemLocalToWorld;// Offset:  784 Size:    64 [unused]
-//   row_major float4x4 PREV_Engine_Owner_SystemWorldToLocal;// Offset:  848 Size:    64 [unused]
-//   row_major float4x4 PREV_Engine_Owner_SystemLocalToWorldNoScale;// Offset:  912 Size:    64 [unused]
-//   row_major float4x4 PREV_Engine_Owner_SystemWorldToLocalNoScale;// Offset:  976 Size:    64 [unused]
-//   float PREV_Engine_DeltaTime;       // Offset: 1040 Size:     4 [unused]
-//   float PREV_Constants_Emitter_Color_ScaleAlpha;// Offset: 1044 Size:     4 [unused]
-//   float PREV_Emitter_AlphaScale;     // Offset: 1048 Size:     4 [unused]
-//   float PREV_Constants_Emitter_FloatFromCurve001_ScaleCurve;// Offset: 1052 Size:     4 [unused]
-//   float PREV_Constants_Emitter_Collision_ParticleRadiusScale;// Offset: 1056 Size:     4 [unused]
-//   row_major float4x4 PREV_Engine_Owner_SystemWorldToLocalTransposed;// Offset: 1072 Size:    64 [unused]
-//   row_major float4x4 PREV_Engine_Owner_SystemLocalToWorldTransposed;// Offset: 1136 Size:    64 [unused]
-//   float PREV_Constants_Emitter_Collision_Friction;// Offset: 1200 Size:     4 [unused]
-//   float PREV_Constants_Emitter_Collision_StaticFriction;// Offset: 1204 Size:     4 [unused]
-//   float PREV_Constants_Emitter_Collision_StaticFrictionEngagementSpeed;// Offset: 1208 Size:     4 [unused]
-//   float PREV_Constants_Emitter_Collision_Restitution;// Offset: 1212 Size:     4 [unused]
-//   float PREV_Constants_Emitter_Collision_RandomizeCollisionNormal;// Offset: 1216 Size:     4 [unused]
-//   float PREV_Constants_Emitter_Collision_FrictionDuringaBounce;// Offset: 1220 Size:     4 [unused]
-//   float PREV_Constants_Emitter_Collision_Maximumtimeoffscreen;// Offset: 1224 Size:     4 [unused]
-//   float PREV_Constants_Emitter_Collision_PercentageofPenetrationBeforeRest;// Offset: 1228 Size:     4 [unused]
-//   float PREV_Constants_Emitter_Collision_RestStateTimeRange;// Offset: 1232 Size:     4 [unused]
-//   float PREV_Constants_Emitter_Collision_MaximumPenetrationCorrectionDistance;// Offset: 1236 Size:     4 [unused]
-//   float4 PREV_Constants_Emitter_Collision_ValidCollisionPlaneNormalForRest;// Offset: 1248 Size:    16 [unused]
-//   float PREV_Constants_Emitter_Collision_MinimumCollisionNormalASC47RestNormalAlignmentPercentage;// Offset: 1264 Size:     4 [unused]
-//   float PREV_Constants_Emitter_Collision_AdvancedAgingRate;// Offset: 1268 Size:     4 [unused]
-//   float PREV_Constants_Emitter_SolveForcesAndVelocity_SpeedLimit;// Offset: 1272 Size:     4 [unused]
-//   float PREV_Constants_Emitter_SolveForcesAndVelocity_AccelerationLimit;// Offset: 1276 Size:     4 [unused]
-//   float PREV_Engine_Time;            // Offset: 1280 Size:     4 [unused]
-//   float PREV_Engine_InverseDeltaTime;// Offset: 1284 Size:     4 [unused]
-//   int PREV_Engine_ExecutionCount;    // Offset: 1288 Size:     4 [unused]
-//   float PREV_Emitter_SpawnRate;      // Offset: 1292 Size:     4 [unused]
-//   int PREV_Engine_Emitter_TotalSpawnedParticles;// Offset: 1296 Size:     4 [unused]
+//   float Constants_Emitter_SolveForcesAndVelocity_SpeedLimit;// Offset:  400 Size:     4 [unused]
+//   float Constants_Emitter_SolveForcesAndVelocity_AccelerationLimit;// Offset:  404 Size:     4 [unused]
+//   float Engine_Time;                 // Offset:  408 Size:     4 [unused]
+//   float Engine_InverseDeltaTime;     // Offset:  412 Size:     4
+//   int Engine_ExecutionCount;         // Offset:  416 Size:     4 [unused]
+//   float Emitter_SpawnRate;           // Offset:  420 Size:     4 [unused]
+//   int Engine_Emitter_TotalSpawnedParticles;// Offset:  424 Size:     4
+//   float PREV_Constants_Emitter_UniformRangedFloat005_Minimum;// Offset:  428 Size:     4 [unused]
+//   float PREV_Constants_Emitter_UniformRangedFloat005_Maximum;// Offset:  432 Size:     4 [unused]
+//   int PREV_Constants_Emitter_UniformRangedFloat005_RandomSeed;// Offset:  436 Size:     4 [unused]
+//   int PREV_Emitter_RandomSeed;       // Offset:  440 Size:     4 [unused]
+//   int PREV_Engine_System_TickCount;  // Offset:  444 Size:     4 [unused]
+//   float PREV_Constants_Emitter_UniformRangedFloat004_Minimum;// Offset:  448 Size:     4 [unused]
+//   float PREV_Constants_Emitter_UniformRangedFloat004_Maximum;// Offset:  452 Size:     4 [unused]
+//   int PREV_Constants_Emitter_UniformRangedFloat004_RandomSeed;// Offset:  456 Size:     4 [unused]
+//   float4 PREV_Engine_Owner_Position; // Offset:  464 Size:    16
+//   float PREV_Constants_Emitter_UniformRangedFloat003_Minimum;// Offset:  480 Size:     4 [unused]
+//   float PREV_Constants_Emitter_UniformRangedFloat003_Maximum;// Offset:  484 Size:     4 [unused]
+//   int PREV_Constants_Emitter_UniformRangedFloat003_RandomSeed;// Offset:  488 Size:     4 [unused]
+//   float4 PREV_Constants_Emitter_InitializeParticle_Color;// Offset:  496 Size:    16 [unused]
+//   float4 PREV_Constants_Emitter_InitializeParticle_SpriteSize;// Offset:  512 Size:    16 [unused]
+//   float4 PREV_Constants_Emitter_InitializeParticle_MeshScale;// Offset:  528 Size:    16 [unused]
+//   float PREV_Emitter_Age;            // Offset:  544 Size:     4
+//   row_major float4x4 PREV_Engine_Owner_SystemLocalToWorld;// Offset:  560 Size:    64 [unused]
+//   row_major float4x4 PREV_Engine_Owner_SystemWorldToLocal;// Offset:  624 Size:    64 [unused]
+//   row_major float4x4 PREV_Engine_Owner_SystemLocalToWorldNoScale;// Offset:  688 Size:    64 [unused]
+//   row_major float4x4 PREV_Engine_Owner_SystemWorldToLocalNoScale;// Offset:  752 Size:    64 [unused]
+//   float PREV_Engine_DeltaTime;       // Offset:  816 Size:     4 [unused]
+//   float PREV_Constants_Emitter_Color_ScaleAlpha;// Offset:  820 Size:     4 [unused]
+//   float PREV_Emitter_AlphaScale;     // Offset:  824 Size:     4 [unused]
+//   float PREV_Constants_Emitter_FloatFromCurve001_ScaleCurve;// Offset:  828 Size:     4 [unused]
+//   float PREV_Constants_Emitter_SolveForcesAndVelocity_SpeedLimit;// Offset:  832 Size:     4 [unused]
+//   float PREV_Constants_Emitter_SolveForcesAndVelocity_AccelerationLimit;// Offset:  836 Size:     4 [unused]
+//   float PREV_Engine_Time;            // Offset:  840 Size:     4 [unused]
+//   float PREV_Engine_InverseDeltaTime;// Offset:  844 Size:     4 [unused]
+//   int PREV_Engine_ExecutionCount;    // Offset:  848 Size:     4 [unused]
+//   float PREV_Emitter_SpawnRate;      // Offset:  852 Size:     4 [unused]
+//   int PREV_Engine_Emitter_TotalSpawnedParticles;// Offset:  856 Size:     4 [unused]
 //
 // }
 //
@@ -375,32 +133,27 @@
 //
 // Name                                 Type  Format         Dim      HLSL Bind  Count
 // ------------------------------ ---------- ------- ----------- -------------- ------
-// SceneTexturesStruct_SceneDepthTextureSampler    sampler      NA          NA             s0      1 
-// SceneTexturesStruct_GBufferATextureSampler    sampler      NA          NA             s1      1 
-// SceneTexturesStruct_SceneDepthTexture    texture  float4          2d             t0      1 
-// SceneTexturesStruct_GBufferATexture    texture  float4          2d             t1      1 
-// InputFloat                        texture   float         buf             t2      1 
-// InputInt                          texture    sint         buf             t3      1 
-// IndexBuffer_Particles_StaticMesh    texture    uint         buf             t4      1 
-// VertexBuffer_Particles_StaticMesh    texture   float         buf             t5      1 
-// SectionBuffer_Particles_StaticMesh    texture   uint4         buf             t6      1 
-// TriangleBuffer_Particles_StaticMesh    texture   uint4         buf             t7      1 
-// IndexBuffer_Particles_StaticMesh2    texture    uint         buf             t8      1 
-// VertexBuffer_Particles_StaticMesh2    texture   float         buf             t9      1 
-// SectionBuffer_Particles_StaticMesh2    texture   uint4         buf            t10      1 
-// TriangleBuffer_Particles_StaticMesh2    texture   uint4         buf            t11      1 
-// IndexBuffer_Particles_StaticMesh3    texture    uint         buf            t12      1 
-// VertexBuffer_Particles_StaticMesh3    texture   float         buf            t13      1 
-// SectionBuffer_Particles_StaticMesh3    texture   uint4         buf            t14      1 
-// TriangleBuffer_Particles_StaticMesh3    texture   uint4         buf            t15      1 
-// CurveLUT_Color_ColorCurve         texture   float         buf            t16      1 
-// CurveLUT_ConvergenceRate_Particles_Position_FloatCurve    texture   float         buf            t17      1 
+// InputFloat                        texture   float         buf             t0      1 
+// InputInt                          texture    sint         buf             t1      1 
+// IndexBuffer_Particles_StaticMesh    texture    uint         buf             t2      1 
+// VertexBuffer_Particles_StaticMesh    texture   float         buf             t3      1 
+// SectionBuffer_Particles_StaticMesh    texture   uint4         buf             t4      1 
+// TriangleBuffer_Particles_StaticMesh    texture   uint4         buf             t5      1 
+// IndexBuffer_Particles_StaticMesh2    texture    uint         buf             t6      1 
+// VertexBuffer_Particles_StaticMesh2    texture   float         buf             t7      1 
+// SectionBuffer_Particles_StaticMesh2    texture   uint4         buf             t8      1 
+// TriangleBuffer_Particles_StaticMesh2    texture   uint4         buf             t9      1 
+// IndexBuffer_Particles_StaticMesh3    texture    uint         buf            t10      1 
+// VertexBuffer_Particles_StaticMesh3    texture   float         buf            t11      1 
+// SectionBuffer_Particles_StaticMesh3    texture   uint4         buf            t12      1 
+// TriangleBuffer_Particles_StaticMesh3    texture   uint4         buf            t13      1 
+// CurveLUT_Color_ColorCurve         texture   float         buf            t14      1 
+// CurveLUT_ConvergenceRate_Particles_Position_FloatCurve    texture   float         buf            t15      1 
 // RWOutputInt                           UAV    sint         buf             u0      1 
 // RWOutputFloat                         UAV   float         buf             u1      1 
 // RWInstanceCounts                      UAV    uint         buf             u2      1 
 // $Globals                          cbuffer      NA          NA            cb0      1 
-// View                              cbuffer      NA          NA            cb1      1 
-// FEmitterParameters                cbuffer      NA          NA            cb2      1 
+// FEmitterParameters                cbuffer      NA          NA            cb1      1 
 //
 //
 //
@@ -418,33 +171,28 @@
 cs_5_0
 dcl_globalFlags refactoringAllowed
 dcl_constantbuffer CB0[70], dynamicIndexed
-dcl_constantbuffer CB1[71], immediateIndexed
-dcl_constantbuffer CB2[49], immediateIndexed
-dcl_sampler s0, mode_default
-dcl_sampler s1, mode_default
-dcl_resource_texture2d (float,float,float,float) t0
-dcl_resource_texture2d (float,float,float,float) t1
-dcl_resource_buffer (float,float,float,float) t2
-dcl_resource_buffer (sint,sint,sint,sint) t3
+dcl_constantbuffer CB1[35], immediateIndexed
+dcl_resource_buffer (float,float,float,float) t0
+dcl_resource_buffer (sint,sint,sint,sint) t1
+dcl_resource_buffer (uint,uint,uint,uint) t2
+dcl_resource_buffer (float,float,float,float) t3
 dcl_resource_buffer (uint,uint,uint,uint) t4
-dcl_resource_buffer (float,float,float,float) t5
+dcl_resource_buffer (uint,uint,uint,uint) t5
 dcl_resource_buffer (uint,uint,uint,uint) t6
-dcl_resource_buffer (uint,uint,uint,uint) t7
+dcl_resource_buffer (float,float,float,float) t7
 dcl_resource_buffer (uint,uint,uint,uint) t8
-dcl_resource_buffer (float,float,float,float) t9
+dcl_resource_buffer (uint,uint,uint,uint) t9
 dcl_resource_buffer (uint,uint,uint,uint) t10
-dcl_resource_buffer (uint,uint,uint,uint) t11
+dcl_resource_buffer (float,float,float,float) t11
 dcl_resource_buffer (uint,uint,uint,uint) t12
-dcl_resource_buffer (float,float,float,float) t13
-dcl_resource_buffer (uint,uint,uint,uint) t14
-dcl_resource_buffer (uint,uint,uint,uint) t15
-dcl_resource_buffer (float,float,float,float) t16
-dcl_resource_buffer (float,float,float,float) t17
+dcl_resource_buffer (uint,uint,uint,uint) t13
+dcl_resource_buffer (float,float,float,float) t14
+dcl_resource_buffer (float,float,float,float) t15
 dcl_uav_typed_buffer (sint,sint,sint,sint) u0
 dcl_uav_typed_buffer (float,float,float,float) u1
 dcl_uav_typed_buffer (uint,uint,uint,uint) u2
 dcl_input vThreadID.x
-dcl_temps 23
+dcl_temps 10
 dcl_thread_group 64, 1, 1
 iadd r0.x, vThreadID.x, cb0[20].x
 ieq r0.y, cb0[22].z, l(-1)
@@ -456,451 +204,137 @@ ult r0.z, r0.x, r0.z
 if_nz r0.z
   ult r0.z, r0.x, r0.y
   if_nz r0.z
-    ld_indexable(buffer)(float,float,float,float) r0.z, r0.xxxx, t2.yzxw
-    iadd r0.w, r0.x, cb0[21].x
-    ld_indexable(buffer)(float,float,float,float) r0.w, r0.wwww, t2.yzwx
-    ishl r2.xyzw, cb0[21].xxxy, l(1, 3, 2, 1)
-    iadd r1.yzw, r0.xxxx, r2.xxyz
-    ld_indexable(buffer)(sint,sint,sint,sint) r1.y, r1.yyyy, t3.yxzw
-    ieq r1.y, r1.y, l(-1)
-    imad r3.xyzw, l(6, 7, 9, 10), cb0[21].xxxx, r0.xxxx
-    ld_indexable(buffer)(float,float,float,float) r2.x, r3.xxxx, t2.xyzw
-    ld_indexable(buffer)(float,float,float,float) r2.y, r3.yyyy, t2.yxzw
-    ld_indexable(buffer)(float,float,float,float) r1.z, r1.zzzz, t2.yzxw
-    ld_indexable(buffer)(float,float,float,float) r3.x, r3.zzzz, t2.xyzw
-    ld_indexable(buffer)(float,float,float,float) r3.y, r3.wwww, t2.yxzw
-    imad r4.xyzw, l(11, 3, 13, 14), cb0[21].xxxx, r0.xxxx
-    ld_indexable(buffer)(float,float,float,float) r3.z, r4.xxxx, t2.yzxw
-    ld_indexable(buffer)(sint,sint,sint,sint) r2.z, r4.yyyy, t3.yzxw
-    ld_indexable(buffer)(float,float,float,float) r4.x, r4.zzzz, t2.xyzw
-    ld_indexable(buffer)(float,float,float,float) r4.y, r4.wwww, t2.yxzw
-    imad r5.xyzw, l(15, 19, 20, 21), cb0[21].xxxx, r0.xxxx
-    ld_indexable(buffer)(float,float,float,float) r4.z, r5.xxxx, t2.yzxw
-    ld_indexable(buffer)(float,float,float,float) r3.w, r5.yyyy, t2.yzwx
-    ld_indexable(buffer)(float,float,float,float) r4.w, r5.zzzz, t2.yzwx
-    ld_indexable(buffer)(float,float,float,float) r5.x, r5.wwww, t2.xyzw
+    ld_indexable(buffer)(float,float,float,float) r0.z, r0.xxxx, t0.yzxw
+    imad r2.xyzw, l(5, 6, 7, 9), cb0[21].xxxx, r0.xxxx
+    ld_indexable(buffer)(float,float,float,float) r0.w, r2.xxxx, t0.yzwx
+    ld_indexable(buffer)(float,float,float,float) r1.y, r2.yyyy, t0.yxzw
+    ld_indexable(buffer)(float,float,float,float) r1.z, r2.zzzz, t0.yzxw
+    ishl r3.xyzw, cb0[21].xyyy, l(3, 1, 2, 3)
+    iadd r1.w, r0.x, r3.x
+    ld_indexable(buffer)(float,float,float,float) r2.x, r1.wwww, t0.xyzw
+    ld_indexable(buffer)(float,float,float,float) r2.y, r2.wwww, t0.yxzw
+    imad r4.xyzw, l(10, 12, 13, 14), cb0[21].xxxx, r0.xxxx
+    ld_indexable(buffer)(float,float,float,float) r2.z, r4.xxxx, t0.yzxw
+    ld_indexable(buffer)(float,float,float,float) r5.x, r4.yyyy, t0.xyzw
+    ld_indexable(buffer)(float,float,float,float) r5.y, r4.zzzz, t0.yxzw
+    ld_indexable(buffer)(float,float,float,float) r5.z, r4.wwww, t0.yzxw
+    imad r4.xyzw, l(18, 19, 20, 21), cb0[21].xxxx, r0.xxxx
+    ld_indexable(buffer)(float,float,float,float) r1.w, r4.xxxx, t0.yzwx
+    ld_indexable(buffer)(float,float,float,float) r2.w, r4.yyyy, t0.yzwx
+    ld_indexable(buffer)(float,float,float,float) r3.x, r4.zzzz, t0.xyzw
+    ld_indexable(buffer)(float,float,float,float) r4.x, r4.wwww, t0.xyzw
     imad r6.xyzw, l(22, 23, 24, 25), cb0[21].xxxx, r0.xxxx
-    ld_indexable(buffer)(float,float,float,float) r5.y, r6.xxxx, t2.yxzw
-    ld_indexable(buffer)(float,float,float,float) r5.z, r6.yyyy, t2.yzxw
-    ld_indexable(buffer)(float,float,float,float) r6.x, r6.zzzz, t2.xyzw
-    ld_indexable(buffer)(float,float,float,float) r6.y, r6.wwww, t2.yxzw
-    ld_indexable(buffer)(sint,sint,sint,sint) r1.w, r1.wwww, t3.yzwx
-    imad r7.xyz, l(26, 27, 28, 0), cb0[21].xxxx, r0.xxxx
-    ld_indexable(buffer)(float,float,float,float) r8.x, r7.xxxx, t2.xyzw
-    ld_indexable(buffer)(float,float,float,float) r8.y, r7.yyyy, t2.yxzw
-    ld_indexable(buffer)(float,float,float,float) r8.z, r7.zzzz, t2.yzxw
-    add r0.zw, r0.zzzw, cb2[24].xxxx
-    max r5.w, r2.x, l(0.000010)
-    add r6.z, r5.w, l(-0.000100)
-    lt r6.z, r0.z, r6.z
+    ld_indexable(buffer)(float,float,float,float) r4.y, r6.xxxx, t0.yxzw
+    ld_indexable(buffer)(float,float,float,float) r4.z, r6.yyyy, t0.yzxw
+    ld_indexable(buffer)(sint,sint,sint,sint) r4.w, r0.xxxx, t1.yzwx
+    ld_indexable(buffer)(float,float,float,float) r6.x, r6.zzzz, t0.xyzw
+    ld_indexable(buffer)(float,float,float,float) r6.y, r6.wwww, t0.yxzw
+    imad r5.w, l(26), cb0[21].x, r0.x
+    ld_indexable(buffer)(float,float,float,float) r6.z, r5.wwww, t0.yzxw
+    add r0.z, r0.z, cb1[24].x
+    max r5.w, r0.w, l(0.000010)
+    add r6.w, r5.w, l(-0.000100)
+    lt r6.w, r0.z, r6.w
     div r5.w, r0.z, r5.w
-    add r6.w, r5.w, -cb0[68].z
-    mul_sat r6.w, r6.w, cb0[69].x
-    mul r7.x, r6.w, l(127.000000)
-    round_ni r7.x, r7.x
-    lt r7.y, r7.x, l(127.000000)
-    add r7.z, r7.x, l(1.000000)
-    mad r6.w, r6.w, l(127.000000), -r7.x
-    mul r7.zw, r7.zzzx, l(0.000000, 0.000000, 4.000000, 4.000000)
-    movc r7.y, r7.y, r7.z, l(508.000000)
-    ftou r7.z, r7.w
-    ld_indexable(buffer)(float,float,float,float) r9.x, r7.zzzz, t16.xyzw
-    mad r7.xzw, r7.xxxx, l(4.000000, 0.000000, 4.000000, 4.000000), l(1.000000, 0.000000, 2.000000, 3.000000)
-    ftou r7.xzw, r7.xxzw
-    ld_indexable(buffer)(float,float,float,float) r9.y, r7.xxxx, t16.yxzw
-    ld_indexable(buffer)(float,float,float,float) r9.z, r7.zzzz, t16.yzxw
-    ld_indexable(buffer)(float,float,float,float) r9.w, r7.wwww, t16.yzwx
-    ftou r7.x, r7.y
-    ld_indexable(buffer)(float,float,float,float) r10.x, r7.xxxx, t16.xyzw
-    add r7.xyz, r7.yyyy, l(1.000000, 2.000000, 3.000000, 0.000000)
-    ftou r7.xyz, r7.xyzx
-    ld_indexable(buffer)(float,float,float,float) r10.y, r7.xxxx, t16.yxzw
-    ld_indexable(buffer)(float,float,float,float) r10.z, r7.yyyy, t16.yzxw
-    ld_indexable(buffer)(float,float,float,float) r10.w, r7.zzzz, t16.yzwx
-    add r7.xyzw, -r9.xyzw, r10.xyzw
-    mad r7.xyzw, r6.wwww, r7.xyzw, r9.xyzw
-    mul r6.w, r7.w, cb2[24].y
-    mul r6.w, r6.w, cb2[24].z
-    add r7.w, r5.w, -cb0[69].y
-    mul_sat r7.w, r7.w, cb0[69].w
-    mul r9.x, r7.w, l(127.000000)
-    round_ni r9.x, r9.x
-    lt r9.y, r9.x, l(127.000000)
-    add r9.z, r9.x, l(1.000000)
-    mad r7.w, r7.w, l(127.000000), -r9.x
-    ftou r9.x, r9.x
-    ld_indexable(buffer)(float,float,float,float) r9.x, r9.xxxx, t17.xyzw
-    ftou r9.z, r9.z
-    movc r9.y, r9.y, r9.z, l(127)
-    ld_indexable(buffer)(float,float,float,float) r9.y, r9.yyyy, t17.yxzw
-    add r9.y, -r9.x, r9.y
-    mad r7.w, r7.w, r9.y, r9.x
-    mul r7.w, r7.w, cb2[24].w
-    mul_sat r7.w, r7.w, cb2[24].x
-    add r9.xyz, -r4.xyzx, r3.xyzx
-    mad r4.xyz, r7.wwww, r9.xyzx, r4.xyzx
-    dp2 r7.w, r6.xyxx, r6.xyxx
-    sqrt r7.w, r7.w
-    mul r7.w, r7.w, cb2[25].x
-    mul r9.xyz, r8.xyzx, cb2[24].xxxx
-    mul r10.xyz, r7.wwww, l(0.500000, 0.000000, -0.500000, 0.000000)
-    mad r9.w, -r7.w, l(-0.500000), r4.z
-    mov r10.w, |r10.z|
-    lt r11.x, r10.w, l(0.000010)
-    movc r10.yzw, r11.xxxx, l(0,0,-1.000000,1.000000), r10.yyzw
-    div r10.yz, r10.yyzy, r10.wwww
-    movc r10.yzw, r11.xxxx, l(0,0,-1.000000,1.000000), r10.yyzw
-    mad r10.yzw, r10.yyyz, r10.wwww, r4.xxyz
-    add r11.xyz, r4.xyzx, cb1[70].xyzx
-    mul r12.xyz, r11.yyyy, cb1[1].xywx
-    mad r11.xyw, r11.xxxx, cb1[0].xyxw, r12.xyxz
-    mad r11.xyz, r11.zzzz, cb1[2].xywx, r11.xywx
-    add r11.xyz, r11.xyzx, cb1[3].xywx
-    div r11.xy, r11.xyxx, r11.zzzz
-    ge r11.zw, l(0.000000, 0.000000, 1.000000, 1.000000), |r11.xxxy|
-    and r11.z, r11.w, r11.z
-    if_nz r11.z
-      mad r12.xy, r11.xyxx, cb1[66].xyxx, cb1[66].wzww
-      sample_l_indexable(texture2d)(float,float,float,float) r11.w, r12.xyxx, t0.yzwx, s0, l(0.000000)
-      mad r12.z, r11.w, cb1[65].x, cb1[65].y
-      mad r11.w, r11.w, cb1[65].z, -cb1[65].w
-      div r11.w, l(1.000000, 1.000000, 1.000000, 1.000000), r11.w
-      add r11.w, r11.w, r12.z
-      mul r11.xy, r11.wwww, r11.xyxx
-      mul r13.xyzw, r11.yyyy, cb1[49].xyzw
-      mad r13.xyzw, r11.xxxx, cb1[48].xyzw, r13.xyzw
-      mad r13.xyzw, r11.wwww, cb1[50].xyzw, r13.xyzw
-      add r13.xyzw, r13.xyzw, cb1[51].xyzw
-      div r11.xyw, r13.xyxz, r13.wwww
-      sample_l_indexable(texture2d)(float,float,float,float) r12.xyz, r12.xyxx, t1.xyzw, s1, l(0.000000)
-      mad r12.xyz, r12.xyzx, l(2.000000, 2.000000, 2.000000, 0.000000), l(-1.000000, -1.000000, -1.000000, 0.000000)
-    else 
-      mov r11.xyw, l(0,0,0,0)
-      mov r12.xyz, l(0,0,1.000000,0)
-    endif 
-    add r13.xyz, r4.xyzx, -cb1[67].xyzx
-    dp3 r12.w, r13.xyzx, r13.xyzx
-    sqrt r12.w, r12.w
-    mad r12.w, -r7.w, l(0.500000), r12.w
-    add r13.xyz, r11.xywx, -cb1[67].xyzx
-    dp3 r13.x, r13.xyzx, r13.xyzx
-    sqrt r13.x, r13.x
-    add r12.w, r12.w, -r13.x
-    dp3 r13.x, r4.xyzx, r12.xyzx
-    mad r13.x, r7.w, l(0.500000), r13.x
-    dp3 r13.y, r11.xywx, r12.xyzx
-    add r13.x, -r13.y, r13.x
-    ge r13.x, r13.x, l(0.000000)
-    dp3 r10.y, r12.xyzx, r10.yzwy
-    add r10.y, -r13.y, r10.y
-    mad r10.y, -r7.w, l(0.500000), r10.y
-    ge r10.y, l(0.000000), r10.y
-    add r9.w, -r9.w, r10.w
-    mul r9.w, r9.w, r12.z
-    lt r9.w, r9.w, l(0.000000)
-    and r10.y, r10.y, r13.x
-    and r9.w, r9.w, r10.y
-    lt r10.y, l(0.000000), r12.w
-    not r10.z, r11.z
-    and r10.z, r1.y, r10.z
-    and r10.y, r10.y, r11.z
-    not r10.yz, r10.yyzy
-    and r6.z, r6.z, r10.z
-    and r6.z, r10.y, r6.z
-    movc r10.yzw, r9.wwww, r12.xxyz, l(0,0,0,1.000000)
-    movc r11.xyw, r9.wwww, r11.xyxw, l(0,0,0,-10000000272564224.000000)
-    add r12.xyz, -r4.xyzx, r11.xywx
-    dp3 r9.w, -r10.yzwy, r12.xyzx
-    mad r9.w, -r7.w, l(0.500000), r9.w
-    lt r12.x, r9.w, l(0.000000)
-    mad r13.xyz, r9.wwww, -r10.yzwy, r4.xyzx
-    mad r12.yzw, r8.xxyz, cb2[24].xxxx, r4.xxyz
-    add r11.xyw, r11.xyxw, -r12.yzyw
-    dp3 r11.x, -r10.yzwy, r11.xywx
-    mad r11.x, -r7.w, l(0.500000), r11.x
-    add r9.w, r9.w, -r11.x
-    max r9.w, |r9.w|, l(0.000001)
-    div r9.w, |r11.x|, r9.w
-    eq r11.y, r9.w, l(0.000000)
-    or r11.y, r11.y, r12.x
-    movc r9.w, r11.y, l(1.000000), r9.w
-    add r11.y, -r9.w, l(1.000000)
-    mad r14.xyz, r11.yyyy, r9.xyzx, r4.xyzx
-    mul r14.w, r9.w, cb2[24].x
-    mov r13.w, cb2[24].x
-    movc r13.xyzw, r12.xxxx, r13.xyzw, r14.xyzw
-    ge r9.w, l(0.000000), r11.x
-    or r1.y, r1.y, r9.w
-    dp3 r11.x, -r10.yzwy, r9.xyzx
-    lt r11.x, r11.x, l(0.100000)
-    div r14.xyz, r9.xyzx, cb2[24].xxxx
-    movc r15.w, r9.w, r13.w, cb2[24].x
-    dp3 r9.x, r14.xyzx, r10.yzwy
-    add r9.x, r9.x, r9.x
-    mad r9.xyz, -r9.xxxx, r10.yzwy, r14.xyzx
-    mul r12.yzw, r2.yyyy, r14.xxyz
-    mul r12.yzw, r12.yyzw, l(0.000000, -0.010000, -0.010000, -0.010000)
-    dp3 r11.y, r12.yzwy, r10.yzwy
-    dp3 r11.w, r9.xyzx, r10.yzwy
-    mul r12.yzw, r10.yyzw, r11.wwww
-    mad r16.xyz, -r11.wwww, r10.yzwy, r9.xyzx
-    dp3 r11.w, r16.xyzx, r16.xyzx
-    sqrt r16.w, r11.w
-    lt r11.w, r16.w, l(0.000010)
-    movc r17.xyzw, r11.wwww, l(0,0,0,1.000000), r16.xyzw
-    div r17.xyz, r17.xyzx, r17.wwww
-    movc r17.xyz, r11.wwww, l(0,0,0,0), r17.xyzx
-    mul r16.xyz, r2.yyyy, r16.xyzx
-    mul r18.xyz, r16.xyzx, l(0.010000, 0.010000, 0.010000, 0.000000)
-    movc r11.w, r11.x, cb2[34].x, cb2[35].y
-    mul r19.xyz, r11.wwww, r17.xyzx
-    mul r19.xyz, r11.yyyy, r19.xyzx
-    mad r16.xyz, r16.xyzx, l(0.010000, 0.010000, 0.010000, 0.000000), -r19.xyzx
-    dp3 r11.y, r16.xyzx, r16.xyzx
-    sqrt r16.w, r11.y
-    lt r11.y, r16.w, l(0.000010)
-    movc r16.xyzw, r11.yyyy, l(0,0,0,1.000000), r16.xyzw
-    div r16.xyz, r16.xyzx, r16.wwww
-    movc r16.xyz, r11.yyyy, l(0,0,0,0), r16.xyzx
-    dp3 r11.y, r17.xyzx, r16.xyzx
-    ge r11.y, l(0.000000), r11.y
-    movc r16.xyz, r11.yyyy, r18.xyzx, r19.xyzx
-    div r16.xyz, -r16.xyzx, r2.yyyy
-    mad r9.xyz, r16.xyzx, l(100.000000, 100.000000, 100.000000, 0.000000), r9.xyzx
-    add r11.y, -cb2[34].w, l(1.000000)
-    movc r11.x, r11.x, l(1.000000), r11.y
-    mad r9.xyz, -r12.yzwy, r11.xxxx, r9.xyzx
-    movc r12.yzw, r9.wwww, r13.xxyz, r4.xxyz
-    dp3 r11.x, r14.xyzx, r14.xyzx
-    sqrt r14.w, r11.x
-    lt r11.x, r14.w, l(0.000010)
-    movc r13.xyzw, r11.xxxx, l(0,0,1.000000,1.000000), r14.xyzw
-    div r13.xyz, r13.xyzx, r13.wwww
-    movc r13.xyz, r11.xxxx, l(0,0,1.000000,0), r13.xyzx
-    dp3 r10.y, r13.xyzx, r10.yzwy
-    lt r10.y, r10.y, l(0.000000)
-    and r10.y, r9.w, r10.y
-    movc r9.xyz, r10.yyyy, r9.xyzx, r8.xyzx
-    mul r13.xyz, r15.wwww, r9.xyzx
-    dp3 r10.y, r13.xyzx, r13.xyzx
-    sqrt r13.w, r10.y
-    lt r10.y, r13.w, l(0.000010)
-    movc r14.xyzw, r10.yyyy, l(0,0,-1.000000,1.000000), r13.xyzw
-    div r14.xyz, r14.xyzx, r14.wwww
-    movc r10.yzw, r10.yyyy, l(0,0,0,-1.000000), r14.xxyz
-    mad r14.xyz, -r10.yzwy, r10.xxxx, r12.yzwy
-    mad r10.xyz, r10.yzwy, r10.xxxx, r13.xyzx
-    dp3 r11.x, r10.xyzx, r10.xyzx
-    sqrt r10.w, r11.x
-    lt r11.x, r10.w, l(0.000010)
-    movc r10.xyzw, r11.xxxx, l(0,0,-1.000000,1.000000), r10.xyzw
-    div r10.xyz, r10.xyzx, r10.wwww
-    movc r10.xyzw, r11.xxxx, l(0,0,-1.000000,1.000000), r10.xyzw
-    mad r10.xyz, r10.xyzx, r10.wwww, r12.yzwy
-    add r16.xyz, r12.yzwy, cb1[70].xyzx
-    mul r17.xyz, r16.yyyy, cb1[1].xywx
-    mad r16.xyw, r16.xxxx, cb1[0].xyxw, r17.xyxz
-    mad r16.xyz, r16.zzzz, cb1[2].xywx, r16.xywx
-    add r16.xyz, r16.xyzx, cb1[3].xywx
-    div r11.xw, r16.xxxy, r16.zzzz
-    ge r16.xy, l(1.000000, 1.000000, 0.000000, 0.000000), |r11.xwxx|
-    and r10.w, r16.y, r16.x
-    if_nz r10.w
-      mad r16.xy, r11.xwxx, cb1[66].xyxx, cb1[66].wzww
-      sample_l_indexable(texture2d)(float,float,float,float) r13.w, r16.xyxx, t0.yzwx, s0, l(0.000000)
-      mad r14.w, r13.w, cb1[65].x, cb1[65].y
-      mad r13.w, r13.w, cb1[65].z, -cb1[65].w
-      div r13.w, l(1.000000, 1.000000, 1.000000, 1.000000), r13.w
-      add r13.w, r13.w, r14.w
-      mul r11.xw, r11.xxxw, r13.wwww
-      mul r17.xyzw, r11.wwww, cb1[49].xyzw
-      mad r17.xyzw, r11.xxxx, cb1[48].xyzw, r17.xyzw
-      mad r17.xyzw, r13.wwww, cb1[50].xyzw, r17.xyzw
-      add r17.xyzw, r17.xyzw, cb1[51].xyzw
-      div r17.xyz, r17.xyzx, r17.wwww
-      sample_l_indexable(texture2d)(float,float,float,float) r16.xyz, r16.xyxx, t1.xyzw, s1, l(0.000000)
-      mad r16.xyz, r16.xyzx, l(2.000000, 2.000000, 2.000000, 0.000000), l(-1.000000, -1.000000, -1.000000, 0.000000)
-    else 
-      mov r17.xyz, l(0,0,0,0)
-      mov r16.xyz, l(0,0,1.000000,0)
-    endif 
-    add r18.xyz, r12.yzwy, -cb1[67].xyzx
-    dp3 r11.x, r18.xyzx, r18.xyzx
-    sqrt r11.x, r11.x
-    mad r11.x, -r7.w, l(0.500000), r11.x
-    add r18.xyz, r17.xyzx, -cb1[67].xyzx
-    dp3 r11.w, r18.xyzx, r18.xyzx
-    sqrt r11.w, r11.w
-    add r11.x, -r11.w, r11.x
-    dp3 r11.w, r12.yzwy, r16.xyzx
-    mad r11.w, r7.w, l(0.500000), r11.w
-    dp3 r13.w, r17.xyzx, r16.xyzx
-    add r11.w, r11.w, -r13.w
-    ge r11.w, r11.w, l(0.000000)
-    dp3 r14.w, r16.xyzx, r10.xyzx
-    add r13.w, -r13.w, r14.w
-    mad r13.w, -r7.w, l(0.500000), r13.w
-    ge r13.w, l(0.000000), r13.w
-    add r10.xyz, -r14.xyzx, r10.xyzx
-    dp3 r10.x, r16.xyzx, r10.xyzx
-    lt r10.x, r10.x, l(0.000000)
-    and r10.y, r11.w, r13.w
-    and r10.x, r10.x, r10.y
-    lt r10.y, l(0.000000), r11.x
-    not r10.z, r10.w
-    and r10.z, r1.y, r10.z
-    and r10.y, r10.y, r10.w
-    not r10.yz, r10.yyzy
-    and r6.z, r6.z, r10.z
-    and r6.z, r10.y, r6.z
-    movc r14.xyz, r10.xxxx, r16.xyzx, l(0,0,1.000000,0)
-    movc r10.xyz, r10.xxxx, r17.xyzx, l(0,0,-10000000272564224.000000,0)
-    add r16.xyz, -r12.yzwy, r10.xyzx
-    dp3 r11.x, -r14.xyzx, r16.xyzx
-    mad r11.x, -r7.w, l(0.500000), r11.x
-    lt r11.w, r11.x, l(0.000000)
-    mad r15.xyz, r11.xxxx, -r14.xyzx, r12.yzwy
-    mad r16.xyz, r9.xyzx, r15.wwww, r12.yzwy
-    add r10.xyz, r10.xyzx, -r16.xyzx
-    dp3 r10.x, -r14.xyzx, r10.xyzx
-    mad r7.w, -r7.w, l(0.500000), r10.x
-    add r10.x, -r7.w, r11.x
-    max r10.x, |r10.x|, l(0.000001)
-    div r10.x, |r7.w|, r10.x
-    eq r10.y, r10.x, l(0.000000)
-    or r10.y, r10.y, r11.w
-    movc r10.x, r10.y, l(1.000000), r10.x
-    add r10.y, -r10.x, l(1.000000)
-    mad r16.xyz, r10.yyyy, r13.xyzx, r12.yzwy
-    mul r16.w, r10.x, r15.w
-    movc r16.xyzw, r11.wwww, r15.xyzw, r16.xyzw
-    ge r7.w, l(0.000000), r7.w
-    or r1.y, r1.y, r7.w
-    dp3 r10.x, -r14.xyzx, r13.xyzx
-    lt r10.x, r10.x, l(0.100000)
-    div r13.xyz, r13.xyzx, r15.wwww
-    movc r15.w, r7.w, r16.w, r15.w
-    dp3 r10.y, r13.xyzx, r14.xyzx
-    add r10.y, r10.y, r10.y
-    mad r17.xyz, -r10.yyyy, r14.xyzx, r13.xyzx
-    mul r18.xyz, r2.yyyy, r13.xyzx
-    mul r18.xyz, r18.xyzx, l(-0.010000, -0.010000, -0.010000, 0.000000)
-    dp3 r10.y, r18.xyzx, r14.xyzx
-    dp3 r10.z, r17.xyzx, r14.xyzx
-    mul r18.xyz, r14.xyzx, r10.zzzz
-    mad r19.xyz, -r10.zzzz, r14.xyzx, r17.xyzx
-    dp3 r10.z, r19.xyzx, r19.xyzx
-    sqrt r19.w, r10.z
-    lt r10.z, r19.w, l(0.000010)
-    movc r20.xyzw, r10.zzzz, l(0,0,0,1.000000), r19.xyzw
-    div r20.xyz, r20.xyzx, r20.wwww
-    movc r20.xyz, r10.zzzz, l(0,0,0,0), r20.xyzx
-    mul r19.xyz, r2.yyyy, r19.xyzx
-    mul r21.xyz, r19.xyzx, l(0.010000, 0.010000, 0.010000, 0.000000)
-    movc r10.z, r10.x, cb2[34].x, cb2[35].y
-    mul r22.xyz, r10.zzzz, r20.xyzx
-    mul r22.xyz, r10.yyyy, r22.xyzx
-    mad r19.xyz, r19.xyzx, l(0.010000, 0.010000, 0.010000, 0.000000), -r22.xyzx
-    dp3 r10.y, r19.xyzx, r19.xyzx
-    sqrt r19.w, r10.y
-    lt r10.y, r19.w, l(0.000010)
-    movc r19.xyzw, r10.yyyy, l(0,0,0,1.000000), r19.xyzw
-    div r19.xyz, r19.xyzx, r19.wwww
-    movc r19.xyz, r10.yyyy, l(0,0,0,0), r19.xyzx
-    dp3 r10.y, r20.xyzx, r19.xyzx
-    ge r10.y, l(0.000000), r10.y
-    movc r19.xyz, r10.yyyy, r21.xyzx, r22.xyzx
-    div r19.xyz, -r19.xyzx, r2.yyyy
-    mad r17.xyz, r19.xyzx, l(100.000000, 100.000000, 100.000000, 0.000000), r17.xyzx
-    movc r10.x, r10.x, l(1.000000), r11.y
-    mad r10.xyz, -r18.xyzx, r10.xxxx, r17.xyzx
-    movc r12.yzw, r7.wwww, r16.xxyz, r12.yyzw
-    dp3 r11.x, r13.xyzx, r13.xyzx
-    sqrt r13.w, r11.x
-    lt r11.x, r13.w, l(0.000010)
-    movc r13.xyzw, r11.xxxx, l(0,0,1.000000,1.000000), r13.xyzw
-    div r13.xyz, r13.xyzx, r13.wwww
-    movc r13.xyz, r11.xxxx, l(0,0,1.000000,0), r13.xyzx
-    dp3 r11.x, r13.xyzx, r14.xyzx
-    lt r11.x, r11.x, l(0.000000)
-    and r11.x, r7.w, r11.x
-    movc r15.xyz, r11.xxxx, r10.xyzx, r9.xyzx
-    and r9.x, r11.z, r10.w
-    movc r0.w, r9.x, l(0), r0.w
-    lt r9.x, r0.w, cb2[35].z
-    and r6.z, r6.z, r9.x
-    or r7.w, r9.w, r7.w
-    iadd r2.z, r2.z, -r7.w
-    and r9.x, r12.x, l(0x3f800000)
-    and r9.y, r11.w, l(0x3f800000)
-    add r9.x, r9.y, r9.x
-    mul r9.y, cb2[24].x, cb2[36].x
-    mad r9.x, r9.x, l(0.500000), -r3.w
-    mad r3.w, r9.y, r9.x, r3.w
-    movc r4.xyz, r7.wwww, r12.yzwy, r4.xyzx
-    mov r8.w, cb2[24].x
-    movc r8.xyzw, r7.wwww, r15.xyzw, r8.xyzw
-    mad r4.xyz, r8.xyzx, r8.wwww, r4.xyzx
-    ieq r6.z, r6.z, l(-1)
-    if_nz r6.z
+    add r7.x, r5.w, -cb0[68].z
+    mul_sat r7.x, r7.x, cb0[69].x
+    mul r7.y, r7.x, l(127.000000)
+    round_ni r7.y, r7.y
+    lt r7.z, r7.y, l(127.000000)
+    add r7.w, r7.y, l(1.000000)
+    mad r7.x, r7.x, l(127.000000), -r7.y
+    mul r8.x, r7.y, l(4.000000)
+    mul r7.w, r7.w, l(4.000000)
+    movc r7.z, r7.z, r7.w, l(508.000000)
+    ftou r7.w, r8.x
+    ld_indexable(buffer)(float,float,float,float) r8.x, r7.wwww, t14.xyzw
+    mad r9.xyz, r7.yyyy, l(4.000000, 4.000000, 4.000000, 0.000000), l(1.000000, 2.000000, 3.000000, 0.000000)
+    ftou r9.xyz, r9.xyzx
+    ld_indexable(buffer)(float,float,float,float) r8.y, r9.xxxx, t14.yxzw
+    ld_indexable(buffer)(float,float,float,float) r8.z, r9.yyyy, t14.yzxw
+    ld_indexable(buffer)(float,float,float,float) r8.w, r9.zzzz, t14.yzwx
+    ftou r7.y, r7.z
+    ld_indexable(buffer)(float,float,float,float) r9.x, r7.yyyy, t14.xyzw
+    add r7.yzw, r7.zzzz, l(0.000000, 1.000000, 2.000000, 3.000000)
+    ftou r7.yzw, r7.yyzw
+    ld_indexable(buffer)(float,float,float,float) r9.y, r7.yyyy, t14.yxzw
+    ld_indexable(buffer)(float,float,float,float) r9.z, r7.zzzz, t14.yzxw
+    ld_indexable(buffer)(float,float,float,float) r9.w, r7.wwww, t14.yzwx
+    add r9.xyzw, -r8.xyzw, r9.xyzw
+    mad r7.xyzw, r7.xxxx, r9.xyzw, r8.xyzw
+    mul r7.w, r7.w, cb1[24].y
+    mul r7.w, r7.w, cb1[24].z
+    add r8.x, r5.w, -cb0[69].y
+    mul_sat r8.x, r8.x, cb0[69].w
+    mul r8.y, r8.x, l(127.000000)
+    round_ni r8.y, r8.y
+    lt r8.z, r8.y, l(127.000000)
+    add r8.w, r8.y, l(1.000000)
+    mad r8.x, r8.x, l(127.000000), -r8.y
+    ftou r8.y, r8.y
+    ld_indexable(buffer)(float,float,float,float) r8.y, r8.yyyy, t15.yxzw
+    ftou r8.w, r8.w
+    movc r8.z, r8.z, r8.w, l(127)
+    ld_indexable(buffer)(float,float,float,float) r8.z, r8.zzzz, t15.yzxw
+    add r8.z, -r8.y, r8.z
+    mad r8.x, r8.x, r8.z, r8.y
+    mul r8.x, r8.x, cb1[24].w
+    mul_sat r8.x, r8.x, cb1[24].x
+    add r8.yzw, -r5.xxyz, r2.xxyz
+    mad r5.xyz, r8.xxxx, r8.yzwy, r5.xyzx
+    mad r5.xyz, r6.xyzx, cb1[24].xxxx, r5.xyzx
+    ieq r6.w, r6.w, l(-1)
+    if_nz r6.w
       imm_atomic_iadd r1.x, u2, cb0[22].w, l(1)
     endif 
-    iadd r6.z, r1.x, cb0[20].x
-    store_uav_typed u1.xyzw, r6.zzzz, r0.zzzz
-    store_uav_typed u0.xyzw, r6.zzzz, l(0,0,0,0)
+    iadd r6.w, r1.x, cb0[20].x
+    store_uav_typed u1.xyzw, r6.wwww, r0.zzzz
     iadd r0.z, r1.x, cb0[21].y
     iadd r0.z, r0.z, cb0[20].x
-    store_uav_typed u0.xyzw, r0.zzzz, l(0,0,0,0)
-    store_uav_typed u1.xyzw, r0.zzzz, r0.wwww
-    iadd r0.z, r1.x, r2.w
-    iadd r0.z, r0.z, cb0[20].x
     store_uav_typed u1.xyzw, r0.zzzz, r7.xxxx
-    imad r0.w, l(3), cb0[21].y, r1.x
-    iadd r0.w, r0.w, cb0[20].x
-    store_uav_typed u1.xyzw, r0.wwww, r7.yyyy
-    ishl r7.xyw, cb0[21].yyyy, l(2, 3, 0, 4)
-    iadd r7.xyw, r1.xxxx, r7.xyxw
-    iadd r7.xyw, r7.xyxw, cb0[20].xxxx
-    store_uav_typed u1.xyzw, r7.xxxx, r7.zzzz
-    imad r9.xyzw, l(5, 6, 7, 9), cb0[21].yyyy, r1.xxxx
-    iadd r9.xyzw, r9.xyzw, cb0[20].xxxx
-    store_uav_typed u1.xyzw, r9.xxxx, r6.wwww
-    store_uav_typed u0.xyzw, r0.zzzz, r1.yyyy
-    store_uav_typed u1.xyzw, r9.yyyy, r2.xxxx
-    store_uav_typed u1.xyzw, r9.zzzz, r2.yyyy
-    store_uav_typed u1.xyzw, r7.yyyy, r1.zzzz
-    store_uav_typed u1.xyzw, r9.wwww, r3.xxxx
-    imad r9.xyzw, l(10, 11, 12, 13), cb0[21].yyyy, r1.xxxx
-    iadd r9.xyzw, r9.xyzw, cb0[20].xxxx
-    store_uav_typed u1.xyzw, r9.xxxx, r3.yyyy
-    store_uav_typed u1.xyzw, r9.yyyy, r3.zzzz
-    store_uav_typed u1.xyzw, r9.zzzz, r5.wwww
-    store_uav_typed u0.xyzw, r0.wwww, r2.zzzz
-    store_uav_typed u1.xyzw, r9.wwww, r4.xxxx
-    imad r2.xyzw, l(14, 15, 17, 18), cb0[21].yyyy, r1.xxxx
+    iadd r3.yzw, r1.xxxx, r3.yyzw
+    iadd r3.yzw, r3.yyzw, cb0[20].xxxx
+    store_uav_typed u1.xyzw, r3.yyyy, r7.yyyy
+    imad r8.xyz, l(3, 5, 6, 0), cb0[21].yyyy, r1.xxxx
+    iadd r8.xyz, r8.xyzx, cb0[20].xxxx
+    store_uav_typed u1.xyzw, r8.xxxx, r7.zzzz
+    store_uav_typed u1.xyzw, r3.zzzz, r7.wwww
+    store_uav_typed u1.xyzw, r8.yyyy, r0.wwww
+    store_uav_typed u1.xyzw, r8.zzzz, r1.yyyy
+    imad r7.xyzw, l(7, 9, 10, 11), cb0[21].yyyy, r1.xxxx
+    iadd r7.xyzw, r7.xyzw, cb0[20].xxxx
+    store_uav_typed u1.xyzw, r7.xxxx, r1.zzzz
+    store_uav_typed u1.xyzw, r3.wwww, r2.xxxx
+    store_uav_typed u1.xyzw, r7.yyyy, r2.yyyy
+    store_uav_typed u1.xyzw, r7.zzzz, r2.zzzz
+    store_uav_typed u1.xyzw, r7.wwww, r5.wwww
+    imad r7.xyzw, l(12, 13, 14, 15), cb0[21].yyyy, r1.xxxx
+    iadd r7.xyzw, r7.xyzw, cb0[20].xxxx
+    store_uav_typed u1.xyzw, r7.xxxx, r5.xxxx
+    store_uav_typed u1.xyzw, r7.yyyy, r5.yyyy
+    store_uav_typed u1.xyzw, r7.zzzz, r5.zzzz
+    store_uav_typed u1.xyzw, r7.wwww, r6.xxxx
+    ishl r0.z, cb0[21].y, l(4)
+    iadd r0.z, r1.x, r0.z
+    iadd r0.z, r0.z, cb0[20].x
+    store_uav_typed u1.xyzw, r0.zzzz, r6.yyyy
+    imad r5.xyzw, l(17, 18, 19, 20), cb0[21].yyyy, r1.xxxx
+    iadd r5.xyzw, r5.xyzw, cb0[20].xxxx
+    store_uav_typed u1.xyzw, r5.xxxx, r6.zzzz
+    store_uav_typed u1.xyzw, r5.yyyy, r1.wwww
+    store_uav_typed u1.xyzw, r5.zzzz, r2.wwww
+    store_uav_typed u1.xyzw, r5.wwww, r3.xxxx
+    imad r2.xyzw, l(21, 22, 23, 24), cb0[21].yyyy, r1.xxxx
     iadd r2.xyzw, r2.xyzw, cb0[20].xxxx
-    store_uav_typed u1.xyzw, r2.xxxx, r4.yyyy
-    store_uav_typed u1.xyzw, r2.yyyy, r4.zzzz
-    store_uav_typed u1.xyzw, r7.wwww, r8.xxxx
-    store_uav_typed u1.xyzw, r2.zzzz, r8.yyyy
-    store_uav_typed u1.xyzw, r2.wwww, r8.zzzz
-    imad r2.xyzw, l(19, 20, 21, 22), cb0[21].yyyy, r1.xxxx
-    iadd r2.xyzw, r2.xyzw, cb0[20].xxxx
-    store_uav_typed u1.xyzw, r2.xxxx, r3.wwww
-    store_uav_typed u1.xyzw, r2.yyyy, r4.wwww
-    store_uav_typed u1.xyzw, r2.zzzz, r5.xxxx
-    store_uav_typed u1.xyzw, r2.wwww, r5.yyyy
-    imad r2.xyzw, l(23, 24, 25, 26), cb0[21].yyyy, r1.xxxx
-    iadd r2.xyzw, r2.xyzw, cb0[20].xxxx
-    store_uav_typed u1.xyzw, r2.xxxx, r5.zzzz
-    store_uav_typed u1.xyzw, r2.yyyy, r6.xxxx
-    store_uav_typed u1.xyzw, r2.zzzz, r6.yyyy
-    store_uav_typed u0.xyzw, r7.xxxx, r1.wwww
-    store_uav_typed u1.xyzw, r2.wwww, r8.xxxx
-    imad r0.zw, l(0, 0, 27, 28), cb0[21].yyyy, r1.xxxx
+    store_uav_typed u1.xyzw, r2.xxxx, r4.xxxx
+    store_uav_typed u1.xyzw, r2.yyyy, r4.yyyy
+    store_uav_typed u1.xyzw, r2.zzzz, r4.zzzz
+    store_uav_typed u0.xyzw, r6.wwww, r4.wwww
+    store_uav_typed u1.xyzw, r2.wwww, r6.xxxx
+    imad r0.zw, l(0, 0, 25, 26), cb0[21].yyyy, r1.xxxx
     iadd r0.zw, r0.zzzw, cb0[20].xxxx
-    store_uav_typed u1.xyzw, r0.zzzz, r8.yyyy
-    store_uav_typed u1.xyzw, r0.wwww, r8.zzzz
+    store_uav_typed u1.xyzw, r0.zzzz, r6.yyyy
+    store_uav_typed u1.xyzw, r0.wwww, r6.zzzz
   else 
     imad r0.z, r0.x, l(0x59834000), cb0[9].z
     iadd r0.x, -r0.y, r0.x
@@ -914,16 +348,16 @@ if_nz r0.z
     ftoi r0.yw, r0.yyyw
     iadd r0.y, r0.y, r0.w
     iadd r0.w, r0.x, -cb0[r0.y + 12].w
-    iadd r0.x, r0.x, cb2[40].x
+    iadd r0.x, r0.x, cb1[26].z
     itof r0.w, r0.w
     mad r0.y, cb0[r0.y + 12].x, r0.w, cb0[r0.y + 12].y
-    add r0.w, -r0.y, cb2[24].x
-    mul r0.y, r0.y, cb2[39].y
-    add r1.yzw, cb2[2].xxyz, -cb2[43].xxyz
-    mad r1.yzw, r0.yyyy, r1.yyzw, cb2[43].xxyz
-    add r2.x, cb2[7].x, -cb2[48].x
-    mad r0.y, r0.y, r2.x, cb2[48].x
-    add r2.x, -cb2[0].x, cb2[0].y
+    add r0.w, -r0.y, cb1[24].x
+    mul r0.y, r0.y, cb1[25].w
+    add r1.yzw, cb1[2].xxyz, -cb1[29].xxyz
+    mad r1.yzw, r0.yyyy, r1.yyzw, cb1[29].xxyz
+    add r2.x, cb1[7].x, -cb1[34].x
+    mad r0.y, r0.y, r2.x, cb1[34].x
+    add r2.x, -cb1[0].x, cb1[0].y
     mov r3.x, vThreadID.x
     mov r3.y, cb0[9].z
     imad r2.yz, r3.xxyx, l(0, 0x0019660d, 0x0019660d, 0), l(0, 0x3c6ef35f, 0x3c6ef35f, 0)
@@ -936,10 +370,10 @@ if_nz r0.z
     and r2.yzw, r2.yyzw, l(0, 0x00ffffff, 0x00ffffff, 0x00ffffff)
     utof r2.yzw, r2.yyzw
     mul r2.x, r2.x, r2.y
-    mad r2.x, r2.x, l(0.000000), cb2[0].x
-    add r2.y, -cb2[3].x, cb2[3].y
+    mad r2.x, r2.x, l(0.000000), cb1[0].x
+    add r2.y, -cb1[3].x, cb1[3].y
     mul r2.y, r2.y, r2.z
-    mad r2.y, r2.y, l(0.000000), cb2[3].x
+    mad r2.y, r2.y, l(0.000000), cb1[3].x
     mul r2.xz, r2.xxwx, l(360.000000, 0.000000, 0.000000, 0.000000)
     iadd r2.w, r0.z, l(0x00196612)
     iadd r0.z, r0.z, r2.w
@@ -957,7 +391,7 @@ if_nz r0.z
     ftou r2.w, r2.w
     iadd r3.x, cb0[23].x, l(-1)
     umin r2.w, r2.w, r3.x
-    ld_indexable(buffer)(uint,uint,uint,uint) r3.xyzw, r2.wwww, t6.xyzw
+    ld_indexable(buffer)(uint,uint,uint,uint) r3.xyzw, r2.wwww, t4.xyzw
     iadd r2.w, r0.z, l(0x00196612)
     iadd r0.z, r0.z, r2.w
     imad r2.w, r2.w, l(0x0019660d), l(0x3c6ef35f)
@@ -971,7 +405,7 @@ if_nz r0.z
     mul r2.w, r2.w, l(0.000000)
     lt r2.w, r3.z, r2.w
     if_nz r2.w
-      ld_indexable(buffer)(uint,uint,uint,uint) r3.xy, r3.wwww, t6.xyzw
+      ld_indexable(buffer)(uint,uint,uint,uint) r3.xy, r3.wwww, t4.xyzw
     endif 
     iadd r2.w, r0.z, l(0x00196612)
     iadd r0.z, r0.z, r2.w
@@ -998,7 +432,7 @@ if_nz r0.z
       iadd r3.y, r3.y, l(-1)
       umin r2.w, r2.w, r3.y
       iadd r3.y, r2.w, r3.x
-      ld_indexable(buffer)(uint,uint,uint,uint) r3.yw, r3.yyyy, t7.zxwy
+      ld_indexable(buffer)(uint,uint,uint,uint) r3.yw, r3.yyyy, t5.zxwy
       iadd r4.x, r0.z, l(0x00196612)
       iadd r0.z, r0.z, r4.x
       imad r4.x, r4.x, l(0x0019660d), l(0x3c6ef35f)
@@ -1042,25 +476,25 @@ if_nz r0.z
     mul r3.x, r2.w, r3.x
     mul r2.w, r2.w, r3.y
     imul null, r3.y, r3.z, l(3)
-    ld_indexable(buffer)(uint,uint,uint,uint) r3.y, r3.yyyy, t4.yxzw
+    ld_indexable(buffer)(uint,uint,uint,uint) r3.y, r3.yyyy, t2.yxzw
     imul null, r4.x, r3.y, l(3)
     imad r4.yz, r3.zzzz, l(0, 3, 3, 0), l(0, 1, 2, 0)
-    ld_indexable(buffer)(uint,uint,uint,uint) r3.z, r4.yyyy, t4.yzxw
+    ld_indexable(buffer)(uint,uint,uint,uint) r3.z, r4.yyyy, t2.yzxw
     imul null, r4.y, r3.z, l(3)
-    ld_indexable(buffer)(uint,uint,uint,uint) r4.z, r4.zzzz, t4.yzxw
+    ld_indexable(buffer)(uint,uint,uint,uint) r4.z, r4.zzzz, t2.yzxw
     imul null, r4.w, r4.z, l(3)
-    ld_indexable(buffer)(float,float,float,float) r5.x, r4.xxxx, t5.xyzw
+    ld_indexable(buffer)(float,float,float,float) r5.x, r4.xxxx, t3.xyzw
     imad r6.xy, r3.yyyy, l(3, 3, 0, 0), l(1, 2, 0, 0)
-    ld_indexable(buffer)(float,float,float,float) r5.y, r6.xxxx, t5.yxzw
-    ld_indexable(buffer)(float,float,float,float) r5.z, r6.yyyy, t5.yzxw
-    ld_indexable(buffer)(float,float,float,float) r6.x, r4.yyyy, t5.xyzw
+    ld_indexable(buffer)(float,float,float,float) r5.y, r6.xxxx, t3.yxzw
+    ld_indexable(buffer)(float,float,float,float) r5.z, r6.yyyy, t3.yzxw
+    ld_indexable(buffer)(float,float,float,float) r6.x, r4.yyyy, t3.xyzw
     imad r3.yz, r3.zzzz, l(0, 3, 3, 0), l(0, 1, 2, 0)
-    ld_indexable(buffer)(float,float,float,float) r6.y, r3.yyyy, t5.yxzw
-    ld_indexable(buffer)(float,float,float,float) r6.z, r3.zzzz, t5.yzxw
-    ld_indexable(buffer)(float,float,float,float) r4.x, r4.wwww, t5.xywz
+    ld_indexable(buffer)(float,float,float,float) r6.y, r3.yyyy, t3.yxzw
+    ld_indexable(buffer)(float,float,float,float) r6.z, r3.zzzz, t3.yzxw
+    ld_indexable(buffer)(float,float,float,float) r4.x, r4.wwww, t3.xywz
     imad r3.yz, r4.zzzz, l(0, 3, 3, 0), l(0, 1, 2, 0)
-    ld_indexable(buffer)(float,float,float,float) r4.y, r3.yyyy, t5.yxwz
-    ld_indexable(buffer)(float,float,float,float) r4.w, r3.zzzz, t5.yzwx
+    ld_indexable(buffer)(float,float,float,float) r4.y, r3.yyyy, t3.yxwz
+    ld_indexable(buffer)(float,float,float,float) r4.w, r3.zzzz, t3.yzwx
     mul r3.xyz, r3.xxxx, r6.xyzx
     mad r3.xyz, r5.xyzx, r3.wwww, r3.xyzx
     mad r3.xyz, r4.xywx, r2.wwww, r3.xyzx
@@ -1068,10 +502,10 @@ if_nz r0.z
     mad r3.xyw, r3.xxxx, cb0[24].xyxz, r4.xyxz
     mad r3.xyz, r3.zzzz, cb0[26].xyzx, r3.xywx
     add r3.xyz, r3.xyzx, cb0[27].xyzx
-    mul r2.w, r3.y, cb2[21].z
-    mad r2.w, r3.x, cb2[20].z, r2.w
-    mad r2.w, r3.z, cb2[22].z, r2.w
-    add r2.w, r2.w, cb2[23].z
+    mul r2.w, r3.y, cb1[21].z
+    mad r2.w, r3.x, cb1[20].z, r2.w
+    mad r2.w, r3.z, cb1[22].z, r2.w
+    add r2.w, r2.w, cb1[23].z
     mul_sat r3.w, r0.y, l(0.500000)
     mul r3.w, r3.w, l(200.000000)
     lt r2.w, r2.w, r3.w
@@ -1092,7 +526,7 @@ if_nz r0.z
     ftou r2.w, r2.w
     iadd r3.w, cb0[38].z, l(-1)
     umin r2.w, r2.w, r3.w
-    ld_indexable(buffer)(uint,uint,uint,uint) r4.xyzw, r2.wwww, t10.xyzw
+    ld_indexable(buffer)(uint,uint,uint,uint) r4.xyzw, r2.wwww, t8.xyzw
     iadd r2.w, r0.z, l(0x00196612)
     iadd r0.z, r0.z, r2.w
     imad r2.w, r2.w, l(0x0019660d), l(0x3c6ef35f)
@@ -1106,7 +540,7 @@ if_nz r0.z
     mul r2.w, r2.w, l(0.000000)
     lt r2.w, r4.z, r2.w
     if_nz r2.w
-      ld_indexable(buffer)(uint,uint,uint,uint) r4.xy, r4.wwww, t10.xyzw
+      ld_indexable(buffer)(uint,uint,uint,uint) r4.xy, r4.wwww, t8.xyzw
     endif 
     iadd r2.w, r0.z, l(0x00196612)
     iadd r0.z, r0.z, r2.w
@@ -1133,7 +567,7 @@ if_nz r0.z
       iadd r4.y, r4.y, l(-1)
       umin r2.w, r2.w, r4.y
       iadd r4.y, r2.w, r4.x
-      ld_indexable(buffer)(uint,uint,uint,uint) r4.yz, r4.yyyy, t11.zxyw
+      ld_indexable(buffer)(uint,uint,uint,uint) r4.yz, r4.yyyy, t9.zxyw
       iadd r4.w, r0.z, l(0x00196612)
       iadd r0.z, r0.z, r4.w
       imad r4.w, r4.w, l(0x0019660d), l(0x3c6ef35f)
@@ -1177,25 +611,25 @@ if_nz r0.z
     mul r4.x, r2.w, r4.x
     mul r2.w, r2.w, r4.y
     imul null, r4.y, r3.w, l(3)
-    ld_indexable(buffer)(uint,uint,uint,uint) r4.y, r4.yyyy, t8.yxzw
+    ld_indexable(buffer)(uint,uint,uint,uint) r4.y, r4.yyyy, t6.yxzw
     imul null, r4.w, r4.y, l(3)
     imad r5.xy, r3.wwww, l(3, 3, 0, 0), l(1, 2, 0, 0)
-    ld_indexable(buffer)(uint,uint,uint,uint) r3.w, r5.xxxx, t8.yzwx
+    ld_indexable(buffer)(uint,uint,uint,uint) r3.w, r5.xxxx, t6.yzwx
     imul null, r5.x, r3.w, l(3)
-    ld_indexable(buffer)(uint,uint,uint,uint) r5.y, r5.yyyy, t8.yxzw
+    ld_indexable(buffer)(uint,uint,uint,uint) r5.y, r5.yyyy, t6.yxzw
     imul null, r5.z, r5.y, l(3)
-    ld_indexable(buffer)(float,float,float,float) r6.x, r4.wwww, t9.xyzw
+    ld_indexable(buffer)(float,float,float,float) r6.x, r4.wwww, t7.xyzw
     imad r4.yw, r4.yyyy, l(0, 3, 0, 3), l(0, 1, 0, 2)
-    ld_indexable(buffer)(float,float,float,float) r6.y, r4.yyyy, t9.yxzw
-    ld_indexable(buffer)(float,float,float,float) r6.z, r4.wwww, t9.yzxw
-    ld_indexable(buffer)(float,float,float,float) r7.x, r5.xxxx, t9.xyzw
+    ld_indexable(buffer)(float,float,float,float) r6.y, r4.yyyy, t7.yxzw
+    ld_indexable(buffer)(float,float,float,float) r6.z, r4.wwww, t7.yzxw
+    ld_indexable(buffer)(float,float,float,float) r7.x, r5.xxxx, t7.xyzw
     imad r4.yw, r3.wwww, l(0, 3, 0, 3), l(0, 1, 0, 2)
-    ld_indexable(buffer)(float,float,float,float) r7.y, r4.yyyy, t9.yxzw
-    ld_indexable(buffer)(float,float,float,float) r7.z, r4.wwww, t9.yzxw
-    ld_indexable(buffer)(float,float,float,float) r5.x, r5.zzzz, t9.xwyz
+    ld_indexable(buffer)(float,float,float,float) r7.y, r4.yyyy, t7.yxzw
+    ld_indexable(buffer)(float,float,float,float) r7.z, r4.wwww, t7.yzxw
+    ld_indexable(buffer)(float,float,float,float) r5.x, r5.zzzz, t7.xwyz
     imad r4.yw, r5.yyyy, l(0, 3, 0, 3), l(0, 1, 0, 2)
-    ld_indexable(buffer)(float,float,float,float) r5.z, r4.yyyy, t9.ywxz
-    ld_indexable(buffer)(float,float,float,float) r5.w, r4.wwww, t9.ywzx
+    ld_indexable(buffer)(float,float,float,float) r5.z, r4.yyyy, t7.ywxz
+    ld_indexable(buffer)(float,float,float,float) r5.w, r4.wwww, t7.ywzx
     mul r4.xyw, r4.xxxx, r7.xyxz
     mad r4.xyz, r6.xyzx, r4.zzzz, r4.xywx
     mad r4.xyz, r5.xzwx, r2.wwww, r4.xyzx
@@ -1225,7 +659,7 @@ if_nz r0.z
     ftou r0.y, r0.y
     iadd r2.w, cb0[53].z, l(-1)
     umin r0.y, r0.y, r2.w
-    ld_indexable(buffer)(uint,uint,uint,uint) r4.xyzw, r0.yyyy, t14.xyzw
+    ld_indexable(buffer)(uint,uint,uint,uint) r4.xyzw, r0.yyyy, t12.xyzw
     iadd r0.y, r0.z, l(0x00196612)
     iadd r0.z, r0.y, r0.z
     imad r0.y, r0.y, l(0x0019660d), l(0x3c6ef35f)
@@ -1239,7 +673,7 @@ if_nz r0.z
     mul r0.y, r0.y, l(0.000000)
     lt r0.y, r4.z, r0.y
     if_nz r0.y
-      ld_indexable(buffer)(uint,uint,uint,uint) r4.xy, r4.wwww, t14.xyzw
+      ld_indexable(buffer)(uint,uint,uint,uint) r4.xy, r4.wwww, t12.xyzw
     endif 
     iadd r0.y, r0.z, l(0x00196612)
     iadd r0.z, r0.y, r0.z
@@ -1266,7 +700,7 @@ if_nz r0.z
       iadd r3.w, r4.y, l(-1)
       umin r0.y, r0.y, r3.w
       iadd r3.w, r0.y, r4.x
-      ld_indexable(buffer)(uint,uint,uint,uint) r4.yz, r3.wwww, t15.zxyw
+      ld_indexable(buffer)(uint,uint,uint,uint) r4.yz, r3.wwww, t13.zxyw
       iadd r3.w, r0.z, l(0x00196612)
       iadd r0.z, r0.z, r3.w
       imad r3.w, r3.w, l(0x0019660d), l(0x3c6ef35f)
@@ -1308,25 +742,25 @@ if_nz r0.z
     mul r0.z, r0.z, r0.y
     mul r0.y, r0.y, r3.w
     imul null, r3.w, r2.w, l(3)
-    ld_indexable(buffer)(uint,uint,uint,uint) r3.w, r3.wwww, t12.yzwx
+    ld_indexable(buffer)(uint,uint,uint,uint) r3.w, r3.wwww, t10.yzwx
     imul null, r4.y, r3.w, l(3)
     imad r4.zw, r2.wwww, l(0, 0, 3, 3), l(0, 0, 1, 2)
-    ld_indexable(buffer)(uint,uint,uint,uint) r2.w, r4.zzzz, t12.yzwx
+    ld_indexable(buffer)(uint,uint,uint,uint) r2.w, r4.zzzz, t10.yzwx
     imul null, r4.z, r2.w, l(3)
-    ld_indexable(buffer)(uint,uint,uint,uint) r4.w, r4.wwww, t12.yzwx
+    ld_indexable(buffer)(uint,uint,uint,uint) r4.w, r4.wwww, t10.yzwx
     imul null, r5.x, r4.w, l(3)
-    ld_indexable(buffer)(float,float,float,float) r6.x, r4.yyyy, t13.xyzw
+    ld_indexable(buffer)(float,float,float,float) r6.x, r4.yyyy, t11.xyzw
     imad r5.zw, r3.wwww, l(0, 0, 3, 3), l(0, 0, 1, 2)
-    ld_indexable(buffer)(float,float,float,float) r6.y, r5.zzzz, t13.yxzw
-    ld_indexable(buffer)(float,float,float,float) r6.z, r5.wwww, t13.yzxw
-    ld_indexable(buffer)(float,float,float,float) r7.x, r4.zzzz, t13.xyzw
+    ld_indexable(buffer)(float,float,float,float) r6.y, r5.zzzz, t11.yxzw
+    ld_indexable(buffer)(float,float,float,float) r6.z, r5.wwww, t11.yzxw
+    ld_indexable(buffer)(float,float,float,float) r7.x, r4.zzzz, t11.xyzw
     imad r4.yz, r2.wwww, l(0, 3, 3, 0), l(0, 1, 2, 0)
-    ld_indexable(buffer)(float,float,float,float) r7.y, r4.yyyy, t13.yxzw
-    ld_indexable(buffer)(float,float,float,float) r7.z, r4.zzzz, t13.yzxw
-    ld_indexable(buffer)(float,float,float,float) r5.x, r5.xxxx, t13.xwyz
+    ld_indexable(buffer)(float,float,float,float) r7.y, r4.yyyy, t11.yxzw
+    ld_indexable(buffer)(float,float,float,float) r7.z, r4.zzzz, t11.yzxw
+    ld_indexable(buffer)(float,float,float,float) r5.x, r5.xxxx, t11.xwyz
     imad r4.yz, r4.wwww, l(0, 3, 3, 0), l(0, 1, 2, 0)
-    ld_indexable(buffer)(float,float,float,float) r5.z, r4.yyyy, t13.ywxz
-    ld_indexable(buffer)(float,float,float,float) r5.w, r4.zzzz, t13.ywzx
+    ld_indexable(buffer)(float,float,float,float) r5.z, r4.yyyy, t11.ywxz
+    ld_indexable(buffer)(float,float,float,float) r5.w, r4.zzzz, t11.ywzx
     mul r4.yzw, r0.zzzz, r7.xxyz
     mad r4.xyz, r6.xyzx, r4.xxxx, r4.yzwy
     mad r4.xyz, r5.xzwx, r0.yyyy, r4.xyzx
@@ -1351,23 +785,23 @@ if_nz r0.z
     mul r4.y, r4.y, l(4.000000)
     movc r4.x, r4.x, r4.y, l(508.000000)
     ftou r4.y, r4.z
-    ld_indexable(buffer)(float,float,float,float) r5.x, r4.yyyy, t16.xyzw
+    ld_indexable(buffer)(float,float,float,float) r5.x, r4.yyyy, t14.xyzw
     mad r4.yzw, r3.wwww, l(0.000000, 4.000000, 4.000000, 4.000000), l(0.000000, 1.000000, 2.000000, 3.000000)
     ftou r4.yzw, r4.yyzw
-    ld_indexable(buffer)(float,float,float,float) r5.y, r4.yyyy, t16.yxzw
-    ld_indexable(buffer)(float,float,float,float) r5.z, r4.zzzz, t16.yzxw
-    ld_indexable(buffer)(float,float,float,float) r5.w, r4.wwww, t16.yzwx
+    ld_indexable(buffer)(float,float,float,float) r5.y, r4.yyyy, t14.yxzw
+    ld_indexable(buffer)(float,float,float,float) r5.z, r4.zzzz, t14.yzxw
+    ld_indexable(buffer)(float,float,float,float) r5.w, r4.wwww, t14.yzwx
     ftou r3.w, r4.x
-    ld_indexable(buffer)(float,float,float,float) r6.x, r3.wwww, t16.xyzw
+    ld_indexable(buffer)(float,float,float,float) r6.x, r3.wwww, t14.xyzw
     add r4.xyz, r4.xxxx, l(1.000000, 2.000000, 3.000000, 0.000000)
     ftou r4.xyz, r4.xyzx
-    ld_indexable(buffer)(float,float,float,float) r6.y, r4.xxxx, t16.yxzw
-    ld_indexable(buffer)(float,float,float,float) r6.z, r4.yyyy, t16.yzxw
-    ld_indexable(buffer)(float,float,float,float) r6.w, r4.zzzz, t16.yzwx
+    ld_indexable(buffer)(float,float,float,float) r6.y, r4.xxxx, t14.yxzw
+    ld_indexable(buffer)(float,float,float,float) r6.z, r4.yyyy, t14.yzxw
+    ld_indexable(buffer)(float,float,float,float) r6.w, r4.zzzz, t14.yzwx
     add r4.xyzw, -r5.xyzw, r6.xyzw
     mad r4.xyzw, r2.wwww, r4.xyzw, r5.xyzw
-    mul r2.w, r4.w, cb2[24].y
-    mul r2.w, r2.w, cb2[24].z
+    mul r2.w, r4.w, cb1[24].y
+    mul r2.w, r2.w, cb1[24].z
     add r3.w, r0.y, -cb0[69].y
     mul_sat r3.w, r3.w, cb0[69].w
     mul r4.w, r3.w, l(127.000000)
@@ -1376,228 +810,67 @@ if_nz r0.z
     add r5.y, r4.w, l(1.000000)
     mad r3.w, r3.w, l(127.000000), -r4.w
     ftou r4.w, r4.w
-    ld_indexable(buffer)(float,float,float,float) r4.w, r4.wwww, t17.yzwx
+    ld_indexable(buffer)(float,float,float,float) r4.w, r4.wwww, t15.yzwx
     ftou r5.y, r5.y
     movc r5.x, r5.x, r5.y, l(127)
-    ld_indexable(buffer)(float,float,float,float) r5.x, r5.xxxx, t17.xyzw
+    ld_indexable(buffer)(float,float,float,float) r5.x, r5.xxxx, t15.xyzw
     add r5.x, -r4.w, r5.x
     mad r3.w, r3.w, r5.x, r4.w
-    mul r3.w, r3.w, cb2[24].w
+    mul r3.w, r3.w, cb1[24].w
     mul_sat r3.w, r0.w, r3.w
     add r5.xyz, -r1.yzwy, r3.xyzx
     mad r1.yzw, r3.wwww, r5.xxyz, r1.yyzw
-    dp2 r3.w, cb2[5].xyxx, cb2[5].xyxx
-    sqrt r3.w, r3.w
-    mul r3.w, r3.w, cb2[25].x
-    mul r5.yz, r3.wwww, l(0.000000, 0.000000, -0.500000, 0.000000)
-    mad r4.w, -r3.w, l(-0.500000), r1.w
-    mov r5.w, |r5.z|
-    lt r5.x, r5.w, l(0.000010)
-    movc r5.yzw, r5.xxxx, l(0,0,-1.000000,1.000000), r5.yyzw
-    div r5.yz, r5.yyzy, r5.wwww
-    movc r5.xyz, r5.xxxx, l(0,-1.000000,1.000000,0), r5.yzwy
-    mad r6.xyz, r5.xxyx, r5.zzzz, r1.yzwy
-    add r7.xyz, r1.yzwy, cb1[70].xyzx
-    mul r8.xyz, r7.yyyy, cb1[1].xywx
-    mad r7.xyw, r7.xxxx, cb1[0].xyxw, r8.xyxz
-    mad r7.xyz, r7.zzzz, cb1[2].xywx, r7.xywx
-    add r7.xyz, r7.xyzx, cb1[3].xywx
-    div r7.xy, r7.xyxx, r7.zzzz
-    ge r7.zw, l(0.000000, 0.000000, 1.000000, 1.000000), |r7.xxxy|
-    and r5.w, r7.w, r7.z
-    if_nz r5.w
-      mad r7.zw, r7.xxxy, cb1[66].xxxy, cb1[66].wwwz
-      sample_l_indexable(texture2d)(float,float,float,float) r6.w, r7.zwzz, t0.yzwx, s0, l(0.000000)
-      mad r8.x, r6.w, cb1[65].x, cb1[65].y
-      mad r6.w, r6.w, cb1[65].z, -cb1[65].w
-      div r6.w, l(1.000000, 1.000000, 1.000000, 1.000000), r6.w
-      add r6.w, r6.w, r8.x
-      mul r7.xy, r6.wwww, r7.xyxx
-      mul r8.xyzw, r7.yyyy, cb1[49].xyzw
-      mad r8.xyzw, r7.xxxx, cb1[48].xyzw, r8.xyzw
-      mad r8.xyzw, r6.wwww, cb1[50].xyzw, r8.xyzw
-      add r8.xyzw, r8.xyzw, cb1[51].xyzw
-      div r8.xyz, r8.xyzx, r8.wwww
-      sample_l_indexable(texture2d)(float,float,float,float) r7.xyz, r7.zwzz, t1.xyzw, s1, l(0.000000)
-      mad r7.xyz, r7.xyzx, l(2.000000, 2.000000, 2.000000, 0.000000), l(-1.000000, -1.000000, -1.000000, 0.000000)
-    else 
-      mov r8.xyz, l(0,0,0,0)
-      mov r7.xyz, l(0,0,1.000000,0)
-    endif 
-    add r9.xyz, r1.yzwy, -cb1[67].xyzx
-    dp3 r6.w, r9.xyzx, r9.xyzx
-    sqrt r6.w, r6.w
-    mad r6.w, -r3.w, l(0.500000), r6.w
-    add r9.xyz, r8.xyzx, -cb1[67].xyzx
-    dp3 r7.w, r9.xyzx, r9.xyzx
-    sqrt r7.w, r7.w
-    add r6.w, r6.w, -r7.w
-    dp3 r7.w, r1.yzwy, r7.xyzx
-    mad r7.w, r3.w, l(0.500000), r7.w
-    dp3 r8.w, r8.xyzx, r7.xyzx
-    add r7.w, r7.w, -r8.w
-    ge r7.w, r7.w, l(0.000000)
-    dp3 r6.x, r7.xyzx, r6.xyzx
-    add r6.x, -r8.w, r6.x
-    mad r6.x, -r3.w, l(0.500000), r6.x
-    ge r6.x, l(0.000000), r6.x
-    add r4.w, -r4.w, r6.z
-    mul r4.w, r4.w, r7.z
-    lt r4.w, r4.w, l(0.000000)
-    and r6.x, r6.x, r7.w
-    and r4.w, r4.w, r6.x
-    lt r6.x, l(0.000000), r6.w
-    and r6.x, r5.w, r6.x
-    not r6.x, r6.x
-    and r0.z, r0.z, r6.x
-    movc r6.xyz, r4.wwww, r8.xyzx, l(0,0,-10000000272564224.000000,0)
-    movc r7.xyz, r4.wwww, -r7.xyzx, l(-0.000000,-0.000000,-1.000000,0)
-    add r6.xyz, -r1.yzwy, r6.xyzx
-    dp3 r4.w, r7.xyzx, r6.xyzx
-    mad r4.w, -r3.w, l(0.500000), r4.w
-    lt r6.x, r4.w, l(0.000000)
-    mad r6.yzw, r4.wwww, r7.xxyz, r1.yyzw
-    movc r6.yzw, r6.xxxx, r6.yyzw, r1.yyzw
-    ge r4.w, l(0.000000), r4.w
-    movc r6.yzw, r4.wwww, r6.yyzw, r1.yyzw
-    mad r7.x, -r3.w, l(-0.500000), r6.w
-    mad r5.xyz, r5.xxyx, r5.zzzz, r6.yzwy
-    add r7.yzw, r6.yyzw, cb1[70].xxyz
-    mul r8.xyz, r7.zzzz, cb1[1].xywx
-    mad r8.xyz, r7.yyyy, cb1[0].xywx, r8.xyzx
-    mad r7.yzw, r7.wwww, cb1[2].xxyw, r8.xxyz
-    add r7.yzw, r7.yyzw, cb1[3].xxyw
-    div r7.yz, r7.yyzy, r7.wwww
-    ge r8.xy, l(1.000000, 1.000000, 0.000000, 0.000000), |r7.yzyy|
-    and r7.w, r8.y, r8.x
-    if_nz r7.w
-      mad r8.xy, r7.yzyy, cb1[66].xyxx, cb1[66].wzww
-      sample_l_indexable(texture2d)(float,float,float,float) r8.z, r8.xyxx, t0.yzxw, s0, l(0.000000)
-      mad r8.w, r8.z, cb1[65].x, cb1[65].y
-      mad r8.z, r8.z, cb1[65].z, -cb1[65].w
-      div r8.z, l(1.000000, 1.000000, 1.000000, 1.000000), r8.z
-      add r8.z, r8.z, r8.w
-      mul r7.yz, r7.yyzy, r8.zzzz
-      mul r9.xyzw, r7.zzzz, cb1[49].xyzw
-      mad r9.xyzw, r7.yyyy, cb1[48].xyzw, r9.xyzw
-      mad r9.xyzw, r8.zzzz, cb1[50].xyzw, r9.xyzw
-      add r9.xyzw, r9.xyzw, cb1[51].xyzw
-      div r9.xyz, r9.xyzx, r9.wwww
-      sample_l_indexable(texture2d)(float,float,float,float) r8.xyz, r8.xyxx, t1.xyzw, s1, l(0.000000)
-      mad r8.xyz, r8.xyzx, l(2.000000, 2.000000, 2.000000, 0.000000), l(-1.000000, -1.000000, -1.000000, 0.000000)
-    else 
-      mov r9.xyz, l(0,0,0,0)
-      mov r8.xyz, l(0,0,1.000000,0)
-    endif 
-    add r10.xyz, r6.yzwy, -cb1[67].xyzx
-    dp3 r7.y, r10.xyzx, r10.xyzx
-    sqrt r7.y, r7.y
-    mad r7.y, -r3.w, l(0.500000), r7.y
-    add r10.xyz, r9.xyzx, -cb1[67].xyzx
-    dp3 r7.z, r10.xyzx, r10.xyzx
-    sqrt r7.z, r7.z
-    add r7.y, -r7.z, r7.y
-    dp3 r7.z, r6.yzwy, r8.xyzx
-    mad r7.z, r3.w, l(0.500000), r7.z
-    dp3 r8.w, r9.xyzx, r8.xyzx
-    add r7.z, r7.z, -r8.w
-    ge r7.z, r7.z, l(0.000000)
-    dp3 r5.x, r8.xyzx, r5.xyzx
-    add r5.x, -r8.w, r5.x
-    mad r5.x, -r3.w, l(0.500000), r5.x
-    ge r5.x, l(0.000000), r5.x
-    add r5.y, -r7.x, r5.z
-    mul r5.y, r5.y, r8.z
-    lt r5.y, r5.y, l(0.000000)
-    and r5.x, r5.x, r7.z
-    and r5.x, r5.y, r5.x
-    lt r5.y, l(0.000000), r7.y
-    not r5.z, r7.w
-    and r5.z, r4.w, r5.z
-    and r5.y, r5.y, r7.w
-    not r5.yz, r5.yyzy
-    and r0.z, r0.z, r5.z
-    and r0.z, r5.y, r0.z
-    movc r7.xyz, r5.xxxx, r9.xyzx, l(0,0,-10000000272564224.000000,0)
-    movc r5.xyz, r5.xxxx, -r8.xyzx, l(-0.000000,-0.000000,-1.000000,0)
-    add r7.xyz, -r6.yzwy, r7.xyzx
-    dp3 r7.x, r5.xyzx, r7.xyzx
-    mad r3.w, -r3.w, l(0.500000), r7.x
-    lt r7.x, r3.w, l(0.000000)
-    mad r5.xyz, r3.wwww, r5.xyzx, r6.yzwy
-    movc r5.xyz, r7.xxxx, r5.xyzx, r6.yzwy
-    ge r3.w, l(0.000000), r3.w
-    or r4.w, r4.w, r3.w
-    movc r5.xyz, r3.wwww, r5.xyzx, r6.yzwy
-    and r3.w, r5.w, r7.w
-    movc r3.w, r3.w, l(0), r0.w
-    lt r5.w, r3.w, cb2[35].z
-    and r0.z, r0.z, r5.w
-    and r5.w, r4.w, l(1)
-    and r6.x, r6.x, l(0x3f800000)
-    and r6.y, r7.x, l(0x3f800000)
-    add r6.x, r6.y, r6.x
-    mul r6.x, r6.x, l(0.500000)
-    mul r6.y, r0.w, cb2[36].x
-    mul r6.x, r6.x, r6.y
-    movc r1.yzw, r4.wwww, r5.xxyz, r1.yyzw
     ieq r0.z, r0.z, l(-1)
     if_nz r0.z
       imm_atomic_iadd r1.x, u2, cb0[22].w, l(1)
     endif 
     iadd r0.z, r1.x, cb0[20].x
     store_uav_typed u1.xyzw, r0.zzzz, r0.wwww
-    store_uav_typed u0.xyzw, r0.zzzz, l(0,0,0,0)
-    iadd r0.z, r1.x, cb0[21].y
-    iadd r0.z, r0.z, cb0[20].x
-    store_uav_typed u0.xyzw, r0.zzzz, l(0,0,0,0)
-    store_uav_typed u1.xyzw, r0.zzzz, r3.wwww
-    ishl r7.xyzw, cb0[21].yyyy, l(1, 2, 3, 4)
-    iadd r7.xyzw, r1.xxxx, r7.xyzw
-    iadd r7.xyzw, r7.xyzw, cb0[20].xxxx
-    store_uav_typed u1.xyzw, r7.xxxx, r4.xxxx
-    imad r8.xyzw, l(3, 5, 6, 7), cb0[21].yyyy, r1.xxxx
-    iadd r8.xyzw, r8.xyzw, cb0[20].xxxx
-    store_uav_typed u1.xyzw, r8.xxxx, r4.yyyy
-    store_uav_typed u1.xyzw, r7.yyyy, r4.zzzz
-    store_uav_typed u1.xyzw, r8.yyyy, r2.wwww
-    store_uav_typed u0.xyzw, r7.xxxx, r4.wwww
-    store_uav_typed u1.xyzw, r8.zzzz, r2.yyyy
-    store_uav_typed u1.xyzw, r8.wwww, l(1.000000,1.000000,1.000000,1.000000)
-    store_uav_typed u1.xyzw, r7.zzzz, r2.zzzz
+    iadd r0.w, r1.x, cb0[21].y
+    iadd r0.w, r0.w, cb0[20].x
+    store_uav_typed u1.xyzw, r0.wwww, r4.xxxx
+    ishl r5.xyzw, cb0[21].yyyy, l(1, 2, 3, 4)
+    iadd r5.xyzw, r1.xxxx, r5.xyzw
+    iadd r5.xyzw, r5.xyzw, cb0[20].xxxx
+    store_uav_typed u1.xyzw, r5.xxxx, r4.yyyy
+    imad r6.xyzw, l(3, 5, 6, 7), cb0[21].yyyy, r1.xxxx
+    iadd r6.xyzw, r6.xyzw, cb0[20].xxxx
+    store_uav_typed u1.xyzw, r6.xxxx, r4.zzzz
+    store_uav_typed u1.xyzw, r5.yyyy, r2.wwww
+    store_uav_typed u1.xyzw, r6.yyyy, r2.yyyy
+    store_uav_typed u1.xyzw, r6.zzzz, l(1.000000,1.000000,1.000000,1.000000)
+    store_uav_typed u1.xyzw, r6.wwww, r2.zzzz
+    store_uav_typed u1.xyzw, r5.zzzz, r3.xxxx
     imad r4.xyzw, l(9, 10, 11, 12), cb0[21].yyyy, r1.xxxx
     iadd r4.xyzw, r4.xyzw, cb0[20].xxxx
-    store_uav_typed u1.xyzw, r4.xxxx, r3.xxxx
-    store_uav_typed u1.xyzw, r4.yyyy, r3.yyyy
-    store_uav_typed u1.xyzw, r4.zzzz, r3.zzzz
-    store_uav_typed u1.xyzw, r4.wwww, r0.yyyy
-    store_uav_typed u0.xyzw, r8.xxxx, r5.wwww
+    store_uav_typed u1.xyzw, r4.xxxx, r3.yyyy
+    store_uav_typed u1.xyzw, r4.yyyy, r3.zzzz
+    store_uav_typed u1.xyzw, r4.zzzz, r0.yyyy
+    store_uav_typed u1.xyzw, r4.wwww, r1.yyyy
     imad r3.xyzw, l(13, 14, 15, 17), cb0[21].yyyy, r1.xxxx
     iadd r3.xyzw, r3.xyzw, cb0[20].xxxx
-    store_uav_typed u1.xyzw, r3.xxxx, r1.yyyy
-    store_uav_typed u1.xyzw, r3.yyyy, r1.zzzz
-    store_uav_typed u1.xyzw, r3.zzzz, r1.wwww
-    store_uav_typed u1.xyzw, r7.wwww, l(0,0,0,0)
+    store_uav_typed u1.xyzw, r3.xxxx, r1.zzzz
+    store_uav_typed u1.xyzw, r3.yyyy, r1.wwww
+    store_uav_typed u1.xyzw, r3.zzzz, l(0,0,0,0)
+    store_uav_typed u1.xyzw, r5.wwww, l(0,0,0,0)
     store_uav_typed u1.xyzw, r3.wwww, l(0,0,0,0)
     imad r3.xyzw, l(18, 19, 20, 21), cb0[21].yyyy, r1.xxxx
     iadd r3.xyzw, r3.xyzw, cb0[20].xxxx
-    store_uav_typed u1.xyzw, r3.xxxx, l(0,0,0,0)
-    store_uav_typed u1.xyzw, r3.yyyy, r6.xxxx
-    store_uav_typed u1.xyzw, r3.zzzz, l(1.000000,1.000000,1.000000,1.000000)
-    store_uav_typed u1.xyzw, r3.wwww, l(1.000000,1.000000,1.000000,1.000000)
-    imad r3.xyzw, l(22, 23, 24, 25), cb0[21].yyyy, r1.xxxx
-    iadd r3.xyzw, r3.xyzw, cb0[20].xxxx
     store_uav_typed u1.xyzw, r3.xxxx, l(1.000000,1.000000,1.000000,1.000000)
-    store_uav_typed u1.xyzw, r3.yyyy, r2.xxxx
-    store_uav_typed u1.xyzw, r3.zzzz, cb2[5].xxxx
-    store_uav_typed u1.xyzw, r3.wwww, cb2[5].yyyy
-    store_uav_typed u0.xyzw, r7.yyyy, r0.xxxx
-    imad r0.xyz, l(26, 27, 28, 0), cb0[21].yyyy, r1.xxxx
-    iadd r0.xyz, r0.xyzx, cb0[20].xxxx
+    store_uav_typed u1.xyzw, r3.yyyy, l(1.000000,1.000000,1.000000,1.000000)
+    store_uav_typed u1.xyzw, r3.zzzz, l(1.000000,1.000000,1.000000,1.000000)
+    store_uav_typed u1.xyzw, r3.wwww, r2.xxxx
+    imad r2.xyzw, l(22, 23, 24, 25), cb0[21].yyyy, r1.xxxx
+    iadd r2.xyzw, r2.xyzw, cb0[20].xxxx
+    store_uav_typed u1.xyzw, r2.xxxx, cb1[5].xxxx
+    store_uav_typed u1.xyzw, r2.yyyy, cb1[5].yyyy
+    store_uav_typed u0.xyzw, r0.zzzz, r0.xxxx
+    store_uav_typed u1.xyzw, r2.zzzz, l(0,0,0,0)
+    store_uav_typed u1.xyzw, r2.wwww, l(0,0,0,0)
+    imad r0.x, l(26), cb0[21].y, r1.x
+    iadd r0.x, r0.x, cb0[20].x
     store_uav_typed u1.xyzw, r0.xxxx, l(0,0,0,0)
-    store_uav_typed u1.xyzw, r0.yyyy, l(0,0,0,0)
-    store_uav_typed u1.xyzw, r0.zzzz, l(0,0,0,0)
   endif 
 endif 
 ret 
-// Approximately 1154 instruction slots used
+// Approximately 679 instruction slots used
