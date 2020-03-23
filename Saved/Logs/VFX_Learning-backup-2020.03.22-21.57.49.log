@@ -1,0 +1,1473 @@
+﻿Log file open, 03/22/20 14:51:12
+LogWindows: Failed to load 'aqProf.dll' (GetLastError=126)
+LogWindows: File 'aqProf.dll' does not exist
+LogWindows: Failed to load 'VtuneApi.dll' (GetLastError=126)
+LogWindows: File 'VtuneApi.dll' does not exist
+LogWindows: Failed to load 'VtuneApi32e.dll' (GetLastError=126)
+LogWindows: File 'VtuneApi32e.dll' does not exist
+LogConsoleResponse: Display: Failed to find resolution value strings in scalability ini. Falling back to default.
+LogInit: Display: Running engine for game: VFX_Learning
+LogPlatformFile: Not using cached read wrapper
+LogTaskGraph: Started task graph with 5 named threads and 35 total threads with 3 sets of task threads.
+LogStats: Stats thread started at 0.067971
+LogD3D11RHI: Loaded GFSDK_Aftermath_Lib.x64.dll
+LogICUInternationalization: ICU TimeZone Detection - Raw Offset: -7:00, Platform Override: ''
+LogPluginManager: Mounting plugin Paper2D
+LogPluginManager: Mounting plugin AISupport
+LogPluginManager: Mounting plugin LightPropagationVolume
+LogPluginManager: Mounting plugin ActorLayerUtilities
+LogPluginManager: Mounting plugin AnimationSharing
+LogPluginManager: Mounting plugin CLionSourceCodeAccess
+LogPluginManager: Mounting plugin CodeLiteSourceCodeAccess
+LogPluginManager: Mounting plugin GitSourceControl
+LogPluginManager: Mounting plugin KDevelopSourceCodeAccess
+LogPluginManager: Mounting plugin NullSourceCodeAccess
+LogPluginManager: Mounting plugin PerforceSourceControl
+LogPluginManager: Mounting plugin PlasticSourceControl
+LogPluginManager: Mounting plugin SubversionSourceControl
+LogPluginManager: Mounting plugin UObjectPlugin
+LogPluginManager: Mounting plugin VisualStudioCodeSourceCodeAccess
+LogPluginManager: Mounting plugin VisualStudioSourceCodeAccess
+LogPluginManager: Mounting plugin XCodeSourceCodeAccess
+LogPluginManager: Mounting plugin AssetManagerEditor
+LogPluginManager: Mounting plugin CryptoKeys
+LogPluginManager: Mounting plugin CurveEditorTools
+LogPluginManager: Mounting plugin DataValidation
+LogPluginManager: Mounting plugin FacialAnimation
+LogPluginManager: Mounting plugin GameplayTagsEditor
+LogPluginManager: Mounting plugin MacGraphicsSwitching
+LogPluginManager: Mounting plugin MaterialAnalyzer
+LogPluginManager: Mounting plugin MobileLauncherProfileWizard
+LogPluginManager: Mounting plugin PluginBrowser
+LogPluginManager: Mounting plugin SpeedTreeImporter
+LogPluginManager: Mounting plugin DatasmithContent
+LogPluginManager: Mounting plugin VariantManagerContent
+LogPluginManager: Mounting plugin AlembicImporter
+LogPluginManager: Mounting plugin AutomationUtils
+LogPluginManager: Mounting plugin BackChannel
+LogPluginManager: Mounting plugin CharacterAI
+LogPluginManager: Mounting plugin GeometryCache
+LogPluginManager: Mounting plugin PlatformCrypto
+LogPluginManager: Mounting plugin ProxyLODPlugin
+LogPluginManager: Mounting plugin SkeletalReduction
+LogPluginManager: Mounting plugin Niagara
+LogPluginManager: Mounting plugin MagicLeap
+LogPluginManager: Mounting plugin MagicLeapMedia
+LogPluginManager: Mounting plugin MLSDK
+LogPluginManager: Mounting plugin AndroidMedia
+LogPluginManager: Mounting plugin AvfMedia
+LogPluginManager: Mounting plugin ImgMedia
+LogPluginManager: Mounting plugin MediaCompositing
+LogPluginManager: Mounting plugin MediaPlayerEditor
+LogPluginManager: Mounting plugin WebMMedia
+LogPluginManager: Mounting plugin WmfMedia
+LogPluginManager: Mounting plugin TcpMessaging
+LogPluginManager: Mounting plugin UdpMessaging
+LogPluginManager: Mounting plugin ActorSequence
+LogPluginManager: Mounting plugin LevelSequenceEditor
+LogPluginManager: Mounting plugin MatineeToLevelSequence
+LogPluginManager: Mounting plugin NetcodeUnitTest
+LogPluginManager: Mounting plugin NUTUnrealEngine4
+LogPluginManager: Mounting plugin OnlineSubsystemGooglePlay
+LogPluginManager: Mounting plugin OnlineSubsystemIOS
+LogPluginManager: Mounting plugin OnlineSubsystem
+LogPluginManager: Mounting plugin OnlineSubsystemNull
+LogPluginManager: Mounting plugin OnlineSubsystemUtils
+LogPluginManager: Mounting plugin LauncherChunkInstaller
+LogPluginManager: Mounting plugin AndroidDeviceProfileSelector
+LogPluginManager: Mounting plugin AndroidMoviePlayer
+LogPluginManager: Mounting plugin AndroidPermission
+LogPluginManager: Mounting plugin AppleImageUtils
+LogPluginManager: Mounting plugin AppleMoviePlayer
+LogPluginManager: Mounting plugin ArchVisCharacter
+LogPluginManager: Mounting plugin AssetTags
+LogPluginManager: Mounting plugin AudioCapture
+LogPluginManager: Mounting plugin CableComponent
+LogPluginManager: Mounting plugin CustomMeshComponent
+LogPluginManager: Mounting plugin EditableMesh
+LogPluginManager: Mounting plugin ExampleDeviceProfileSelector
+LogPluginManager: Mounting plugin GoogleCloudMessaging
+LogPluginManager: Mounting plugin IOSDeviceProfileSelector
+LogPluginManager: Mounting plugin LinuxDeviceProfileSelector
+LogPluginManager: Mounting plugin LocationServicesBPLibrary
+LogPluginManager: Mounting plugin MobilePatchingUtils
+LogPluginManager: Mounting plugin OculusVR
+LogPluginManager: Mounting plugin PhysXVehicles
+LogPluginManager: Mounting plugin PostSplashScreen
+LogPluginManager: Mounting plugin ProceduralMeshComponent
+LogPluginManager: Mounting plugin RuntimePhysXCooking
+LogPluginManager: Mounting plugin SignificanceManager
+LogPluginManager: Mounting plugin SteamVR
+LogPluginManager: Mounting plugin WebMMoviePlayer
+LogPluginManager: Mounting plugin WindowsMoviePlayer
+LogPluginManager: Mounting plugin ScreenshotTools
+LogInit: Using libcurl 7.55.1-DEV
+LogInit:  - built for x86_64-pc-win32
+LogInit:  - supports SSL with OpenSSL/1.1.1
+LogInit:  - supports HTTP deflate (compression) using libz 1.2.8
+LogInit:  - other features:
+LogInit:      CURL_VERSION_SSL
+LogInit:      CURL_VERSION_LIBZ
+LogInit:      CURL_VERSION_IPV6
+LogInit:      CURL_VERSION_ASYNCHDNS
+LogInit:      CURL_VERSION_LARGEFILE
+LogInit:      CURL_VERSION_IDN
+LogInit:  CurlRequestOptions (configurable via config and command line):
+LogInit:  - bVerifyPeer = true  - Libcurl will verify peer certificate
+LogInit:  - bUseHttpProxy = false  - Libcurl will NOT use HTTP proxy
+LogInit:  - bDontReuseConnections = false  - Libcurl will reuse connections
+LogInit:  - MaxHostConnections = 16  - Libcurl will limit the number of connections to a host
+LogInit:  - LocalHostAddr = Default
+LogInit:  - BufferSize = 65536
+LogOnline: OSS: Creating online subsystem instance for: NULL
+LogInit: WinSock: version 1.1 (2.2), MaxSocks=32767, MaxUdp=65467
+LogOnline: OSS: TryLoadSubsystemAndSetDefault: Loaded subsystem for module [NULL]
+LogInit: Build: ++UE4+Release-4.24-CL-11590370
+LogInit: Engine Version: 4.24.3-11590370+++UE4+Release-4.24
+LogInit: Compatible Engine Version: 4.24.0-10570792+++UE4+Release-4.24
+LogInit: Net CL: 10570792
+LogInit: OS: Windows 10 (Release 1903) (), CPU: Intel(R) Core(TM) i7-8700K CPU @ 3.70GHz, GPU: NVIDIA GeForce GTX 1080 Ti
+LogInit: Compiled (64-bit): Feb 24 2020 15:39:18
+LogInit: Compiled with Visual C++: 19.16.27032.01
+LogInit: Build Configuration: Development
+LogInit: Branch Name: ++UE4+Release-4.24
+LogInit: Command Line: 
+LogInit: Base Directory: F:/Unreal/UE_4.24/Engine/Binaries/Win64/
+LogInit: Installed Engine Build: 1
+LogDevObjectVersion: Number of dev versions registered: 25
+LogDevObjectVersion:   Dev-Blueprints (B0D832E4-1F89-4F0D-ACCF-7EB736FD4AA2): 10
+LogDevObjectVersion:   Dev-Build (E1C64328-A22C-4D53-A36C-8E866417BD8C): 0
+LogDevObjectVersion:   Dev-Core (375EC13C-06E4-48FB-B500-84F0262A717E): 3
+LogDevObjectVersion:   Dev-Editor (E4B068ED-F494-42E9-A231-DA0B2E46BB41): 37
+LogDevObjectVersion:   Dev-Framework (CFFC743F-43B0-4480-9391-14DF171D2073): 36
+LogDevObjectVersion:   Dev-Mobile (B02B49B5-BB20-44E9-A304-32B752E40360): 2
+LogDevObjectVersion:   Dev-Networking (A4E4105C-59A1-49B5-A7C5-40C4547EDFEE): 0
+LogDevObjectVersion:   Dev-Online (39C831C9-5AE6-47DC-9A44-9C173E1C8E7C): 0
+LogDevObjectVersion:   Dev-Physics (78F01B33-EBEA-4F98-B9B4-84EACCB95AA2): 2
+LogDevObjectVersion:   Dev-Platform (6631380F-2D4D-43E0-8009-CF276956A95A): 0
+LogDevObjectVersion:   Dev-Rendering (12F88B9F-8875-4AFC-A67C-D90C383ABD29): 36
+LogDevObjectVersion:   Dev-Sequencer (7B5AE74C-D270-4C10-A958-57980B212A5A): 11
+LogDevObjectVersion:   Dev-VR (D7296918-1DD6-4BDD-9DE2-64A83CC13884): 2
+LogDevObjectVersion:   Dev-LoadTimes (C2A15278-BFE7-4AFE-6C17-90FF531DF755): 1
+LogDevObjectVersion:   Private-Geometry (6EACA3D4-40EC-4CC1-B786-8BED09428FC5): 3
+LogDevObjectVersion:   Dev-AnimPhys (29E575DD-E0A3-4627-9D10-D276232CDCEA): 17
+LogDevObjectVersion:   Dev-Anim (AF43A65D-7FD3-4947-9873-3E8ED9C1BB05): 2
+LogDevObjectVersion:   Dev-ReflectionCapture (6B266CEC-1EC7-4B8F-A30B-E4D90942FC07): 1
+LogDevObjectVersion:   Dev-Automation (0DF73D61-A23F-47EA-B727-89E90C41499A): 1
+LogDevObjectVersion:   FortniteMain (601D1886-AC64-4F84-AA16-D3DE0DEAC7D6): 31
+LogDevObjectVersion:   Dev-Enterprise (9DFFBCD6-494F-0158-E221-12823C92A888): 8
+LogDevObjectVersion:   Dev-Niagara (F2AED0AC-9AFE-416F-8664-AA7FFA26D6FC): 1
+LogDevObjectVersion:   Dev-Destruction (174F1F0B-B4C6-45A5-B13F-2EE8D0FB917D): 9
+LogDevObjectVersion:   Dev-Physics-Ext (35F94A83-E258-406C-A318-09F59610247C): 8
+LogDevObjectVersion:   Dev-CineCamera (B2E18506-4273-CFC2-A54E-F4BB758BBA07): 1
+LogInit: Presizing for max 25165824 objects, including 0 objects not considered by GC, pre-allocating 0 bytes for permanent pool.
+LogInit: Object subsystem initialized
+LogConfig: Setting CVar [[con.DebugEarlyDefault:1]]
+LogConfig: Setting CVar [[r.setres:1280x720]]
+[2020.03.22-20.51.12:548][  0]LogConfig: Setting CVar [[r.VSync:0]]
+[2020.03.22-20.51.12:548][  0]LogConfig: Setting CVar [[r.RHICmdBypass:0]]
+[2020.03.22-20.51.12:548][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.RendererSettings] File [C:/Users/Jim/Documents/VFX_Learning/Saved/Config/Windows/Engine.ini]
+[2020.03.22-20.51.12:548][  0]LogConfig: Setting CVar [[r.GPUCrashDebugging:0]]
+[2020.03.22-20.51.12:548][  0]LogConfig: Setting CVar [[r.SkinCache.CompileShaders:1]]
+[2020.03.22-20.51.12:548][  0]LogConfig: Setting CVar [[r.RayTracing:0]]
+[2020.03.22-20.51.12:548][  0]LogConfig: Setting CVar [[r.DefaultFeature.MotionBlur:0]]
+[2020.03.22-20.51.12:548][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.RendererOverrideSettings] File [C:/Users/Jim/Documents/VFX_Learning/Saved/Config/Windows/Engine.ini]
+[2020.03.22-20.51.12:548][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.StreamingSettings] File [C:/Users/Jim/Documents/VFX_Learning/Saved/Config/Windows/Engine.ini]
+[2020.03.22-20.51.12:548][  0]LogConfig: Setting CVar [[s.MinBulkDataSizeForAsyncLoading:131072]]
+[2020.03.22-20.51.12:548][  0]LogConfig: Setting CVar [[s.AsyncLoadingThreadEnabled:0]]
+[2020.03.22-20.51.12:548][  0]LogConfig: Setting CVar [[s.EventDrivenLoaderEnabled:1]]
+[2020.03.22-20.51.12:548][  0]LogConfig: Setting CVar [[s.WarnIfTimeLimitExceeded:0]]
+[2020.03.22-20.51.12:548][  0]LogConfig: Setting CVar [[s.TimeLimitExceededMultiplier:1.5]]
+[2020.03.22-20.51.12:548][  0]LogConfig: Setting CVar [[s.TimeLimitExceededMinTime:0.005]]
+[2020.03.22-20.51.12:548][  0]LogConfig: Setting CVar [[s.UseBackgroundLevelStreaming:1]]
+[2020.03.22-20.51.12:548][  0]LogConfig: Setting CVar [[s.PriorityAsyncLoadingExtraTime:15.0]]
+[2020.03.22-20.51.12:548][  0]LogConfig: Setting CVar [[s.LevelStreamingActorsUpdateTimeLimit:5.0]]
+[2020.03.22-20.51.12:548][  0]LogConfig: Setting CVar [[s.PriorityLevelStreamingActorsUpdateExtraTime:5.0]]
+[2020.03.22-20.51.12:548][  0]LogConfig: Setting CVar [[s.LevelStreamingComponentsRegistrationGranularity:10]]
+[2020.03.22-20.51.12:548][  0]LogConfig: Setting CVar [[s.UnregisterComponentsTimeLimit:1.0]]
+[2020.03.22-20.51.12:548][  0]LogConfig: Setting CVar [[s.LevelStreamingComponentsUnregistrationGranularity:5]]
+[2020.03.22-20.51.12:548][  0]LogConfig: Setting CVar [[s.FlushStreamingOnExit:1]]
+[2020.03.22-20.51.12:548][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.GarbageCollectionSettings] File [C:/Users/Jim/Documents/VFX_Learning/Saved/Config/Windows/Engine.ini]
+[2020.03.22-20.51.12:548][  0]LogConfig: Setting CVar [[gc.MaxObjectsNotConsideredByGC:1]]
+[2020.03.22-20.51.12:548][  0]LogConfig: Setting CVar [[gc.SizeOfPermanentObjectPool:0]]
+[2020.03.22-20.51.12:548][  0]LogConfig: Setting CVar [[gc.FlushStreamingOnGC:0]]
+[2020.03.22-20.51.12:548][  0]LogConfig: Setting CVar [[gc.NumRetriesBeforeForcingGC:10]]
+[2020.03.22-20.51.12:548][  0]LogConfig: Setting CVar [[gc.AllowParallelGC:1]]
+[2020.03.22-20.51.12:548][  0]LogConfig: Setting CVar [[gc.TimeBetweenPurgingPendingKillObjects:61.1]]
+[2020.03.22-20.51.12:548][  0]LogConfig: Setting CVar [[gc.MaxObjectsInEditor:25165824]]
+[2020.03.22-20.51.12:548][  0]LogConfig: Setting CVar [[gc.IncrementalBeginDestroyEnabled:1]]
+[2020.03.22-20.51.12:548][  0]LogConfig: Setting CVar [[gc.CreateGCClusters:1]]
+[2020.03.22-20.51.12:548][  0]LogConfig: Setting CVar [[gc.MinGCClusterSize:5]]
+[2020.03.22-20.51.12:548][  0]LogConfig: Setting CVar [[gc.ActorClusteringEnabled:0]]
+[2020.03.22-20.51.12:548][  0]LogConfig: Setting CVar [[gc.BlueprintClusteringEnabled:0]]
+[2020.03.22-20.51.12:548][  0]LogConfig: Setting CVar [[gc.UseDisregardForGCOnDedicatedServers:0]]
+[2020.03.22-20.51.12:548][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.NetworkSettings] File [C:/Users/Jim/Documents/VFX_Learning/Saved/Config/Windows/Engine.ini]
+[2020.03.22-20.51.12:548][  0]LogConfig: Applying CVar settings from Section [/Script/UnrealEd.CookerSettings] File [C:/Users/Jim/Documents/VFX_Learning/Saved/Config/Windows/Engine.ini]
+[2020.03.22-20.51.12:553][  0]LogConfig: Applying CVar settings from Section [ViewDistanceQuality@3] File [C:/Users/Jim/Documents/VFX_Learning/Saved/Config/Windows/Scalability.ini]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.SkeletalMeshLODBias:0]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.ViewDistanceScale:1.0]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Applying CVar settings from Section [AntiAliasingQuality@3] File [C:/Users/Jim/Documents/VFX_Learning/Saved/Config/Windows/Scalability.ini]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.PostProcessAAQuality:4]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Applying CVar settings from Section [ShadowQuality@3] File [C:/Users/Jim/Documents/VFX_Learning/Saved/Config/Windows/Scalability.ini]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.LightFunctionQuality:1]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.ShadowQuality:5]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.Shadow.CSM.MaxCascades:10]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.Shadow.MaxResolution:2048]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.Shadow.MaxCSMResolution:2048]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.Shadow.RadiusThreshold:0.01]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.Shadow.DistanceScale:1.0]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.Shadow.CSM.TransitionScale:1.0]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.Shadow.PreShadowResolutionFactor:1.0]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.DistanceFieldShadowing:1]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.DistanceFieldAO:1]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.AOQuality:2]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.VolumetricFog:1]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridPixelSize:8]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridSizeZ:128]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.VolumetricFog.HistoryMissSupersampleCount:4]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.LightMaxDrawDistanceScale:1]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.CapsuleShadows:1]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Applying CVar settings from Section [PostProcessQuality@3] File [C:/Users/Jim/Documents/VFX_Learning/Saved/Config/Windows/Scalability.ini]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.MotionBlurQuality:4]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMipLevelFactor:0.4]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMaxQuality:100]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.AmbientOcclusionLevels:-1]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.AmbientOcclusionRadiusScale:1.0]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.DepthOfFieldQuality:2]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.RenderTargetPoolMin:400]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.LensFlareQuality:2]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.SceneColorFringeQuality:1]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.EyeAdaptationQuality:2]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.BloomQuality:5]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.FastBlurThreshold:100]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.Upscale.Quality:3]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.Tonemapper.GrainQuantization:1]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.LightShaftQuality:1]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.Filter.SizeScale:1]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.Tonemapper.Quality:5]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.DOF.Gather.AccumulatorQuality:1        ; higher gathering accumulator quality]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.DOF.Gather.PostfilterMethod:1          ; Median3x3 postfilering method]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.DOF.Gather.EnableBokehSettings:0       ; no bokeh simulation when gathering]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.DOF.Gather.RingCount:4                 ; medium number of samples when gathering]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.DOF.Scatter.ForegroundCompositing:1    ; additive foreground scattering]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.DOF.Scatter.BackgroundCompositing:2    ; additive background scattering]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.DOF.Scatter.EnableBokehSettings:1      ; bokeh simulation when scattering]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.DOF.Scatter.MaxSpriteRatio:0.1         ; only a maximum of 10% of scattered bokeh]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.DOF.Recombine.Quality:1                ; cheap slight out of focus]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.DOF.Recombine.EnableBokehSettings:0    ; no bokeh simulation on slight out of focus]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.DOF.TemporalAAQuality:1                ; more stable temporal accumulation]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxForegroundRadius:0.025]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxBackgroundRadius:0.025]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Applying CVar settings from Section [TextureQuality@3] File [C:/Users/Jim/Documents/VFX_Learning/Saved/Config/Windows/Scalability.ini]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.Streaming.MipBias:0]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.Streaming.AmortizeCPUToGPUCopy:0]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.Streaming.MaxNumTexturesToStreamPerFrame:0]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.Streaming.Boost:1]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.MaxAnisotropy:8]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.VT.MaxAnisotropy:8]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.Streaming.LimitPoolSizeToVRAM:0]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.Streaming.PoolSize:1000]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.Streaming.MaxEffectiveScreenSize:0]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Applying CVar settings from Section [EffectsQuality@3] File [C:/Users/Jim/Documents/VFX_Learning/Saved/Config/Windows/Scalability.ini]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.TranslucencyLightingVolumeDim:64]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.RefractionQuality:2]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.SSR.Quality:3]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.SSR.HalfResSceneColor:0]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.SceneColorFormat:4]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.DetailMode:2]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.TranslucencyVolumeBlur:1]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.MaterialQualityLevel:1 ; High quality]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.SSS.Scale:1]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.SSS.SampleSet:2]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.SSS.Quality:1]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.SSS.HalfRes:1]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.SSGI.Quality:3]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.EmitterSpawnRateScale:1.0]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.ParticleLightQuality:2]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.FastApplyOnOpaque:1 ; Always have FastSkyLUT 1 in this case to avoid wrong sky]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.SampleCountPerSlice:1]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.DepthResolution:16.0]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT:1]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT.SampleCountMin:4.0]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT.SampleCountMax:32.0]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.SampleCountMin:4.0]]
+[2020.03.22-20.51.12:553][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.SampleCountMax:32.0]]
+[2020.03.22-20.51.12:554][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.TransmittanceLUT.UseSmallFormat:0]]
+[2020.03.22-20.51.12:554][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.TransmittanceLUT.SampleCount:10.0]]
+[2020.03.22-20.51.12:554][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.MultiScatteringLUT.SampleCount:15.0]]
+[2020.03.22-20.51.12:554][  0]LogConfig: Applying CVar settings from Section [FoliageQuality@3] File [C:/Users/Jim/Documents/VFX_Learning/Saved/Config/Windows/Scalability.ini]
+[2020.03.22-20.51.12:554][  0]LogConfig: Setting CVar [[foliage.DensityScale:1.0]]
+[2020.03.22-20.51.12:554][  0]LogConfig: Setting CVar [[grass.DensityScale:1.0]]
+[2020.03.22-20.51.12:554][  0]LogConfig: Applying CVar settings from Section [ShadingQuality@3] File [C:/Users/Jim/Documents/VFX_Learning/Saved/Config/Windows/Scalability.ini]
+[2020.03.22-20.51.12:554][  0]LogConfig: Setting CVar [[r.HairStrands.SkyLighting.SampleCount:16]]
+[2020.03.22-20.51.12:554][  0]LogConfig: Setting CVar [[r.HairStrands.SkyLighting.JitterIntegration:0]]
+[2020.03.22-20.51.12:554][  0]LogConfig: Setting CVar [[r.HairStrands.SkyAO.SampleCount:16]]
+[2020.03.22-20.51.12:554][  0]LogInit: Selected Device Profile: [Windows]
+[2020.03.22-20.51.12:554][  0]LogInit: Applying CVar settings loaded from the selected device profile: [Windows]
+[2020.03.22-20.51.12:556][  0]LogHAL: Display: Platform has ~ 32 GB [34290954240 / 34359738368 / 32], which maps to Largest [LargestMinGB=32, LargerMinGB=12, DefaultMinGB=8, SmallerMinGB=6, SmallestMinGB=0)
+[2020.03.22-20.51.12:556][  0]LogInit: Going up to parent DeviceProfile []
+[2020.03.22-20.51.12:556][  0]LogConfig: Applying CVar settings from Section [ViewDistanceQuality@3] File [C:/Users/Jim/Documents/VFX_Learning/Saved/Config/Windows/Scalability.ini]
+[2020.03.22-20.51.12:556][  0]LogConfig: Setting CVar [[r.SkeletalMeshLODBias:0]]
+[2020.03.22-20.51.12:556][  0]LogConfig: Setting CVar [[r.ViewDistanceScale:1.0]]
+[2020.03.22-20.51.12:556][  0]LogConfig: Applying CVar settings from Section [AntiAliasingQuality@3] File [C:/Users/Jim/Documents/VFX_Learning/Saved/Config/Windows/Scalability.ini]
+[2020.03.22-20.51.12:556][  0]LogConfig: Setting CVar [[r.PostProcessAAQuality:4]]
+[2020.03.22-20.51.12:556][  0]LogConfig: Applying CVar settings from Section [ShadowQuality@3] File [C:/Users/Jim/Documents/VFX_Learning/Saved/Config/Windows/Scalability.ini]
+[2020.03.22-20.51.12:556][  0]LogConfig: Setting CVar [[r.LightFunctionQuality:1]]
+[2020.03.22-20.51.12:556][  0]LogConfig: Setting CVar [[r.ShadowQuality:5]]
+[2020.03.22-20.51.12:556][  0]LogConfig: Setting CVar [[r.Shadow.CSM.MaxCascades:10]]
+[2020.03.22-20.51.12:556][  0]LogConfig: Setting CVar [[r.Shadow.MaxResolution:2048]]
+[2020.03.22-20.51.12:556][  0]LogConfig: Setting CVar [[r.Shadow.MaxCSMResolution:2048]]
+[2020.03.22-20.51.12:556][  0]LogConfig: Setting CVar [[r.Shadow.RadiusThreshold:0.01]]
+[2020.03.22-20.51.12:556][  0]LogConfig: Setting CVar [[r.Shadow.DistanceScale:1.0]]
+[2020.03.22-20.51.12:556][  0]LogConfig: Setting CVar [[r.Shadow.CSM.TransitionScale:1.0]]
+[2020.03.22-20.51.12:556][  0]LogConfig: Setting CVar [[r.Shadow.PreShadowResolutionFactor:1.0]]
+[2020.03.22-20.51.12:556][  0]LogConfig: Setting CVar [[r.DistanceFieldShadowing:1]]
+[2020.03.22-20.51.12:556][  0]LogConfig: Setting CVar [[r.DistanceFieldAO:1]]
+[2020.03.22-20.51.12:556][  0]LogConfig: Setting CVar [[r.AOQuality:2]]
+[2020.03.22-20.51.12:556][  0]LogConfig: Setting CVar [[r.VolumetricFog:1]]
+[2020.03.22-20.51.12:556][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridPixelSize:8]]
+[2020.03.22-20.51.12:556][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridSizeZ:128]]
+[2020.03.22-20.51.12:556][  0]LogConfig: Setting CVar [[r.VolumetricFog.HistoryMissSupersampleCount:4]]
+[2020.03.22-20.51.12:556][  0]LogConfig: Setting CVar [[r.LightMaxDrawDistanceScale:1]]
+[2020.03.22-20.51.12:556][  0]LogConfig: Setting CVar [[r.CapsuleShadows:1]]
+[2020.03.22-20.51.12:556][  0]LogConfig: Applying CVar settings from Section [PostProcessQuality@3] File [C:/Users/Jim/Documents/VFX_Learning/Saved/Config/Windows/Scalability.ini]
+[2020.03.22-20.51.12:557][  0]LogConfig: Setting CVar [[r.MotionBlurQuality:4]]
+[2020.03.22-20.51.12:557][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMipLevelFactor:0.4]]
+[2020.03.22-20.51.12:557][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMaxQuality:100]]
+[2020.03.22-20.51.12:557][  0]LogConfig: Setting CVar [[r.AmbientOcclusionLevels:-1]]
+[2020.03.22-20.51.12:557][  0]LogConfig: Setting CVar [[r.AmbientOcclusionRadiusScale:1.0]]
+[2020.03.22-20.51.12:557][  0]LogConfig: Setting CVar [[r.DepthOfFieldQuality:2]]
+[2020.03.22-20.51.12:557][  0]LogConfig: Setting CVar [[r.RenderTargetPoolMin:400]]
+[2020.03.22-20.51.12:557][  0]LogConfig: Setting CVar [[r.LensFlareQuality:2]]
+[2020.03.22-20.51.12:557][  0]LogConfig: Setting CVar [[r.SceneColorFringeQuality:1]]
+[2020.03.22-20.51.12:557][  0]LogConfig: Setting CVar [[r.EyeAdaptationQuality:2]]
+[2020.03.22-20.51.12:557][  0]LogConfig: Setting CVar [[r.BloomQuality:5]]
+[2020.03.22-20.51.12:557][  0]LogConfig: Setting CVar [[r.FastBlurThreshold:100]]
+[2020.03.22-20.51.12:557][  0]LogConfig: Setting CVar [[r.Upscale.Quality:3]]
+[2020.03.22-20.51.12:557][  0]LogConfig: Setting CVar [[r.Tonemapper.GrainQuantization:1]]
+[2020.03.22-20.51.12:557][  0]LogConfig: Setting CVar [[r.LightShaftQuality:1]]
+[2020.03.22-20.51.12:557][  0]LogConfig: Setting CVar [[r.Filter.SizeScale:1]]
+[2020.03.22-20.51.12:557][  0]LogConfig: Setting CVar [[r.Tonemapper.Quality:5]]
+[2020.03.22-20.51.12:557][  0]LogConfig: Setting CVar [[r.DOF.Gather.AccumulatorQuality:1        ; higher gathering accumulator quality]]
+[2020.03.22-20.51.12:557][  0]LogConfig: Setting CVar [[r.DOF.Gather.PostfilterMethod:1          ; Median3x3 postfilering method]]
+[2020.03.22-20.51.12:557][  0]LogConfig: Setting CVar [[r.DOF.Gather.EnableBokehSettings:0       ; no bokeh simulation when gathering]]
+[2020.03.22-20.51.12:557][  0]LogConfig: Setting CVar [[r.DOF.Gather.RingCount:4                 ; medium number of samples when gathering]]
+[2020.03.22-20.51.12:557][  0]LogConfig: Setting CVar [[r.DOF.Scatter.ForegroundCompositing:1    ; additive foreground scattering]]
+[2020.03.22-20.51.12:557][  0]LogConfig: Setting CVar [[r.DOF.Scatter.BackgroundCompositing:2    ; additive background scattering]]
+[2020.03.22-20.51.12:557][  0]LogConfig: Setting CVar [[r.DOF.Scatter.EnableBokehSettings:1      ; bokeh simulation when scattering]]
+[2020.03.22-20.51.12:557][  0]LogConfig: Setting CVar [[r.DOF.Scatter.MaxSpriteRatio:0.1         ; only a maximum of 10% of scattered bokeh]]
+[2020.03.22-20.51.12:557][  0]LogConfig: Setting CVar [[r.DOF.Recombine.Quality:1                ; cheap slight out of focus]]
+[2020.03.22-20.51.12:557][  0]LogConfig: Setting CVar [[r.DOF.Recombine.EnableBokehSettings:0    ; no bokeh simulation on slight out of focus]]
+[2020.03.22-20.51.12:557][  0]LogConfig: Setting CVar [[r.DOF.TemporalAAQuality:1                ; more stable temporal accumulation]]
+[2020.03.22-20.51.12:557][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxForegroundRadius:0.025]]
+[2020.03.22-20.51.12:557][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxBackgroundRadius:0.025]]
+[2020.03.22-20.51.12:557][  0]LogConfig: Applying CVar settings from Section [TextureQuality@3] File [C:/Users/Jim/Documents/VFX_Learning/Saved/Config/Windows/Scalability.ini]
+[2020.03.22-20.51.12:557][  0]LogConfig: Setting CVar [[r.Streaming.MipBias:0]]
+[2020.03.22-20.51.12:557][  0]LogConfig: Setting CVar [[r.Streaming.AmortizeCPUToGPUCopy:0]]
+[2020.03.22-20.51.12:557][  0]LogConfig: Setting CVar [[r.Streaming.MaxNumTexturesToStreamPerFrame:0]]
+[2020.03.22-20.51.12:557][  0]LogConfig: Setting CVar [[r.Streaming.Boost:1]]
+[2020.03.22-20.51.12:557][  0]LogConfig: Setting CVar [[r.MaxAnisotropy:8]]
+[2020.03.22-20.51.12:557][  0]LogConfig: Setting CVar [[r.VT.MaxAnisotropy:8]]
+[2020.03.22-20.51.12:557][  0]LogConfig: Setting CVar [[r.Streaming.LimitPoolSizeToVRAM:0]]
+[2020.03.22-20.51.12:557][  0]LogConfig: Setting CVar [[r.Streaming.PoolSize:1000]]
+[2020.03.22-20.51.12:557][  0]LogConfig: Setting CVar [[r.Streaming.MaxEffectiveScreenSize:0]]
+[2020.03.22-20.51.12:557][  0]LogConfig: Applying CVar settings from Section [EffectsQuality@3] File [C:/Users/Jim/Documents/VFX_Learning/Saved/Config/Windows/Scalability.ini]
+[2020.03.22-20.51.12:557][  0]LogConfig: Setting CVar [[r.TranslucencyLightingVolumeDim:64]]
+[2020.03.22-20.51.12:557][  0]LogConfig: Setting CVar [[r.RefractionQuality:2]]
+[2020.03.22-20.51.12:557][  0]LogConfig: Setting CVar [[r.SSR.Quality:3]]
+[2020.03.22-20.51.12:557][  0]LogConfig: Setting CVar [[r.SSR.HalfResSceneColor:0]]
+[2020.03.22-20.51.12:557][  0]LogConfig: Setting CVar [[r.SceneColorFormat:4]]
+[2020.03.22-20.51.12:557][  0]LogConfig: Setting CVar [[r.DetailMode:2]]
+[2020.03.22-20.51.12:557][  0]LogConfig: Setting CVar [[r.TranslucencyVolumeBlur:1]]
+[2020.03.22-20.51.12:557][  0]LogConfig: Setting CVar [[r.MaterialQualityLevel:1 ; High quality]]
+[2020.03.22-20.51.12:557][  0]LogConfig: Setting CVar [[r.SSS.Scale:1]]
+[2020.03.22-20.51.12:557][  0]LogConfig: Setting CVar [[r.SSS.SampleSet:2]]
+[2020.03.22-20.51.12:557][  0]LogConfig: Setting CVar [[r.SSS.Quality:1]]
+[2020.03.22-20.51.12:557][  0]LogConfig: Setting CVar [[r.SSS.HalfRes:1]]
+[2020.03.22-20.51.12:557][  0]LogConfig: Setting CVar [[r.SSGI.Quality:3]]
+[2020.03.22-20.51.12:557][  0]LogConfig: Setting CVar [[r.EmitterSpawnRateScale:1.0]]
+[2020.03.22-20.51.12:557][  0]LogConfig: Setting CVar [[r.ParticleLightQuality:2]]
+[2020.03.22-20.51.12:557][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.FastApplyOnOpaque:1 ; Always have FastSkyLUT 1 in this case to avoid wrong sky]]
+[2020.03.22-20.51.12:557][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.SampleCountPerSlice:1]]
+[2020.03.22-20.51.12:557][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.DepthResolution:16.0]]
+[2020.03.22-20.51.12:557][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT:1]]
+[2020.03.22-20.51.12:557][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT.SampleCountMin:4.0]]
+[2020.03.22-20.51.12:557][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT.SampleCountMax:32.0]]
+[2020.03.22-20.51.12:557][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.SampleCountMin:4.0]]
+[2020.03.22-20.51.12:557][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.SampleCountMax:32.0]]
+[2020.03.22-20.51.12:557][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.TransmittanceLUT.UseSmallFormat:0]]
+[2020.03.22-20.51.12:557][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.TransmittanceLUT.SampleCount:10.0]]
+[2020.03.22-20.51.12:557][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.MultiScatteringLUT.SampleCount:15.0]]
+[2020.03.22-20.51.12:557][  0]LogConfig: Applying CVar settings from Section [FoliageQuality@3] File [C:/Users/Jim/Documents/VFX_Learning/Saved/Config/Windows/Scalability.ini]
+[2020.03.22-20.51.12:557][  0]LogConfig: Setting CVar [[foliage.DensityScale:1.0]]
+[2020.03.22-20.51.12:557][  0]LogConfig: Setting CVar [[grass.DensityScale:1.0]]
+[2020.03.22-20.51.12:557][  0]LogConfig: Applying CVar settings from Section [ShadingQuality@3] File [C:/Users/Jim/Documents/VFX_Learning/Saved/Config/Windows/Scalability.ini]
+[2020.03.22-20.51.12:557][  0]LogConfig: Setting CVar [[r.HairStrands.SkyLighting.SampleCount:16]]
+[2020.03.22-20.51.12:557][  0]LogConfig: Setting CVar [[r.HairStrands.SkyLighting.JitterIntegration:0]]
+[2020.03.22-20.51.12:557][  0]LogConfig: Setting CVar [[r.HairStrands.SkyAO.SampleCount:16]]
+[2020.03.22-20.51.12:557][  0]LogConfig: Applying CVar settings from Section [Startup] File [../../../Engine/Config/ConsoleVariables.ini]
+[2020.03.22-20.51.12:557][  0]LogConfig: Setting CVar [[net.UseAdaptiveNetUpdateFrequency:0]]
+[2020.03.22-20.51.12:557][  0]LogConfig: Setting CVar [[p.chaos.AllowCreatePhysxBodies:1]]
+[2020.03.22-20.51.12:558][  0]LogConfig: Setting CVar [[fx.SkipVectorVMBackendOptimizations:1]]
+[2020.03.22-20.51.12:558][  0]LogConfig: Applying CVar settings from Section [ConsoleVariables] File [C:/Users/Jim/Documents/VFX_Learning/Saved/Config/Windows/Engine.ini]
+[2020.03.22-20.51.12:558][  0]LogInit: Computer: DESKTOP-IUR89VI
+[2020.03.22-20.51.12:558][  0]LogInit: User: Jim
+[2020.03.22-20.51.12:558][  0]LogInit: CPU Page size=4096, Cores=6
+[2020.03.22-20.51.12:558][  0]LogInit: High frequency timer resolution =10.000000 MHz
+[2020.03.22-20.51.12:558][  0]LogMemory: Memory total: Physical=31.9GB (32GB approx)
+[2020.03.22-20.51.12:558][  0]LogMemory: Platform Memory Stats for Windows
+[2020.03.22-20.51.12:558][  0]LogMemory: Process Physical Memory: 109.18 MB used, 109.18 MB peak
+[2020.03.22-20.51.12:558][  0]LogMemory: Process Virtual Memory: 101.68 MB used, 101.68 MB peak
+[2020.03.22-20.51.12:558][  0]LogMemory: Physical Memory: 10891.72 MB used,  21810.68 MB free, 32702.40 MB total
+[2020.03.22-20.51.12:558][  0]LogMemory: Virtual Memory: 5160.29 MB used,  134212568.00 MB free, 134217728.00 MB total
+[2020.03.22-20.51.12:561][  0]LogWindows: WindowsPlatformFeatures enabled
+[2020.03.22-20.51.12:584][  0]LogInit: Overriding language with editor language configuration option (en).
+[2020.03.22-20.51.12:584][  0]LogInit: Overriding locale with editor locale configuration option (en-US).
+[2020.03.22-20.51.12:708][  0]LogInit: Setting process to per monitor DPI aware
+[2020.03.22-20.51.12:773][  0]LogSlate: New Slate User Created.  User Index 0, Is Virtual User: 0
+[2020.03.22-20.51.12:773][  0]LogSlate: Slate User Registered.  User Index 0, Is Virtual User: 0
+[2020.03.22-20.51.12:938][  0]LogD3D12RHI: Aftermath initialized
+[2020.03.22-20.51.12:938][  0]LogD3D12RHI: Loading WinPixEventRuntime.dll for PIX profiling (from ../../../Engine/Binaries/ThirdParty/Windows/DirectX/x64).
+[2020.03.22-20.51.12:944][  0]LogHMD: Failed to initialize OpenVR with code 110
+[2020.03.22-20.51.13:046][  0]LogD3D12RHI: Found D3D12 adapter 0: NVIDIA GeForce GTX 1080 Ti (Max supported Feature Level 12_1)
+[2020.03.22-20.51.13:046][  0]LogD3D12RHI: Adapter has 11127MB of dedicated video memory, 0MB of dedicated system memory, and 16351MB of shared system memory, 2 output[s]
+[2020.03.22-20.51.13:056][  0]LogD3D12RHI: Found D3D12 adapter 1: Microsoft Basic Render Driver (Max supported Feature Level 12_1)
+[2020.03.22-20.51.13:056][  0]LogD3D12RHI: Adapter has 0MB of dedicated video memory, 0MB of dedicated system memory, and 16351MB of shared system memory, 0 output[s]
+[2020.03.22-20.51.13:056][  0]LogD3D12RHI: Forcing D3D12.AsyncDeferredDeletion=0 as a workaround for a deadlock.
+[2020.03.22-20.51.13:056][  0]LogD3D12RHI: Chosen D3D12 Adapter Id = 0
+[2020.03.22-20.51.13:063][  0]LogD3D12RHI: Emitting draw events for PIX profiling.
+[2020.03.22-20.51.13:116][  0]LogD3D12RHI: The system supports ID3D12Device1.
+[2020.03.22-20.51.13:116][  0]LogD3D12RHI: The system supports ID3D12Device2.
+[2020.03.22-20.51.13:189][  0]LogD3D12RHI: Display: Not using pipeline state disk cache per r.D3D12.PSO.DiskCache=0
+[2020.03.22-20.51.13:189][  0]LogD3D12RHI: Display: Not using driver-optimized pipeline state disk cache per r.D3D12.PSO.DriverOptimizedDiskCache=0
+[2020.03.22-20.51.13:190][  0]LogD3D12RHI:     GPU DeviceId: 0x1b06 (for the marketing name, search the web for "GPU Device Id")
+[2020.03.22-20.51.13:190][  0]LogWindows: EnumDisplayDevices:
+[2020.03.22-20.51.13:190][  0]LogWindows:    0. 'NVIDIA GeForce GTX 1080 Ti' (P:1 D:1)
+[2020.03.22-20.51.13:190][  0]LogWindows:    1. 'NVIDIA GeForce GTX 1080 Ti' (P:0 D:1)
+[2020.03.22-20.51.13:191][  0]LogWindows:    2. 'NVIDIA GeForce GTX 1080 Ti' (P:0 D:0)
+[2020.03.22-20.51.13:191][  0]LogWindows:    3. 'NVIDIA GeForce GTX 1080 Ti' (P:0 D:0)
+[2020.03.22-20.51.13:192][  0]LogWindows: DebugString: FoundDriverCount:4 
+[2020.03.22-20.51.13:192][  0]LogD3D12RHI:     Adapter Name: NVIDIA GeForce GTX 1080 Ti
+[2020.03.22-20.51.13:192][  0]LogD3D12RHI:   Driver Version: 442.59 (internal:26.21.14.4259, unified:442.59)
+[2020.03.22-20.51.13:192][  0]LogD3D12RHI:      Driver Date: 3-4-2020
+[2020.03.22-20.51.13:192][  0]LogRHI: Texture pool is 5958 MB (70% of 8512 MB)
+[2020.03.22-20.51.13:192][  0]LogD3D12RHI: Async texture creation enabled
+[2020.03.22-20.51.13:192][  0]LogD3D12RHI: RHI has support for 64 bit atomics
+[2020.03.22-20.51.13:518][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'AllDesktop'
+[2020.03.22-20.51.13:542][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android'
+[2020.03.22-20.51.13:542][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_ASTC'
+[2020.03.22-20.51.13:542][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_ATC'
+[2020.03.22-20.51.13:542][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_DXT'
+[2020.03.22-20.51.13:542][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_ETC1'
+[2020.03.22-20.51.13:542][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_ETC1a'
+[2020.03.22-20.51.13:542][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_ETC2'
+[2020.03.22-20.51.13:542][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_PVRTC'
+[2020.03.22-20.51.13:542][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'AndroidClient'
+[2020.03.22-20.51.13:542][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_ASTCClient'
+[2020.03.22-20.51.13:542][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_ATCClient'
+[2020.03.22-20.51.13:542][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_DXTClient'
+[2020.03.22-20.51.13:542][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_ETC1Client'
+[2020.03.22-20.51.13:542][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_ETC1aClient'
+[2020.03.22-20.51.13:542][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_ETC2Client'
+[2020.03.22-20.51.13:542][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_PVRTCClient'
+[2020.03.22-20.51.13:542][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_Multi'
+[2020.03.22-20.51.13:542][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_MultiClient'
+[2020.03.22-20.51.13:557][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'IOSClient'
+[2020.03.22-20.51.13:557][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'IOS'
+[2020.03.22-20.51.13:563][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'LinuxNoEditor'
+[2020.03.22-20.51.13:569][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'LinuxClient'
+[2020.03.22-20.51.13:575][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'LinuxServer'
+[2020.03.22-20.51.13:581][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'LinuxAArch64NoEditor'
+[2020.03.22-20.51.13:587][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'LinuxAArch64Client'
+[2020.03.22-20.51.13:593][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'LinuxAArch64Server'
+[2020.03.22-20.51.13:614][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Lumin'
+[2020.03.22-20.51.13:614][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'LuminClient'
+[2020.03.22-20.51.13:627][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'TVOSClient'
+[2020.03.22-20.51.13:627][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'TVOS'
+[2020.03.22-20.51.13:634][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'WindowsNoEditor'
+[2020.03.22-20.51.13:640][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Windows'
+[2020.03.22-20.51.13:648][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'WindowsClient'
+[2020.03.22-20.51.13:654][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'WindowsServer'
+[2020.03.22-20.51.13:654][  0]LogTargetPlatformManager: Display: Building Assets For Windows
+[2020.03.22-20.51.13:656][  0]LogAudioDebug: Display: Lib vorbis DLL was dynamically loaded.
+[2020.03.22-20.51.13:672][  0]LogShaderCompilers: Guid format shader working directory is 8 characters bigger than the processId version (C:/Users/Jim/Documents/VFX_Learning/Intermediate/Shaders/WorkingDirectory/19600/).
+[2020.03.22-20.51.13:672][  0]LogShaderCompilers: Cleaned the shader compiler working directory 'C:/Users/Jim/AppData/Local/Temp/UnrealShaderWorkingDir/5C17E554424FBB6AAEC173A15843B94E/'.
+[2020.03.22-20.51.13:672][  0]LogXGEController: Cleaning working directory: C:/Users/Jim/AppData/Local/Temp/UnrealXGEWorkingDir/
+[2020.03.22-20.51.13:674][  0]LogXGEController: Cannot use XGE Controller as Incredibuild is not installed on this machine.
+[2020.03.22-20.51.13:674][  0]LogShaderCompilers: Cannot use XGE Shader Compiler as Incredibuild is not installed on this machine.
+[2020.03.22-20.51.13:674][  0]LogShaderCompilers: Display: Using Local Shader Compiler.
+[2020.03.22-20.51.14:266][  0]LogDerivedDataCache: Display: Max Cache Size: 512 MB
+[2020.03.22-20.51.14:311][  0]LogDerivedDataCache: Loaded boot cache 0.04s 80MB C:/Users/Jim/AppData/Local/UnrealEngine/4.24/DerivedDataCache/Boot.ddc.
+[2020.03.22-20.51.14:311][  0]LogDerivedDataCache: Display: Loaded Boot cache: C:/Users/Jim/AppData/Local/UnrealEngine/4.24/DerivedDataCache/Boot.ddc
+[2020.03.22-20.51.14:311][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  Pak pak cache file C:/Users/Jim/Documents/VFX_Learning/DerivedDataCache/DDC.ddp not found, will not use a pak cache.
+[2020.03.22-20.51.14:311][  0]LogDerivedDataCache: Unable to find inner node Pak for hierarchical cache Hierarchy.
+[2020.03.22-20.51.14:311][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  CompressedPak pak cache file C:/Users/Jim/Documents/VFX_Learning/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
+[2020.03.22-20.51.14:311][  0]LogDerivedDataCache: Unable to find inner node CompressedPak for hierarchical cache Hierarchy.
+[2020.03.22-20.51.14:320][  0]LogDerivedDataCache: Display: Pak cache opened for reading ../../../Engine/DerivedDataCache/Compressed.ddp.
+[2020.03.22-20.51.14:320][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  EnterprisePak pak cache file ../../../Enterprise/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
+[2020.03.22-20.51.14:320][  0]LogDerivedDataCache: Unable to find inner node EnterprisePak for hierarchical cache Hierarchy.
+[2020.03.22-20.51.14:321][  0]LogDerivedDataCache: Using Local data cache path C:/Users/Jim/AppData/Local/UnrealEngine/Common/DerivedDataCache: Writable
+[2020.03.22-20.51.14:321][  0]LogDerivedDataCache: Shared data cache path not found in *engine.ini, will not use an Shared cache.
+[2020.03.22-20.51.14:321][  0]LogDerivedDataCache: Unable to find inner node Shared for hierarchical cache Hierarchy.
+[2020.03.22-20.51.14:341][  0]LogMaterial: Verifying Global Shaders for PCD3D_SM5
+[2020.03.22-20.51.14:343][  0]LogSlate: Using FreeType 2.10.0
+[2020.03.22-20.51.14:344][  0]LogSlate: SlateFontServices - WITH_FREETYPE: 1, WITH_HARFBUZZ: 1
+[2020.03.22-20.51.14:397][  0]LogAssetRegistry: FAssetRegistry took 0.0021 seconds to start up
+[2020.03.22-20.51.14:637][  0]LogInit: Selected Device Profile: [Windows]
+[2020.03.22-20.51.14:770][  0]LogMeshReduction: Using QuadricMeshReduction for automatic static mesh reduction
+[2020.03.22-20.51.14:770][  0]LogMeshReduction: Using SimplygonMeshReduction for automatic skeletal mesh reduction
+[2020.03.22-20.51.14:770][  0]LogMeshReduction: Using ProxyLODMeshReduction for automatic mesh merging
+[2020.03.22-20.51.14:770][  0]LogMeshReduction: No distributed automatic mesh merging module available
+[2020.03.22-20.51.14:770][  0]LogMeshMerging: No distributed automatic mesh merging module available
+[2020.03.22-20.51.14:780][  0]LogNetVersion: VFX_Learning 1.0.0, NetCL: 10570792, EngineNetVer: 13, GameNetVer: 0 (Checksum: 537258961)
+[2020.03.22-20.51.15:757][  0]LogPackageLocalizationCache: Processed 11 localized package path(s) for 1 prioritized culture(s) in 0.042595 seconds
+[2020.03.22-20.51.15:763][  0]LogUObjectArray: 46771 objects as part of root set at end of initial load.
+[2020.03.22-20.51.15:763][  0]LogUObjectAllocator: 8140680 out of 0 bytes used by permanent object pool.
+[2020.03.22-20.51.15:763][  0]LogUObjectArray: CloseDisregardForGC: 0/0 objects in disregard for GC pool
+[2020.03.22-20.51.16:118][  0]LogTcpMessaging: Initializing TcpMessaging bridge
+[2020.03.22-20.51.16:120][  0]LogUdpMessaging: Initializing bridge on interface 0.0.0.0:0 to multicast group 230.0.0.1:6666.
+[2020.03.22-20.51.16:159][  0]SourceControl: Source control is disabled
+[2020.03.22-20.51.16:159][  0]SourceControl: Source control is disabled
+[2020.03.22-20.51.16:160][  0]SourceControl: Source control is disabled
+[2020.03.22-20.51.16:160][  0]SourceControl: Source control is disabled
+[2020.03.22-20.51.16:161][  0]SourceControl: Source control is disabled
+[2020.03.22-20.51.16:228][  0]LogAndroidPermission: UAndroidPermissionCallbackProxy::GetInstance
+[2020.03.22-20.51.16:235][  0]LogAudioCaptureCore: Display: No Audio Capture implementations found. Audio input will be silent.
+[2020.03.22-20.51.16:235][  0]LogAudioCaptureCore: Display: No Audio Capture implementations found. Audio input will be silent.
+[2020.03.22-20.51.16:303][  0]LogOcInput: OculusInput pre-init called
+[2020.03.22-20.51.16:309][  0]LogWindows: Failed to load 'OVRPlugin.dll' (GetLastError=126)
+[2020.03.22-20.51.16:309][  0]LogWindows: File 'OVRPlugin.dll' does not exist
+[2020.03.22-20.51.16:363][  0]LogEngine: Initializing Engine...
+[2020.03.22-20.51.16:365][  0]LogHMD: Failed to initialize OpenVR with code 110
+[2020.03.22-20.51.16:365][  0]LogStats: UGameplayTagsManager::InitializeManager -  0.000 s
+[2020.03.22-20.51.16:655][  0]LogInit: Initializing FReadOnlyCVARCache
+[2020.03.22-20.51.16:660][  0]LogAIModule: Creating AISystem for world Untitled
+[2020.03.22-20.51.16:661][  0]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2020.03.22-20.51.16:661][  0]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2020.03.22-20.51.16:661][  0]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2020.03.22-20.51.16:662][  0]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2020.03.22-20.51.16:662][  0]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2020.03.22-20.51.16:662][  0]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2020.03.22-20.51.16:662][  0]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2020.03.22-20.51.16:662][  0]LogAudio: Display: AudioDevice MaxSources: 32
+[2020.03.22-20.51.16:662][  0]LogAudio: Display: Using built-in audio occlusion.
+[2020.03.22-20.51.16:662][  0]LogAudioMixer: Display: Initializing audio mixer.
+[2020.03.22-20.51.16:712][  0]LogAudioMixer: Display: Audio Device Output Speaker Info:
+[2020.03.22-20.51.16:712][  0]LogAudioMixer: Display: Name: 扬声器 (Realtek High Definition Audio)
+[2020.03.22-20.51.16:712][  0]LogAudioMixer: Display: Is Default: Yes
+[2020.03.22-20.51.16:712][  0]LogAudioMixer: Display: Sample Rate: 48000
+[2020.03.22-20.51.16:712][  0]LogAudioMixer: Display: Channel Count Used: 2
+[2020.03.22-20.51.16:712][  0]LogAudioMixer: Display: Device Channel Count: 2
+[2020.03.22-20.51.16:712][  0]LogAudioMixer: Display: Channel Order:
+[2020.03.22-20.51.16:712][  0]LogAudioMixer: Display: 0: FrontLeft
+[2020.03.22-20.51.16:712][  0]LogAudioMixer: Display: 1: FrontRight
+[2020.03.22-20.51.16:740][  0]LogAudioMixer: Display: Using Audio Device 扬声器 (Realtek High Definition Audio)
+[2020.03.22-20.51.16:743][  0]LogInit: FAudioDevice initialized.
+[2020.03.22-20.51.16:744][  0]LogNetVersion: Set ProjectVersion to 1.0.0.0. Version Checksum will be recalculated on next use.
+[2020.03.22-20.51.16:908][  0]LogDerivedDataCache: Saved boot cache 0.16s 80MB C:/Users/Jim/AppData/Local/UnrealEngine/4.24/DerivedDataCache/Boot.ddc.
+[2020.03.22-20.51.16:908][  0]LogInit: Texture streaming: Enabled
+[2020.03.22-20.51.16:917][  0]LogEngineSessionManager: EngineSessionManager initialized
+[2020.03.22-20.51.16:917][  0]LogEditorSessionSummary: Verbose: Initializing EditorSessionSummaryWriter for editor session tracking
+[2020.03.22-20.51.16:920][  0]LogEditorSessionSummary: EditorSessionSummaryWriter initialized
+[2020.03.22-20.51.16:956][  0]LogInit: Transaction tracking system initialized
+[2020.03.22-20.51.16:962][  0]BlueprintLog: New page: Editor Load
+[2020.03.22-20.51.16:984][  0]LocalizationService: Localization service is disabled
+[2020.03.22-20.51.17:194][  0]LogFileCache: Scanning file cache for directory 'C:/Users/Jim/Documents/VFX_Learning/Content/' took 0.00s
+[2020.03.22-20.51.17:194][  0]LogCook: Display: Max memory allowance for cook 16384mb min free memory 0mb
+[2020.03.22-20.51.17:194][  0]LogCook: Display: Mobile HDR setting 1
+[2020.03.22-20.51.17:880][  0]SourceControl: Source control is disabled
+[2020.03.22-20.51.18:016][  0]LogSlate: Took 0.000297 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Regular.ttf' (155K)
+[2020.03.22-20.51.26:165][  0]LogSlate: Window 'Restore Packages' being destroyed
+[2020.03.22-20.51.26:174][  0]LogWindowsTextInputMethodSystem: Display: IME system now activated using TSF (搜狗拼音输入法).
+[2020.03.22-20.51.26:182][  0]LogWindowsTextInputMethodSystem: Display: IME system now activated using TSF (搜狗拼音输入法).
+[2020.03.22-20.51.26:196][  0]Cmd: MAP LOAD FILE="C:/Users/Jim/Documents/VFX_Learning/Content/ThirdPersonBP/Maps/ThirdPersonExampleMap.umap" TEMPLATE=0 SHOWPROGRESS=1 FEATURELEVEL=3
+[2020.03.22-20.51.26:197][  0]LightingResults: New page: Lighting Build
+[2020.03.22-20.51.26:197][  0]LogWorld: UWorld::CleanupWorld for Untitled, bSessionEnded=true, bCleanupResources=true
+[2020.03.22-20.51.26:197][  0]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.03.22-20.51.26:197][  0]MapCheck: New page: Map Check
+[2020.03.22-20.51.26:197][  0]LightingResults: New page: Lighting Build
+[2020.03.22-20.51.26:222][  0]LogUObjectHash: Compacting FUObjectHashTables data took   1.50ms
+[2020.03.22-20.51.26:906][  0]LogNiagaraEditor: Verbose: '/Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon' Precompile took 0.075027 sec.
+[2020.03.22-20.51.26:971][  0]LogTemp: Display: Loaded shader NiagaraScript /Game/ThirdPersonBP/VFX/Systems/HolographicSystem.HolographicSystem:CircularSpawner.GPUComputeScript_4 for Niagara script NiagaraScript /Game/ThirdPersonBP/VFX/Systems/HolographicSystem.HolographicSystem:CircularSpawner.GPUComputeScript_4 from DDC
+[2020.03.22-20.51.26:978][  0]LogTemp: Display: Loaded shader NiagaraScript /Game/ThirdPersonBP/VFX/Systems/HolographicSystem_3DMesh_2.HolographicSystem_3DMesh_2:Character_1.GPUComputeScript_4 for Niagara script NiagaraScript /Game/ThirdPersonBP/VFX/Systems/HolographicSystem_3DMesh_2.HolographicSystem_3DMesh_2:Character_1.GPUComputeScript_4 from DDC
+[2020.03.22-20.51.27:105][  0]LogNiagaraEditor: Verbose: '/Game/ThirdPersonBP/VFX/Systems/HolographicSystem_3DMesh_2' Precompile took 0.117270 sec.
+[2020.03.22-20.51.27:109][  0]LogTemp: Display: Loaded shader NiagaraScript /Game/ThirdPersonBP/VFX/Systems/HolographicSystem_3DMesh.HolographicSystem_3DMesh:Character_1.GPUComputeScript_4 for Niagara script NiagaraScript /Game/ThirdPersonBP/VFX/Systems/HolographicSystem_3DMesh.HolographicSystem_3DMesh:Character_1.GPUComputeScript_4 from DDC
+[2020.03.22-20.51.27:248][  0]LogNiagaraEditor: Verbose: '/Game/ThirdPersonBP/VFX/Systems/HolographicSystem_3DMesh' Precompile took 0.126156 sec.
+[2020.03.22-20.51.27:295][  0]LogAIModule: Creating AISystem for world ThirdPersonExampleMap
+[2020.03.22-20.51.27:303][  0]LogTemp: Display: Loaded shader NiagaraScript /Game/ThirdPersonBP/VFX/Systems/HolographicSystem_3DMesh.HolographicSystem_3DMesh:Character_1.GPUComputeScript_4 for Niagara script NiagaraScript /Game/ThirdPersonBP/VFX/Systems/HolographicSystem_3DMesh.HolographicSystem_3DMesh:Character_1.GPUComputeScript_4 from DDC
+[2020.03.22-20.51.27:318][  0]LogNiagara: StaticMesh data interface has no valid mesh. Failed InitPerInstanceData - NiagaraDataInterfaceStaticMesh /Game/ThirdPersonBP/VFX/Systems/HolographicSystem_3DMesh.HolographicSystem_3DMesh:Character_1.SpawnScript_0.NiagaraDataInterfaceStaticMesh_1
+[2020.03.22-20.51.27:319][  0]LogNiagara: Warning: UNiagaraDataInterfaceStaticMesh::InitPerInstanceData> Invalid per-instance init!!!
+[2020.03.22-20.51.27:319][  0]LogNiagara: Error: Error initializing data interface "/Game/ThirdPersonBP/VFX/Systems/HolographicSystem_3DMesh.HolographicSystem_3DMesh:Character_1.SpawnScript_0.NiagaraDataInterfaceStaticMesh_1" for system. 3586334848 | HolographicSystem_3DMesh
+[2020.03.22-20.51.27:319][  0]LogNiagara: StaticMesh data interface has no valid mesh. Failed InitPerInstanceData - NiagaraDataInterfaceStaticMesh /Game/ThirdPersonBP/VFX/Systems/HolographicSystem_3DMesh.HolographicSystem_3DMesh:Character_1.SpawnScript_0.NiagaraDataInterfaceStaticMesh_4
+[2020.03.22-20.51.27:319][  0]LogNiagara: Warning: UNiagaraDataInterfaceStaticMesh::InitPerInstanceData> Invalid per-instance init!!!
+[2020.03.22-20.51.27:319][  0]LogNiagara: Error: Error initializing data interface "/Game/ThirdPersonBP/VFX/Systems/HolographicSystem_3DMesh.HolographicSystem_3DMesh:Character_1.SpawnScript_0.NiagaraDataInterfaceStaticMesh_4" for system. 3586334848 | HolographicSystem_3DMesh
+[2020.03.22-20.51.27:319][  0]LogNiagara: Error: Error initializing data interfaces. Completing system. 3586334848 | HolographicSystem_3DMesh
+[2020.03.22-20.51.27:319][  0]LogNiagara: InvalidateCompileResults /Game/ThirdPersonBP/VFX/Systems/HolographicSystem_3DMesh_2.HolographicSystem_3DMesh_2:Projector_0.SpawnScript
+[2020.03.22-20.51.27:319][  0]LogNiagara: InvalidateCompileResults /Game/ThirdPersonBP/VFX/Systems/HolographicSystem_3DMesh_2.HolographicSystem_3DMesh_2:Projector_0.UpdateScript
+[2020.03.22-20.51.27:319][  0]LogNiagara: InvalidateCompileResults /Game/ThirdPersonBP/VFX/Systems/HolographicSystem_3DMesh_2.HolographicSystem_3DMesh_2:Projector_0.EmitterSpawnScript
+[2020.03.22-20.51.27:320][  0]LogNiagara: InvalidateCompileResults /Game/ThirdPersonBP/VFX/Systems/HolographicSystem_3DMesh_2.HolographicSystem_3DMesh_2:Projector_0.EmitterUpdateScript
+[2020.03.22-20.51.27:352][  0]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
+[2020.03.22-20.51.27:397][  0]LogUObjectHash: Compacting FUObjectHashTables data took   2.03ms
+[2020.03.22-20.51.27:398][  0]Cmd: MAP CHECKDEP NOCLEARLOG
+[2020.03.22-20.51.27:398][  0]MapCheck: Map check complete: 0 Error(s), 0 Warning(s), took 0.279ms to complete.
+[2020.03.22-20.51.27:398][  0]LogFileHelpers: Loading map 'ThirdPersonExampleMap' took 1.203
+[2020.03.22-20.51.27:464][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2020.03.22-20.51.27:470][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2020.03.22-20.51.27:476][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2020.03.22-20.51.27:481][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2020.03.22-20.51.27:486][  0]LogCollectionManager: Loaded 0 collections in 0.000908 seconds
+[2020.03.22-20.51.27:497][  0]LogFileCache: Scanning file cache for directory 'C:/Users/Jim/Documents/VFX_Learning/Saved/Collections/' took 0.00s
+[2020.03.22-20.51.27:497][  0]LogFileCache: Scanning file cache for directory 'C:/Users/Jim/Documents/VFX_Learning/Content/Developers/Jim/Collections/' took 0.00s
+[2020.03.22-20.51.27:497][  0]LogFileCache: Scanning file cache for directory 'C:/Users/Jim/Documents/VFX_Learning/Content/Collections/' took 0.00s
+[2020.03.22-20.51.27:497][  0]LogContentBrowser: Native class hierarchy populated in 0.0066 seconds. Added 3165 classes and 735 folders.
+[2020.03.22-20.51.27:499][  0]LogContentBrowser: Native class hierarchy updated for 'WidgetCarousel' in 0.0002 seconds. Added 0 classes and 0 folders.
+[2020.03.22-20.51.27:563][  0]LogContentBrowser: Native class hierarchy updated for 'AddContentDialog' in 0.0003 seconds. Added 0 classes and 0 folders.
+[2020.03.22-20.51.27:566][  0]LogContentBrowser: Native class hierarchy updated for 'SceneOutliner' in 0.0003 seconds. Added 2 classes and 3 folders.
+[2020.03.22-20.51.27:602][  0]LogSlate: Took 0.000268 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Bold.ttf' (160K)
+[2020.03.22-20.51.27:606][  0]LogSlate: Took 0.000202 seconds to synchronously load lazily loaded font '../../../Engine/Content/Editor/Slate/Fonts/FontAwesome.ttf' (139K)
+[2020.03.22-20.51.27:651][  0]LogRenderer: Scene Capture has ShowOnlyComponents or ShowOnlyActors ignored by the PrimitiveRenderMode setting! /Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap:PersistentLevel.SceneCapture2D1_Blueprint.NewSceneCaptureComponent2D
+[2020.03.22-20.51.27:652][  0]LogRenderer: Reallocating scene render targets to support 1024x1024 Format 10 NumSamples 1 (Frame:1).
+[2020.03.22-20.51.27:785][  0]LogRenderer: Reallocating scene render targets to support 1616x1024 Format 10 NumSamples 1 (Frame:1).
+[2020.03.22-20.51.27:949][  0]LogContentBrowser: Native class hierarchy updated for 'HierarchicalLODOutliner' in 0.0003 seconds. Added 0 classes and 0 folders.
+[2020.03.22-20.51.27:949][  0]LogLoad: (Engine Initialization) Total time: 17.01 seconds
+[2020.03.22-20.51.27:949][  0]LogLoad: (Engine Initialization) Total Blueprint compile time: 0.00 seconds
+[2020.03.22-20.51.28:017][  0]LogAssetRegistry: Asset discovery search completed in 13.6207 seconds
+[2020.03.22-20.51.28:020][  0]LogCollectionManager: Fixed up redirectors for 0 collections in 0.000006 seconds (updated 0 objects)
+[2020.03.22-20.51.28:021][  0]LogContentStreaming: Texture pool size now 1000 MB
+[2020.03.22-20.51.28:100][  3]LogNiagara: FNiagaraDummyRWBufferFloat InitRHI NiagaraRenderer::DummyFloat
+[2020.03.22-20.51.28:100][  3]LogNiagara: FNiagaraDummyRWBufferInt InitRHI NiagaraRenderer::DummyInt
+[2020.03.22-20.51.28:972][ 90]LogSlate: Took 0.000281 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
+[2020.03.22-20.51.32:876][521]LogEditorViewport: Clicking on Actor (LMB): ToneShadingRibbon_Blueprint_C (ToneShadingRibbon_Blueprint)
+[2020.03.22-20.51.33:524][539]LogStats: FPlatformStackWalk::StackWalkAndDump -  0.466 s
+[2020.03.22-20.51.33:524][539]LogOutputDevice: Error: === Handled ensure: ===
+[2020.03.22-20.51.33:524][539]LogOutputDevice: Error: 
+[2020.03.22-20.51.33:524][539]LogOutputDevice: Error: Ensure condition failed: DataBuffer && Index >= 0 && (uint32)Index < DataBuffer->GetNumInstances() [File:d:\build\++ue4\sync\engine\plugins\fx\niagara\source\niagara\classes\NiagaraDataSet.h] [Line: 1407]
+[2020.03.22-20.51.33:524][539]LogOutputDevice: Error: 
+[2020.03.22-20.51.33:524][539]LogOutputDevice: Error: Stack: 
+[2020.03.22-20.51.33:524][539]LogOutputDevice: Error: [Callstack] 0x00007fff59bdc259 UE4Editor-Niagara.dll!UnknownFunction []
+[2020.03.22-20.51.33:524][539]LogOutputDevice: Error: [Callstack] 0x00007fff59a16774 UE4Editor-Niagara.dll!UnknownFunction []
+[2020.03.22-20.51.33:524][539]LogOutputDevice: Error: [Callstack] 0x00007fff59a78d79 UE4Editor-Niagara.dll!UnknownFunction []
+[2020.03.22-20.51.33:524][539]LogOutputDevice: Error: [Callstack] 0x00007fff59a35898 UE4Editor-Niagara.dll!UnknownFunction []
+[2020.03.22-20.51.33:524][539]LogOutputDevice: Error: [Callstack] 0x00007fff676f3599 UE4Editor-VectorVM.dll!UnknownFunction []
+[2020.03.22-20.51.33:524][539]LogOutputDevice: Error: [Callstack] 0x00007fff67708d9b UE4Editor-VectorVM.dll!UnknownFunction []
+[2020.03.22-20.51.33:524][539]LogOutputDevice: Error: [Callstack] 0x00007fff677075c2 UE4Editor-VectorVM.dll!UnknownFunction []
+[2020.03.22-20.51.33:524][539]LogOutputDevice: Error: [Callstack] 0x00007fff59b1351c UE4Editor-Niagara.dll!UnknownFunction []
+[2020.03.22-20.51.33:524][539]LogOutputDevice: Error: [Callstack] 0x00007fff59aeb269 UE4Editor-Niagara.dll!UnknownFunction []
+[2020.03.22-20.51.33:524][539]LogOutputDevice: Error: [Callstack] 0x00007fff59b48eaf UE4Editor-Niagara.dll!UnknownFunction []
+[2020.03.22-20.51.33:524][539]LogOutputDevice: Error: [Callstack] 0x00007fff59b14115 UE4Editor-Niagara.dll!UnknownFunction []
+[2020.03.22-20.51.33:524][539]LogOutputDevice: Error: [Callstack] 0x00007fff87d7931a UE4Editor-Core.dll!UnknownFunction []
+[2020.03.22-20.51.33:524][539]LogOutputDevice: Error: [Callstack] 0x00007fff87d7a40d UE4Editor-Core.dll!UnknownFunction []
+[2020.03.22-20.51.33:524][539]LogOutputDevice: Error: [Callstack] 0x00007fff87d8254b UE4Editor-Core.dll!UnknownFunction []
+[2020.03.22-20.51.33:524][539]LogOutputDevice: Error: [Callstack] 0x00007fff881f32ef UE4Editor-Core.dll!UnknownFunction []
+[2020.03.22-20.51.33:524][539]LogOutputDevice: Error: [Callstack] 0x00007fff881f2f94 UE4Editor-Core.dll!UnknownFunction []
+[2020.03.22-20.51.33:524][539]LogOutputDevice: Error: [Callstack] 0x00007ffff2a87bd4 KERNEL32.DLL!UnknownFunction []
+[2020.03.22-20.51.33:524][539]LogOutputDevice: Error: [Callstack] 0x00007ffff39cced1 ntdll.dll!UnknownFunction []
+[2020.03.22-20.51.33:524][539]LogOutputDevice: Error: 
+[2020.03.22-20.51.33:524][539]LogStats:                SubmitErrorReport -  0.000 s
+[2020.03.22-20.51.34:715][539]LogStats:                    SendNewReport -  1.190 s
+[2020.03.22-20.51.34:715][539]LogStats:             FDebug::EnsureFailed -  1.656 s
+[2020.03.22-20.51.34:715][539]LogStats: FPlatformStackWalk::StackWalkAndDump -  0.000 s
+[2020.03.22-20.51.34:715][539]LogOutputDevice: Error: === Handled ensure: ===
+[2020.03.22-20.51.34:715][539]LogOutputDevice: Error: 
+[2020.03.22-20.51.34:715][539]LogOutputDevice: Error: Ensure condition failed: DataBuffer && Index >= 0 && (uint32)Index < DataBuffer->GetNumInstances() [File:d:\build\++ue4\sync\engine\plugins\fx\niagara\source\niagara\classes\NiagaraDataSet.h] [Line: 898]
+[2020.03.22-20.51.34:715][539]LogOutputDevice: Error: 
+[2020.03.22-20.51.34:715][539]LogOutputDevice: Error: Stack: 
+[2020.03.22-20.51.34:715][539]LogOutputDevice: Error: [Callstack] 0x00007fff59bdbf49 UE4Editor-Niagara.dll!UnknownFunction []
+[2020.03.22-20.51.34:715][539]LogOutputDevice: Error: [Callstack] 0x00007fff59a167f4 UE4Editor-Niagara.dll!UnknownFunction []
+[2020.03.22-20.51.34:715][539]LogOutputDevice: Error: [Callstack] 0x00007fff59a78d79 UE4Editor-Niagara.dll!UnknownFunction []
+[2020.03.22-20.51.34:715][539]LogOutputDevice: Error: [Callstack] 0x00007fff59a35898 UE4Editor-Niagara.dll!UnknownFunction []
+[2020.03.22-20.51.34:715][539]LogOutputDevice: Error: [Callstack] 0x00007fff676f3599 UE4Editor-VectorVM.dll!UnknownFunction []
+[2020.03.22-20.51.34:715][539]LogOutputDevice: Error: [Callstack] 0x00007fff67708d9b UE4Editor-VectorVM.dll!UnknownFunction []
+[2020.03.22-20.51.34:715][539]LogOutputDevice: Error: [Callstack] 0x00007fff677075c2 UE4Editor-VectorVM.dll!UnknownFunction []
+[2020.03.22-20.51.34:715][539]LogOutputDevice: Error: [Callstack] 0x00007fff59b1351c UE4Editor-Niagara.dll!UnknownFunction []
+[2020.03.22-20.51.34:715][539]LogOutputDevice: Error: [Callstack] 0x00007fff59aeb269 UE4Editor-Niagara.dll!UnknownFunction []
+[2020.03.22-20.51.34:715][539]LogOutputDevice: Error: [Callstack] 0x00007fff59b48eaf UE4Editor-Niagara.dll!UnknownFunction []
+[2020.03.22-20.51.34:715][539]LogOutputDevice: Error: [Callstack] 0x00007fff59b14115 UE4Editor-Niagara.dll!UnknownFunction []
+[2020.03.22-20.51.34:715][539]LogOutputDevice: Error: [Callstack] 0x00007fff87d7931a UE4Editor-Core.dll!UnknownFunction []
+[2020.03.22-20.51.34:715][539]LogOutputDevice: Error: [Callstack] 0x00007fff87d7a40d UE4Editor-Core.dll!UnknownFunction []
+[2020.03.22-20.51.34:715][539]LogOutputDevice: Error: [Callstack] 0x00007fff87d8254b UE4Editor-Core.dll!UnknownFunction []
+[2020.03.22-20.51.34:715][539]LogOutputDevice: Error: [Callstack] 0x00007fff881f32ef UE4Editor-Core.dll!UnknownFunction []
+[2020.03.22-20.51.34:715][539]LogOutputDevice: Error: [Callstack] 0x00007fff881f2f94 UE4Editor-Core.dll!UnknownFunction []
+[2020.03.22-20.51.34:715][539]LogOutputDevice: Error: [Callstack] 0x00007ffff2a87bd4 KERNEL32.DLL!UnknownFunction []
+[2020.03.22-20.51.34:715][539]LogOutputDevice: Error: [Callstack] 0x00007ffff39cced1 ntdll.dll!UnknownFunction []
+[2020.03.22-20.51.34:715][539]LogOutputDevice: Error: 
+[2020.03.22-20.51.34:715][539]LogStats:                SubmitErrorReport -  0.000 s
+[2020.03.22-20.52.49:879][539]LogStats:                    SendNewReport - 75.161 s
+[2020.03.22-20.52.49:879][539]LogStats:             FDebug::EnsureFailed - 75.162 s
+[2020.03.22-20.52.49:880][539]LogTemp: Resetting audio stream to device id 
+[2020.03.22-20.52.49:932][539]LogAudioMixer: Display: Audio Device Output Speaker Info:
+[2020.03.22-20.52.49:932][539]LogAudioMixer: Display: Name: 扬声器 (Realtek High Definition Audio)
+[2020.03.22-20.52.49:932][539]LogAudioMixer: Display: Is Default: Yes
+[2020.03.22-20.52.49:932][539]LogAudioMixer: Display: Sample Rate: 48000
+[2020.03.22-20.52.49:932][539]LogAudioMixer: Display: Channel Count Used: 2
+[2020.03.22-20.52.49:932][539]LogAudioMixer: Display: Device Channel Count: 2
+[2020.03.22-20.52.49:932][539]LogAudioMixer: Display: Channel Order:
+[2020.03.22-20.52.49:932][539]LogAudioMixer: Display: 0: FrontLeft
+[2020.03.22-20.52.49:932][539]LogAudioMixer: Display: 1: FrontRight
+[2020.03.22-20.53.21:897][ 30]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Floor)
+[2020.03.22-20.53.22:540][ 99]LogEditorViewport: Clicking on Actor (LMB): ToneShadingRibbon_Blueprint_C (ToneShadingRibbon_Blueprint)
+[2020.03.22-20.53.23:005][151]Cmd: DELETE
+[2020.03.22-20.53.23:005][151]Cmd: ACTOR DELETE
+[2020.03.22-20.53.23:013][151]LogEditorActor: Deleted Actor: ToneShadingRibbon_Blueprint_C
+[2020.03.22-20.53.23:040][151]LogUObjectHash: Compacting FUObjectHashTables data took   1.44ms
+[2020.03.22-20.53.23:041][151]LogEditorActor: Deleted 1 Actors (0.035 secs)
+[2020.03.22-20.53.25:132][397]LogUObjectHash: Compacting FUObjectHashTables data took   0.63ms
+[2020.03.22-20.53.25:379][397]LogSlate: Took 0.000214 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
+[2020.03.22-20.53.26:512][397]LogSlate: Window 'Delete Assets' being destroyed
+[2020.03.22-20.53.27:717][529]LogUObjectHash: Compacting FUObjectHashTables data took   0.61ms
+[2020.03.22-20.53.27:915][529]LogSavePackage: Moving 'C:/Users/Jim/Documents/VFX_Learning/Saved/ThirdPersonExampleMapB414A61F48B1FAB7F52253B248508D7A.tmp' to 'C:/Users/Jim/Documents/VFX_Learning/Content/ThirdPersonBP/Maps/ThirdPersonExampleMap.umap'
+[2020.03.22-20.53.28:050][529]LogSavePackage: Moving 'C:/Users/Jim/Documents/VFX_Learning/Saved/ThirdPersonExampleMap_BuiltData8010F4924FB76314C0FEADBD186C29C0.tmp' to 'C:/Users/Jim/Documents/VFX_Learning/Content/ThirdPersonBP/Maps/ThirdPersonExampleMap_BuiltData.uasset'
+[2020.03.22-20.53.28:073][529]AssetCheck: New page: Asset Save: multiple assets
+[2020.03.22-20.53.28:073][529]LogContentValidation: Display: Validating World /Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap
+[2020.03.22-20.53.28:073][529]LogContentValidation: Display: Validating MapBuildDataRegistry /Game/ThirdPersonBP/Maps/ThirdPersonExampleMap_BuiltData.ThirdPersonExampleMap_BuiltData
+[2020.03.22-20.53.29:609][708]LogUObjectHash: Compacting FUObjectHashTables data took   1.66ms
+[2020.03.22-20.53.31:436][708]LogSlate: Window 'Delete Assets' being destroyed
+[2020.03.22-20.53.51:229][993]LogAssetEditorSubsystem: Opening Asset editor for NiagaraSystem /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon
+[2020.03.22-20.53.51:553][993]61565_ToneShadingRibbon_MessageLog: System successfully compiled.
+[2020.03.22-20.53.51:558][993]LogSlate: Took 0.000187 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-BoldCondensed.ttf' (158K)
+[2020.03.22-20.53.57:459][482]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon" FILE="C:/Users/Jim/Documents/VFX_Learning/Content/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.uasset" SILENT=true
+[2020.03.22-20.53.57:639][482]LogSavePackage: Moving 'C:/Users/Jim/Documents/VFX_Learning/Saved/ToneShadingRibbon6D680C62404549022A26CBABDE297BDB.tmp' to 'C:/Users/Jim/Documents/VFX_Learning/Content/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.uasset'
+[2020.03.22-20.53.57:666][482]AssetCheck: New page: Asset Save: ToneShadingRibbon
+[2020.03.22-20.53.57:666][482]LogContentValidation: Display: Validating NiagaraSystem /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon
+[2020.03.22-20.54.23:903][155]LogSlate: Window 'Pick a starting point for your system' being destroyed
+[2020.03.22-20.54.24:010][155]LogNiagaraEditor: Verbose: '/Niagara/DefaultAssets/Templates/Systems/DirectionalBurst' Precompile took 0.063403 sec.
+[2020.03.22-20.54.24:878][243]LogNiagaraEditor: Verbose: '/Game/ThirdPersonBP/VFX/Systems/NewNiagaraSystem' Precompile took 0.062069 sec.
+[2020.03.22-20.54.24:947][243]LogNiagaraEditor: Verbose: '/Game/ThirdPersonBP/VFX/Systems/NewNiagaraSystem' Precompile took 0.062163 sec.
+[2020.03.22-20.54.26:748][439]LogAssetEditorSubsystem: Opening Asset editor for NiagaraSystem /Game/ThirdPersonBP/VFX/Systems/NewNiagaraSystem.NewNiagaraSystem
+[2020.03.22-20.54.26:891][439]82240_NewNiagaraSystem_MessageLog: System successfully compiled.
+[2020.03.22-20.54.26:945][440]82240_NewNiagaraSystem_MessageLog: System successfully compiled.
+[2020.03.22-20.57.19:815][917]LogNiagaraEditor: Verbose: '/Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon' Precompile took 0.069205 sec.
+[2020.03.22-20.57.19:847][918]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.EventScript_6 ...................................................................
+[2020.03.22-20.57.19:847][918]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.UpdateScript_2 ...................................................................
+[2020.03.22-20.57.19:847][918]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.SpawnScript_1 ...................................................................
+[2020.03.22-20.57.19:874][920]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.EventScript_6 took 0.050140 sec (0.001746/0.048287)... Status NCS_UpToDate
+[2020.03.22-20.57.19:876][920]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.EventScript_6' was built locally..
+[2020.03.22-20.57.19:923][924]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.UpdateScript_2 took 0.103251 sec (0.004159/0.053267)... Status NCS_UpToDate
+[2020.03.22-20.57.19:925][924]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.UpdateScript_2' was built locally..
+[2020.03.22-20.57.20:005][930]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.SpawnScript_1 took 0.178841 sec (0.008564/0.075715)... Status NCS_UpToDate
+[2020.03.22-20.57.20:006][930]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.SpawnScript_1' was built locally..
+[2020.03.22-20.57.20:075][931]61565_ToneShadingRibbon_MessageLog: System successfully compiled.
+[2020.03.22-20.58.11:790][854]LogNiagaraEditor: Verbose: '/Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon' Precompile took 0.095027 sec.
+[2020.03.22-20.58.11:837][854]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.SpawnScript_1 ...................................................................
+[2020.03.22-20.58.11:837][854]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.EventScript_6 ...................................................................
+[2020.03.22-20.58.11:837][854]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.UpdateScript_2 ...................................................................
+[2020.03.22-20.58.11:837][854]LogNiagaraCompiler: Warning: Before the Particles.ID parameter can be used, the 'Requires persistent IDs' option has to be activated in the emitter properties. Note that this comes with additional memory and CPU costs. -  System Asset: NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.SpawnScript_1
+[2020.03.22-20.58.11:837][854]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.SpawnScript_1 took 0.002903 sec (0.002885/0.000000)... Status NCS_Error
+[2020.03.22-20.58.11:837][854]LogNiagaraCompiler: Warning: Before the Particles.ID parameter can be used, the 'Requires persistent IDs' option has to be activated in the emitter properties. Note that this comes with additional memory and CPU costs. -  System Asset: NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.UpdateScript_2
+[2020.03.22-20.58.11:837][854]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.UpdateScript_2 took 0.005665 sec (0.005648/0.000000)... Status NCS_Error
+[2020.03.22-20.58.11:837][854]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.SpawnScript_1' was built locally..
+[2020.03.22-20.58.11:837][854]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.UpdateScript_2' was built locally..
+[2020.03.22-20.58.11:854][855]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.EventScript_6 took 0.049219 sec (0.004448/0.044727)... Status NCS_UpToDate
+[2020.03.22-20.58.11:856][855]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.EventScript_6' was built locally..
+[2020.03.22-20.58.11:856][855]LogNiagara: Warning: Before the Particles.ID parameter can be used, the 'Requires persistent IDs' option has to be activated in the emitter properties. Note that this comes with additional memory and CPU costs. -  System Asset: /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.SpawnScript_1
+[2020.03.22-20.58.11:856][855]LogNiagara: Warning: Before the Particles.ID parameter can be used, the 'Requires persistent IDs' option has to be activated in the emitter properties. Note that this comes with additional memory and CPU costs. -  System Asset: /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.UpdateScript_2
+[2020.03.22-20.58.11:884][855]LogNiagara: Warning: Failed to activate Niagara System due to invalid asset!
+[2020.03.22-20.58.11:885][855]LogNiagara: Warning: Failed to activate Niagara System due to invalid asset!
+[2020.03.22-20.58.11:922][856]61565_ToneShadingRibbon_MessageLog: Error: Before the Particles.ID parameter can be used, the 'Requires persistent IDs' option has to be activated in the emitter properties. Note that this comes with additional memory and CPU costs. -  ToneShadingRibbon_NE, Particle Spawn Script Interpolated, 
+[2020.03.22-20.58.11:922][856]61565_ToneShadingRibbon_MessageLog: Error: Before the Particles.ID parameter can be used, the 'Requires persistent IDs' option has to be activated in the emitter properties. Note that this comes with additional memory and CPU costs. -  ToneShadingRibbon_NE, Particle Update Script, 
+[2020.03.22-20.58.11:922][856]61565_ToneShadingRibbon_MessageLog: System failed to compile with 0 warning(s) and 2 error(s).
+[2020.03.22-20.58.12:643][904]LogNiagaraEditor: Verbose: '/Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon' Precompile took 0.098056 sec.
+[2020.03.22-20.58.12:751][904]61565_ToneShadingRibbon_MessageLog: System successfully compiled.
+[2020.03.22-21.00.03:363][  9]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon" FILE="C:/Users/Jim/Documents/VFX_Learning/Content/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.uasset" SILENT=true
+[2020.03.22-21.00.03:540][  9]LogSavePackage: Moving 'C:/Users/Jim/Documents/VFX_Learning/Saved/ToneShadingRibbon6F39D8EB4AA15CDB1633AF8FDF34901C.tmp' to 'C:/Users/Jim/Documents/VFX_Learning/Content/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.uasset'
+[2020.03.22-21.00.03:561][  9]AssetCheck: New page: Asset Save: ToneShadingRibbon
+[2020.03.22-21.00.03:561][  9]LogContentValidation: Display: Validating NiagaraSystem /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon
+[2020.03.22-21.00.38:207][898]LogUObjectHash: Compacting FUObjectHashTables data took   1.84ms
+[2020.03.22-21.00.38:429][898]LogSavePackage: Moving 'C:/Users/Jim/Documents/VFX_Learning/Saved/ThirdPersonExampleMap4962D4E24FE5B5D690EEE9A84B236465.tmp' to 'C:/Users/Jim/Documents/VFX_Learning/Content/ThirdPersonBP/Maps/ThirdPersonExampleMap.umap'
+[2020.03.22-21.00.38:534][898]LogSavePackage: Moving 'C:/Users/Jim/Documents/VFX_Learning/Saved/ThirdPersonExampleMap_BuiltDataF7E483B04B29D4D61CAC588D9F2CF481.tmp' to 'C:/Users/Jim/Documents/VFX_Learning/Content/ThirdPersonBP/Maps/ThirdPersonExampleMap_BuiltData.uasset'
+[2020.03.22-21.00.38:556][898]AssetCheck: New page: Asset Save: multiple assets
+[2020.03.22-21.00.38:556][898]LogContentValidation: Display: Validating World /Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap
+[2020.03.22-21.00.38:556][898]LogContentValidation: Display: Validating MapBuildDataRegistry /Game/ThirdPersonBP/Maps/ThirdPersonExampleMap_BuiltData.ThirdPersonExampleMap_BuiltData
+[2020.03.22-21.12.21:029][910]LogNiagaraEditor: Verbose: '/Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon' Precompile took 0.071135 sec.
+[2020.03.22-21.12.21:052][911]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:CircularSpawner.SpawnScript ...................................................................
+[2020.03.22-21.12.21:052][911]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:CircularSpawner.UpdateScript ...................................................................
+[2020.03.22-21.12.21:256][928]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:CircularSpawner.SpawnScript took 0.217589 sec (0.012827/0.204645)... Status NCS_UpToDate
+[2020.03.22-21.12.21:258][928]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:CircularSpawner.SpawnScript' was built locally..
+[2020.03.22-21.12.21:316][933]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:CircularSpawner.UpdateScript took 0.277765 sec (0.015794/0.060597)... Status NCS_UpToDate
+[2020.03.22-21.12.21:317][933]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:CircularSpawner.UpdateScript' was built locally..
+[2020.03.22-21.12.21:390][934]61565_ToneShadingRibbon_MessageLog: System successfully compiled.
+[2020.03.22-21.12.42:090][584]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon" FILE="C:/Users/Jim/Documents/VFX_Learning/Content/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.uasset" SILENT=true
+[2020.03.22-21.12.42:268][584]LogSavePackage: Moving 'C:/Users/Jim/Documents/VFX_Learning/Saved/ToneShadingRibbon620679094FB2E30C4FAAE583D957BB74.tmp' to 'C:/Users/Jim/Documents/VFX_Learning/Content/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.uasset'
+[2020.03.22-21.12.42:291][584]AssetCheck: New page: Asset Save: ToneShadingRibbon
+[2020.03.22-21.12.42:291][584]LogContentValidation: Display: Validating NiagaraSystem /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon
+[2020.03.22-21.12.50:271][332]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon" FILE="C:/Users/Jim/Documents/VFX_Learning/Content/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.uasset" SILENT=true
+[2020.03.22-21.12.50:446][332]LogSavePackage: Moving 'C:/Users/Jim/Documents/VFX_Learning/Saved/ToneShadingRibbon19054C18428CB265AF4954A3A27FFC69.tmp' to 'C:/Users/Jim/Documents/VFX_Learning/Content/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.uasset'
+[2020.03.22-21.12.50:465][332]AssetCheck: New page: Asset Save: ToneShadingRibbon
+[2020.03.22-21.12.50:465][332]LogContentValidation: Display: Validating NiagaraSystem /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon
+[2020.03.22-21.18.00:346][302]LogNiagaraEditor: Verbose: '/Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon' Precompile took 0.082337 sec.
+[2020.03.22-21.18.00:370][303]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:CircularSpawner.SpawnScript ...................................................................
+[2020.03.22-21.18.00:370][303]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:CircularSpawner.UpdateScript ...................................................................
+[2020.03.22-21.18.00:627][318]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:CircularSpawner.SpawnScript took 0.263036 sec (0.014505/0.248378)... Status NCS_UpToDate
+[2020.03.22-21.18.00:634][318]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:CircularSpawner.SpawnScript' was built locally..
+[2020.03.22-21.18.00:693][321]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:CircularSpawner.UpdateScript took 0.336871 sec (0.018861/0.074126)... Status NCS_UpToDate
+[2020.03.22-21.18.00:701][321]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:CircularSpawner.UpdateScript' was built locally..
+[2020.03.22-21.18.00:800][322]61565_ToneShadingRibbon_MessageLog: System successfully compiled.
+[2020.03.22-21.18.01:364][356]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon" FILE="C:/Users/Jim/Documents/VFX_Learning/Content/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.uasset" SILENT=true
+[2020.03.22-21.18.01:551][356]LogSavePackage: Moving 'C:/Users/Jim/Documents/VFX_Learning/Saved/ToneShadingRibbon67FA72CA421D1BCE1EDE82B1713ADC07.tmp' to 'C:/Users/Jim/Documents/VFX_Learning/Content/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.uasset'
+[2020.03.22-21.18.01:572][356]AssetCheck: New page: Asset Save: ToneShadingRibbon
+[2020.03.22-21.18.01:572][356]LogContentValidation: Display: Validating NiagaraSystem /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon
+[2020.03.22-21.24.50:335][763]LogNiagaraEditor: Warning: Cleanup System view model 0000029B214E4410
+[2020.03.22-21.24.50:347][763]LogWorld: UWorld::CleanupWorld for World_4, bSessionEnded=true, bCleanupResources=true
+[2020.03.22-21.24.50:347][763]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.03.22-21.24.50:360][763]LogNiagaraEditor: Warning: Cleanup System view model 0000029B214E4410
+[2020.03.22-21.24.50:360][763]LogNiagaraEditor: Warning: Deleting System view model 0000029B214E4410
+[2020.03.22-21.24.50:423][763]LogUObjectHash: Compacting FUObjectHashTables data took   2.61ms
+[2020.03.22-21.24.54:673][160]LogAssetEditorSubsystem: Opening Asset editor for NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ReadPaticlePosition.ReadPaticlePosition
+[2020.03.22-21.24.54:718][160]MaterialEditorStats: LastOpCount: 0
+[2020.03.22-21.24.54:737][160]FE28DADC44C314310437A99637910B20_ReadPaticlePosition_MessageLog: Script successfully compiled.
+[2020.03.22-21.24.54:749][160]LogSlate: Took 0.000265 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Italic.ttf' (157K)
+[2020.03.22-21.24.57:543][358]LogNiagaraEditor: Saving and Compiling NiagaraScript ReadPaticlePosition
+[2020.03.22-21.24.57:644][358]LogNiagaraEditor: Verbose: '/Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon' Precompile took 0.069733 sec.
+[2020.03.22-21.24.57:753][358]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/ThirdPersonBP/VFX/Systems/ReadPaticlePosition" FILE="C:/Users/Jim/Documents/VFX_Learning/Content/ThirdPersonBP/VFX/Systems/ReadPaticlePosition.uasset" SILENT=true
+[2020.03.22-21.24.57:784][358]LogSavePackage: Moving 'C:/Users/Jim/Documents/VFX_Learning/Saved/ReadPaticlePositionF3D7B69044ED47AC8E191583CD18EB88.tmp' to 'C:/Users/Jim/Documents/VFX_Learning/Content/ThirdPersonBP/VFX/Systems/ReadPaticlePosition.uasset'
+[2020.03.22-21.24.57:799][358]AssetCheck: New page: Asset Save: ReadPaticlePosition
+[2020.03.22-21.24.57:799][358]LogContentValidation: Display: Validating NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ReadPaticlePosition.ReadPaticlePosition
+[2020.03.22-21.24.57:825][358]61565_ToneShadingRibbon_MessageLog: System successfully compiled.
+[2020.03.22-21.35.17:353][114]LogNiagaraEditor: Verbose: '/Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon' Precompile took 0.068446 sec.
+[2020.03.22-21.35.17:383][115]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.SpawnScript_1 ...................................................................
+[2020.03.22-21.35.17:383][115]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.UpdateScript_2 ...................................................................
+[2020.03.22-21.35.17:383][115]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.EventScript_6 ...................................................................
+[2020.03.22-21.35.17:429][119]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.SpawnScript_1 took 0.072822 sec (0.003982/0.068769)... Status NCS_UpToDate
+[2020.03.22-21.35.17:430][119]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.SpawnScript_1' was built locally..
+[2020.03.22-21.35.17:486][124]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.UpdateScript_2 took 0.128451 sec (0.006449/0.055704)... Status NCS_UpToDate
+[2020.03.22-21.35.17:487][124]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.UpdateScript_2' was built locally..
+[2020.03.22-21.35.17:531][128]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.EventScript_6 took 0.172612 sec (0.007800/0.044321)... Status NCS_UpToDate
+[2020.03.22-21.35.17:532][128]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.EventScript_6' was built locally..
+[2020.03.22-21.35.17:601][129]61565_ToneShadingRibbon_MessageLog: System successfully compiled.
+[2020.03.22-21.35.25:899][866]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon" FILE="C:/Users/Jim/Documents/VFX_Learning/Content/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.uasset" SILENT=true
+[2020.03.22-21.35.26:078][866]LogSavePackage: Moving 'C:/Users/Jim/Documents/VFX_Learning/Saved/ToneShadingRibbon02761F2A4E4F7FE0C3F0FD8ECBBD2C3F.tmp' to 'C:/Users/Jim/Documents/VFX_Learning/Content/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.uasset'
+[2020.03.22-21.35.26:101][866]AssetCheck: New page: Asset Save: ToneShadingRibbon
+[2020.03.22-21.35.26:102][866]LogContentValidation: Display: Validating NiagaraSystem /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon
+[2020.03.22-21.35.42:153][393]LogNiagaraEditor: Saving and Compiling NiagaraScript ReadPaticlePosition
+[2020.03.22-21.35.42:180][393]LogNiagaraEditor: Verbose: '/Engine/Transient' Precompile took 0.001574 sec.
+[2020.03.22-21.35.42:180][393]LogNiagaraEditor: Compiling System NiagaraScript /Engine/Transient.ReadPaticlePosition ...................................................................
+[2020.03.22-21.35.42:212][393]LogNiagaraEditor: Compiling System NiagaraScript /Engine/Transient.ReadPaticlePosition took 0.032053 sec (0.000589/0.031404)... Status NCS_UpToDate
+[2020.03.22-21.35.42:214][393]MaterialEditorStats: LastOpCount: 0
+[2020.03.22-21.35.42:286][393]LogNiagaraEditor: Verbose: '/Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon' Precompile took 0.068667 sec.
+[2020.03.22-21.35.42:340][393]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.SpawnScript_1 ...................................................................
+[2020.03.22-21.35.42:340][393]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.UpdateScript_2 ...................................................................
+[2020.03.22-21.35.42:340][393]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.EventScript_6 ...................................................................
+[2020.03.22-21.35.42:356][393]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.SpawnScript_1 took 0.065913 sec (0.003940/0.061901)... Status NCS_UpToDate
+[2020.03.22-21.35.42:372][393]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/ThirdPersonBP/VFX/Systems/ReadPaticlePosition" FILE="C:/Users/Jim/Documents/VFX_Learning/Content/ThirdPersonBP/VFX/Systems/ReadPaticlePosition.uasset" SILENT=true
+[2020.03.22-21.35.42:403][393]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.UpdateScript_2 took 0.114903 sec (0.005855/0.049693)... Status NCS_UpToDate
+[2020.03.22-21.35.42:403][393]LogSavePackage: Moving 'C:/Users/Jim/Documents/VFX_Learning/Saved/ReadPaticlePosition68E2928C456ACEAD6312918093CA6728.tmp' to 'C:/Users/Jim/Documents/VFX_Learning/Content/ThirdPersonBP/VFX/Systems/ReadPaticlePosition.uasset'
+[2020.03.22-21.35.42:422][393]AssetCheck: New page: Asset Save: ReadPaticlePosition
+[2020.03.22-21.35.42:422][393]LogContentValidation: Display: Validating NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ReadPaticlePosition.ReadPaticlePosition
+[2020.03.22-21.35.42:423][393]FE28DADC44C314310437A99637910B20_ReadPaticlePosition_MessageLog: Script successfully compiled.
+[2020.03.22-21.35.42:425][393]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.SpawnScript_1' was built locally..
+[2020.03.22-21.35.42:425][393]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.UpdateScript_2' was built locally..
+[2020.03.22-21.35.42:445][394]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.EventScript_6 took 0.156081 sec (0.007343/0.041197)... Status NCS_UpToDate
+[2020.03.22-21.35.42:447][394]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.EventScript_6' was built locally..
+[2020.03.22-21.35.42:518][395]61565_ToneShadingRibbon_MessageLog: System successfully compiled.
+[2020.03.22-21.35.51:948][192]LogNiagaraEditor: Verbose: '/Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon' Precompile took 0.067798 sec.
+[2020.03.22-21.35.51:977][193]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.SpawnScript_1 ...................................................................
+[2020.03.22-21.35.51:977][193]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.UpdateScript_2 ...................................................................
+[2020.03.22-21.35.51:977][193]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.EventScript_6 ...................................................................
+[2020.03.22-21.35.52:017][196]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.SpawnScript_1 took 0.066768 sec (0.003848/0.062854)... Status NCS_UpToDate
+[2020.03.22-21.35.52:019][196]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.SpawnScript_1' was built locally..
+[2020.03.22-21.35.52:064][200]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.UpdateScript_2 took 0.114772 sec (0.006250/0.048011)... Status NCS_UpToDate
+[2020.03.22-21.35.52:067][200]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.UpdateScript_2' was built locally..
+[2020.03.22-21.35.52:104][203]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.EventScript_6 took 0.154892 sec (0.007633/0.040253)... Status NCS_UpToDate
+[2020.03.22-21.35.52:104][203]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.EventScript_6' was built locally..
+[2020.03.22-21.35.52:174][204]61565_ToneShadingRibbon_MessageLog: System successfully compiled.
+[2020.03.22-21.35.57:607][735]LogNiagaraEditor: Removed Var 'Constants.ToneShadingRibbon_NE.SetVariables_AA762EB24016272637CC078A8AC3F8ED.Particles.NewID' from Script NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.SpawnScript_1
+[2020.03.22-21.35.57:609][735]LogNiagaraEditor: Removed Var 'Constants.ToneShadingRibbon_NE.SetVariables_AA762EB24016272637CC078A8AC3F8ED.Particles.NewID' from Script NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.UpdateScript_2
+[2020.03.22-21.35.57:683][735]LogNiagaraEditor: Verbose: '/Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon' Precompile took 0.069984 sec.
+[2020.03.22-21.35.57:708][736]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.SpawnScript_1 ...................................................................
+[2020.03.22-21.35.57:708][736]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.UpdateScript_2 ...................................................................
+[2020.03.22-21.35.57:708][736]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.EventScript_6 ...................................................................
+[2020.03.22-21.35.57:758][740]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.SpawnScript_1 took 0.066012 sec (0.004116/0.061798)... Status NCS_UpToDate
+[2020.03.22-21.35.57:759][740]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.SpawnScript_1' was built locally..
+[2020.03.22-21.35.57:805][744]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.UpdateScript_2 took 0.115825 sec (0.007062/0.049890)... Status NCS_UpToDate
+[2020.03.22-21.35.57:806][744]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.UpdateScript_2' was built locally..
+[2020.03.22-21.35.57:842][747]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.EventScript_6 took 0.156268 sec (0.008602/0.040535)... Status NCS_UpToDate
+[2020.03.22-21.35.57:842][747]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.EventScript_6' was built locally..
+[2020.03.22-21.35.57:913][748]61565_ToneShadingRibbon_MessageLog: System successfully compiled.
+[2020.03.22-21.35.59:473][890]Cmd: TRANSACTION UNDO
+[2020.03.22-21.35.59:473][890]LogEditorTransaction: Undo Make dynamic input
+[2020.03.22-21.35.59:632][890]LogNiagaraEditor: Verbose: '/Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon' Precompile took 0.067625 sec.
+[2020.03.22-21.35.59:687][891]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.EventScript_6 ...................................................................
+[2020.03.22-21.35.59:687][891]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.SpawnScript_1 ...................................................................
+[2020.03.22-21.35.59:687][891]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:SystemSpawnScript ...................................................................
+[2020.03.22-21.35.59:687][891]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.UpdateScript_2 ...................................................................
+[2020.03.22-21.35.59:687][891]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:SystemUpdateScript ...................................................................
+[2020.03.22-21.35.59:687][891]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.EventScript_6 took 0.042328 sec (0.001586/0.040693)... Status NCS_UpToDate
+[2020.03.22-21.35.59:693][891]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.EventScript_6' was built locally..
+[2020.03.22-21.35.59:755][892]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.SpawnScript_1 took 0.114003 sec (0.005413/0.071793)... Status NCS_UpToDate
+[2020.03.22-21.35.59:760][893]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.SpawnScript_1' was built locally..
+[2020.03.22-21.35.59:808][894]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:SystemSpawnScript took 0.152430 sec (0.009716/0.038569)... Status NCS_UpToDate
+[2020.03.22-21.35.59:812][895]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:SystemSpawnScript' was built locally..
+[2020.03.22-21.35.59:837][895]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.UpdateScript_2 took 0.196263 sec (0.012476/0.043961)... Status NCS_UpToDate
+[2020.03.22-21.35.59:842][896]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.UpdateScript_2' was built locally..
+[2020.03.22-21.35.59:946][899]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:SystemUpdateScript took 0.300812 sec (0.019816/0.104666)... Status NCS_UpToDate
+[2020.03.22-21.35.59:951][900]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:SystemUpdateScript' was built locally..
+[2020.03.22-21.36.00:039][901]61565_ToneShadingRibbon_MessageLog: System successfully compiled.
+[2020.03.22-21.36.02:761][123]LogNiagaraEditor: Removed Var 'Constants.ToneShadingRibbon_NE.SetVariables_AA762EB24016272637CC078A8AC3F8ED.Particles.NewID' from Script NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.SpawnScript_1
+[2020.03.22-21.36.02:762][123]LogNiagaraEditor: Removed Var 'Constants.ToneShadingRibbon_NE.SetVariables_AA762EB24016272637CC078A8AC3F8ED.Particles.NewID' from Script NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.UpdateScript_2
+[2020.03.22-21.36.02:838][123]LogNiagaraEditor: Verbose: '/Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon' Precompile took 0.070569 sec.
+[2020.03.22-21.36.02:870][124]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.UpdateScript_2 ...................................................................
+[2020.03.22-21.36.02:870][124]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.EventScript_6 ...................................................................
+[2020.03.22-21.36.02:870][124]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.SpawnScript_1 ...................................................................
+[2020.03.22-21.36.02:894][126]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.UpdateScript_2 took 0.050414 sec (0.002367/0.047982)... Status NCS_UpToDate
+[2020.03.22-21.36.02:895][126]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.UpdateScript_2' was built locally..
+[2020.03.22-21.36.02:940][130]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.EventScript_6 took 0.092762 sec (0.003846/0.042488)... Status NCS_UpToDate
+[2020.03.22-21.36.02:942][130]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.EventScript_6' was built locally..
+[2020.03.22-21.36.03:001][135]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.SpawnScript_1 took 0.152789 sec (0.007887/0.060109)... Status NCS_UpToDate
+[2020.03.22-21.36.03:002][135]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.SpawnScript_1' was built locally..
+[2020.03.22-21.36.03:071][136]61565_ToneShadingRibbon_MessageLog: System successfully compiled.
+[2020.03.22-21.36.07:184][477]LogNiagaraEditor: Verbose: '/Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon' Precompile took 0.067962 sec.
+[2020.03.22-21.36.07:219][478]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.SpawnScript_1 ...................................................................
+[2020.03.22-21.36.07:219][478]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.UpdateScript_2 ...................................................................
+[2020.03.22-21.36.07:219][478]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.EventScript_6 ...................................................................
+[2020.03.22-21.36.07:257][479]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.SpawnScript_1 took 0.063719 sec (0.003830/0.059822)... Status NCS_UpToDate
+[2020.03.22-21.36.07:264][480]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.SpawnScript_1' was built locally..
+[2020.03.22-21.36.07:302][483]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.UpdateScript_2 took 0.114312 sec (0.006097/0.050631)... Status NCS_UpToDate
+[2020.03.22-21.36.07:304][483]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.UpdateScript_2' was built locally..
+[2020.03.22-21.36.07:341][486]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.EventScript_6 took 0.153520 sec (0.007460/0.039362)... Status NCS_UpToDate
+[2020.03.22-21.36.07:343][486]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.EventScript_6' was built locally..
+[2020.03.22-21.36.07:413][487]61565_ToneShadingRibbon_MessageLog: System successfully compiled.
+[2020.03.22-21.36.08:609][575]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon" FILE="C:/Users/Jim/Documents/VFX_Learning/Content/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.uasset" SILENT=true
+[2020.03.22-21.36.08:783][575]LogSavePackage: Moving 'C:/Users/Jim/Documents/VFX_Learning/Saved/ToneShadingRibbonB060FC1A4590576528F7938F4C39BBF6.tmp' to 'C:/Users/Jim/Documents/VFX_Learning/Content/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.uasset'
+[2020.03.22-21.36.08:805][575]AssetCheck: New page: Asset Save: ToneShadingRibbon
+[2020.03.22-21.36.08:805][575]LogContentValidation: Display: Validating NiagaraSystem /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon
+[2020.03.22-21.36.20:552][554]LogNiagaraEditor: Verbose: '/Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon' Precompile took 0.068955 sec.
+[2020.03.22-21.36.20:589][555]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.SpawnScript_1 ...................................................................
+[2020.03.22-21.36.20:589][555]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.UpdateScript_2 ...................................................................
+[2020.03.22-21.36.20:589][555]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.EventScript_6 ...................................................................
+[2020.03.22-21.36.20:629][558]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.SpawnScript_1 took 0.071713 sec (0.003831/0.067786)... Status NCS_UpToDate
+[2020.03.22-21.36.20:631][558]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.SpawnScript_1' was built locally..
+[2020.03.22-21.36.20:679][562]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.UpdateScript_2 took 0.118415 sec (0.006039/0.046896)... Status NCS_UpToDate
+[2020.03.22-21.36.20:681][562]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.UpdateScript_2' was built locally..
+[2020.03.22-21.36.20:716][565]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.EventScript_6 took 0.160243 sec (0.007365/0.041988)... Status NCS_UpToDate
+[2020.03.22-21.36.20:717][565]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:ToneShadingRibbon_NE.EventScript_6' was built locally..
+[2020.03.22-21.36.20:789][566]61565_ToneShadingRibbon_MessageLog: System successfully compiled.
+[2020.03.22-21.36.21:497][622]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon" FILE="C:/Users/Jim/Documents/VFX_Learning/Content/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.uasset" SILENT=true
+[2020.03.22-21.36.21:670][622]LogSavePackage: Moving 'C:/Users/Jim/Documents/VFX_Learning/Saved/ToneShadingRibbonC2B9E42844BAD5EE8DB6EAA26581D5BA.tmp' to 'C:/Users/Jim/Documents/VFX_Learning/Content/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.uasset'
+[2020.03.22-21.36.21:689][622]AssetCheck: New page: Asset Save: ToneShadingRibbon
+[2020.03.22-21.36.21:689][622]LogContentValidation: Display: Validating NiagaraSystem /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon
+[2020.03.22-21.37.00:081][554]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon" FILE="C:/Users/Jim/Documents/VFX_Learning/Content/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.uasset" SILENT=true
+[2020.03.22-21.37.00:255][554]LogSavePackage: Moving 'C:/Users/Jim/Documents/VFX_Learning/Saved/ToneShadingRibbonCFCD0E574EB686AD87BD1495673360D7.tmp' to 'C:/Users/Jim/Documents/VFX_Learning/Content/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.uasset'
+[2020.03.22-21.37.00:277][554]AssetCheck: New page: Asset Save: ToneShadingRibbon
+[2020.03.22-21.37.00:277][554]LogContentValidation: Display: Validating NiagaraSystem /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon
+[2020.03.22-21.37.09:459][201]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon" FILE="C:/Users/Jim/Documents/VFX_Learning/Content/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.uasset" SILENT=true
+[2020.03.22-21.37.09:632][201]LogSavePackage: Moving 'C:/Users/Jim/Documents/VFX_Learning/Saved/ToneShadingRibbonD4C494D147FB9954922C558A20D09AD4.tmp' to 'C:/Users/Jim/Documents/VFX_Learning/Content/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.uasset'
+[2020.03.22-21.37.09:654][201]AssetCheck: New page: Asset Save: ToneShadingRibbon
+[2020.03.22-21.37.09:654][201]LogContentValidation: Display: Validating NiagaraSystem /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon
+[2020.03.22-21.37.24:355][789]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon" FILE="C:/Users/Jim/Documents/VFX_Learning/Content/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.uasset" SILENT=true
+[2020.03.22-21.37.24:530][789]LogSavePackage: Moving 'C:/Users/Jim/Documents/VFX_Learning/Saved/ToneShadingRibbon71E7FB5C44F2C2F8541F7CB026BEF6BF.tmp' to 'C:/Users/Jim/Documents/VFX_Learning/Content/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.uasset'
+[2020.03.22-21.37.24:550][789]AssetCheck: New page: Asset Save: ToneShadingRibbon
+[2020.03.22-21.37.24:550][789]LogContentValidation: Display: Validating NiagaraSystem /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon
+[2020.03.22-21.37.30:487][353]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon" FILE="C:/Users/Jim/Documents/VFX_Learning/Content/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.uasset" SILENT=true
+[2020.03.22-21.37.30:662][353]LogSavePackage: Moving 'C:/Users/Jim/Documents/VFX_Learning/Saved/ToneShadingRibbonDC0C8F224AE0E418F15E85B221B08FE5.tmp' to 'C:/Users/Jim/Documents/VFX_Learning/Content/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.uasset'
+[2020.03.22-21.37.30:682][353]AssetCheck: New page: Asset Save: ToneShadingRibbon
+[2020.03.22-21.37.30:682][353]LogContentValidation: Display: Validating NiagaraSystem /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon
+[2020.03.22-21.37.43:566][588]LogNiagaraEditor: Verbose: '/Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon' Precompile took 0.069035 sec.
+[2020.03.22-21.37.43:610][589]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:CircularSpawner.SpawnScript ...................................................................
+[2020.03.22-21.37.43:610][589]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:CircularSpawner.UpdateScript ...................................................................
+[2020.03.22-21.37.43:798][604]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:CircularSpawner.SpawnScript took 0.227259 sec (0.011262/0.215887)... Status NCS_UpToDate
+[2020.03.22-21.37.43:800][604]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:CircularSpawner.SpawnScript' was built locally..
+[2020.03.22-21.37.43:846][608]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:CircularSpawner.UpdateScript took 0.279278 sec (0.014274/0.052222)... Status NCS_UpToDate
+[2020.03.22-21.37.43:847][608]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:CircularSpawner.UpdateScript' was built locally..
+[2020.03.22-21.37.43:917][609]61565_ToneShadingRibbon_MessageLog: System successfully compiled.
+[2020.03.22-21.37.54:769][437]LogNiagaraEditor: Verbose: '/Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon' Precompile took 0.069848 sec.
+[2020.03.22-21.37.54:817][438]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:CircularSpawner.SpawnScript ...................................................................
+[2020.03.22-21.37.54:817][438]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:CircularSpawner.UpdateScript ...................................................................
+[2020.03.22-21.37.54:982][452]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:CircularSpawner.SpawnScript took 0.210401 sec (0.011250/0.199058)... Status NCS_UpToDate
+[2020.03.22-21.37.54:983][452]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:CircularSpawner.SpawnScript' was built locally..
+[2020.03.22-21.37.55:042][457]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:CircularSpawner.UpdateScript took 0.263780 sec (0.014368/0.053548)... Status NCS_UpToDate
+[2020.03.22-21.37.55:044][457]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:CircularSpawner.UpdateScript' was built locally..
+[2020.03.22-21.37.55:113][458]61565_ToneShadingRibbon_MessageLog: System successfully compiled.
+[2020.03.22-21.38.10:691][717]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon" FILE="C:/Users/Jim/Documents/VFX_Learning/Content/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.uasset" SILENT=true
+[2020.03.22-21.38.10:869][717]LogSavePackage: Moving 'C:/Users/Jim/Documents/VFX_Learning/Saved/ToneShadingRibbon359D19D24A664345AB5075A838EA483C.tmp' to 'C:/Users/Jim/Documents/VFX_Learning/Content/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.uasset'
+[2020.03.22-21.38.10:889][717]AssetCheck: New page: Asset Save: ToneShadingRibbon
+[2020.03.22-21.38.10:889][717]LogContentValidation: Display: Validating NiagaraSystem /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon
+[2020.03.22-21.38.12:672][857]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon" FILE="C:/Users/Jim/Documents/VFX_Learning/Content/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.uasset" SILENT=true
+[2020.03.22-21.38.12:853][857]LogSavePackage: Moving 'C:/Users/Jim/Documents/VFX_Learning/Saved/ToneShadingRibbonA3CDA2C4498C11F63E509AB3881D9374.tmp' to 'C:/Users/Jim/Documents/VFX_Learning/Content/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.uasset'
+[2020.03.22-21.38.12:871][857]AssetCheck: New page: Asset Save: ToneShadingRibbon
+[2020.03.22-21.38.12:871][857]LogContentValidation: Display: Validating NiagaraSystem /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon
+[2020.03.22-21.38.34:202][189]LogNiagaraEditor: Verbose: '/Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon' Precompile took 0.067599 sec.
+[2020.03.22-21.38.34:258][190]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:CircularSpawner.SpawnScript ...................................................................
+[2020.03.22-21.38.34:258][190]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:CircularSpawner.UpdateScript ...................................................................
+[2020.03.22-21.38.34:327][195]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:CircularSpawner.SpawnScript took 0.124946 sec (0.007862/0.117000)... Status NCS_UpToDate
+[2020.03.22-21.38.34:327][195]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:CircularSpawner.SpawnScript' was built locally..
+[2020.03.22-21.38.34:390][200]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:CircularSpawner.UpdateScript took 0.179899 sec (0.010879/0.055073)... Status NCS_UpToDate
+[2020.03.22-21.38.34:391][200]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:CircularSpawner.UpdateScript' was built locally..
+[2020.03.22-21.38.34:465][201]61565_ToneShadingRibbon_MessageLog: System successfully compiled.
+[2020.03.22-21.38.43:644][910]LogNiagaraEditor: Verbose: '/Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon' Precompile took 0.066513 sec.
+[2020.03.22-21.38.43:695][911]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:CircularSpawner.SpawnScript ...................................................................
+[2020.03.22-21.38.43:695][911]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:CircularSpawner.UpdateScript ...................................................................
+[2020.03.22-21.38.43:760][916]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:CircularSpawner.SpawnScript took 0.113507 sec (0.007022/0.106407)... Status NCS_UpToDate
+[2020.03.22-21.38.43:762][916]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:CircularSpawner.SpawnScript' was built locally..
+[2020.03.22-21.38.43:817][920]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:CircularSpawner.UpdateScript took 0.170465 sec (0.010193/0.057157)... Status NCS_UpToDate
+[2020.03.22-21.38.43:817][920]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:CircularSpawner.UpdateScript' was built locally..
+[2020.03.22-21.38.43:891][921]61565_ToneShadingRibbon_MessageLog: System successfully compiled.
+[2020.03.22-21.38.54:639][955]LogNiagaraEditor: Verbose: '/Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon' Precompile took 0.069303 sec.
+[2020.03.22-21.38.54:689][956]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:CircularSpawner.SpawnScript ...................................................................
+[2020.03.22-21.38.54:689][956]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:CircularSpawner.UpdateScript ...................................................................
+[2020.03.22-21.38.54:780][963]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:CircularSpawner.SpawnScript took 0.128653 sec (0.007942/0.120633)... Status NCS_UpToDate
+[2020.03.22-21.38.54:781][963]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:CircularSpawner.SpawnScript' was built locally..
+[2020.03.22-21.38.54:831][967]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:CircularSpawner.UpdateScript took 0.183934 sec (0.011137/0.055417)... Status NCS_UpToDate
+[2020.03.22-21.38.54:832][967]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:CircularSpawner.UpdateScript' was built locally..
+[2020.03.22-21.38.54:906][968]61565_ToneShadingRibbon_MessageLog: System successfully compiled.
+[2020.03.22-21.39.05:704][819]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon" FILE="C:/Users/Jim/Documents/VFX_Learning/Content/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.uasset" SILENT=true
+[2020.03.22-21.39.05:892][819]LogSavePackage: Moving 'C:/Users/Jim/Documents/VFX_Learning/Saved/ToneShadingRibbon9C3E6CFB4CF996A043EB33B68B89C987.tmp' to 'C:/Users/Jim/Documents/VFX_Learning/Content/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.uasset'
+[2020.03.22-21.39.05:913][819]AssetCheck: New page: Asset Save: ToneShadingRibbon
+[2020.03.22-21.39.05:913][819]LogContentValidation: Display: Validating NiagaraSystem /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon
+[2020.03.22-21.39.52:605][778]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Floor)
+[2020.03.22-21.39.53:739][870]LogEditorViewport: Clicking on Actor (LMB): NiagaraActor (ToneShadingRibbon)
+[2020.03.22-21.39.55:485][  7]LogNiagaraEditor: Verbose: '/Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon' Precompile took 0.071459 sec.
+[2020.03.22-21.39.55:539][  7]61565_ToneShadingRibbon_MessageLog: System successfully compiled.
+[2020.03.22-21.40.19:818][ 53]LogNiagaraEditor: Verbose: '/Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon' Precompile took 0.067365 sec.
+[2020.03.22-21.40.19:844][ 54]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:CircularSpawner.SpawnScript ...................................................................
+[2020.03.22-21.40.19:844][ 54]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:CircularSpawner.UpdateScript ...................................................................
+[2020.03.22-21.40.19:952][ 60]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:CircularSpawner.SpawnScript took 0.128899 sec (0.008192/0.120618)... Status NCS_UpToDate
+[2020.03.22-21.40.19:952][ 60]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:CircularSpawner.SpawnScript' was built locally..
+[2020.03.22-21.40.20:002][ 62]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:CircularSpawner.UpdateScript took 0.177158 sec (0.011538/0.048437)... Status NCS_UpToDate
+[2020.03.22-21.40.20:007][ 62]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:CircularSpawner.UpdateScript' was built locally..
+[2020.03.22-21.40.20:081][ 63]61565_ToneShadingRibbon_MessageLog: System successfully compiled.
+[2020.03.22-21.40.20:925][120]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon" FILE="C:/Users/Jim/Documents/VFX_Learning/Content/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.uasset" SILENT=true
+[2020.03.22-21.40.21:096][120]LogSavePackage: Moving 'C:/Users/Jim/Documents/VFX_Learning/Saved/ToneShadingRibbon7421B58D4210DA952F7880B9058C7612.tmp' to 'C:/Users/Jim/Documents/VFX_Learning/Content/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.uasset'
+[2020.03.22-21.40.21:117][120]AssetCheck: New page: Asset Save: ToneShadingRibbon
+[2020.03.22-21.40.21:117][120]LogContentValidation: Display: Validating NiagaraSystem /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon
+[2020.03.22-21.40.39:471][587]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon" FILE="C:/Users/Jim/Documents/VFX_Learning/Content/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.uasset" SILENT=true
+[2020.03.22-21.40.39:644][587]LogSavePackage: Moving 'C:/Users/Jim/Documents/VFX_Learning/Saved/ToneShadingRibbon20FF0FB4460B69CAAB1295B891A350BE.tmp' to 'C:/Users/Jim/Documents/VFX_Learning/Content/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.uasset'
+[2020.03.22-21.40.39:664][587]AssetCheck: New page: Asset Save: ToneShadingRibbon
+[2020.03.22-21.40.39:664][587]LogContentValidation: Display: Validating NiagaraSystem /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon
+[2020.03.22-21.40.50:450][434]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon" FILE="C:/Users/Jim/Documents/VFX_Learning/Content/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.uasset" SILENT=true
+[2020.03.22-21.40.50:622][434]LogSavePackage: Moving 'C:/Users/Jim/Documents/VFX_Learning/Saved/ToneShadingRibbonF9BC84274F421AD625865EB54C9D8F7D.tmp' to 'C:/Users/Jim/Documents/VFX_Learning/Content/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.uasset'
+[2020.03.22-21.40.50:643][434]AssetCheck: New page: Asset Save: ToneShadingRibbon
+[2020.03.22-21.40.50:643][434]LogContentValidation: Display: Validating NiagaraSystem /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon
+[2020.03.22-21.42.31:803][967]LogNiagaraEditor: Verbose: '/Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon' Precompile took 0.070311 sec.
+[2020.03.22-21.42.31:852][968]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:CircularSpawner.UpdateScript ...................................................................
+[2020.03.22-21.42.31:853][968]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:CircularSpawner.SpawnScript ...................................................................
+[2020.03.22-21.42.31:860][968]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:CircularSpawner.UpdateScript took 0.055663 sec (0.003294/0.052301)... Status NCS_UpToDate
+[2020.03.22-21.42.31:860][968]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:CircularSpawner.UpdateScript' was built locally..
+[2020.03.22-21.42.31:969][977]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:CircularSpawner.SpawnScript took 0.163760 sec (0.010118/0.108451)... Status NCS_UpToDate
+[2020.03.22-21.42.31:971][977]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon:CircularSpawner.SpawnScript' was built locally..
+[2020.03.22-21.42.32:037][978]61565_ToneShadingRibbon_MessageLog: System successfully compiled.
+[2020.03.22-21.42.33:754][123]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon" FILE="C:/Users/Jim/Documents/VFX_Learning/Content/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.uasset" SILENT=true
+[2020.03.22-21.42.33:925][123]LogSavePackage: Moving 'C:/Users/Jim/Documents/VFX_Learning/Saved/ToneShadingRibbonB02E59BA46EE7B532ADD7CBBE9DFA446.tmp' to 'C:/Users/Jim/Documents/VFX_Learning/Content/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.uasset'
+[2020.03.22-21.42.33:947][123]AssetCheck: New page: Asset Save: ToneShadingRibbon
+[2020.03.22-21.42.33:947][123]LogContentValidation: Display: Validating NiagaraSystem /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon
+[2020.03.22-21.42.50:429][236]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon" FILE="C:/Users/Jim/Documents/VFX_Learning/Content/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.uasset" SILENT=true
+[2020.03.22-21.42.50:598][236]LogSavePackage: Moving 'C:/Users/Jim/Documents/VFX_Learning/Saved/ToneShadingRibbon3EC65B524009087CF736288FEFEE74FE.tmp' to 'C:/Users/Jim/Documents/VFX_Learning/Content/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.uasset'
+[2020.03.22-21.42.50:619][236]AssetCheck: New page: Asset Save: ToneShadingRibbon
+[2020.03.22-21.42.50:619][236]LogContentValidation: Display: Validating NiagaraSystem /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon
+[2020.03.22-21.43.15:174][882]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon" FILE="C:/Users/Jim/Documents/VFX_Learning/Content/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.uasset" SILENT=true
+[2020.03.22-21.43.15:345][882]LogSavePackage: Moving 'C:/Users/Jim/Documents/VFX_Learning/Saved/ToneShadingRibbon02075B854E3C4A244027449CAF098AEE.tmp' to 'C:/Users/Jim/Documents/VFX_Learning/Content/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.uasset'
+[2020.03.22-21.43.15:364][882]AssetCheck: New page: Asset Save: ToneShadingRibbon
+[2020.03.22-21.43.15:364][882]LogContentValidation: Display: Validating NiagaraSystem /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon
+[2020.03.22-21.43.25:855][553]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon" FILE="C:/Users/Jim/Documents/VFX_Learning/Content/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.uasset" SILENT=true
+[2020.03.22-21.43.26:026][553]LogSavePackage: Moving 'C:/Users/Jim/Documents/VFX_Learning/Saved/ToneShadingRibbonC6C6086D41AF0B9F881A9CBE14A974C1.tmp' to 'C:/Users/Jim/Documents/VFX_Learning/Content/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.uasset'
+[2020.03.22-21.43.26:046][553]AssetCheck: New page: Asset Save: ToneShadingRibbon
+[2020.03.22-21.43.26:046][553]LogContentValidation: Display: Validating NiagaraSystem /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon
+[2020.03.22-21.43.32:836][992]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon" FILE="C:/Users/Jim/Documents/VFX_Learning/Content/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.uasset" SILENT=true
+[2020.03.22-21.43.33:005][992]LogSavePackage: Moving 'C:/Users/Jim/Documents/VFX_Learning/Saved/ToneShadingRibbon4C4BF3734DFAB3B542CFAD8B880581C4.tmp' to 'C:/Users/Jim/Documents/VFX_Learning/Content/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.uasset'
+[2020.03.22-21.43.33:025][992]AssetCheck: New page: Asset Save: ToneShadingRibbon
+[2020.03.22-21.43.33:025][992]LogContentValidation: Display: Validating NiagaraSystem /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon
+[2020.03.22-21.43.50:417][133]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon" FILE="C:/Users/Jim/Documents/VFX_Learning/Content/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.uasset" SILENT=true
+[2020.03.22-21.43.50:589][133]LogSavePackage: Moving 'C:/Users/Jim/Documents/VFX_Learning/Saved/ToneShadingRibbon7D79E6D54B5C1B2155CBA398ECCE8D22.tmp' to 'C:/Users/Jim/Documents/VFX_Learning/Content/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.uasset'
+[2020.03.22-21.43.50:610][133]AssetCheck: New page: Asset Save: ToneShadingRibbon
+[2020.03.22-21.43.50:610][133]LogContentValidation: Display: Validating NiagaraSystem /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon
+[2020.03.22-21.44.14:546][615]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon" FILE="C:/Users/Jim/Documents/VFX_Learning/Content/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.uasset" SILENT=true
+[2020.03.22-21.44.14:718][615]LogSavePackage: Moving 'C:/Users/Jim/Documents/VFX_Learning/Saved/ToneShadingRibbon91AC441A42B5DD7B5FCFFBAAAFCC2AEB.tmp' to 'C:/Users/Jim/Documents/VFX_Learning/Content/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.uasset'
+[2020.03.22-21.44.14:736][615]AssetCheck: New page: Asset Save: ToneShadingRibbon
+[2020.03.22-21.44.14:736][615]LogContentValidation: Display: Validating NiagaraSystem /Game/ThirdPersonBP/VFX/Systems/ToneShadingRibbon.ToneShadingRibbon
+[2020.03.22-21.57.42:933][351]LogUObjectHash: Compacting FUObjectHashTables data took   2.78ms
+[2020.03.22-21.57.43:207][351]LogSavePackage: Moving 'C:/Users/Jim/Documents/VFX_Learning/Saved/ThirdPersonExampleMapE4D8E07641F6EE1234C461BAF0259565.tmp' to 'C:/Users/Jim/Documents/VFX_Learning/Content/ThirdPersonBP/Maps/ThirdPersonExampleMap.umap'
+[2020.03.22-21.57.43:311][351]LogSavePackage: Moving 'C:/Users/Jim/Documents/VFX_Learning/Saved/ThirdPersonExampleMap_BuiltData0102B1F444827ABFFCAC818BC99B2E1D.tmp' to 'C:/Users/Jim/Documents/VFX_Learning/Content/ThirdPersonBP/Maps/ThirdPersonExampleMap_BuiltData.uasset'
+[2020.03.22-21.57.43:335][351]AssetCheck: New page: Asset Save: multiple assets
+[2020.03.22-21.57.43:335][351]LogContentValidation: Display: Validating World /Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap
+[2020.03.22-21.57.43:335][351]LogContentValidation: Display: Validating MapBuildDataRegistry /Game/ThirdPersonBP/Maps/ThirdPersonExampleMap_BuiltData.ThirdPersonExampleMap_BuiltData
+[2020.03.22-21.57.44:505][430]LogUObjectHash: Compacting FUObjectHashTables data took   2.33ms
+[2020.03.22-21.57.47:072][430]LogSlate: Window 'Save Content' being destroyed
+[2020.03.22-21.57.47:103][430]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/ThirdPersonBP/VFX/Systems/NewNiagaraSystem" FILE="C:/Users/Jim/Documents/VFX_Learning/Content/ThirdPersonBP/VFX/Systems/NewNiagaraSystem.uasset" SILENT=true
+[2020.03.22-21.57.47:207][430]LogSavePackage: Moving 'C:/Users/Jim/Documents/VFX_Learning/Saved/NewNiagaraSystem0AB0E1B84F4CDC49E17FF1AB2F6B8EA8.tmp' to 'C:/Users/Jim/Documents/VFX_Learning/Content/ThirdPersonBP/VFX/Systems/NewNiagaraSystem.uasset'
+[2020.03.22-21.57.47:249][430]LogSlate: Window 'ReadPaticlePosition' being destroyed
+[2020.03.22-21.57.47:252][430]LogNiagaraEditor: Warning: Cleanup System view model 0000029AEF8CF010
+[2020.03.22-21.57.47:264][430]LogWorld: UWorld::CleanupWorld for World_3, bSessionEnded=true, bCleanupResources=true
+[2020.03.22-21.57.47:264][430]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.03.22-21.57.47:280][430]LogNiagaraEditor: Warning: Cleanup System view model 0000029AEF8CF010
+[2020.03.22-21.57.47:280][430]LogNiagaraEditor: Warning: Deleting System view model 0000029AEF8CF010
+[2020.03.22-21.57.47:295][430]LogSlate: Window 'VFX_Learning - Unreal Editor' being destroyed
+[2020.03.22-21.57.47:299][430]LogWindowsTextInputMethodSystem: Display: IME system now activated using TSF (搜狗拼音输入法).
+[2020.03.22-21.57.47:405][430]AssetCheck: New page: Asset Save: NewNiagaraSystem
+[2020.03.22-21.57.47:405][430]LogContentValidation: Display: Validating NiagaraSystem /Game/ThirdPersonBP/VFX/Systems/NewNiagaraSystem.NewNiagaraSystem
+[2020.03.22-21.57.47:478][430]LogUObjectHash: Compacting FUObjectHashTables data took   2.48ms
+[2020.03.22-21.57.47:480][431]Cmd: QUIT_EDITOR
+[2020.03.22-21.57.47:480][431]LogCore: Engine exit requested (reason: UUnrealEdEngine::CloseEditor())
+[2020.03.22-21.57.47:487][431]LogCore: Engine exit requested (reason: EngineExit() was called; note: exit was already requested)
+[2020.03.22-21.57.47:487][431]LogAudioMixer: Display: No commands were queued while flushing the source manager.
+[2020.03.22-21.57.47:504][431]LogExit: Preparing to exit.
+[2020.03.22-21.57.47:955][431]LogWorld: UWorld::CleanupWorld for World_0, bSessionEnded=true, bCleanupResources=true
+[2020.03.22-21.57.47:957][431]LogWorld: UWorld::CleanupWorld for World_2, bSessionEnded=true, bCleanupResources=true
+[2020.03.22-21.57.47:957][431]LogWorld: UWorld::CleanupWorld for World_1, bSessionEnded=true, bCleanupResources=true
+[2020.03.22-21.57.47:970][431]LogDemo: Cleaned up 0 splitscreen connections with owner deletion
+[2020.03.22-21.57.47:987][431]LogWorld: UWorld::CleanupWorld for None, bSessionEnded=true, bCleanupResources=true
+[2020.03.22-21.57.47:988][431]LogExit: Editor shut down
+[2020.03.22-21.57.47:988][431]LogExit: Transaction tracking system shut down
+[2020.03.22-21.57.48:108][431]LogExit: Object subsystem successfully closed.
+[2020.03.22-21.57.48:136][431]LogShaderCompilers: Display: Shaders left to compile 0
+[2020.03.22-21.57.48:147][431]LogModuleManager: Shutting down and abandoning module SequencerWidgets (714)
+[2020.03.22-21.57.48:147][431]LogModuleManager: Shutting down and abandoning module HierarchicalLODOutliner (712)
+[2020.03.22-21.57.48:147][431]LogModuleManager: Shutting down and abandoning module SceneOutliner (710)
+[2020.03.22-21.57.48:147][431]LogModuleManager: Shutting down and abandoning module AddContentDialog (708)
+[2020.03.22-21.57.48:147][431]LogModuleManager: Shutting down and abandoning module WidgetCarousel (707)
+[2020.03.22-21.57.48:147][431]LogModuleManager: Shutting down and abandoning module EditorWidgets (704)
+[2020.03.22-21.57.48:147][431]LogModuleManager: Shutting down and abandoning module CollectionManager (702)
+[2020.03.22-21.57.48:147][431]LogModuleManager: Shutting down and abandoning module StatsViewer (700)
+[2020.03.22-21.57.48:147][431]LogModuleManager: Shutting down and abandoning module VirtualTexturingEditor (698)
+[2020.03.22-21.57.48:147][431]LogModuleManager: Shutting down and abandoning module FoliageEdit (696)
+[2020.03.22-21.57.48:147][431]LogModuleManager: Shutting down and abandoning module LandscapeEditor (694)
+[2020.03.22-21.57.48:147][431]LogModuleManager: Shutting down and abandoning module MeshPaintMode (692)
+[2020.03.22-21.57.48:147][431]LogModuleManager: Shutting down and abandoning module SceneDepthPickerMode (690)
+[2020.03.22-21.57.48:147][431]LogModuleManager: Shutting down and abandoning module ActorPickerMode (688)
+[2020.03.22-21.57.48:147][431]LogModuleManager: Shutting down and abandoning module GeometryMode (686)
+[2020.03.22-21.57.48:147][431]LogModuleManager: Shutting down and abandoning module TextureAlignMode (684)
+[2020.03.22-21.57.48:147][431]LogModuleManager: Shutting down and abandoning module BspMode (682)
+[2020.03.22-21.57.48:147][431]LogModuleManager: Shutting down and abandoning module PIEPreviewDeviceProfileSelector (680)
+[2020.03.22-21.57.48:147][431]LogModuleManager: Shutting down and abandoning module SequenceRecorderSections (678)
+[2020.03.22-21.57.48:147][431]LogModuleManager: Shutting down and abandoning module AutomationWorker (676)
+[2020.03.22-21.57.48:147][431]LogModuleManager: Shutting down and abandoning module SteamVREditor (674)
+[2020.03.22-21.57.48:147][431]LogModuleManager: Shutting down and abandoning module OculusMR (672)
+[2020.03.22-21.57.48:147][431]LogModuleManager: Shutting down and abandoning module AudioCaptureEditor (670)
+[2020.03.22-21.57.48:147][431]LogModuleManager: Shutting down and abandoning module MatineeToLevelSequence (668)
+[2020.03.22-21.57.48:148][431]LogModuleManager: Shutting down and abandoning module LevelSequenceEditor (666)
+[2020.03.22-21.57.48:148][431]LogModuleManager: Shutting down and abandoning module PlacementMode (665)
+[2020.03.22-21.57.48:148][431]LogModuleManager: Shutting down and abandoning module MaterialEditor (664)
+[2020.03.22-21.57.48:148][431]LogModuleManager: Shutting down and abandoning module ActorSequenceEditor (660)
+[2020.03.22-21.57.48:148][431]LogModuleManager: Shutting down and abandoning module WmfMediaFactory (658)
+[2020.03.22-21.57.48:148][431]LogModuleManager: Shutting down and abandoning module WmfMediaEditor (656)
+[2020.03.22-21.57.48:148][431]LogModuleManager: Shutting down and abandoning module WebMMediaFactory (654)
+[2020.03.22-21.57.48:148][431]LogModuleManager: Shutting down and abandoning module WebMMediaEditor (652)
+[2020.03.22-21.57.48:148][431]LogModuleManager: Shutting down and abandoning module WebMMedia (650)
+[2020.03.22-21.57.48:148][431]LogModuleManager: Shutting down and abandoning module MediaPlayerEditor (648)
+[2020.03.22-21.57.48:148][431]LogModuleManager: Shutting down and abandoning module MediaCompositingEditor (646)
+[2020.03.22-21.57.48:148][431]LogModuleManager: Shutting down and abandoning module SequenceRecorder (645)
+[2020.03.22-21.57.48:148][431]LogModuleManager: Shutting down and abandoning module OpenExrWrapper (642)
+[2020.03.22-21.57.48:148][431]LogModuleManager: Shutting down and abandoning module ImgMediaFactory (640)
+[2020.03.22-21.57.48:148][431]LogModuleManager: Shutting down and abandoning module ImgMediaEditor (638)
+[2020.03.22-21.57.48:148][431]LogModuleManager: Shutting down and abandoning module AvfMediaFactory (636)
+[2020.03.22-21.57.48:148][431]LogModuleManager: Shutting down and abandoning module AvfMediaEditor (634)
+[2020.03.22-21.57.48:148][431]LogModuleManager: Shutting down and abandoning module AndroidMediaFactory (632)
+[2020.03.22-21.57.48:148][431]LogModuleManager: Shutting down and abandoning module AndroidMediaEditor (630)
+[2020.03.22-21.57.48:148][431]LogModuleManager: Shutting down and abandoning module MagicLeapMediaCodecFactory (628)
+[2020.03.22-21.57.48:148][431]LogModuleManager: Shutting down and abandoning module MagicLeapMediaFactory (626)
+[2020.03.22-21.57.48:148][431]LogModuleManager: Shutting down and abandoning module MagicLeapMediaEditor (624)
+[2020.03.22-21.57.48:148][431]LogModuleManager: Shutting down and abandoning module CharacterAI (622)
+[2020.03.22-21.57.48:148][431]LogModuleManager: Shutting down and abandoning module SmartSnapping (620)
+[2020.03.22-21.57.48:148][431]LogModuleManager: Shutting down and abandoning module SessionServices (618)
+[2020.03.22-21.57.48:148][431]LogModuleManager: Shutting down and abandoning module MeshPaint (616)
+[2020.03.22-21.57.48:148][431]LogModuleManager: Shutting down and abandoning module ViewportSnapping (614)
+[2020.03.22-21.57.48:148][431]LogModuleManager: Shutting down and abandoning module ViewportInteraction (612)
+[2020.03.22-21.57.48:148][431]LogModuleManager: Shutting down and abandoning module ClothPainter (610)
+[2020.03.22-21.57.48:148][431]LogModuleManager: Shutting down and abandoning module SkeletalMeshEditor (609)
+[2020.03.22-21.57.48:148][431]LogModuleManager: Shutting down and abandoning module LogVisualizer (606)
+[2020.03.22-21.57.48:148][431]LogModuleManager: Shutting down and abandoning module IntroTutorials (604)
+[2020.03.22-21.57.48:148][431]LogModuleManager: Shutting down and abandoning module GameProjectGeneration (603)
+[2020.03.22-21.57.48:148][431]LogModuleManager: Shutting down and abandoning module LuminPlatformEditor (600)
+[2020.03.22-21.57.48:148][431]LogModuleManager: Shutting down and abandoning module IOSPlatformEditor (598)
+[2020.03.22-21.57.48:148][431]LogModuleManager: Shutting down and abandoning module AndroidPlatformEditor (596)
+[2020.03.22-21.57.48:148][431]LogModuleManager: Shutting down and abandoning module AndroidDeviceDetection (595)
+[2020.03.22-21.57.48:989][431]LogModuleManager: Shutting down and abandoning module WindowsPlatformEditor (592)
+[2020.03.22-21.57.48:989][431]LogModuleManager: Shutting down and abandoning module LuminRuntimeSettings (590)
+[2020.03.22-21.57.48:989][431]LogModuleManager: Shutting down and abandoning module IOSRuntimeSettings (588)
+[2020.03.22-21.57.48:989][431]LogModuleManager: Shutting down and abandoning module AndroidRuntimeSettings (586)
+[2020.03.22-21.57.48:989][431]LogModuleManager: Shutting down and abandoning module EditorInteractiveToolsFramework (584)
+[2020.03.22-21.57.48:989][431]LogModuleManager: Shutting down and abandoning module TimeManagementEditor (582)
+[2020.03.22-21.57.48:989][431]LogModuleManager: Shutting down and abandoning module InputBindingEditor (580)
+[2020.03.22-21.57.48:989][431]LogModuleManager: Shutting down and abandoning module MergeActors (578)
+[2020.03.22-21.57.48:989][431]LogModuleManager: Shutting down and abandoning module LocalizationDashboard (576)
+[2020.03.22-21.57.48:989][431]LogModuleManager: Shutting down and abandoning module LocalizationService (575)
+[2020.03.22-21.57.48:989][431]LogModuleManager: Shutting down and abandoning module HardwareTargeting (572)
+[2020.03.22-21.57.48:989][431]LogModuleManager: Shutting down and abandoning module DeviceProfileEditor (570)
+[2020.03.22-21.57.48:989][431]LogModuleManager: Shutting down and abandoning module UndoHistory (568)
+[2020.03.22-21.57.48:989][431]LogModuleManager: Shutting down and abandoning module XmlParser (566)
+[2020.03.22-21.57.48:989][431]LogModuleManager: Shutting down and abandoning module Blutility (564)
+[2020.03.22-21.57.48:989][431]LogModuleManager: Shutting down and abandoning module ProjectSettingsViewer (562)
+[2020.03.22-21.57.48:990][431]LogModuleManager: Shutting down and abandoning module ProjectTargetPlatformEditor (561)
+[2020.03.22-21.57.48:990][431]LogModuleManager: Shutting down and abandoning module EditorSettingsViewer (558)
+[2020.03.22-21.57.48:990][431]LogModuleManager: Shutting down and abandoning module SettingsEditor (556)
+[2020.03.22-21.57.48:990][431]LogModuleManager: Shutting down and abandoning module ProjectLauncher (554)
+[2020.03.22-21.57.48:990][431]LogModuleManager: Shutting down and abandoning module SessionFrontend (552)
+[2020.03.22-21.57.48:990][431]LogModuleManager: Shutting down and abandoning module ProfilerClient (550)
+[2020.03.22-21.57.48:990][431]LogModuleManager: Shutting down and abandoning module DeviceManager (548)
+[2020.03.22-21.57.48:990][431]LogModuleManager: Shutting down and abandoning module TargetDeviceServices (547)
+[2020.03.22-21.57.49:022][431]LogModuleManager: Shutting down and abandoning module AutomationController (544)
+[2020.03.22-21.57.49:022][431]LogModuleManager: Shutting down and abandoning module AutomationWindow (542)
+[2020.03.22-21.57.49:022][431]LogModuleManager: Shutting down and abandoning module Layers (540)
+[2020.03.22-21.57.49:022][431]LogModuleManager: Shutting down and abandoning module ComponentVisualizers (538)
+[2020.03.22-21.57.49:022][431]LogModuleManager: Shutting down and abandoning module DetailCustomizations (536)
+[2020.03.22-21.57.49:022][431]LogModuleManager: Shutting down and abandoning module PackagesDialog (534)
+[2020.03.22-21.57.49:022][431]LogModuleManager: Shutting down and abandoning module AnimationBlueprintEditor (532)
+[2020.03.22-21.57.49:022][431]LogModuleManager: Shutting down and abandoning module Persona (530)
+[2020.03.22-21.57.49:022][431]LogModuleManager: Shutting down and abandoning module AdvancedPreviewScene (529)
+[2020.03.22-21.57.49:022][431]LogModuleManager: Shutting down and abandoning module AnimGraph (527)
+[2020.03.22-21.57.49:022][431]LogModuleManager: Shutting down and abandoning module Kismet (524)
+[2020.03.22-21.57.49:031][431]LogModuleManager: Shutting down and abandoning module KismetWidgets (523)
+[2020.03.22-21.57.49:031][431]LogModuleManager: Shutting down and abandoning module GraphEditor (520)
+[2020.03.22-21.57.49:031][431]LogModuleManager: Shutting down and abandoning module StructViewer (518)
+[2020.03.22-21.57.49:031][431]LogModuleManager: Shutting down and abandoning module ClassViewer (516)
+[2020.03.22-21.57.49:031][431]LogModuleManager: Shutting down and abandoning module Toolbox (514)
+[2020.03.22-21.57.49:031][431]LogModuleManager: Shutting down and abandoning module ModuleUI (512)
+[2020.03.22-21.57.49:031][431]LogModuleManager: Shutting down and abandoning module OutputLog (510)
+[2020.03.22-21.57.49:031][431]LogModuleManager: Shutting down and abandoning module GammaUI (508)
+[2020.03.22-21.57.49:031][431]LogModuleManager: Shutting down and abandoning module Documentation (506)
+[2020.03.22-21.57.49:031][431]LogModuleManager: Shutting down and abandoning module ToolMenus (504)
+[2020.03.22-21.57.49:031][431]LogModuleManager: Shutting down and abandoning module LiveCoding (502)
+[2020.03.22-21.57.49:031][431]LogModuleManager: Shutting down and abandoning module LevelSequence (500)
+[2020.03.22-21.57.49:031][431]LogModuleManager: Shutting down and abandoning module MovieSceneTracks (498)
+[2020.03.22-21.57.49:031][431]LogModuleManager: Shutting down and abandoning module MovieScene (496)
+[2020.03.22-21.57.49:031][431]LogModuleManager: Shutting down and abandoning module StreamingPauseRendering (494)
+[2020.03.22-21.57.49:031][431]LogModuleManager: Shutting down and abandoning module LauncherPlatform (492)
+[2020.03.22-21.57.49:031][431]LogModuleManager: Shutting down and abandoning module AnalyticsET (490)
+[2020.03.22-21.57.49:031][431]LogModuleManager: Shutting down and abandoning module PortalServices (488)
+[2020.03.22-21.57.49:031][431]LogModuleManager: Shutting down and abandoning module PortalRpc (486)
+[2020.03.22-21.57.49:031][431]LogModuleManager: Shutting down and abandoning module MessagingRpc (484)
+[2020.03.22-21.57.49:031][431]LogModuleManager: Shutting down and abandoning module AudioMixerXAudio2 (482)
+[2020.03.22-21.57.49:031][431]LogModuleManager: Shutting down and abandoning module AIModule (480)
+[2020.03.22-21.57.49:032][431]LogModuleManager: Shutting down and abandoning module GameplayDebugger (479)
+[2020.03.22-21.57.49:032][431]LogModuleManager: Shutting down and abandoning module AITestSuite (477)
+[2020.03.22-21.57.49:032][431]LogModuleManager: Shutting down and abandoning module NavigationSystem (475)
+[2020.03.22-21.57.49:032][431]LogModuleManager: Shutting down and abandoning module ImageWriteQueue (472)
+[2020.03.22-21.57.49:034][431]LogModuleManager: Shutting down and abandoning module ProfilerService (470)
+[2020.03.22-21.57.49:258][431]LogModuleManager: Shutting down and abandoning module TaskGraph (468)
+[2020.03.22-21.57.49:258][431]LogModuleManager: Shutting down and abandoning module ScreenshotTools (466)
+[2020.03.22-21.57.49:258][431]LogModuleManager: Shutting down and abandoning module ProceduralMeshComponentEditor (464)
+[2020.03.22-21.57.49:258][431]LogModuleManager: Shutting down and abandoning module ProceduralMeshComponent (462)
+[2020.03.22-21.57.49:258][431]LogModuleManager: Shutting down and abandoning module OculusEditor (460)
+[2020.03.22-21.57.49:258][431]LogModuleManager: Shutting down and abandoning module OculusInput (458)
+[2020.03.22-21.57.49:258][431]LogModuleManager: Shutting down and abandoning module MobilePatchingUtils (456)
+[2020.03.22-21.57.49:258][431]LogModuleManager: Shutting down and abandoning module EditableMesh (454)
+[2020.03.22-21.57.49:258][431]LogModuleManager: Shutting down and abandoning module CustomMeshComponent (452)
+[2020.03.22-21.57.49:258][431]LogModuleManager: Shutting down and abandoning module CableComponent (450)
+[2020.03.22-21.57.49:258][431]LogModuleManager: Shutting down and abandoning module AudioCapture (448)
+[2020.03.22-21.57.49:258][431]LogModuleManager: Shutting down and abandoning module AudioCaptureRtAudio (447)
+[2020.03.22-21.57.49:258][431]LogModuleManager: Shutting down and abandoning module AssetTags (444)
+[2020.03.22-21.57.49:258][431]LogModuleManager: Shutting down and abandoning module ArchVisCharacter (442)
+[2020.03.22-21.57.49:258][431]LogModuleManager: Shutting down and abandoning module AppleImageUtilsBlueprintSupport (440)
+[2020.03.22-21.57.49:258][431]LogModuleManager: Shutting down and abandoning module AppleImageUtils (438)
+[2020.03.22-21.57.49:258][431]LogModuleManager: Shutting down and abandoning module AndroidPermission (436)
+[2020.03.22-21.57.49:258][431]LogModuleManager: Shutting down and abandoning module NUTUnrealEngine4 (434)
+[2020.03.22-21.57.49:259][431]LogModuleManager: Shutting down and abandoning module NetcodeUnitTest (432)
+[2020.03.22-21.57.49:259][431]LogModuleManager: Shutting down and abandoning module MediaCompositing (430)
+[2020.03.22-21.57.49:259][431]LogModuleManager: Shutting down and abandoning module ImgMedia (428)
+[2020.03.22-21.57.49:259][431]LogModuleManager: Shutting down and abandoning module MagicLeapHelperVulkan (426)
+[2020.03.22-21.57.49:259][431]LogModuleManager: Shutting down and abandoning module MagicLeapHelperOpenGL (424)
+[2020.03.22-21.57.49:259][431]LogModuleManager: Shutting down and abandoning module MagicLeapAudio (422)
+[2020.03.22-21.57.49:259][431]LogModuleManager: Shutting down and abandoning module NiagaraEditorWidgets (420)
+[2020.03.22-21.57.49:259][431]LogModuleManager: Shutting down and abandoning module GeometryCacheTracks (418)
+[2020.03.22-21.57.49:259][431]LogModuleManager: Shutting down and abandoning module GeometryCacheSequencer (416)
+[2020.03.22-21.57.49:259][431]LogModuleManager: Shutting down and abandoning module BackChannel (414)
+[2020.03.22-21.57.49:259][431]LogModuleManager: Shutting down and abandoning module AutomationUtilsEditor (412)
+[2020.03.22-21.57.49:259][431]LogModuleManager: Shutting down and abandoning module AutomationUtils (410)
+[2020.03.22-21.57.49:259][431]LogModuleManager: Shutting down and abandoning module AlembicImporter (408)
+[2020.03.22-21.57.49:259][431]LogModuleManager: Shutting down and abandoning module AlembicLibrary (407)
+[2020.03.22-21.57.49:259][431]LogModuleManager: Shutting down and abandoning module GeometryCache (406)
+[2020.03.22-21.57.49:259][431]LogModuleManager: Shutting down and abandoning module GeometryCacheEd (405)
+[2020.03.22-21.57.49:259][431]LogModuleManager: Shutting down and abandoning module VariantManagerContentEditor (400)
+[2020.03.22-21.57.49:259][431]LogModuleManager: Shutting down and abandoning module DatasmithContentEditor (398)
+[2020.03.22-21.57.49:259][431]LogModuleManager: Shutting down and abandoning module SpeedTreeImporter (396)
+[2020.03.22-21.57.49:259][431]LogModuleManager: Shutting down and abandoning module PluginBrowser (394)
+[2020.03.22-21.57.49:259][431]LogModuleManager: Shutting down and abandoning module MobileLauncherProfileWizard (392)
+[2020.03.22-21.57.49:259][431]LogModuleManager: Shutting down and abandoning module MaterialAnalyzer (390)
+[2020.03.22-21.57.49:259][431]LogModuleManager: Shutting down and abandoning module CurveEditorTools (388)
+[2020.03.22-21.57.49:259][431]LogModuleManager: Shutting down and abandoning module CryptoKeysOpenSSL (386)
+[2020.03.22-21.57.49:259][431]LogModuleManager: Shutting down and abandoning module CryptoKeys (384)
+[2020.03.22-21.57.49:259][431]LogModuleManager: Shutting down and abandoning module VisualStudioSourceCodeAccess (382)
+[2020.03.22-21.57.49:259][431]LogModuleManager: Shutting down and abandoning module VisualStudioCodeSourceCodeAccess (380)
+[2020.03.22-21.57.49:259][431]LogModuleManager: Shutting down and abandoning module UObjectPlugin (378)
+[2020.03.22-21.57.49:259][431]LogModuleManager: Shutting down and abandoning module SubversionSourceControl (376)
+[2020.03.22-21.57.49:259][431]LogModuleManager: Shutting down and abandoning module PlasticSourceControl (374)
+[2020.03.22-21.57.49:259][431]LogModuleManager: Shutting down and abandoning module PerforceSourceControl (372)
+[2020.03.22-21.57.49:259][431]LogModuleManager: Shutting down and abandoning module GitSourceControl (370)
+[2020.03.22-21.57.49:259][431]LogModuleManager: Shutting down and abandoning module SourceControl (369)
+[2020.03.22-21.57.49:259][431]LogModuleManager: Shutting down and abandoning module CLionSourceCodeAccess (366)
+[2020.03.22-21.57.49:259][431]LogModuleManager: Shutting down and abandoning module AnimationSharingEd (364)
+[2020.03.22-21.57.49:259][431]LogModuleManager: Shutting down and abandoning module ActorLayerUtilitiesEditor (362)
+[2020.03.22-21.57.49:259][431]LogModuleManager: Shutting down and abandoning module ActorLayerUtilities (360)
+[2020.03.22-21.57.49:259][431]LogModuleManager: Shutting down and abandoning module LightPropagationVolumeEditor (358)
+[2020.03.22-21.57.49:259][431]LogModuleManager: Shutting down and abandoning module PaperTiledImporter (356)
+[2020.03.22-21.57.49:259][431]LogModuleManager: Shutting down and abandoning module PaperSpriteSheetImporter (354)
+[2020.03.22-21.57.49:259][431]LogModuleManager: Shutting down and abandoning module Paper2DEditor (352)
+[2020.03.22-21.57.49:259][431]LogModuleManager: Shutting down and abandoning module SignificanceManager (350)
+[2020.03.22-21.57.49:259][431]LogModuleManager: Shutting down and abandoning module RuntimePhysXCooking (348)
+[2020.03.22-21.57.49:259][431]LogModuleManager: Shutting down and abandoning module PhysXVehiclesEditor (346)
+[2020.03.22-21.57.49:259][431]LogModuleManager: Shutting down and abandoning module LocationServicesBPLibrary (342)
+[2020.03.22-21.57.49:259][431]LogModuleManager: Shutting down and abandoning module ActorSequence (340)
+[2020.03.22-21.57.49:259][431]LogModuleManager: Shutting down and abandoning module UdpMessaging (338)
+[2020.03.22-21.57.49:360][431]LogModuleManager: Shutting down and abandoning module TcpMessaging (336)
+[2020.03.22-21.57.49:461][431]LogModuleManager: Shutting down and abandoning module MagicLeapPrivileges (334)
+[2020.03.22-21.57.49:461][431]LogModuleManager: Shutting down and abandoning module MagicLeapPlanes (332)
+[2020.03.22-21.57.49:461][431]LogMagicLeapPlanes: Planes tracker already destroyed.
+[2020.03.22-21.57.49:461][431]LogModuleManager: Shutting down and abandoning module MagicLeapIdentity (330)
+[2020.03.22-21.57.49:461][431]LogModuleManager: Shutting down and abandoning module MagicLeapSecureStorage (328)
+[2020.03.22-21.57.49:461][431]LogModuleManager: Shutting down and abandoning module MagicLeapImageTracker (326)
+[2020.03.22-21.57.49:461][431]LogModuleManager: Shutting down and abandoning module MagicLeapHandTracking (324)
+[2020.03.22-21.57.49:461][431]LogModuleManager: Shutting down and abandoning module MagicLeapHandMeshing (322)
+[2020.03.22-21.57.49:461][431]LogModuleManager: Shutting down and abandoning module MagicLeapEyeTracker (320)
+[2020.03.22-21.57.49:461][431]LogModuleManager: Shutting down and abandoning module MagicLeapController (318)
+[2020.03.22-21.57.49:461][431]LogSlate: Slate User Destroyed.  User Index 0, Is Virtual User: 0
+[2020.03.22-21.57.49:461][431]LogModuleManager: Shutting down and abandoning module MagicLeapARPin (316)
+[2020.03.22-21.57.49:461][431]LogModuleManager: Shutting down and abandoning module MagicLeapAR (314)
+[2020.03.22-21.57.49:461][431]LogModuleManager: Shutting down and abandoning module AugmentedReality (313)
+[2020.03.22-21.57.49:461][431]LogModuleManager: Shutting down and abandoning module NiagaraAnimNotifies (310)
+[2020.03.22-21.57.49:461][431]LogModuleManager: Shutting down and abandoning module Niagara (308)
+[2020.03.22-21.57.49:461][431]LogModuleManager: Shutting down and abandoning module NiagaraEditor (307)
+[2020.03.22-21.57.49:461][431]LogModuleManager: Shutting down and abandoning module NiagaraCore (304)
+[2020.03.22-21.57.49:461][431]LogModuleManager: Shutting down and abandoning module GameplayTagsEditor (302)
+[2020.03.22-21.57.49:461][431]LogModuleManager: Shutting down and abandoning module FacialAnimationEditor (300)
+[2020.03.22-21.57.49:461][431]LogModuleManager: Shutting down and abandoning module FacialAnimation (298)
+[2020.03.22-21.57.49:461][431]LogModuleManager: Shutting down and abandoning module DataValidation (296)
+[2020.03.22-21.57.49:461][431]LogModuleManager: Shutting down and abandoning module AssetManagerEditor (294)
+[2020.03.22-21.57.49:461][431]LogModuleManager: Shutting down and abandoning module LevelEditor (293)
+[2020.03.22-21.57.49:462][431]LogModuleManager: Shutting down and abandoning module PixelInspectorModule (292)
+[2020.03.22-21.57.49:462][431]LogModuleManager: Shutting down and abandoning module CommonMenuExtensions (290)
+[2020.03.22-21.57.49:462][431]LogModuleManager: Shutting down and abandoning module MainFrame (288)
+[2020.03.22-21.57.49:462][431]LogModuleManager: Shutting down and abandoning module HotReload (287)
+[2020.03.22-21.57.49:462][431]LogModuleManager: Shutting down and abandoning module ContentBrowser (283)
+[2020.03.22-21.57.49:463][431]LogModuleManager: Shutting down and abandoning module TreeMap (281)
+[2020.03.22-21.57.49:463][431]LogModuleManager: Shutting down and abandoning module AnimationSharing (278)
+[2020.03.22-21.57.49:463][431]LogModuleManager: Shutting down and abandoning module LightPropagationVolumeRuntime (276)
+[2020.03.22-21.57.49:463][431]LogModuleManager: Shutting down and abandoning module Paper2D (274)
+[2020.03.22-21.57.49:463][431]LogModuleManager: Shutting down and abandoning module WindowsMoviePlayer (272)
+[2020.03.22-21.57.49:465][431]LogModuleManager: Shutting down and abandoning module WebMMoviePlayer (270)
+[2020.03.22-21.57.49:465][431]LogModuleManager: Shutting down and abandoning module NetworkReplayStreaming (268)
+[2020.03.22-21.57.49:465][431]LogModuleManager: Shutting down and abandoning module PacketHandler (266)
+[2020.03.22-21.57.49:465][431]LogModuleManager: Shutting down and abandoning module ClothingSystemEditor (264)
+[2020.03.22-21.57.49:465][431]LogModuleManager: Shutting down and abandoning module ClothingSystemRuntimeNv (262)
+[2020.03.22-21.57.49:465][431]LogModuleManager: Shutting down and abandoning module MediaAssets (260)
+[2020.03.22-21.57.49:465][431]LogModuleManager: Shutting down and abandoning module Overlay (258)
+[2020.03.22-21.57.49:465][431]LogModuleManager: Shutting down and abandoning module OverlayEditor (257)
+[2020.03.22-21.57.49:465][431]LogModuleManager: Shutting down and abandoning module VREditor (254)
+[2020.03.22-21.57.49:465][431]LogModuleManager: Shutting down and abandoning module StringTableEditor (252)
+[2020.03.22-21.57.49:465][431]LogModuleManager: Shutting down and abandoning module GameplayTasksEditor (250)
+[2020.03.22-21.57.49:465][431]LogModuleManager: Shutting down and abandoning module BehaviorTreeEditor (248)
+[2020.03.22-21.57.49:465][431]LogModuleManager: Shutting down and abandoning module FunctionalTesting (246)
+[2020.03.22-21.57.49:465][431]LogModuleManager: Shutting down and abandoning module CollisionAnalyzer (244)
+[2020.03.22-21.57.49:465][431]LogModuleManager: Shutting down and abandoning module WorkspaceMenuStructure (243)
+[2020.03.22-21.57.49:465][431]LogModuleManager: Shutting down and abandoning module UMG (240)
+[2020.03.22-21.57.49:465][431]LogModuleManager: Shutting down and abandoning module UMGEditor (239)
+[2020.03.22-21.57.49:465][431]LogModuleManager: Shutting down and abandoning module MessageLog (237)
+[2020.03.22-21.57.49:465][431]LogModuleManager: Shutting down and abandoning module SlateReflector (232)
+[2020.03.22-21.57.49:465][431]LogModuleManager: Shutting down and abandoning module Slate (230)
+[2020.03.22-21.57.49:465][431]LogModuleManager: Shutting down and abandoning module SlateCore (228)
+[2020.03.22-21.57.49:465][431]LogModuleManager: Shutting down and abandoning module LandscapeEditorUtilities (226)
+[2020.03.22-21.57.49:465][431]LogModuleManager: Shutting down and abandoning module UnrealEd (224)
+[2020.03.22-21.57.49:465][431]LogModuleManager: Shutting down and abandoning module MRMesh (222)
+[2020.03.22-21.57.49:465][431]LogModuleManager: Shutting down and abandoning module SourceCodeAccess (220)
+[2020.03.22-21.57.49:465][431]LogModuleManager: Shutting down and abandoning module HeadMountedDisplay (218)
+[2020.03.22-21.57.49:465][431]LogModuleManager: Shutting down and abandoning module XAudio2 (216)
+[2020.03.22-21.57.49:465][431]LogModuleManager: Shutting down and abandoning module Networking (214)
+[2020.03.22-21.57.49:465][431]LogModuleManager: Shutting down and abandoning module Core (212)
+[2020.03.22-21.57.49:465][431]LogModuleManager: Shutting down and abandoning module MovieSceneTools (210)
+[2020.03.22-21.57.49:465][431]LogModuleManager: Shutting down and abandoning module CurveEditor (209)
+[2020.03.22-21.57.49:466][431]LogModuleManager: Shutting down and abandoning module Sequencer (207)
+[2020.03.22-21.57.49:466][431]LogModuleManager: Shutting down and abandoning module EditorStyle (206)
+[2020.03.22-21.57.49:467][431]LogModuleManager: Shutting down and abandoning module KismetCompiler (202)
+[2020.03.22-21.57.49:467][431]LogModuleManager: Shutting down and abandoning module MeshUtilities (200)
+[2020.03.22-21.57.49:467][431]LogModuleManager: Shutting down and abandoning module MeshMergeUtilities (199)
+[2020.03.22-21.57.49:467][431]LogModuleManager: Shutting down and abandoning module MeshReductionInterface (198)
+[2020.03.22-21.57.49:467][431]LogModuleManager: Shutting down and abandoning module MeshBoneReduction (197)
+[2020.03.22-21.57.49:467][431]LogModuleManager: Shutting down and abandoning module SkeletalMeshReduction (195)
+[2020.03.22-21.57.49:467][431]LogModuleManager: Shutting down and abandoning module ProxyLODMeshReduction (193)
+[2020.03.22-21.57.49:467][431]LogModuleManager: Shutting down and abandoning module QuadricMeshReduction (191)
+[2020.03.22-21.57.49:467][431]LogModuleManager: Shutting down and abandoning module MaterialBaking (187)
+[2020.03.22-21.57.49:467][431]LogModuleManager: Shutting down and abandoning module NullInstallBundleManager (182)
+[2020.03.22-21.57.49:467][431]LogModuleManager: Shutting down and abandoning module DerivedDataCache (180)
+[2020.03.22-21.57.49:467][431]LogDerivedDataCache: Shutdown
+[2020.03.22-21.57.49:467][431]LogModuleManager: Shutting down and abandoning module XGEController (178)
+[2020.03.22-21.57.49:467][431]LogXGEController: Cleaning working directory: C:/Users/Jim/AppData/Local/Temp/UnrealXGEWorkingDir/
+[2020.03.22-21.57.49:467][431]LogModuleManager: Shutting down and abandoning module TargetPlatform (176)
+[2020.03.22-21.57.49:467][431]LogModuleManager: Shutting down and abandoning module VulkanShaderFormat (175)
+[2020.03.22-21.57.49:467][431]LogModuleManager: Shutting down and abandoning module ShaderFormatVectorVM (173)
+[2020.03.22-21.57.49:467][431]LogModuleManager: Shutting down and abandoning module ShaderFormatOpenGL (171)
+[2020.03.22-21.57.49:467][431]LogModuleManager: Shutting down and abandoning module ShaderFormatD3D (169)
+[2020.03.22-21.57.49:467][431]LogModuleManager: Shutting down and abandoning module MetalShaderFormat (167)
+[2020.03.22-21.57.49:467][431]LogModuleManager: Shutting down and abandoning module TextureFormatUncompressed (165)
+[2020.03.22-21.57.49:467][431]LogModuleManager: Shutting down and abandoning module TextureFormatPVR (163)
+[2020.03.22-21.57.49:467][431]LogModuleManager: Shutting down and abandoning module TextureFormatDXT (161)
+[2020.03.22-21.57.49:467][431]LogModuleManager: Shutting down and abandoning module TextureFormatIntelISPCTexComp (159)
+[2020.03.22-21.57.49:467][431]LogModuleManager: Shutting down and abandoning module TextureFormatASTC (157)
+[2020.03.22-21.57.49:467][431]LogModuleManager: Shutting down and abandoning module ImageWrapper (156)
+[2020.03.22-21.57.49:467][431]LogModuleManager: Shutting down and abandoning module TextureFormatAndroid (153)
+[2020.03.22-21.57.49:467][431]LogModuleManager: Shutting down and abandoning module AudioFormatOpus (151)
+[2020.03.22-21.57.49:467][431]LogModuleManager: Shutting down and abandoning module AudioFormatOgg (149)
+[2020.03.22-21.57.49:467][431]LogModuleManager: Shutting down and abandoning module AudioFormatADPCM (147)
+[2020.03.22-21.57.49:467][431]LogModuleManager: Shutting down and abandoning module WindowsServerTargetPlatform (145)
+[2020.03.22-21.57.49:467][431]LogModuleManager: Shutting down and abandoning module WindowsClientTargetPlatform (143)
+[2020.03.22-21.57.49:467][431]LogModuleManager: Shutting down and abandoning module WindowsTargetPlatform (141)
+[2020.03.22-21.57.49:468][431]LogModuleManager: Shutting down and abandoning module WindowsNoEditorTargetPlatform (139)
+[2020.03.22-21.57.49:468][431]LogModuleManager: Shutting down and abandoning module TVOSTargetPlatform (137)
+[2020.03.22-21.57.49:468][431]LogModuleManager: Shutting down and abandoning module LuminTargetPlatform (135)
+[2020.03.22-21.57.49:469][431]LogModuleManager: Shutting down and abandoning module LinuxAArch64ServerTargetPlatform (133)
+[2020.03.22-21.57.49:469][431]LogModuleManager: Shutting down and abandoning module LinuxAArch64ClientTargetPlatform (131)
+[2020.03.22-21.57.49:469][431]LogModuleManager: Shutting down and abandoning module LinuxAArch64NoEditorTargetPlatform (129)
+[2020.03.22-21.57.49:469][431]LogModuleManager: Shutting down and abandoning module LinuxServerTargetPlatform (127)
+[2020.03.22-21.57.49:469][431]LogModuleManager: Shutting down and abandoning module LinuxClientTargetPlatform (125)
+[2020.03.22-21.57.49:469][431]LogModuleManager: Shutting down and abandoning module LinuxNoEditorTargetPlatform (123)
+[2020.03.22-21.57.49:469][431]LogModuleManager: Shutting down and abandoning module Messaging (121)
+[2020.03.22-21.57.49:469][431]LogModuleManager: Shutting down and abandoning module IOSTargetPlatform (119)
+[2020.03.22-21.57.49:469][431]LogModuleManager: Shutting down and abandoning module AndroidTargetPlatform (117)
+[2020.03.22-21.57.49:474][431]LogModuleManager: Shutting down and abandoning module AllDesktopTargetPlatform (115)
+[2020.03.22-21.57.49:474][431]LogModuleManager: Shutting down and abandoning module D3D12RHI (112)
+[2020.03.22-21.57.49:474][431]LogModuleManager: Shutting down and abandoning module InputCore (110)
+[2020.03.22-21.57.49:474][431]LogModuleManager: Shutting down and abandoning module Settings (108)
+[2020.03.22-21.57.49:474][431]LogModuleManager: Shutting down and abandoning module DirectoryWatcher (106)
+[2020.03.22-21.57.49:474][431]LogModuleManager: Shutting down and abandoning module PhysXCooking (104)
+[2020.03.22-21.57.49:474][431]LogModuleManager: Shutting down and abandoning module ChaosSolvers (102)
+[2020.03.22-21.57.49:474][431]LogModuleManager: Shutting down and abandoning module FieldSystemEngine (101)
+[2020.03.22-21.57.49:474][431]LogModuleManager: Shutting down and abandoning module Chaos (98)
+[2020.03.22-21.57.49:474][431]LogModuleManager: Shutting down and abandoning module WindowsPlatformFeatures (96)
+[2020.03.22-21.57.49:475][431]LogModuleManager: Shutting down and abandoning module GameplayMediaEncoder (95)
+[2020.03.22-21.57.49:475][431]LogModuleManager: Shutting down and abandoning module SteamVRInputDevice (92)
+[2020.03.22-21.57.49:475][431]LogModuleManager: Shutting down and abandoning module SteamVRInput (90)
+[2020.03.22-21.57.49:475][431]LogModuleManager: Shutting down and abandoning module SteamVR (88)
+[2020.03.22-21.57.49:475][431]LogHMD: Freeing OpenVRDLLHandle.
+[2020.03.22-21.57.49:475][431]LogModuleManager: Shutting down and abandoning module OculusHMD (86)
+[2020.03.22-21.57.49:475][431]LogModuleManager: Shutting down and abandoning module ExampleDeviceProfileSelector (84)
+[2020.03.22-21.57.49:475][431]LogModuleManager: Shutting down and abandoning module LauncherChunkInstaller (82)
+[2020.03.22-21.57.49:475][431]LogModuleManager: Shutting down and abandoning module OnlineBlueprintSupport (80)
+[2020.03.22-21.57.49:475][431]LogModuleManager: Shutting down and abandoning module OnlineSubsystem (76)
+[2020.03.22-21.57.49:475][431]LogModuleManager: Shutting down and abandoning module XMPP (71)
+[2020.03.22-21.57.49:476][431]LogModuleManager: Shutting down and abandoning module WebSockets (70)
+[2020.03.22-21.57.49:509][431]LogModuleManager: Shutting down and abandoning module HTTP (67)
+[2020.03.22-21.57.49:509][431]LogHttp: Display: Http module shutting down, but needs to wait on 1 outstanding Http requests:
+[2020.03.22-21.57.49:509][431]LogHttp: Display: 	verb=[POST] url=[https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7BE5DD2FFB-4E0D-11A3-7BC8-41881C8CFC54%7D&AppID=UEEditor.Rocket.Release&AppVersion=4.24.3-11590370%2B%2B%2BUE4%2BRelease-4.24&UserID=cbe17d46496ad20a41788e8821a3e187%7C982782e525234895b45f49a3907d3019%7C6579e7d8-7343-4197-8d2f-c31a2f28a06f&AppEnvironment=datacollector-binary&UploadType=eteventstream] refs=[1] status=Processing
+[2020.03.22-21.57.49:525][431]LogModuleManager: Shutting down and abandoning module SSL (66)
+[2020.03.22-21.57.49:525][431]LogModuleManager: Shutting down and abandoning module WmfMedia (62)
+[2020.03.22-21.57.49:526][431]LogModuleManager: Shutting down and abandoning module Media (61)
+[2020.03.22-21.57.49:527][431]LogModuleManager: Shutting down and abandoning module MagicLeap (58)
+[2020.03.22-21.57.49:527][431]LogModuleManager: Shutting down and abandoning module NiagaraVertexFactories (56)
+[2020.03.22-21.57.49:527][431]LogModuleManager: Shutting down and abandoning module NiagaraShader (54)
+[2020.03.22-21.57.49:527][431]LogModuleManager: Shutting down and abandoning module VariantManagerContent (52)
+[2020.03.22-21.57.49:527][431]LogModuleManager: Shutting down and abandoning module DatasmithContent (50)
+[2020.03.22-21.57.49:528][431]LogModuleManager: Shutting down and abandoning module AISupportModule (48)
+[2020.03.22-21.57.49:528][431]LogModuleManager: Shutting down and abandoning module DesktopPlatform (46)
+[2020.03.22-21.57.49:528][431]LogModuleManager: Shutting down and abandoning module PlatformCryptoOpenSSL (44)
+[2020.03.22-21.57.49:528][431]LogModuleManager: Shutting down and abandoning module PlatformCryptoTypes (42)
+[2020.03.22-21.57.49:528][431]LogModuleManager: Shutting down and abandoning module PlatformCrypto (40)
+[2020.03.22-21.57.49:528][431]LogModuleManager: Shutting down and abandoning module AnimationModifiers (38)
+[2020.03.22-21.57.49:528][431]LogModuleManager: Shutting down and abandoning module PropertyEditor (37)
+[2020.03.22-21.57.49:529][431]LogModuleManager: Shutting down and abandoning module AudioEditor (34)
+[2020.03.22-21.57.49:529][431]LogModuleManager: Shutting down and abandoning module TextureCompressor (32)
+[2020.03.22-21.57.49:529][431]LogModuleManager: Shutting down and abandoning module RenderCore (30)
+[2020.03.22-21.57.49:529][431]LogModuleManager: Shutting down and abandoning module Landscape (28)
+[2020.03.22-21.57.49:529][431]LogModuleManager: Shutting down and abandoning module SlateRHIRenderer (26)
+[2020.03.22-21.57.49:530][431]LogModuleManager: Shutting down and abandoning module OpenGLDrv (24)
+[2020.03.22-21.57.49:530][431]LogModuleManager: Shutting down and abandoning module D3D11RHI (22)
+[2020.03.22-21.57.49:530][431]LogModuleManager: Shutting down and abandoning module AnimGraphRuntime (20)
+[2020.03.22-21.57.49:530][431]LogModuleManager: Shutting down and abandoning module Renderer (18)
+[2020.03.22-21.57.49:530][431]LogModuleManager: Shutting down and abandoning module Engine (16)
+[2020.03.22-21.57.49:530][431]LogModuleManager: Shutting down and abandoning module CoreUObject (14)
+[2020.03.22-21.57.49:530][431]LogModuleManager: Shutting down and abandoning module NetworkFile (12)
+[2020.03.22-21.57.49:530][431]LogModuleManager: Shutting down and abandoning module CookedIterativeFile (10)
+[2020.03.22-21.57.49:530][431]LogModuleManager: Shutting down and abandoning module StreamingFile (8)
+[2020.03.22-21.57.49:530][431]LogModuleManager: Shutting down and abandoning module SandboxFile (6)
+[2020.03.22-21.57.49:530][431]LogModuleManager: Shutting down and abandoning module PakFile (4)
+[2020.03.22-21.57.49:530][431]LogModuleManager: Shutting down and abandoning module RSA (3)
+[2020.03.22-21.57.49:530][431]LogNiagara: FNiagaraDummyRWBufferInt ReleaseRHI NiagaraRenderer::DummyInt
+[2020.03.22-21.57.49:530][431]LogNiagara: FNiagaraDummyRWBufferFloat ReleaseRHI NiagaraRenderer::DummyFloat
+[2020.03.22-21.57.49:583][431]LogD3D12RHI: ~FD3D12DynamicRHI
+[2020.03.22-21.57.49:593][431]LogExit: Exiting.
+[2020.03.22-21.57.49:594][431]Log file closed, 03/22/20 15:57:49
