@@ -1,0 +1,930 @@
+﻿Log file open, 03/31/20 19:13:49
+LogWindows: Failed to load 'aqProf.dll' (GetLastError=126)
+LogWindows: File 'aqProf.dll' does not exist
+LogWindows: Failed to load 'VtuneApi.dll' (GetLastError=126)
+LogWindows: File 'VtuneApi.dll' does not exist
+LogWindows: Failed to load 'VtuneApi32e.dll' (GetLastError=126)
+LogWindows: File 'VtuneApi32e.dll' does not exist
+LogConsoleResponse: Display: Failed to find resolution value strings in scalability ini. Falling back to default.
+LogInit: Display: Running engine for game: VFX_Learning
+LogPlatformFile: Not using cached read wrapper
+LogTaskGraph: Started task graph with 5 named threads and 35 total threads with 3 sets of task threads.
+LogStats: Stats thread started at 0.197022
+LogD3D11RHI: Loaded GFSDK_Aftermath_Lib.x64.dll
+LogICUInternationalization: ICU TimeZone Detection - Raw Offset: -7:00, Platform Override: ''
+LogPluginManager: Mounting plugin Paper2D
+LogPluginManager: Mounting plugin AISupport
+LogPluginManager: Mounting plugin LightPropagationVolume
+LogPluginManager: Mounting plugin ActorLayerUtilities
+LogPluginManager: Mounting plugin AnimationSharing
+LogPluginManager: Mounting plugin CLionSourceCodeAccess
+LogPluginManager: Mounting plugin CodeLiteSourceCodeAccess
+LogPluginManager: Mounting plugin GitSourceControl
+LogPluginManager: Mounting plugin KDevelopSourceCodeAccess
+LogPluginManager: Mounting plugin NullSourceCodeAccess
+LogPluginManager: Mounting plugin PerforceSourceControl
+LogPluginManager: Mounting plugin PlasticSourceControl
+LogPluginManager: Mounting plugin SubversionSourceControl
+LogPluginManager: Mounting plugin UObjectPlugin
+LogPluginManager: Mounting plugin VisualStudioCodeSourceCodeAccess
+LogPluginManager: Mounting plugin VisualStudioSourceCodeAccess
+LogPluginManager: Mounting plugin XCodeSourceCodeAccess
+LogPluginManager: Mounting plugin AssetManagerEditor
+LogPluginManager: Mounting plugin CryptoKeys
+LogPluginManager: Mounting plugin CurveEditorTools
+LogPluginManager: Mounting plugin DataValidation
+LogPluginManager: Mounting plugin FacialAnimation
+LogPluginManager: Mounting plugin GameplayTagsEditor
+LogPluginManager: Mounting plugin MacGraphicsSwitching
+LogPluginManager: Mounting plugin MaterialAnalyzer
+LogPluginManager: Mounting plugin MobileLauncherProfileWizard
+LogPluginManager: Mounting plugin PluginBrowser
+LogPluginManager: Mounting plugin SpeedTreeImporter
+LogPluginManager: Mounting plugin DatasmithContent
+LogPluginManager: Mounting plugin VariantManagerContent
+LogPluginManager: Mounting plugin AlembicImporter
+LogPluginManager: Mounting plugin AutomationUtils
+LogPluginManager: Mounting plugin BackChannel
+LogPluginManager: Mounting plugin CharacterAI
+LogPluginManager: Mounting plugin GeometryCache
+LogPluginManager: Mounting plugin PlatformCrypto
+LogPluginManager: Mounting plugin ProxyLODPlugin
+LogPluginManager: Mounting plugin SkeletalReduction
+LogPluginManager: Mounting plugin Niagara
+LogPluginManager: Mounting plugin MagicLeap
+LogPluginManager: Mounting plugin MagicLeapMedia
+LogPluginManager: Mounting plugin MLSDK
+LogPluginManager: Mounting plugin AndroidMedia
+LogPluginManager: Mounting plugin AvfMedia
+LogPluginManager: Mounting plugin ImgMedia
+LogPluginManager: Mounting plugin MediaCompositing
+LogPluginManager: Mounting plugin MediaPlayerEditor
+LogPluginManager: Mounting plugin WebMMedia
+LogPluginManager: Mounting plugin WmfMedia
+LogPluginManager: Mounting plugin TcpMessaging
+LogPluginManager: Mounting plugin UdpMessaging
+LogPluginManager: Mounting plugin ActorSequence
+LogPluginManager: Mounting plugin LevelSequenceEditor
+LogPluginManager: Mounting plugin MatineeToLevelSequence
+LogPluginManager: Mounting plugin NetcodeUnitTest
+LogPluginManager: Mounting plugin NUTUnrealEngine4
+LogPluginManager: Mounting plugin OnlineSubsystemGooglePlay
+LogPluginManager: Mounting plugin OnlineSubsystemIOS
+LogPluginManager: Mounting plugin OnlineSubsystem
+LogPluginManager: Mounting plugin OnlineSubsystemNull
+LogPluginManager: Mounting plugin OnlineSubsystemUtils
+LogPluginManager: Mounting plugin LauncherChunkInstaller
+LogPluginManager: Mounting plugin AndroidDeviceProfileSelector
+LogPluginManager: Mounting plugin AndroidMoviePlayer
+LogPluginManager: Mounting plugin AndroidPermission
+LogPluginManager: Mounting plugin AppleImageUtils
+LogPluginManager: Mounting plugin AppleMoviePlayer
+LogPluginManager: Mounting plugin ArchVisCharacter
+LogPluginManager: Mounting plugin AssetTags
+LogPluginManager: Mounting plugin AudioCapture
+LogPluginManager: Mounting plugin CableComponent
+LogPluginManager: Mounting plugin CustomMeshComponent
+LogPluginManager: Mounting plugin EditableMesh
+LogPluginManager: Mounting plugin ExampleDeviceProfileSelector
+LogPluginManager: Mounting plugin GoogleCloudMessaging
+LogPluginManager: Mounting plugin IOSDeviceProfileSelector
+LogPluginManager: Mounting plugin LinuxDeviceProfileSelector
+LogPluginManager: Mounting plugin LocationServicesBPLibrary
+LogPluginManager: Mounting plugin MobilePatchingUtils
+LogPluginManager: Mounting plugin OculusVR
+LogPluginManager: Mounting plugin PhysXVehicles
+LogPluginManager: Mounting plugin PostSplashScreen
+LogPluginManager: Mounting plugin ProceduralMeshComponent
+LogPluginManager: Mounting plugin RuntimePhysXCooking
+LogPluginManager: Mounting plugin SignificanceManager
+LogPluginManager: Mounting plugin SteamVR
+LogPluginManager: Mounting plugin WebMMoviePlayer
+LogPluginManager: Mounting plugin WindowsMoviePlayer
+LogPluginManager: Mounting plugin ScreenshotTools
+LogInit: Using libcurl 7.55.1-DEV
+LogInit:  - built for x86_64-pc-win32
+LogInit:  - supports SSL with OpenSSL/1.1.1
+LogInit:  - supports HTTP deflate (compression) using libz 1.2.8
+LogInit:  - other features:
+LogInit:      CURL_VERSION_SSL
+LogInit:      CURL_VERSION_LIBZ
+LogInit:      CURL_VERSION_IPV6
+LogInit:      CURL_VERSION_ASYNCHDNS
+LogInit:      CURL_VERSION_LARGEFILE
+LogInit:      CURL_VERSION_IDN
+LogInit:  CurlRequestOptions (configurable via config and command line):
+LogInit:  - bVerifyPeer = true  - Libcurl will verify peer certificate
+LogInit:  - bUseHttpProxy = false  - Libcurl will NOT use HTTP proxy
+LogInit:  - bDontReuseConnections = false  - Libcurl will reuse connections
+LogInit:  - MaxHostConnections = 16  - Libcurl will limit the number of connections to a host
+LogInit:  - LocalHostAddr = Default
+LogInit:  - BufferSize = 65536
+LogOnline: OSS: Creating online subsystem instance for: NULL
+LogInit: WinSock: version 1.1 (2.2), MaxSocks=32767, MaxUdp=65467
+LogOnline: OSS: TryLoadSubsystemAndSetDefault: Loaded subsystem for module [NULL]
+LogInit: Build: ++UE4+Release-4.24-CL-11590370
+LogInit: Engine Version: 4.24.3-11590370+++UE4+Release-4.24
+LogInit: Compatible Engine Version: 4.24.0-10570792+++UE4+Release-4.24
+LogInit: Net CL: 10570792
+LogInit: OS: Windows 10 (Release 1903) (), CPU: Intel(R) Core(TM) i7-8700K CPU @ 3.70GHz, GPU: NVIDIA GeForce GTX 1080 Ti
+LogInit: Compiled (64-bit): Feb 24 2020 15:39:18
+LogInit: Compiled with Visual C++: 19.16.27032.01
+LogInit: Build Configuration: Development
+LogInit: Branch Name: ++UE4+Release-4.24
+LogInit: Command Line: 
+LogInit: Base Directory: F:/Unreal/UE_4.24/Engine/Binaries/Win64/
+LogInit: Installed Engine Build: 1
+LogDevObjectVersion: Number of dev versions registered: 25
+LogDevObjectVersion:   Dev-Blueprints (B0D832E4-1F89-4F0D-ACCF-7EB736FD4AA2): 10
+LogDevObjectVersion:   Dev-Build (E1C64328-A22C-4D53-A36C-8E866417BD8C): 0
+LogDevObjectVersion:   Dev-Core (375EC13C-06E4-48FB-B500-84F0262A717E): 3
+LogDevObjectVersion:   Dev-Editor (E4B068ED-F494-42E9-A231-DA0B2E46BB41): 37
+LogDevObjectVersion:   Dev-Framework (CFFC743F-43B0-4480-9391-14DF171D2073): 36
+LogDevObjectVersion:   Dev-Mobile (B02B49B5-BB20-44E9-A304-32B752E40360): 2
+LogDevObjectVersion:   Dev-Networking (A4E4105C-59A1-49B5-A7C5-40C4547EDFEE): 0
+LogDevObjectVersion:   Dev-Online (39C831C9-5AE6-47DC-9A44-9C173E1C8E7C): 0
+LogDevObjectVersion:   Dev-Physics (78F01B33-EBEA-4F98-B9B4-84EACCB95AA2): 2
+LogDevObjectVersion:   Dev-Platform (6631380F-2D4D-43E0-8009-CF276956A95A): 0
+LogDevObjectVersion:   Dev-Rendering (12F88B9F-8875-4AFC-A67C-D90C383ABD29): 36
+LogDevObjectVersion:   Dev-Sequencer (7B5AE74C-D270-4C10-A958-57980B212A5A): 11
+LogDevObjectVersion:   Dev-VR (D7296918-1DD6-4BDD-9DE2-64A83CC13884): 2
+LogDevObjectVersion:   Dev-LoadTimes (C2A15278-BFE7-4AFE-6C17-90FF531DF755): 1
+LogDevObjectVersion:   Private-Geometry (6EACA3D4-40EC-4CC1-B786-8BED09428FC5): 3
+LogDevObjectVersion:   Dev-AnimPhys (29E575DD-E0A3-4627-9D10-D276232CDCEA): 17
+LogDevObjectVersion:   Dev-Anim (AF43A65D-7FD3-4947-9873-3E8ED9C1BB05): 2
+LogDevObjectVersion:   Dev-ReflectionCapture (6B266CEC-1EC7-4B8F-A30B-E4D90942FC07): 1
+LogDevObjectVersion:   Dev-Automation (0DF73D61-A23F-47EA-B727-89E90C41499A): 1
+LogDevObjectVersion:   FortniteMain (601D1886-AC64-4F84-AA16-D3DE0DEAC7D6): 31
+LogDevObjectVersion:   Dev-Enterprise (9DFFBCD6-494F-0158-E221-12823C92A888): 8
+LogDevObjectVersion:   Dev-Niagara (F2AED0AC-9AFE-416F-8664-AA7FFA26D6FC): 1
+LogDevObjectVersion:   Dev-Destruction (174F1F0B-B4C6-45A5-B13F-2EE8D0FB917D): 9
+LogDevObjectVersion:   Dev-Physics-Ext (35F94A83-E258-406C-A318-09F59610247C): 8
+LogDevObjectVersion:   Dev-CineCamera (B2E18506-4273-CFC2-A54E-F4BB758BBA07): 1
+LogInit: Presizing for max 25165824 objects, including 0 objects not considered by GC, pre-allocating 0 bytes for permanent pool.
+LogInit: Object subsystem initialized
+LogConfig: Setting CVar [[con.DebugEarlyDefault:1]]
+LogConfig: Setting CVar [[r.setres:1280x720]]
+[2020.04.01-01.13.49:994][  0]LogConfig: Setting CVar [[r.VSync:0]]
+[2020.04.01-01.13.49:994][  0]LogConfig: Setting CVar [[r.RHICmdBypass:0]]
+[2020.04.01-01.13.49:994][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.RendererSettings] File [C:/Users/Jim/Documents/VFX_Learning/Saved/Config/Windows/Engine.ini]
+[2020.04.01-01.13.49:994][  0]LogConfig: Setting CVar [[r.GPUCrashDebugging:0]]
+[2020.04.01-01.13.49:994][  0]LogConfig: Setting CVar [[r.SkinCache.CompileShaders:1]]
+[2020.04.01-01.13.49:994][  0]LogConfig: Setting CVar [[r.RayTracing:0]]
+[2020.04.01-01.13.49:994][  0]LogConfig: Setting CVar [[r.DefaultFeature.MotionBlur:0]]
+[2020.04.01-01.13.49:994][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.RendererOverrideSettings] File [C:/Users/Jim/Documents/VFX_Learning/Saved/Config/Windows/Engine.ini]
+[2020.04.01-01.13.49:994][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.StreamingSettings] File [C:/Users/Jim/Documents/VFX_Learning/Saved/Config/Windows/Engine.ini]
+[2020.04.01-01.13.49:994][  0]LogConfig: Setting CVar [[s.MinBulkDataSizeForAsyncLoading:131072]]
+[2020.04.01-01.13.49:994][  0]LogConfig: Setting CVar [[s.AsyncLoadingThreadEnabled:0]]
+[2020.04.01-01.13.49:994][  0]LogConfig: Setting CVar [[s.EventDrivenLoaderEnabled:1]]
+[2020.04.01-01.13.49:994][  0]LogConfig: Setting CVar [[s.WarnIfTimeLimitExceeded:0]]
+[2020.04.01-01.13.49:994][  0]LogConfig: Setting CVar [[s.TimeLimitExceededMultiplier:1.5]]
+[2020.04.01-01.13.49:994][  0]LogConfig: Setting CVar [[s.TimeLimitExceededMinTime:0.005]]
+[2020.04.01-01.13.49:994][  0]LogConfig: Setting CVar [[s.UseBackgroundLevelStreaming:1]]
+[2020.04.01-01.13.49:994][  0]LogConfig: Setting CVar [[s.PriorityAsyncLoadingExtraTime:15.0]]
+[2020.04.01-01.13.49:994][  0]LogConfig: Setting CVar [[s.LevelStreamingActorsUpdateTimeLimit:5.0]]
+[2020.04.01-01.13.49:994][  0]LogConfig: Setting CVar [[s.PriorityLevelStreamingActorsUpdateExtraTime:5.0]]
+[2020.04.01-01.13.49:994][  0]LogConfig: Setting CVar [[s.LevelStreamingComponentsRegistrationGranularity:10]]
+[2020.04.01-01.13.49:994][  0]LogConfig: Setting CVar [[s.UnregisterComponentsTimeLimit:1.0]]
+[2020.04.01-01.13.49:994][  0]LogConfig: Setting CVar [[s.LevelStreamingComponentsUnregistrationGranularity:5]]
+[2020.04.01-01.13.49:994][  0]LogConfig: Setting CVar [[s.FlushStreamingOnExit:1]]
+[2020.04.01-01.13.49:994][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.GarbageCollectionSettings] File [C:/Users/Jim/Documents/VFX_Learning/Saved/Config/Windows/Engine.ini]
+[2020.04.01-01.13.49:994][  0]LogConfig: Setting CVar [[gc.MaxObjectsNotConsideredByGC:1]]
+[2020.04.01-01.13.49:994][  0]LogConfig: Setting CVar [[gc.SizeOfPermanentObjectPool:0]]
+[2020.04.01-01.13.49:994][  0]LogConfig: Setting CVar [[gc.FlushStreamingOnGC:0]]
+[2020.04.01-01.13.49:994][  0]LogConfig: Setting CVar [[gc.NumRetriesBeforeForcingGC:10]]
+[2020.04.01-01.13.49:994][  0]LogConfig: Setting CVar [[gc.AllowParallelGC:1]]
+[2020.04.01-01.13.49:994][  0]LogConfig: Setting CVar [[gc.TimeBetweenPurgingPendingKillObjects:61.1]]
+[2020.04.01-01.13.49:994][  0]LogConfig: Setting CVar [[gc.MaxObjectsInEditor:25165824]]
+[2020.04.01-01.13.49:994][  0]LogConfig: Setting CVar [[gc.IncrementalBeginDestroyEnabled:1]]
+[2020.04.01-01.13.49:994][  0]LogConfig: Setting CVar [[gc.CreateGCClusters:1]]
+[2020.04.01-01.13.49:994][  0]LogConfig: Setting CVar [[gc.MinGCClusterSize:5]]
+[2020.04.01-01.13.49:994][  0]LogConfig: Setting CVar [[gc.ActorClusteringEnabled:0]]
+[2020.04.01-01.13.49:994][  0]LogConfig: Setting CVar [[gc.BlueprintClusteringEnabled:0]]
+[2020.04.01-01.13.49:994][  0]LogConfig: Setting CVar [[gc.UseDisregardForGCOnDedicatedServers:0]]
+[2020.04.01-01.13.49:994][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.NetworkSettings] File [C:/Users/Jim/Documents/VFX_Learning/Saved/Config/Windows/Engine.ini]
+[2020.04.01-01.13.49:994][  0]LogConfig: Applying CVar settings from Section [/Script/UnrealEd.CookerSettings] File [C:/Users/Jim/Documents/VFX_Learning/Saved/Config/Windows/Engine.ini]
+[2020.04.01-01.13.50:000][  0]LogConfig: Applying CVar settings from Section [ViewDistanceQuality@3] File [C:/Users/Jim/Documents/VFX_Learning/Saved/Config/Windows/Scalability.ini]
+[2020.04.01-01.13.50:000][  0]LogConfig: Setting CVar [[r.SkeletalMeshLODBias:0]]
+[2020.04.01-01.13.50:000][  0]LogConfig: Setting CVar [[r.ViewDistanceScale:1.0]]
+[2020.04.01-01.13.50:000][  0]LogConfig: Applying CVar settings from Section [AntiAliasingQuality@3] File [C:/Users/Jim/Documents/VFX_Learning/Saved/Config/Windows/Scalability.ini]
+[2020.04.01-01.13.50:000][  0]LogConfig: Setting CVar [[r.PostProcessAAQuality:4]]
+[2020.04.01-01.13.50:000][  0]LogConfig: Applying CVar settings from Section [ShadowQuality@3] File [C:/Users/Jim/Documents/VFX_Learning/Saved/Config/Windows/Scalability.ini]
+[2020.04.01-01.13.50:000][  0]LogConfig: Setting CVar [[r.LightFunctionQuality:1]]
+[2020.04.01-01.13.50:000][  0]LogConfig: Setting CVar [[r.ShadowQuality:5]]
+[2020.04.01-01.13.50:000][  0]LogConfig: Setting CVar [[r.Shadow.CSM.MaxCascades:10]]
+[2020.04.01-01.13.50:000][  0]LogConfig: Setting CVar [[r.Shadow.MaxResolution:2048]]
+[2020.04.01-01.13.50:000][  0]LogConfig: Setting CVar [[r.Shadow.MaxCSMResolution:2048]]
+[2020.04.01-01.13.50:000][  0]LogConfig: Setting CVar [[r.Shadow.RadiusThreshold:0.01]]
+[2020.04.01-01.13.50:000][  0]LogConfig: Setting CVar [[r.Shadow.DistanceScale:1.0]]
+[2020.04.01-01.13.50:000][  0]LogConfig: Setting CVar [[r.Shadow.CSM.TransitionScale:1.0]]
+[2020.04.01-01.13.50:000][  0]LogConfig: Setting CVar [[r.Shadow.PreShadowResolutionFactor:1.0]]
+[2020.04.01-01.13.50:000][  0]LogConfig: Setting CVar [[r.DistanceFieldShadowing:1]]
+[2020.04.01-01.13.50:000][  0]LogConfig: Setting CVar [[r.DistanceFieldAO:1]]
+[2020.04.01-01.13.50:000][  0]LogConfig: Setting CVar [[r.AOQuality:2]]
+[2020.04.01-01.13.50:000][  0]LogConfig: Setting CVar [[r.VolumetricFog:1]]
+[2020.04.01-01.13.50:000][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridPixelSize:8]]
+[2020.04.01-01.13.50:000][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridSizeZ:128]]
+[2020.04.01-01.13.50:000][  0]LogConfig: Setting CVar [[r.VolumetricFog.HistoryMissSupersampleCount:4]]
+[2020.04.01-01.13.50:000][  0]LogConfig: Setting CVar [[r.LightMaxDrawDistanceScale:1]]
+[2020.04.01-01.13.50:000][  0]LogConfig: Setting CVar [[r.CapsuleShadows:1]]
+[2020.04.01-01.13.50:000][  0]LogConfig: Applying CVar settings from Section [PostProcessQuality@3] File [C:/Users/Jim/Documents/VFX_Learning/Saved/Config/Windows/Scalability.ini]
+[2020.04.01-01.13.50:000][  0]LogConfig: Setting CVar [[r.MotionBlurQuality:4]]
+[2020.04.01-01.13.50:000][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMipLevelFactor:0.4]]
+[2020.04.01-01.13.50:000][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMaxQuality:100]]
+[2020.04.01-01.13.50:000][  0]LogConfig: Setting CVar [[r.AmbientOcclusionLevels:-1]]
+[2020.04.01-01.13.50:000][  0]LogConfig: Setting CVar [[r.AmbientOcclusionRadiusScale:1.0]]
+[2020.04.01-01.13.50:000][  0]LogConfig: Setting CVar [[r.DepthOfFieldQuality:2]]
+[2020.04.01-01.13.50:000][  0]LogConfig: Setting CVar [[r.RenderTargetPoolMin:400]]
+[2020.04.01-01.13.50:001][  0]LogConfig: Setting CVar [[r.LensFlareQuality:2]]
+[2020.04.01-01.13.50:001][  0]LogConfig: Setting CVar [[r.SceneColorFringeQuality:1]]
+[2020.04.01-01.13.50:001][  0]LogConfig: Setting CVar [[r.EyeAdaptationQuality:2]]
+[2020.04.01-01.13.50:001][  0]LogConfig: Setting CVar [[r.BloomQuality:5]]
+[2020.04.01-01.13.50:001][  0]LogConfig: Setting CVar [[r.FastBlurThreshold:100]]
+[2020.04.01-01.13.50:001][  0]LogConfig: Setting CVar [[r.Upscale.Quality:3]]
+[2020.04.01-01.13.50:001][  0]LogConfig: Setting CVar [[r.Tonemapper.GrainQuantization:1]]
+[2020.04.01-01.13.50:001][  0]LogConfig: Setting CVar [[r.LightShaftQuality:1]]
+[2020.04.01-01.13.50:001][  0]LogConfig: Setting CVar [[r.Filter.SizeScale:1]]
+[2020.04.01-01.13.50:001][  0]LogConfig: Setting CVar [[r.Tonemapper.Quality:5]]
+[2020.04.01-01.13.50:001][  0]LogConfig: Setting CVar [[r.DOF.Gather.AccumulatorQuality:1        ; higher gathering accumulator quality]]
+[2020.04.01-01.13.50:001][  0]LogConfig: Setting CVar [[r.DOF.Gather.PostfilterMethod:1          ; Median3x3 postfilering method]]
+[2020.04.01-01.13.50:001][  0]LogConfig: Setting CVar [[r.DOF.Gather.EnableBokehSettings:0       ; no bokeh simulation when gathering]]
+[2020.04.01-01.13.50:001][  0]LogConfig: Setting CVar [[r.DOF.Gather.RingCount:4                 ; medium number of samples when gathering]]
+[2020.04.01-01.13.50:001][  0]LogConfig: Setting CVar [[r.DOF.Scatter.ForegroundCompositing:1    ; additive foreground scattering]]
+[2020.04.01-01.13.50:001][  0]LogConfig: Setting CVar [[r.DOF.Scatter.BackgroundCompositing:2    ; additive background scattering]]
+[2020.04.01-01.13.50:001][  0]LogConfig: Setting CVar [[r.DOF.Scatter.EnableBokehSettings:1      ; bokeh simulation when scattering]]
+[2020.04.01-01.13.50:001][  0]LogConfig: Setting CVar [[r.DOF.Scatter.MaxSpriteRatio:0.1         ; only a maximum of 10% of scattered bokeh]]
+[2020.04.01-01.13.50:001][  0]LogConfig: Setting CVar [[r.DOF.Recombine.Quality:1                ; cheap slight out of focus]]
+[2020.04.01-01.13.50:001][  0]LogConfig: Setting CVar [[r.DOF.Recombine.EnableBokehSettings:0    ; no bokeh simulation on slight out of focus]]
+[2020.04.01-01.13.50:001][  0]LogConfig: Setting CVar [[r.DOF.TemporalAAQuality:1                ; more stable temporal accumulation]]
+[2020.04.01-01.13.50:001][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxForegroundRadius:0.025]]
+[2020.04.01-01.13.50:001][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxBackgroundRadius:0.025]]
+[2020.04.01-01.13.50:001][  0]LogConfig: Applying CVar settings from Section [TextureQuality@3] File [C:/Users/Jim/Documents/VFX_Learning/Saved/Config/Windows/Scalability.ini]
+[2020.04.01-01.13.50:001][  0]LogConfig: Setting CVar [[r.Streaming.MipBias:0]]
+[2020.04.01-01.13.50:001][  0]LogConfig: Setting CVar [[r.Streaming.AmortizeCPUToGPUCopy:0]]
+[2020.04.01-01.13.50:001][  0]LogConfig: Setting CVar [[r.Streaming.MaxNumTexturesToStreamPerFrame:0]]
+[2020.04.01-01.13.50:001][  0]LogConfig: Setting CVar [[r.Streaming.Boost:1]]
+[2020.04.01-01.13.50:001][  0]LogConfig: Setting CVar [[r.MaxAnisotropy:8]]
+[2020.04.01-01.13.50:001][  0]LogConfig: Setting CVar [[r.VT.MaxAnisotropy:8]]
+[2020.04.01-01.13.50:001][  0]LogConfig: Setting CVar [[r.Streaming.LimitPoolSizeToVRAM:0]]
+[2020.04.01-01.13.50:001][  0]LogConfig: Setting CVar [[r.Streaming.PoolSize:1000]]
+[2020.04.01-01.13.50:001][  0]LogConfig: Setting CVar [[r.Streaming.MaxEffectiveScreenSize:0]]
+[2020.04.01-01.13.50:001][  0]LogConfig: Applying CVar settings from Section [EffectsQuality@3] File [C:/Users/Jim/Documents/VFX_Learning/Saved/Config/Windows/Scalability.ini]
+[2020.04.01-01.13.50:001][  0]LogConfig: Setting CVar [[r.TranslucencyLightingVolumeDim:64]]
+[2020.04.01-01.13.50:001][  0]LogConfig: Setting CVar [[r.RefractionQuality:2]]
+[2020.04.01-01.13.50:001][  0]LogConfig: Setting CVar [[r.SSR.Quality:3]]
+[2020.04.01-01.13.50:001][  0]LogConfig: Setting CVar [[r.SSR.HalfResSceneColor:0]]
+[2020.04.01-01.13.50:001][  0]LogConfig: Setting CVar [[r.SceneColorFormat:4]]
+[2020.04.01-01.13.50:001][  0]LogConfig: Setting CVar [[r.DetailMode:2]]
+[2020.04.01-01.13.50:001][  0]LogConfig: Setting CVar [[r.TranslucencyVolumeBlur:1]]
+[2020.04.01-01.13.50:001][  0]LogConfig: Setting CVar [[r.MaterialQualityLevel:1 ; High quality]]
+[2020.04.01-01.13.50:001][  0]LogConfig: Setting CVar [[r.SSS.Scale:1]]
+[2020.04.01-01.13.50:001][  0]LogConfig: Setting CVar [[r.SSS.SampleSet:2]]
+[2020.04.01-01.13.50:001][  0]LogConfig: Setting CVar [[r.SSS.Quality:1]]
+[2020.04.01-01.13.50:001][  0]LogConfig: Setting CVar [[r.SSS.HalfRes:1]]
+[2020.04.01-01.13.50:001][  0]LogConfig: Setting CVar [[r.SSGI.Quality:3]]
+[2020.04.01-01.13.50:001][  0]LogConfig: Setting CVar [[r.EmitterSpawnRateScale:1.0]]
+[2020.04.01-01.13.50:001][  0]LogConfig: Setting CVar [[r.ParticleLightQuality:2]]
+[2020.04.01-01.13.50:001][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.FastApplyOnOpaque:1 ; Always have FastSkyLUT 1 in this case to avoid wrong sky]]
+[2020.04.01-01.13.50:001][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.SampleCountPerSlice:1]]
+[2020.04.01-01.13.50:001][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.DepthResolution:16.0]]
+[2020.04.01-01.13.50:001][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT:1]]
+[2020.04.01-01.13.50:001][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT.SampleCountMin:4.0]]
+[2020.04.01-01.13.50:001][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT.SampleCountMax:32.0]]
+[2020.04.01-01.13.50:001][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.SampleCountMin:4.0]]
+[2020.04.01-01.13.50:001][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.SampleCountMax:32.0]]
+[2020.04.01-01.13.50:001][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.TransmittanceLUT.UseSmallFormat:0]]
+[2020.04.01-01.13.50:001][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.TransmittanceLUT.SampleCount:10.0]]
+[2020.04.01-01.13.50:001][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.MultiScatteringLUT.SampleCount:15.0]]
+[2020.04.01-01.13.50:001][  0]LogConfig: Applying CVar settings from Section [FoliageQuality@3] File [C:/Users/Jim/Documents/VFX_Learning/Saved/Config/Windows/Scalability.ini]
+[2020.04.01-01.13.50:001][  0]LogConfig: Setting CVar [[foliage.DensityScale:1.0]]
+[2020.04.01-01.13.50:001][  0]LogConfig: Setting CVar [[grass.DensityScale:1.0]]
+[2020.04.01-01.13.50:001][  0]LogConfig: Applying CVar settings from Section [ShadingQuality@3] File [C:/Users/Jim/Documents/VFX_Learning/Saved/Config/Windows/Scalability.ini]
+[2020.04.01-01.13.50:001][  0]LogConfig: Setting CVar [[r.HairStrands.SkyLighting.SampleCount:16]]
+[2020.04.01-01.13.50:001][  0]LogConfig: Setting CVar [[r.HairStrands.SkyLighting.JitterIntegration:0]]
+[2020.04.01-01.13.50:001][  0]LogConfig: Setting CVar [[r.HairStrands.SkyAO.SampleCount:16]]
+[2020.04.01-01.13.50:001][  0]LogInit: Selected Device Profile: [Windows]
+[2020.04.01-01.13.50:001][  0]LogInit: Applying CVar settings loaded from the selected device profile: [Windows]
+[2020.04.01-01.13.50:007][  0]LogHAL: Display: Platform has ~ 32 GB [34290954240 / 34359738368 / 32], which maps to Largest [LargestMinGB=32, LargerMinGB=12, DefaultMinGB=8, SmallerMinGB=6, SmallestMinGB=0)
+[2020.04.01-01.13.50:007][  0]LogInit: Going up to parent DeviceProfile []
+[2020.04.01-01.13.50:007][  0]LogConfig: Applying CVar settings from Section [ViewDistanceQuality@3] File [C:/Users/Jim/Documents/VFX_Learning/Saved/Config/Windows/Scalability.ini]
+[2020.04.01-01.13.50:007][  0]LogConfig: Setting CVar [[r.SkeletalMeshLODBias:0]]
+[2020.04.01-01.13.50:007][  0]LogConfig: Setting CVar [[r.ViewDistanceScale:1.0]]
+[2020.04.01-01.13.50:007][  0]LogConfig: Applying CVar settings from Section [AntiAliasingQuality@3] File [C:/Users/Jim/Documents/VFX_Learning/Saved/Config/Windows/Scalability.ini]
+[2020.04.01-01.13.50:007][  0]LogConfig: Setting CVar [[r.PostProcessAAQuality:4]]
+[2020.04.01-01.13.50:007][  0]LogConfig: Applying CVar settings from Section [ShadowQuality@3] File [C:/Users/Jim/Documents/VFX_Learning/Saved/Config/Windows/Scalability.ini]
+[2020.04.01-01.13.50:007][  0]LogConfig: Setting CVar [[r.LightFunctionQuality:1]]
+[2020.04.01-01.13.50:007][  0]LogConfig: Setting CVar [[r.ShadowQuality:5]]
+[2020.04.01-01.13.50:007][  0]LogConfig: Setting CVar [[r.Shadow.CSM.MaxCascades:10]]
+[2020.04.01-01.13.50:007][  0]LogConfig: Setting CVar [[r.Shadow.MaxResolution:2048]]
+[2020.04.01-01.13.50:007][  0]LogConfig: Setting CVar [[r.Shadow.MaxCSMResolution:2048]]
+[2020.04.01-01.13.50:007][  0]LogConfig: Setting CVar [[r.Shadow.RadiusThreshold:0.01]]
+[2020.04.01-01.13.50:007][  0]LogConfig: Setting CVar [[r.Shadow.DistanceScale:1.0]]
+[2020.04.01-01.13.50:007][  0]LogConfig: Setting CVar [[r.Shadow.CSM.TransitionScale:1.0]]
+[2020.04.01-01.13.50:007][  0]LogConfig: Setting CVar [[r.Shadow.PreShadowResolutionFactor:1.0]]
+[2020.04.01-01.13.50:007][  0]LogConfig: Setting CVar [[r.DistanceFieldShadowing:1]]
+[2020.04.01-01.13.50:007][  0]LogConfig: Setting CVar [[r.DistanceFieldAO:1]]
+[2020.04.01-01.13.50:007][  0]LogConfig: Setting CVar [[r.AOQuality:2]]
+[2020.04.01-01.13.50:007][  0]LogConfig: Setting CVar [[r.VolumetricFog:1]]
+[2020.04.01-01.13.50:007][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridPixelSize:8]]
+[2020.04.01-01.13.50:007][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridSizeZ:128]]
+[2020.04.01-01.13.50:007][  0]LogConfig: Setting CVar [[r.VolumetricFog.HistoryMissSupersampleCount:4]]
+[2020.04.01-01.13.50:007][  0]LogConfig: Setting CVar [[r.LightMaxDrawDistanceScale:1]]
+[2020.04.01-01.13.50:007][  0]LogConfig: Setting CVar [[r.CapsuleShadows:1]]
+[2020.04.01-01.13.50:007][  0]LogConfig: Applying CVar settings from Section [PostProcessQuality@3] File [C:/Users/Jim/Documents/VFX_Learning/Saved/Config/Windows/Scalability.ini]
+[2020.04.01-01.13.50:007][  0]LogConfig: Setting CVar [[r.MotionBlurQuality:4]]
+[2020.04.01-01.13.50:007][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMipLevelFactor:0.4]]
+[2020.04.01-01.13.50:007][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMaxQuality:100]]
+[2020.04.01-01.13.50:007][  0]LogConfig: Setting CVar [[r.AmbientOcclusionLevels:-1]]
+[2020.04.01-01.13.50:007][  0]LogConfig: Setting CVar [[r.AmbientOcclusionRadiusScale:1.0]]
+[2020.04.01-01.13.50:007][  0]LogConfig: Setting CVar [[r.DepthOfFieldQuality:2]]
+[2020.04.01-01.13.50:007][  0]LogConfig: Setting CVar [[r.RenderTargetPoolMin:400]]
+[2020.04.01-01.13.50:007][  0]LogConfig: Setting CVar [[r.LensFlareQuality:2]]
+[2020.04.01-01.13.50:007][  0]LogConfig: Setting CVar [[r.SceneColorFringeQuality:1]]
+[2020.04.01-01.13.50:007][  0]LogConfig: Setting CVar [[r.EyeAdaptationQuality:2]]
+[2020.04.01-01.13.50:007][  0]LogConfig: Setting CVar [[r.BloomQuality:5]]
+[2020.04.01-01.13.50:007][  0]LogConfig: Setting CVar [[r.FastBlurThreshold:100]]
+[2020.04.01-01.13.50:007][  0]LogConfig: Setting CVar [[r.Upscale.Quality:3]]
+[2020.04.01-01.13.50:007][  0]LogConfig: Setting CVar [[r.Tonemapper.GrainQuantization:1]]
+[2020.04.01-01.13.50:007][  0]LogConfig: Setting CVar [[r.LightShaftQuality:1]]
+[2020.04.01-01.13.50:007][  0]LogConfig: Setting CVar [[r.Filter.SizeScale:1]]
+[2020.04.01-01.13.50:007][  0]LogConfig: Setting CVar [[r.Tonemapper.Quality:5]]
+[2020.04.01-01.13.50:007][  0]LogConfig: Setting CVar [[r.DOF.Gather.AccumulatorQuality:1        ; higher gathering accumulator quality]]
+[2020.04.01-01.13.50:007][  0]LogConfig: Setting CVar [[r.DOF.Gather.PostfilterMethod:1          ; Median3x3 postfilering method]]
+[2020.04.01-01.13.50:007][  0]LogConfig: Setting CVar [[r.DOF.Gather.EnableBokehSettings:0       ; no bokeh simulation when gathering]]
+[2020.04.01-01.13.50:007][  0]LogConfig: Setting CVar [[r.DOF.Gather.RingCount:4                 ; medium number of samples when gathering]]
+[2020.04.01-01.13.50:007][  0]LogConfig: Setting CVar [[r.DOF.Scatter.ForegroundCompositing:1    ; additive foreground scattering]]
+[2020.04.01-01.13.50:007][  0]LogConfig: Setting CVar [[r.DOF.Scatter.BackgroundCompositing:2    ; additive background scattering]]
+[2020.04.01-01.13.50:007][  0]LogConfig: Setting CVar [[r.DOF.Scatter.EnableBokehSettings:1      ; bokeh simulation when scattering]]
+[2020.04.01-01.13.50:007][  0]LogConfig: Setting CVar [[r.DOF.Scatter.MaxSpriteRatio:0.1         ; only a maximum of 10% of scattered bokeh]]
+[2020.04.01-01.13.50:007][  0]LogConfig: Setting CVar [[r.DOF.Recombine.Quality:1                ; cheap slight out of focus]]
+[2020.04.01-01.13.50:007][  0]LogConfig: Setting CVar [[r.DOF.Recombine.EnableBokehSettings:0    ; no bokeh simulation on slight out of focus]]
+[2020.04.01-01.13.50:008][  0]LogConfig: Setting CVar [[r.DOF.TemporalAAQuality:1                ; more stable temporal accumulation]]
+[2020.04.01-01.13.50:008][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxForegroundRadius:0.025]]
+[2020.04.01-01.13.50:008][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxBackgroundRadius:0.025]]
+[2020.04.01-01.13.50:008][  0]LogConfig: Applying CVar settings from Section [TextureQuality@3] File [C:/Users/Jim/Documents/VFX_Learning/Saved/Config/Windows/Scalability.ini]
+[2020.04.01-01.13.50:008][  0]LogConfig: Setting CVar [[r.Streaming.MipBias:0]]
+[2020.04.01-01.13.50:008][  0]LogConfig: Setting CVar [[r.Streaming.AmortizeCPUToGPUCopy:0]]
+[2020.04.01-01.13.50:008][  0]LogConfig: Setting CVar [[r.Streaming.MaxNumTexturesToStreamPerFrame:0]]
+[2020.04.01-01.13.50:008][  0]LogConfig: Setting CVar [[r.Streaming.Boost:1]]
+[2020.04.01-01.13.50:008][  0]LogConfig: Setting CVar [[r.MaxAnisotropy:8]]
+[2020.04.01-01.13.50:008][  0]LogConfig: Setting CVar [[r.VT.MaxAnisotropy:8]]
+[2020.04.01-01.13.50:008][  0]LogConfig: Setting CVar [[r.Streaming.LimitPoolSizeToVRAM:0]]
+[2020.04.01-01.13.50:008][  0]LogConfig: Setting CVar [[r.Streaming.PoolSize:1000]]
+[2020.04.01-01.13.50:008][  0]LogConfig: Setting CVar [[r.Streaming.MaxEffectiveScreenSize:0]]
+[2020.04.01-01.13.50:008][  0]LogConfig: Applying CVar settings from Section [EffectsQuality@3] File [C:/Users/Jim/Documents/VFX_Learning/Saved/Config/Windows/Scalability.ini]
+[2020.04.01-01.13.50:008][  0]LogConfig: Setting CVar [[r.TranslucencyLightingVolumeDim:64]]
+[2020.04.01-01.13.50:008][  0]LogConfig: Setting CVar [[r.RefractionQuality:2]]
+[2020.04.01-01.13.50:008][  0]LogConfig: Setting CVar [[r.SSR.Quality:3]]
+[2020.04.01-01.13.50:008][  0]LogConfig: Setting CVar [[r.SSR.HalfResSceneColor:0]]
+[2020.04.01-01.13.50:008][  0]LogConfig: Setting CVar [[r.SceneColorFormat:4]]
+[2020.04.01-01.13.50:008][  0]LogConfig: Setting CVar [[r.DetailMode:2]]
+[2020.04.01-01.13.50:008][  0]LogConfig: Setting CVar [[r.TranslucencyVolumeBlur:1]]
+[2020.04.01-01.13.50:008][  0]LogConfig: Setting CVar [[r.MaterialQualityLevel:1 ; High quality]]
+[2020.04.01-01.13.50:008][  0]LogConfig: Setting CVar [[r.SSS.Scale:1]]
+[2020.04.01-01.13.50:008][  0]LogConfig: Setting CVar [[r.SSS.SampleSet:2]]
+[2020.04.01-01.13.50:008][  0]LogConfig: Setting CVar [[r.SSS.Quality:1]]
+[2020.04.01-01.13.50:008][  0]LogConfig: Setting CVar [[r.SSS.HalfRes:1]]
+[2020.04.01-01.13.50:008][  0]LogConfig: Setting CVar [[r.SSGI.Quality:3]]
+[2020.04.01-01.13.50:008][  0]LogConfig: Setting CVar [[r.EmitterSpawnRateScale:1.0]]
+[2020.04.01-01.13.50:008][  0]LogConfig: Setting CVar [[r.ParticleLightQuality:2]]
+[2020.04.01-01.13.50:008][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.FastApplyOnOpaque:1 ; Always have FastSkyLUT 1 in this case to avoid wrong sky]]
+[2020.04.01-01.13.50:008][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.SampleCountPerSlice:1]]
+[2020.04.01-01.13.50:008][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.DepthResolution:16.0]]
+[2020.04.01-01.13.50:008][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT:1]]
+[2020.04.01-01.13.50:008][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT.SampleCountMin:4.0]]
+[2020.04.01-01.13.50:008][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT.SampleCountMax:32.0]]
+[2020.04.01-01.13.50:008][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.SampleCountMin:4.0]]
+[2020.04.01-01.13.50:008][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.SampleCountMax:32.0]]
+[2020.04.01-01.13.50:008][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.TransmittanceLUT.UseSmallFormat:0]]
+[2020.04.01-01.13.50:008][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.TransmittanceLUT.SampleCount:10.0]]
+[2020.04.01-01.13.50:008][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.MultiScatteringLUT.SampleCount:15.0]]
+[2020.04.01-01.13.50:008][  0]LogConfig: Applying CVar settings from Section [FoliageQuality@3] File [C:/Users/Jim/Documents/VFX_Learning/Saved/Config/Windows/Scalability.ini]
+[2020.04.01-01.13.50:008][  0]LogConfig: Setting CVar [[foliage.DensityScale:1.0]]
+[2020.04.01-01.13.50:008][  0]LogConfig: Setting CVar [[grass.DensityScale:1.0]]
+[2020.04.01-01.13.50:008][  0]LogConfig: Applying CVar settings from Section [ShadingQuality@3] File [C:/Users/Jim/Documents/VFX_Learning/Saved/Config/Windows/Scalability.ini]
+[2020.04.01-01.13.50:008][  0]LogConfig: Setting CVar [[r.HairStrands.SkyLighting.SampleCount:16]]
+[2020.04.01-01.13.50:008][  0]LogConfig: Setting CVar [[r.HairStrands.SkyLighting.JitterIntegration:0]]
+[2020.04.01-01.13.50:008][  0]LogConfig: Setting CVar [[r.HairStrands.SkyAO.SampleCount:16]]
+[2020.04.01-01.13.50:008][  0]LogConfig: Applying CVar settings from Section [Startup] File [../../../Engine/Config/ConsoleVariables.ini]
+[2020.04.01-01.13.50:009][  0]LogConfig: Setting CVar [[net.UseAdaptiveNetUpdateFrequency:0]]
+[2020.04.01-01.13.50:009][  0]LogConfig: Setting CVar [[p.chaos.AllowCreatePhysxBodies:1]]
+[2020.04.01-01.13.50:009][  0]LogConfig: Setting CVar [[fx.SkipVectorVMBackendOptimizations:1]]
+[2020.04.01-01.13.50:009][  0]LogConfig: Applying CVar settings from Section [ConsoleVariables] File [C:/Users/Jim/Documents/VFX_Learning/Saved/Config/Windows/Engine.ini]
+[2020.04.01-01.13.50:009][  0]LogInit: Computer: DESKTOP-IUR89VI
+[2020.04.01-01.13.50:009][  0]LogInit: User: Jim
+[2020.04.01-01.13.50:009][  0]LogInit: CPU Page size=4096, Cores=6
+[2020.04.01-01.13.50:009][  0]LogInit: High frequency timer resolution =10.000000 MHz
+[2020.04.01-01.13.50:009][  0]LogMemory: Memory total: Physical=31.9GB (32GB approx)
+[2020.04.01-01.13.50:009][  0]LogMemory: Platform Memory Stats for Windows
+[2020.04.01-01.13.50:009][  0]LogMemory: Process Physical Memory: 109.28 MB used, 109.29 MB peak
+[2020.04.01-01.13.50:009][  0]LogMemory: Process Virtual Memory: 101.86 MB used, 101.86 MB peak
+[2020.04.01-01.13.50:009][  0]LogMemory: Physical Memory: 10911.60 MB used,  21790.80 MB free, 32702.40 MB total
+[2020.04.01-01.13.50:009][  0]LogMemory: Virtual Memory: 5160.31 MB used,  134212568.00 MB free, 134217728.00 MB total
+[2020.04.01-01.13.50:015][  0]LogWindows: WindowsPlatformFeatures enabled
+[2020.04.01-01.13.50:063][  0]LogInit: Overriding language with editor language configuration option (en).
+[2020.04.01-01.13.50:064][  0]LogInit: Overriding locale with editor locale configuration option (en-US).
+[2020.04.01-01.13.50:195][  0]LogInit: Setting process to per monitor DPI aware
+[2020.04.01-01.13.50:314][  0]LogSlate: New Slate User Created.  User Index 0, Is Virtual User: 0
+[2020.04.01-01.13.50:314][  0]LogSlate: Slate User Registered.  User Index 0, Is Virtual User: 0
+[2020.04.01-01.13.50:969][  0]LogD3D12RHI: Aftermath initialized
+[2020.04.01-01.13.50:969][  0]LogD3D12RHI: Loading WinPixEventRuntime.dll for PIX profiling (from ../../../Engine/Binaries/ThirdParty/Windows/DirectX/x64).
+[2020.04.01-01.13.50:981][  0]LogHMD: Failed to initialize OpenVR with code 110
+[2020.04.01-01.13.51:112][  0]LogD3D12RHI: Found D3D12 adapter 0: NVIDIA GeForce GTX 1080 Ti (Max supported Feature Level 12_1)
+[2020.04.01-01.13.51:112][  0]LogD3D12RHI: Adapter has 11127MB of dedicated video memory, 0MB of dedicated system memory, and 16351MB of shared system memory, 2 output[s]
+[2020.04.01-01.13.51:127][  0]LogD3D12RHI: Found D3D12 adapter 1: Microsoft Basic Render Driver (Max supported Feature Level 12_1)
+[2020.04.01-01.13.51:127][  0]LogD3D12RHI: Adapter has 0MB of dedicated video memory, 0MB of dedicated system memory, and 16351MB of shared system memory, 0 output[s]
+[2020.04.01-01.13.51:127][  0]LogD3D12RHI: Forcing D3D12.AsyncDeferredDeletion=0 as a workaround for a deadlock.
+[2020.04.01-01.13.51:127][  0]LogD3D12RHI: Chosen D3D12 Adapter Id = 0
+[2020.04.01-01.13.51:134][  0]LogD3D12RHI: Emitting draw events for PIX profiling.
+[2020.04.01-01.13.51:210][  0]LogD3D12RHI: The system supports ID3D12Device1.
+[2020.04.01-01.13.51:210][  0]LogD3D12RHI: The system supports ID3D12Device2.
+[2020.04.01-01.13.51:287][  0]LogD3D12RHI: Display: Not using pipeline state disk cache per r.D3D12.PSO.DiskCache=0
+[2020.04.01-01.13.51:287][  0]LogD3D12RHI: Display: Not using driver-optimized pipeline state disk cache per r.D3D12.PSO.DriverOptimizedDiskCache=0
+[2020.04.01-01.13.51:288][  0]LogD3D12RHI:     GPU DeviceId: 0x1b06 (for the marketing name, search the web for "GPU Device Id")
+[2020.04.01-01.13.51:288][  0]LogWindows: EnumDisplayDevices:
+[2020.04.01-01.13.51:288][  0]LogWindows:    0. 'NVIDIA GeForce GTX 1080 Ti' (P:1 D:1)
+[2020.04.01-01.13.51:289][  0]LogWindows:    1. 'NVIDIA GeForce GTX 1080 Ti' (P:0 D:1)
+[2020.04.01-01.13.51:289][  0]LogWindows:    2. 'NVIDIA GeForce GTX 1080 Ti' (P:0 D:0)
+[2020.04.01-01.13.51:290][  0]LogWindows:    3. 'NVIDIA GeForce GTX 1080 Ti' (P:0 D:0)
+[2020.04.01-01.13.51:290][  0]LogWindows: DebugString: FoundDriverCount:4 
+[2020.04.01-01.13.51:290][  0]LogD3D12RHI:     Adapter Name: NVIDIA GeForce GTX 1080 Ti
+[2020.04.01-01.13.51:290][  0]LogD3D12RHI:   Driver Version: 442.59 (internal:26.21.14.4259, unified:442.59)
+[2020.04.01-01.13.51:290][  0]LogD3D12RHI:      Driver Date: 3-4-2020
+[2020.04.01-01.13.51:290][  0]LogRHI: Texture pool is 5958 MB (70% of 8512 MB)
+[2020.04.01-01.13.51:290][  0]LogD3D12RHI: Async texture creation enabled
+[2020.04.01-01.13.51:290][  0]LogD3D12RHI: RHI has support for 64 bit atomics
+[2020.04.01-01.13.51:800][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'AllDesktop'
+[2020.04.01-01.13.51:829][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android'
+[2020.04.01-01.13.51:829][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_ASTC'
+[2020.04.01-01.13.51:829][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_ATC'
+[2020.04.01-01.13.51:830][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_DXT'
+[2020.04.01-01.13.51:830][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_ETC1'
+[2020.04.01-01.13.51:830][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_ETC1a'
+[2020.04.01-01.13.51:830][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_ETC2'
+[2020.04.01-01.13.51:830][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_PVRTC'
+[2020.04.01-01.13.51:830][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'AndroidClient'
+[2020.04.01-01.13.51:830][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_ASTCClient'
+[2020.04.01-01.13.51:830][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_ATCClient'
+[2020.04.01-01.13.51:830][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_DXTClient'
+[2020.04.01-01.13.51:830][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_ETC1Client'
+[2020.04.01-01.13.51:830][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_ETC1aClient'
+[2020.04.01-01.13.51:830][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_ETC2Client'
+[2020.04.01-01.13.51:830][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_PVRTCClient'
+[2020.04.01-01.13.51:830][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_Multi'
+[2020.04.01-01.13.51:830][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_MultiClient'
+[2020.04.01-01.13.51:859][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'IOSClient'
+[2020.04.01-01.13.51:859][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'IOS'
+[2020.04.01-01.13.51:869][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'LinuxNoEditor'
+[2020.04.01-01.13.51:880][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'LinuxClient'
+[2020.04.01-01.13.51:890][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'LinuxServer'
+[2020.04.01-01.13.51:900][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'LinuxAArch64NoEditor'
+[2020.04.01-01.13.51:910][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'LinuxAArch64Client'
+[2020.04.01-01.13.51:920][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'LinuxAArch64Server'
+[2020.04.01-01.13.51:958][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Lumin'
+[2020.04.01-01.13.51:958][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'LuminClient'
+[2020.04.01-01.13.51:980][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'TVOSClient'
+[2020.04.01-01.13.51:980][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'TVOS'
+[2020.04.01-01.13.51:990][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'WindowsNoEditor'
+[2020.04.01-01.13.52:004][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Windows'
+[2020.04.01-01.13.52:014][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'WindowsClient'
+[2020.04.01-01.13.52:025][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'WindowsServer'
+[2020.04.01-01.13.52:025][  0]LogTargetPlatformManager: Display: Building Assets For Windows
+[2020.04.01-01.13.52:035][  0]LogAudioDebug: Display: Lib vorbis DLL was dynamically loaded.
+[2020.04.01-01.13.52:085][  0]LogShaderCompilers: Guid format shader working directory is 8 characters bigger than the processId version (C:/Users/Jim/Documents/VFX_Learning/Intermediate/Shaders/WorkingDirectory/16308/).
+[2020.04.01-01.13.52:085][  0]LogShaderCompilers: Cleaned the shader compiler working directory 'C:/Users/Jim/AppData/Local/Temp/UnrealShaderWorkingDir/64419B9742862721F6A7F7AD8AE0043E/'.
+[2020.04.01-01.13.52:086][  0]LogXGEController: Cleaning working directory: C:/Users/Jim/AppData/Local/Temp/UnrealXGEWorkingDir/
+[2020.04.01-01.13.52:087][  0]LogXGEController: Cannot use XGE Controller as Incredibuild is not installed on this machine.
+[2020.04.01-01.13.52:087][  0]LogShaderCompilers: Cannot use XGE Shader Compiler as Incredibuild is not installed on this machine.
+[2020.04.01-01.13.52:087][  0]LogShaderCompilers: Display: Using Local Shader Compiler.
+[2020.04.01-01.13.52:967][  0]LogDerivedDataCache: Display: Max Cache Size: 512 MB
+[2020.04.01-01.13.53:013][  0]LogDerivedDataCache: Loaded boot cache 0.05s 80MB C:/Users/Jim/AppData/Local/UnrealEngine/4.24/DerivedDataCache/Boot.ddc.
+[2020.04.01-01.13.53:013][  0]LogDerivedDataCache: Display: Loaded Boot cache: C:/Users/Jim/AppData/Local/UnrealEngine/4.24/DerivedDataCache/Boot.ddc
+[2020.04.01-01.13.53:013][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  Pak pak cache file C:/Users/Jim/Documents/VFX_Learning/DerivedDataCache/DDC.ddp not found, will not use a pak cache.
+[2020.04.01-01.13.53:013][  0]LogDerivedDataCache: Unable to find inner node Pak for hierarchical cache Hierarchy.
+[2020.04.01-01.13.53:013][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  CompressedPak pak cache file C:/Users/Jim/Documents/VFX_Learning/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
+[2020.04.01-01.13.53:013][  0]LogDerivedDataCache: Unable to find inner node CompressedPak for hierarchical cache Hierarchy.
+[2020.04.01-01.13.53:022][  0]LogDerivedDataCache: Display: Pak cache opened for reading ../../../Engine/DerivedDataCache/Compressed.ddp.
+[2020.04.01-01.13.53:022][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  EnterprisePak pak cache file ../../../Enterprise/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
+[2020.04.01-01.13.53:022][  0]LogDerivedDataCache: Unable to find inner node EnterprisePak for hierarchical cache Hierarchy.
+[2020.04.01-01.13.53:026][  0]LogDerivedDataCache: Using Local data cache path C:/Users/Jim/AppData/Local/UnrealEngine/Common/DerivedDataCache: Writable
+[2020.04.01-01.13.53:026][  0]LogDerivedDataCache: Shared data cache path not found in *engine.ini, will not use an Shared cache.
+[2020.04.01-01.13.53:026][  0]LogDerivedDataCache: Unable to find inner node Shared for hierarchical cache Hierarchy.
+[2020.04.01-01.13.53:045][  0]LogMaterial: Verifying Global Shaders for PCD3D_SM5
+[2020.04.01-01.13.53:047][  0]LogSlate: Using FreeType 2.10.0
+[2020.04.01-01.13.53:049][  0]LogSlate: SlateFontServices - WITH_FREETYPE: 1, WITH_HARFBUZZ: 1
+[2020.04.01-01.13.53:208][  0]LogAssetRegistry: FAssetRegistry took 0.0051 seconds to start up
+[2020.04.01-01.13.53:633][  0]LogInit: Selected Device Profile: [Windows]
+[2020.04.01-01.13.53:821][  0]LogMeshReduction: Using QuadricMeshReduction for automatic static mesh reduction
+[2020.04.01-01.13.53:821][  0]LogMeshReduction: Using SimplygonMeshReduction for automatic skeletal mesh reduction
+[2020.04.01-01.13.53:821][  0]LogMeshReduction: Using ProxyLODMeshReduction for automatic mesh merging
+[2020.04.01-01.13.53:821][  0]LogMeshReduction: No distributed automatic mesh merging module available
+[2020.04.01-01.13.53:821][  0]LogMeshMerging: No distributed automatic mesh merging module available
+[2020.04.01-01.13.53:835][  0]LogNetVersion: VFX_Learning 1.0.0, NetCL: 10570792, EngineNetVer: 13, GameNetVer: 0 (Checksum: 537258961)
+[2020.04.01-01.13.56:118][  0]LogPackageLocalizationCache: Processed 11 localized package path(s) for 1 prioritized culture(s) in 0.073827 seconds
+[2020.04.01-01.13.56:123][  0]LogUObjectArray: 46771 objects as part of root set at end of initial load.
+[2020.04.01-01.13.56:123][  0]LogUObjectAllocator: 8140680 out of 0 bytes used by permanent object pool.
+[2020.04.01-01.13.56:123][  0]LogUObjectArray: CloseDisregardForGC: 0/0 objects in disregard for GC pool
+[2020.04.01-01.13.56:728][  0]LogTcpMessaging: Initializing TcpMessaging bridge
+[2020.04.01-01.13.56:733][  0]LogUdpMessaging: Initializing bridge on interface 0.0.0.0:0 to multicast group 230.0.0.1:6666.
+[2020.04.01-01.13.56:809][  0]SourceControl: Source control is disabled
+[2020.04.01-01.13.56:809][  0]SourceControl: Source control is disabled
+[2020.04.01-01.13.56:811][  0]SourceControl: Source control is disabled
+[2020.04.01-01.13.56:813][  0]SourceControl: Source control is disabled
+[2020.04.01-01.13.56:815][  0]SourceControl: Source control is disabled
+[2020.04.01-01.13.56:964][  0]LogAndroidPermission: UAndroidPermissionCallbackProxy::GetInstance
+[2020.04.01-01.13.56:983][  0]LogAudioCaptureCore: Display: No Audio Capture implementations found. Audio input will be silent.
+[2020.04.01-01.13.56:983][  0]LogAudioCaptureCore: Display: No Audio Capture implementations found. Audio input will be silent.
+[2020.04.01-01.13.57:089][  0]LogOcInput: OculusInput pre-init called
+[2020.04.01-01.13.57:099][  0]LogWindows: Failed to load 'OVRPlugin.dll' (GetLastError=126)
+[2020.04.01-01.13.57:099][  0]LogWindows: File 'OVRPlugin.dll' does not exist
+[2020.04.01-01.13.57:180][  0]LogEngine: Initializing Engine...
+[2020.04.01-01.13.57:182][  0]LogHMD: Failed to initialize OpenVR with code 110
+[2020.04.01-01.13.57:183][  0]LogStats: UGameplayTagsManager::InitializeManager -  0.000 s
+[2020.04.01-01.13.57:516][  0]LogInit: Initializing FReadOnlyCVARCache
+[2020.04.01-01.13.57:524][  0]LogAIModule: Creating AISystem for world Untitled
+[2020.04.01-01.13.57:527][  0]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2020.04.01-01.13.57:527][  0]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2020.04.01-01.13.57:527][  0]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2020.04.01-01.13.57:527][  0]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2020.04.01-01.13.57:527][  0]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2020.04.01-01.13.57:527][  0]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2020.04.01-01.13.57:527][  0]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2020.04.01-01.13.57:527][  0]LogAudio: Display: AudioDevice MaxSources: 32
+[2020.04.01-01.13.57:527][  0]LogAudio: Display: Using built-in audio occlusion.
+[2020.04.01-01.13.57:527][  0]LogAudioMixer: Display: Initializing audio mixer.
+[2020.04.01-01.13.57:579][  0]LogAudioMixer: Display: Audio Device Output Speaker Info:
+[2020.04.01-01.13.57:579][  0]LogAudioMixer: Display: Name: 扬声器 (Realtek High Definition Audio)
+[2020.04.01-01.13.57:579][  0]LogAudioMixer: Display: Is Default: Yes
+[2020.04.01-01.13.57:579][  0]LogAudioMixer: Display: Sample Rate: 48000
+[2020.04.01-01.13.57:579][  0]LogAudioMixer: Display: Channel Count Used: 2
+[2020.04.01-01.13.57:579][  0]LogAudioMixer: Display: Device Channel Count: 2
+[2020.04.01-01.13.57:579][  0]LogAudioMixer: Display: Channel Order:
+[2020.04.01-01.13.57:579][  0]LogAudioMixer: Display: 0: FrontLeft
+[2020.04.01-01.13.57:579][  0]LogAudioMixer: Display: 1: FrontRight
+[2020.04.01-01.13.57:653][  0]LogAudioMixer: Display: Using Audio Device 扬声器 (Realtek High Definition Audio)
+[2020.04.01-01.13.57:660][  0]LogInit: FAudioDevice initialized.
+[2020.04.01-01.13.57:660][  0]LogNetVersion: Set ProjectVersion to 1.0.0.0. Version Checksum will be recalculated on next use.
+[2020.04.01-01.13.57:774][  0]LogDerivedDataCache: Saved boot cache 0.11s 80MB C:/Users/Jim/AppData/Local/UnrealEngine/4.24/DerivedDataCache/Boot.ddc.
+[2020.04.01-01.13.57:777][  0]LogInit: Texture streaming: Enabled
+[2020.04.01-01.13.57:792][  0]LogEngineSessionManager: EngineSessionManager initialized
+[2020.04.01-01.13.57:792][  0]LogEditorSessionSummary: Verbose: Initializing EditorSessionSummaryWriter for editor session tracking
+[2020.04.01-01.13.57:798][  0]LogEditorSessionSummary: EditorSessionSummaryWriter initialized
+[2020.04.01-01.13.57:850][  0]LogInit: Transaction tracking system initialized
+[2020.04.01-01.13.57:869][  0]BlueprintLog: New page: Editor Load
+[2020.04.01-01.13.57:930][  0]LocalizationService: Localization service is disabled
+[2020.04.01-01.13.58:341][  0]LogCook: Display: Max memory allowance for cook 16384mb min free memory 0mb
+[2020.04.01-01.13.58:341][  0]LogCook: Display: Mobile HDR setting 1
+[2020.04.01-01.13.58:527][  0]LogFileCache: Scanning file cache for directory 'C:/Users/Jim/Documents/VFX_Learning/Content/' took 0.03s
+[2020.04.01-01.14.00:801][  0]SourceControl: Source control is disabled
+[2020.04.01-01.14.00:802][  0]Cmd: MAP LOAD FILE="C:/Users/Jim/Documents/VFX_Learning/Content/ThirdPersonBP/Maps/ThirdPersonExampleMap.umap" TEMPLATE=0 SHOWPROGRESS=1 FEATURELEVEL=3
+[2020.04.01-01.14.00:803][  0]LightingResults: New page: Lighting Build
+[2020.04.01-01.14.00:804][  0]LogWorld: UWorld::CleanupWorld for Untitled, bSessionEnded=true, bCleanupResources=true
+[2020.04.01-01.14.00:804][  0]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.04.01-01.14.00:804][  0]MapCheck: New page: Map Check
+[2020.04.01-01.14.00:804][  0]LightingResults: New page: Lighting Build
+[2020.04.01-01.14.00:825][  0]LogUObjectHash: Compacting FUObjectHashTables data took   1.35ms
+[2020.04.01-01.14.01:758][  0]LogTemp: Display: Loaded shader NiagaraScript /Game/ThirdPersonBP/VFX/Systems/HolographicSystem_3DMesh_2.HolographicSystem_3DMesh_2:Character_1.GPUComputeScript_4 for Niagara script NiagaraScript /Game/ThirdPersonBP/VFX/Systems/HolographicSystem_3DMesh_2.HolographicSystem_3DMesh_2:Character_1.GPUComputeScript_4 from DDC
+[2020.04.01-01.14.01:886][  0]LogNiagaraEditor: Verbose: '/Game/ThirdPersonBP/VFX/Systems/HolographicSystem_3DMesh_2' Precompile took 0.116988 sec.
+[2020.04.01-01.14.01:905][  0]LogTemp: Display: Loaded shader NiagaraScript /Game/ThirdPersonBP/VFX/Systems/HolographicSystem_3DMesh.HolographicSystem_3DMesh:Character_1.GPUComputeScript_4 for Niagara script NiagaraScript /Game/ThirdPersonBP/VFX/Systems/HolographicSystem_3DMesh.HolographicSystem_3DMesh:Character_1.GPUComputeScript_4 from DDC
+[2020.04.01-01.14.02:040][  0]LogNiagaraEditor: Verbose: '/Game/ThirdPersonBP/VFX/Systems/HolographicSystem_3DMesh' Precompile took 0.124412 sec.
+[2020.04.01-01.14.02:102][  0]LogTemp: Display: Loaded shader NiagaraScript /Game/ThirdPersonBP/VFX/Systems/HolographicSystem.HolographicSystem:CircularSpawner.GPUComputeScript_4 for Niagara script NiagaraScript /Game/ThirdPersonBP/VFX/Systems/HolographicSystem.HolographicSystem:CircularSpawner.GPUComputeScript_4 from DDC
+[2020.04.01-01.14.02:177][  0]LogNiagaraEditor: Verbose: '/Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon1' Precompile took 0.028052 sec.
+[2020.04.01-01.14.02:205][  0]LogAIModule: Creating AISystem for world ThirdPersonExampleMap
+[2020.04.01-01.14.02:247][  0]LogTemp: Display: Loaded shader NiagaraScript /Game/ThirdPersonBP/VFX/Systems/HolographicSystem_3DMesh.HolographicSystem_3DMesh:Character_1.GPUComputeScript_4 for Niagara script NiagaraScript /Game/ThirdPersonBP/VFX/Systems/HolographicSystem_3DMesh.HolographicSystem_3DMesh:Character_1.GPUComputeScript_4 from DDC
+[2020.04.01-01.14.02:256][  0]LogNiagara: StaticMesh data interface has no valid mesh. Failed InitPerInstanceData - NiagaraDataInterfaceStaticMesh /Game/ThirdPersonBP/VFX/Systems/HolographicSystem_3DMesh.HolographicSystem_3DMesh:Character_1.SpawnScript_0.NiagaraDataInterfaceStaticMesh_1
+[2020.04.01-01.14.02:256][  0]LogNiagara: Warning: UNiagaraDataInterfaceStaticMesh::InitPerInstanceData> Invalid per-instance init!!!
+[2020.04.01-01.14.02:256][  0]LogNiagara: Error: Error initializing data interface "/Game/ThirdPersonBP/VFX/Systems/HolographicSystem_3DMesh.HolographicSystem_3DMesh:Character_1.SpawnScript_0.NiagaraDataInterfaceStaticMesh_1" for system. 862795136 | HolographicSystem_3DMesh
+[2020.04.01-01.14.02:256][  0]LogNiagara: StaticMesh data interface has no valid mesh. Failed InitPerInstanceData - NiagaraDataInterfaceStaticMesh /Game/ThirdPersonBP/VFX/Systems/HolographicSystem_3DMesh.HolographicSystem_3DMesh:Character_1.SpawnScript_0.NiagaraDataInterfaceStaticMesh_4
+[2020.04.01-01.14.02:256][  0]LogNiagara: Warning: UNiagaraDataInterfaceStaticMesh::InitPerInstanceData> Invalid per-instance init!!!
+[2020.04.01-01.14.02:256][  0]LogNiagara: Error: Error initializing data interface "/Game/ThirdPersonBP/VFX/Systems/HolographicSystem_3DMesh.HolographicSystem_3DMesh:Character_1.SpawnScript_0.NiagaraDataInterfaceStaticMesh_4" for system. 862795136 | HolographicSystem_3DMesh
+[2020.04.01-01.14.02:256][  0]LogNiagara: Error: Error initializing data interfaces. Completing system. 862795136 | HolographicSystem_3DMesh
+[2020.04.01-01.14.02:257][  0]LogNiagara: InvalidateCompileResults /Game/ThirdPersonBP/VFX/Systems/HolographicSystem_3DMesh_2.HolographicSystem_3DMesh_2:Projector_0.SpawnScript
+[2020.04.01-01.14.02:257][  0]LogNiagara: InvalidateCompileResults /Game/ThirdPersonBP/VFX/Systems/HolographicSystem_3DMesh_2.HolographicSystem_3DMesh_2:Projector_0.UpdateScript
+[2020.04.01-01.14.02:257][  0]LogNiagara: InvalidateCompileResults /Game/ThirdPersonBP/VFX/Systems/HolographicSystem_3DMesh_2.HolographicSystem_3DMesh_2:Projector_0.EmitterSpawnScript
+[2020.04.01-01.14.02:257][  0]LogNiagara: InvalidateCompileResults /Game/ThirdPersonBP/VFX/Systems/HolographicSystem_3DMesh_2.HolographicSystem_3DMesh_2:Projector_0.EmitterUpdateScript
+[2020.04.01-01.14.02:273][  0]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
+[2020.04.01-01.14.02:305][  0]LogUObjectHash: Compacting FUObjectHashTables data took   1.95ms
+[2020.04.01-01.14.02:305][  0]Cmd: MAP CHECKDEP NOCLEARLOG
+[2020.04.01-01.14.02:306][  0]MapCheck: Map check complete: 0 Error(s), 0 Warning(s), took 0.367ms to complete.
+[2020.04.01-01.14.02:306][  0]LogFileHelpers: Loading map 'ThirdPersonExampleMap' took 1.504
+[2020.04.01-01.14.02:458][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2020.04.01-01.14.02:464][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2020.04.01-01.14.02:469][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2020.04.01-01.14.02:475][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2020.04.01-01.14.02:483][  0]LogCollectionManager: Loaded 0 collections in 0.002504 seconds
+[2020.04.01-01.14.02:499][  0]LogFileCache: Scanning file cache for directory 'C:/Users/Jim/Documents/VFX_Learning/Saved/Collections/' took 0.00s
+[2020.04.01-01.14.02:499][  0]LogFileCache: Scanning file cache for directory 'C:/Users/Jim/Documents/VFX_Learning/Content/Developers/Jim/Collections/' took 0.00s
+[2020.04.01-01.14.02:499][  0]LogFileCache: Scanning file cache for directory 'C:/Users/Jim/Documents/VFX_Learning/Content/Collections/' took 0.00s
+[2020.04.01-01.14.02:499][  0]LogContentBrowser: Native class hierarchy populated in 0.0066 seconds. Added 3165 classes and 735 folders.
+[2020.04.01-01.14.02:502][  0]LogContentBrowser: Native class hierarchy updated for 'WidgetCarousel' in 0.0003 seconds. Added 0 classes and 0 folders.
+[2020.04.01-01.14.02:849][  0]LogContentBrowser: Native class hierarchy updated for 'AddContentDialog' in 0.0003 seconds. Added 0 classes and 0 folders.
+[2020.04.01-01.14.02:853][  0]LogContentBrowser: Native class hierarchy updated for 'SceneOutliner' in 0.0003 seconds. Added 2 classes and 3 folders.
+[2020.04.01-01.14.02:969][  0]LogSlate: Took 0.000884 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Regular.ttf' (155K)
+[2020.04.01-01.14.02:971][  0]LogSlate: Took 0.000885 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Bold.ttf' (160K)
+[2020.04.01-01.14.02:975][  0]LogSlate: Took 0.000758 seconds to synchronously load lazily loaded font '../../../Engine/Content/Editor/Slate/Fonts/FontAwesome.ttf' (139K)
+[2020.04.01-01.14.03:047][  0]LogRenderer: Scene Capture has ShowOnlyComponents or ShowOnlyActors ignored by the PrimitiveRenderMode setting! /Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap:PersistentLevel.SceneCapture2D1_Blueprint.NewSceneCaptureComponent2D
+[2020.04.01-01.14.03:071][  0]LogRenderer: Reallocating scene render targets to support 1024x1024 Format 10 NumSamples 1 (Frame:1).
+[2020.04.01-01.14.03:203][  0]LogRenderer: Reallocating scene render targets to support 1616x1024 Format 10 NumSamples 1 (Frame:1).
+[2020.04.01-01.14.03:394][  0]LogContentBrowser: Native class hierarchy updated for 'HierarchicalLODOutliner' in 0.0003 seconds. Added 0 classes and 0 folders.
+[2020.04.01-01.14.03:394][  0]LogLoad: (Engine Initialization) Total time: 22.84 seconds
+[2020.04.01-01.14.03:394][  0]LogLoad: (Engine Initialization) Total Blueprint compile time: 0.00 seconds
+[2020.04.01-01.14.03:452][  0]LogContentStreaming: Texture pool size now 1000 MB
+[2020.04.01-01.14.03:540][  1]LogAssetRegistry: Asset discovery search completed in 10.3338 seconds
+[2020.04.01-01.14.03:542][  1]LogCollectionManager: Fixed up redirectors for 0 collections in 0.000006 seconds (updated 0 objects)
+[2020.04.01-01.14.03:580][  3]LogNiagara: FNiagaraDummyRWBufferFloat InitRHI NiagaraRenderer::DummyFloat
+[2020.04.01-01.14.03:580][  3]LogNiagara: FNiagaraDummyRWBufferInt InitRHI NiagaraRenderer::DummyInt
+[2020.04.01-01.14.20:346][990]LogEditorViewport: Clicking on Actor (LMB): NiagaraActor (ToonShadingRibbon1)
+[2020.04.01-01.14.24:687][502]Cmd: DELETE
+[2020.04.01-01.14.24:687][502]Cmd: ACTOR DELETE
+[2020.04.01-01.14.24:689][502]LogEditorActor: Deleted Actor: NiagaraActor
+[2020.04.01-01.14.24:712][502]LogUObjectHash: Compacting FUObjectHashTables data took   0.65ms
+[2020.04.01-01.14.24:713][502]LogEditorActor: Deleted 1 Actors (0.025 secs)
+[2020.04.01-01.14.26:501][714]LogSlate: Took 0.000945 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
+[2020.04.01-01.14.26:548][714]LogUObjectHash: Compacting FUObjectHashTables data took   0.60ms
+[2020.04.01-01.14.26:735][714]LogSavePackage: Moving 'C:/Users/Jim/Documents/VFX_Learning/Saved/ThirdPersonExampleMapF701C7E846447AE68ADFFA8BDBFD736A.tmp' to 'C:/Users/Jim/Documents/VFX_Learning/Content/ThirdPersonBP/Maps/ThirdPersonExampleMap.umap'
+[2020.04.01-01.14.26:891][714]LogSavePackage: Moving 'C:/Users/Jim/Documents/VFX_Learning/Saved/ThirdPersonExampleMap_BuiltData5C40C1134EB0C916DE1B6A83D5DE8748.tmp' to 'C:/Users/Jim/Documents/VFX_Learning/Content/ThirdPersonBP/Maps/ThirdPersonExampleMap_BuiltData.uasset'
+[2020.04.01-01.14.26:916][714]AssetCheck: New page: Asset Save: multiple assets
+[2020.04.01-01.14.26:916][714]LogContentValidation: Display: Validating World /Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap
+[2020.04.01-01.14.26:916][714]LogContentValidation: Display: Validating MapBuildDataRegistry /Game/ThirdPersonBP/Maps/ThirdPersonExampleMap_BuiltData.ThirdPersonExampleMap_BuiltData
+[2020.04.01-01.14.33:400][440]LogNiagaraEditor: Verbose: '/Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2' Precompile took 0.027801 sec.
+[2020.04.01-01.14.36:030][750]LogAssetEditorSubsystem: Opening Asset editor for NiagaraSystem /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2
+[2020.04.01-01.14.36:351][750]LogSlate: Took 0.000884 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-BoldCondensed.ttf' (158K)
+[2020.04.01-01.16.16:334][322]LogAssetEditorSubsystem: Opening Asset editor for NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ReadPaticlePosition.ReadPaticlePosition
+[2020.04.01-01.16.16:398][322]MaterialEditorStats: LastOpCount: 0
+[2020.04.01-01.16.16:418][322]48DB050849E70F033E641C817CBCE8C7_ReadPaticlePosition_MessageLog: Script successfully compiled.
+[2020.04.01-01.16.16:436][322]LogSlate: Took 0.006380 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Italic.ttf' (157K)
+[2020.04.01-01.16.38:050][500]LogNiagaraEditor: Verbose: '/Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2' Precompile took 0.027418 sec.
+[2020.04.01-01.16.38:072][501]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingRibbon_NE.SpawnScript_1 ...................................................................
+[2020.04.01-01.16.38:072][501]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingRibbon_NE.UpdateScript_2 ...................................................................
+[2020.04.01-01.16.38:121][506]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingRibbon_NE.SpawnScript_1 took 0.070172 sec (0.002695/0.067383)... Status NCS_UpToDate
+[2020.04.01-01.16.38:121][506]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingRibbon_NE.SpawnScript_1' was built locally..
+[2020.04.01-01.16.38:164][511]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingRibbon_NE.UpdateScript_2 took 0.112584 sec (0.003630/0.042418)... Status NCS_UpToDate
+[2020.04.01-01.16.38:164][511]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingRibbon_NE.UpdateScript_2' was built locally..
+[2020.04.01-01.16.38:193][512]59702_ToonShadingRibbon2_MessageLog: System successfully compiled.
+[2020.04.01-01.16.43:138][ 46]LogNiagaraEditor: Verbose: '/Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2' Precompile took 0.030901 sec.
+[2020.04.01-01.16.43:158][ 47]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingRibbon_NE.SpawnScript_1 ...................................................................
+[2020.04.01-01.16.43:158][ 47]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingRibbon_NE.UpdateScript_2 ...................................................................
+[2020.04.01-01.16.43:215][ 52]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingRibbon_NE.SpawnScript_1 took 0.074312 sec (0.003242/0.070987)... Status NCS_UpToDate
+[2020.04.01-01.16.43:216][ 52]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingRibbon_NE.SpawnScript_1' was built locally..
+[2020.04.01-01.16.43:268][ 58]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingRibbon_NE.UpdateScript_2 took 0.129133 sec (0.005013/0.054822)... Status NCS_UpToDate
+[2020.04.01-01.16.43:272][ 58]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingRibbon_NE.UpdateScript_2' was built locally..
+[2020.04.01-01.16.43:283][ 58]LogNiagara: Error: Error initializing data interface "/Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingRibbon_NE.UpdateScript_2.NiagaraDataInterfaceParticleRead_0" for system. 841151872 | ToonShadingRibbon2
+[2020.04.01-01.16.43:283][ 58]LogNiagara: Error: Error initializing data interfaces. Completing system. 841151872 | ToonShadingRibbon2
+[2020.04.01-01.16.43:306][ 59]59702_ToonShadingRibbon2_MessageLog: System successfully compiled.
+[2020.04.01-01.16.47:443][508]LogNiagaraEditor: Verbose: '/Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2' Precompile took 0.030769 sec.
+[2020.04.01-01.16.47:466][509]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingRibbon_NE.SpawnScript_1 ...................................................................
+[2020.04.01-01.16.47:466][509]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingRibbon_NE.UpdateScript_2 ...................................................................
+[2020.04.01-01.16.47:513][513]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingRibbon_NE.SpawnScript_1 took 0.066115 sec (0.003189/0.062846)... Status NCS_UpToDate
+[2020.04.01-01.16.47:515][513]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingRibbon_NE.SpawnScript_1' was built locally..
+[2020.04.01-01.16.47:564][518]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingRibbon_NE.UpdateScript_2 took 0.114972 sec (0.004830/0.048863)... Status NCS_UpToDate
+[2020.04.01-01.16.47:568][518]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingRibbon_NE.UpdateScript_2' was built locally..
+[2020.04.01-01.16.47:580][518]LogNiagara: Error: Error initializing data interface "/Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingRibbon_NE.UpdateScript_2.NiagaraDataInterfaceParticleRead_1" for system. 841151872 | ToonShadingRibbon2
+[2020.04.01-01.16.47:580][518]LogNiagara: Error: Error initializing data interfaces. Completing system. 841151872 | ToonShadingRibbon2
+[2020.04.01-01.16.47:601][519]59702_ToonShadingRibbon2_MessageLog: System successfully compiled.
+[2020.04.01-01.16.48:739][640]LogNiagaraEditor: Verbose: '/Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2' Precompile took 0.030677 sec.
+[2020.04.01-01.16.48:762][641]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingRibbon_NE.SpawnScript_1 ...................................................................
+[2020.04.01-01.16.48:762][641]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingRibbon_NE.UpdateScript_2 ...................................................................
+[2020.04.01-01.16.48:806][646]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingRibbon_NE.SpawnScript_1 took 0.064729 sec (0.003160/0.061494)... Status NCS_UpToDate
+[2020.04.01-01.16.48:807][646]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingRibbon_NE.SpawnScript_1' was built locally..
+[2020.04.01-01.16.48:857][650]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingRibbon_NE.UpdateScript_2 took 0.111191 sec (0.004754/0.046494)... Status NCS_UpToDate
+[2020.04.01-01.16.48:859][650]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingRibbon_NE.UpdateScript_2' was built locally..
+[2020.04.01-01.16.48:870][650]LogNiagara: Error: Error initializing data interface "/Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingRibbon_NE.UpdateScript_2.NiagaraDataInterfaceParticleRead_3" for system. 841151872 | ToonShadingRibbon2
+[2020.04.01-01.16.48:870][650]LogNiagara: Error: Error initializing data interfaces. Completing system. 841151872 | ToonShadingRibbon2
+[2020.04.01-01.16.48:889][651]59702_ToonShadingRibbon2_MessageLog: System successfully compiled.
+[2020.04.01-01.16.53:077][108]LogNiagaraEditor: Verbose: '/Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2' Precompile took 0.032180 sec.
+[2020.04.01-01.16.53:103][109]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:SystemSpawnScript ...................................................................
+[2020.04.01-01.16.53:103][109]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:SystemUpdateScript ...................................................................
+[2020.04.01-01.16.53:122][111]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:SystemSpawnScript took 0.040474 sec (0.001137/0.039298)... Status NCS_UpToDate
+[2020.04.01-01.16.53:123][111]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:SystemSpawnScript' was built locally..
+[2020.04.01-01.16.53:196][119]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:SystemUpdateScript took 0.108966 sec (0.004220/0.068518)... Status NCS_UpToDate
+[2020.04.01-01.16.53:197][119]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:SystemUpdateScript' was built locally..
+[2020.04.01-01.16.53:208][119]LogNiagara: Error: Error initializing data interface "/Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingRibbon_NE.UpdateScript_2.NiagaraDataInterfaceParticleRead_3" for system. 841151872 | ToonShadingRibbon2
+[2020.04.01-01.16.53:208][119]LogNiagara: Error: Error initializing data interfaces. Completing system. 841151872 | ToonShadingRibbon2
+[2020.04.01-01.16.53:227][120]59702_ToonShadingRibbon2_MessageLog: System successfully compiled.
+[2020.04.01-01.16.55:864][424]LogNiagaraEditor: Verbose: '/Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2' Precompile took 0.032107 sec.
+[2020.04.01-01.16.55:886][425]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:SystemSpawnScript ...................................................................
+[2020.04.01-01.16.55:886][425]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:SystemUpdateScript ...................................................................
+[2020.04.01-01.16.55:904][427]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:SystemSpawnScript took 0.038268 sec (0.001295/0.036937)... Status NCS_UpToDate
+[2020.04.01-01.16.55:905][427]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:SystemSpawnScript' was built locally..
+[2020.04.01-01.16.55:984][436]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:SystemUpdateScript took 0.112907 sec (0.004779/0.074717)... Status NCS_UpToDate
+[2020.04.01-01.16.55:986][436]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:SystemUpdateScript' was built locally..
+[2020.04.01-01.16.55:997][436]LogNiagara: Error: Error initializing data interface "/Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingRibbon_NE.UpdateScript_2.NiagaraDataInterfaceParticleRead_3" for system. 841151872 | ToonShadingRibbon2
+[2020.04.01-01.16.55:997][436]LogNiagara: Error: Error initializing data interfaces. Completing system. 841151872 | ToonShadingRibbon2
+[2020.04.01-01.16.56:015][437]59702_ToonShadingRibbon2_MessageLog: System successfully compiled.
+[2020.04.01-01.17.01:646][ 86]LogNiagaraEditor: Verbose: '/Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2' Precompile took 0.030474 sec.
+[2020.04.01-01.17.01:668][ 87]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:SystemSpawnScript ...................................................................
+[2020.04.01-01.17.01:668][ 87]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:SystemUpdateScript ...................................................................
+[2020.04.01-01.17.01:690][ 89]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:SystemSpawnScript took 0.039298 sec (0.001081/0.038174)... Status NCS_UpToDate
+[2020.04.01-01.17.01:691][ 89]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:SystemSpawnScript' was built locally..
+[2020.04.01-01.17.01:756][ 94]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:SystemUpdateScript took 0.103199 sec (0.004222/0.063926)... Status NCS_UpToDate
+[2020.04.01-01.17.01:757][ 94]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:SystemUpdateScript' was built locally..
+[2020.04.01-01.17.01:769][ 94]LogNiagara: Error: Error initializing data interface "/Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingRibbon_NE.UpdateScript_2.NiagaraDataInterfaceParticleRead_3" for system. 841151872 | ToonShadingRibbon2
+[2020.04.01-01.17.01:769][ 94]LogNiagara: Error: Error initializing data interfaces. Completing system. 841151872 | ToonShadingRibbon2
+[2020.04.01-01.17.01:788][ 95]59702_ToonShadingRibbon2_MessageLog: System successfully compiled.
+[2020.04.01-01.17.02:024][119]LogNiagaraEditor: Verbose: '/Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2' Precompile took 0.030934 sec.
+[2020.04.01-01.17.02:051][120]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:SystemSpawnScript ...................................................................
+[2020.04.01-01.17.02:051][120]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:SystemUpdateScript ...................................................................
+[2020.04.01-01.17.02:070][122]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:SystemSpawnScript took 0.037149 sec (0.001255/0.035845)... Status NCS_UpToDate
+[2020.04.01-01.17.02:071][122]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:SystemSpawnScript' was built locally..
+[2020.04.01-01.17.02:142][130]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:SystemUpdateScript took 0.111336 sec (0.004782/0.074292)... Status NCS_UpToDate
+[2020.04.01-01.17.02:144][130]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:SystemUpdateScript' was built locally..
+[2020.04.01-01.17.02:155][130]LogNiagara: Error: Error initializing data interface "/Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingRibbon_NE.UpdateScript_2.NiagaraDataInterfaceParticleRead_3" for system. 841151872 | ToonShadingRibbon2
+[2020.04.01-01.17.02:155][130]LogNiagara: Error: Error initializing data interfaces. Completing system. 841151872 | ToonShadingRibbon2
+[2020.04.01-01.17.02:174][131]59702_ToonShadingRibbon2_MessageLog: System successfully compiled.
+[2020.04.01-01.17.03:317][246]LogNiagaraEditor: Verbose: '/Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2' Precompile took 0.030422 sec.
+[2020.04.01-01.17.03:340][247]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingRibbon_NE.SpawnScript_1 ...................................................................
+[2020.04.01-01.17.03:340][247]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingRibbon_NE.UpdateScript_2 ...................................................................
+[2020.04.01-01.17.03:377][251]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingRibbon_NE.SpawnScript_1 took 0.054346 sec (0.002265/0.051999)... Status NCS_UpToDate
+[2020.04.01-01.17.03:378][251]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingRibbon_NE.SpawnScript_1' was built locally..
+[2020.04.01-01.17.03:421][256]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingRibbon_NE.UpdateScript_2 took 0.100256 sec (0.003797/0.045934)... Status NCS_UpToDate
+[2020.04.01-01.17.03:422][256]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingRibbon_NE.UpdateScript_2' was built locally..
+[2020.04.01-01.17.03:434][256]LogNiagara: Error: Error initializing data interface "/Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingRibbon_NE.UpdateScript_2.NiagaraDataInterfaceParticleRead_4" for system. 841151872 | ToonShadingRibbon2
+[2020.04.01-01.17.03:434][256]LogNiagara: Error: Error initializing data interfaces. Completing system. 841151872 | ToonShadingRibbon2
+[2020.04.01-01.17.03:451][257]59702_ToonShadingRibbon2_MessageLog: System successfully compiled.
+[2020.04.01-01.17.04:117][319]LogNiagaraEditor: Verbose: '/Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2' Precompile took 0.031866 sec.
+[2020.04.01-01.17.04:140][320]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingRibbon_NE.SpawnScript_1 ...................................................................
+[2020.04.01-01.17.04:140][320]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingRibbon_NE.UpdateScript_2 ...................................................................
+[2020.04.01-01.17.04:207][327]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingRibbon_NE.SpawnScript_1 took 0.080705 sec (0.003817/0.076790)... Status NCS_UpToDate
+[2020.04.01-01.17.04:208][327]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingRibbon_NE.SpawnScript_1' was built locally..
+[2020.04.01-01.17.04:250][332]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingRibbon_NE.UpdateScript_2 took 0.132676 sec (0.005531/0.051967)... Status NCS_UpToDate
+[2020.04.01-01.17.04:251][332]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingRibbon_NE.UpdateScript_2' was built locally..
+[2020.04.01-01.17.04:263][332]LogNiagara: Error: Error initializing data interface "/Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingRibbon_NE.UpdateScript_2.NiagaraDataInterfaceParticleRead_5" for system. 841151872 | ToonShadingRibbon2
+[2020.04.01-01.17.04:263][332]LogNiagara: Error: Error initializing data interfaces. Completing system. 841151872 | ToonShadingRibbon2
+[2020.04.01-01.17.04:281][333]59702_ToonShadingRibbon2_MessageLog: System successfully compiled.
+[2020.04.01-01.17.28:590][151]LogAssetEditorSubsystem: Opening Asset editor for NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ReadPaticlePosition1.ReadPaticlePosition1
+[2020.04.01-01.17.28:648][151]MaterialEditorStats: LastOpCount: 0
+[2020.04.01-01.17.28:668][151]48DB050849E70F033E641C817CBCE8C7_ReadPaticlePosition1_MessageLog: Script successfully compiled.
+[2020.04.01-01.17.49:147][313]LogNiagaraEditor: Saving and Compiling NiagaraScript ReadPaticlePosition1
+[2020.04.01-01.17.49:166][313]LogNiagaraEditor: Verbose: '/Engine/Transient' Precompile took 0.002710 sec.
+[2020.04.01-01.17.49:166][313]LogNiagaraEditor: Compiling System NiagaraScript /Engine/Transient.ReadPaticlePosition1 ...................................................................
+[2020.04.01-01.17.49:199][313]LogNiagaraEditor: Compiling System NiagaraScript /Engine/Transient.ReadPaticlePosition1 took 0.032660 sec (0.000796/0.031803)... Status NCS_UpToDate
+[2020.04.01-01.17.49:201][313]MaterialEditorStats: LastOpCount: 0
+[2020.04.01-01.17.49:239][313]LogNiagaraEditor: Verbose: '/Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2' Precompile took 0.031886 sec.
+[2020.04.01-01.17.49:264][313]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingRibbon_NE.SpawnScript_1 ...................................................................
+[2020.04.01-01.17.49:264][313]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingRibbon_NE.UpdateScript_2 ...................................................................
+[2020.04.01-01.17.49:299][313]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/ThirdPersonBP/VFX/Systems/ReadPaticlePosition1" FILE="C:/Users/Jim/Documents/VFX_Learning/Content/ThirdPersonBP/VFX/Systems/ReadPaticlePosition1.uasset" SILENT=true
+[2020.04.01-01.17.49:322][313]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingRibbon_NE.SpawnScript_1 took 0.067943 sec (0.003808/0.064060)... Status NCS_UpToDate
+[2020.04.01-01.17.49:322][313]LogSavePackage: Moving 'C:/Users/Jim/Documents/VFX_Learning/Saved/ReadPaticlePosition1531D46CC4534514DE59294B24B4F720C.tmp' to 'C:/Users/Jim/Documents/VFX_Learning/Content/ThirdPersonBP/VFX/Systems/ReadPaticlePosition1.uasset'
+[2020.04.01-01.17.49:341][313]AssetCheck: New page: Asset Save: ReadPaticlePosition1
+[2020.04.01-01.17.49:341][313]LogContentValidation: Display: Validating NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ReadPaticlePosition1.ReadPaticlePosition1
+[2020.04.01-01.17.49:343][313]48DB050849E70F033E641C817CBCE8C7_ReadPaticlePosition1_MessageLog: Script successfully compiled.
+[2020.04.01-01.17.49:355][314]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingRibbon_NE.UpdateScript_2 took 0.112302 sec (0.005506/0.044360)... Status NCS_UpToDate
+[2020.04.01-01.17.50:140][384]LogNiagaraEditor: Saving and Compiling NiagaraScript ReadPaticlePosition1
+[2020.04.01-01.17.50:164][384]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingRibbon_NE.SpawnScript_1' was built locally..
+[2020.04.01-01.17.50:165][384]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingRibbon_NE.UpdateScript_2' was built locally..
+[2020.04.01-01.17.50:224][384]LogNiagaraEditor: Verbose: '/Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2' Precompile took 0.040479 sec.
+[2020.04.01-01.17.50:234][384]LogNiagara: Error: Error initializing data interface "/Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingRibbon_NE.UpdateScript_2.NiagaraDataInterfaceParticleRead_6" for system. 841151872 | ToonShadingRibbon2
+[2020.04.01-01.17.50:235][384]LogNiagara: Error: Error initializing data interfaces. Completing system. 841151872 | ToonShadingRibbon2
+[2020.04.01-01.17.50:235][384]LogNiagara: Error: Error initializing data interface "/Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingRibbon_NE.UpdateScript_2.NiagaraDataInterfaceParticleRead_6" for system. 841151872 | ToonShadingRibbon2
+[2020.04.01-01.17.50:235][384]LogNiagara: Error: Error initializing data interfaces. Completing system. 841151872 | ToonShadingRibbon2
+[2020.04.01-01.17.50:286][384]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/ThirdPersonBP/VFX/Systems/ReadPaticlePosition1" FILE="C:/Users/Jim/Documents/VFX_Learning/Content/ThirdPersonBP/VFX/Systems/ReadPaticlePosition1.uasset" SILENT=true
+[2020.04.01-01.17.50:346][384]LogSavePackage: Moving 'C:/Users/Jim/Documents/VFX_Learning/Saved/ReadPaticlePosition1999F07E649559693B8BD66ABD053C5CB.tmp' to 'C:/Users/Jim/Documents/VFX_Learning/Content/ThirdPersonBP/VFX/Systems/ReadPaticlePosition1.uasset'
+[2020.04.01-01.17.50:371][384]AssetCheck: New page: Asset Save: ReadPaticlePosition1
+[2020.04.01-01.17.50:371][384]LogContentValidation: Display: Validating NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ReadPaticlePosition1.ReadPaticlePosition1
+[2020.04.01-01.17.50:381][384]59702_ToonShadingRibbon2_MessageLog: System successfully compiled.
+[2020.04.01-01.18.03:486][760]LogNiagaraEditor: Verbose: '/Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2' Precompile took 0.031307 sec.
+[2020.04.01-01.18.03:510][761]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingRibbon_NE.SpawnScript_1 ...................................................................
+[2020.04.01-01.18.03:510][761]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingRibbon_NE.UpdateScript_2 ...................................................................
+[2020.04.01-01.18.03:565][767]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingRibbon_NE.SpawnScript_1 took 0.076948 sec (0.003739/0.073135)... Status NCS_UpToDate
+[2020.04.01-01.18.03:567][767]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingRibbon_NE.SpawnScript_1' was built locally..
+[2020.04.01-01.18.03:615][772]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingRibbon_NE.UpdateScript_2 took 0.125578 sec (0.005126/0.048797)... Status NCS_UpToDate
+[2020.04.01-01.18.03:616][772]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingRibbon_NE.UpdateScript_2' was built locally..
+[2020.04.01-01.18.03:627][772]LogNiagara: Error: Error initializing data interface "/Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingRibbon_NE.UpdateScript_2.NiagaraDataInterfaceParticleRead_7" for system. 841151872 | ToonShadingRibbon2
+[2020.04.01-01.18.03:627][772]LogNiagara: Error: Error initializing data interfaces. Completing system. 841151872 | ToonShadingRibbon2
+[2020.04.01-01.18.03:646][773]59702_ToonShadingRibbon2_MessageLog: System successfully compiled.
+[2020.04.01-01.18.04:586][871]LogNiagaraEditor: Verbose: '/Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2' Precompile took 0.031728 sec.
+[2020.04.01-01.18.04:609][872]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingRibbon_NE.SpawnScript_1 ...................................................................
+[2020.04.01-01.18.04:610][872]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingRibbon_NE.UpdateScript_2 ...................................................................
+[2020.04.01-01.18.04:667][877]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingRibbon_NE.SpawnScript_1 took 0.073799 sec (0.003916/0.069771)... Status NCS_UpToDate
+[2020.04.01-01.18.04:668][877]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingRibbon_NE.SpawnScript_1' was built locally..
+[2020.04.01-01.18.04:708][881]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingRibbon_NE.UpdateScript_2 took 0.119795 sec (0.005492/0.046124)... Status NCS_UpToDate
+[2020.04.01-01.18.04:709][881]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingRibbon_NE.UpdateScript_2' was built locally..
+[2020.04.01-01.18.04:721][881]LogNiagara: Error: Error initializing data interface "/Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingRibbon_NE.UpdateScript_2.NiagaraDataInterfaceParticleRead_8" for system. 841151872 | ToonShadingRibbon2
+[2020.04.01-01.18.04:721][881]LogNiagara: Error: Error initializing data interfaces. Completing system. 841151872 | ToonShadingRibbon2
+[2020.04.01-01.18.04:739][882]59702_ToonShadingRibbon2_MessageLog: System successfully compiled.
+[2020.04.01-01.18.20:010][480]LogNiagara: Error: Error initializing data interface "/Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingSprite_NE_0.UpdateScript_2.NiagaraDataInterfaceParticleRead_8" for system. 841151872 | ToonShadingRibbon2
+[2020.04.01-01.18.20:010][480]LogNiagara: Error: Error initializing data interfaces. Completing system. 841151872 | ToonShadingRibbon2
+[2020.04.01-01.18.20:063][480]LogNiagaraEditor: Verbose: '/Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2' Precompile took 0.052330 sec.
+[2020.04.01-01.18.20:109][481]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:SystemSpawnScript ...................................................................
+[2020.04.01-01.18.20:109][481]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:SystemUpdateScript ...................................................................
+[2020.04.01-01.18.20:109][481]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:SystemSpawnScript took 0.033387 sec (0.001303/0.032047)... Status NCS_UpToDate
+[2020.04.01-01.18.20:110][481]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:SystemSpawnScript' was built locally..
+[2020.04.01-01.18.20:181][487]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:SystemUpdateScript took 0.114324 sec (0.004885/0.081047)... Status NCS_UpToDate
+[2020.04.01-01.18.20:182][487]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:SystemUpdateScript' was built locally..
+[2020.04.01-01.18.20:193][487]LogNiagara: Error: Error initializing data interface "/Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingSprite_NE_0.UpdateScript_2.NiagaraDataInterfaceParticleRead_8" for system. 841151872 | ToonShadingRibbon2
+[2020.04.01-01.18.20:193][487]LogNiagara: Error: Error initializing data interfaces. Completing system. 841151872 | ToonShadingRibbon2
+[2020.04.01-01.18.20:221][488]59702_ToonShadingRibbon2_MessageLog: System successfully compiled.
+[2020.04.01-01.18.56:168][335]LogNiagaraEditor: Verbose: '/Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2' Precompile took 0.032976 sec.
+[2020.04.01-01.18.56:187][336]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingSprite_NE_0.UpdateScript_2 ...................................................................
+[2020.04.01-01.18.56:187][336]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingSprite_NE_0.SpawnScript_1 ...................................................................
+[2020.04.01-01.18.56:224][340]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingSprite_NE_0.UpdateScript_2 took 0.055655 sec (0.001800/0.053760)... Status NCS_UpToDate
+[2020.04.01-01.18.56:225][340]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingSprite_NE_0.UpdateScript_2' was built locally..
+[2020.04.01-01.18.56:302][348]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingSprite_NE_0.SpawnScript_1 took 0.132637 sec (0.005920/0.077079)... Status NCS_UpToDate
+[2020.04.01-01.18.56:303][348]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingSprite_NE_0.SpawnScript_1' was built locally..
+[2020.04.01-01.18.56:334][349]59702_ToonShadingRibbon2_MessageLog: System successfully compiled.
+[2020.04.01-01.18.58:295][552]LogNiagaraEditor: Verbose: '/Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2' Precompile took 0.031247 sec.
+[2020.04.01-01.18.58:318][553]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingSprite_NE_0.SpawnScript_1 ...................................................................
+[2020.04.01-01.18.58:318][553]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingSprite_NE_0.UpdateScript_2 ...................................................................
+[2020.04.01-01.18.58:373][559]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingSprite_NE_0.SpawnScript_1 took 0.071915 sec (0.003852/0.067966)... Status NCS_UpToDate
+[2020.04.01-01.18.58:374][559]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingSprite_NE_0.SpawnScript_1' was built locally..
+[2020.04.01-01.18.58:424][564]LogNiagaraEditor: Compiling System NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingSprite_NE_0.UpdateScript_2 took 0.125790 sec (0.005592/0.053936)... Status NCS_UpToDate
+[2020.04.01-01.18.58:425][564]LogNiagara: UNiagraScript 'NiagaraScript /Game/ThirdPersonBP/VFX/Systems/ToonShadingRibbon2.ToonShadingRibbon2:ToneShadingSprite_NE_0.UpdateScript_2' was built locally..
+[2020.04.01-01.18.58:455][565]59702_ToonShadingRibbon2_MessageLog: System successfully compiled.
+[2020.04.01-01.18.58:457][565]LogOutputDevice: Warning: 
+
+Script Stack (0 frames):
+
+[2020.04.01-01.18.58:936][565]LogStats: FPlatformStackWalk::StackWalkAndDump -  0.479 s
+[2020.04.01-01.18.58:936][565]LogOutputDevice: Error: === Handled ensure: ===
+[2020.04.01-01.18.58:936][565]LogOutputDevice: Error: 
+[2020.04.01-01.18.58:936][565]LogOutputDevice: Error: Ensure condition failed: DataBuffer && Index >= 0 && (uint32)Index < DataBuffer->GetNumInstances() [File:d:\build\++ue4\sync\engine\plugins\fx\niagara\source\niagara\classes\NiagaraDataSet.h] [Line: 1407]
+[2020.04.01-01.18.58:936][565]LogOutputDevice: Error: 
+[2020.04.01-01.18.58:936][565]LogOutputDevice: Error: Stack: 
+[2020.04.01-01.18.58:936][565]LogOutputDevice: Error: [Callstack] 0x00007ff84d24c259 UE4Editor-Niagara.dll!UnknownFunction []
+[2020.04.01-01.18.58:936][565]LogOutputDevice: Error: [Callstack] 0x00007ff84d086774 UE4Editor-Niagara.dll!UnknownFunction []
+[2020.04.01-01.18.58:936][565]LogOutputDevice: Error: [Callstack] 0x00007ff84d0e8d79 UE4Editor-Niagara.dll!UnknownFunction []
+[2020.04.01-01.18.58:936][565]LogOutputDevice: Error: [Callstack] 0x00007ff84d0a5898 UE4Editor-Niagara.dll!UnknownFunction []
+[2020.04.01-01.18.58:936][565]LogOutputDevice: Error: [Callstack] 0x00007ff852f43599 UE4Editor-VectorVM.dll!UnknownFunction []
+[2020.04.01-01.18.58:936][565]LogOutputDevice: Error: [Callstack] 0x00007ff852f58f97 UE4Editor-VectorVM.dll!UnknownFunction []
+[2020.04.01-01.18.58:936][565]LogOutputDevice: Error: [Callstack] 0x00007ff852f575c2 UE4Editor-VectorVM.dll!UnknownFunction []
+[2020.04.01-01.18.58:936][565]LogOutputDevice: Error: [Callstack] 0x00007ff84d18351c UE4Editor-Niagara.dll!UnknownFunction []
+[2020.04.01-01.18.58:936][565]LogOutputDevice: Error: [Callstack] 0x00007ff84d15b269 UE4Editor-Niagara.dll!UnknownFunction []
+[2020.04.01-01.18.58:936][565]LogOutputDevice: Error: [Callstack] 0x00007ff84d1b8eaf UE4Editor-Niagara.dll!UnknownFunction []
+[2020.04.01-01.18.58:936][565]LogOutputDevice: Error: [Callstack] 0x00007ff84d186adc UE4Editor-Niagara.dll!UnknownFunction []
+[2020.04.01-01.18.58:936][565]LogOutputDevice: Error: [Callstack] 0x00007ff84d1ba2e7 UE4Editor-Niagara.dll!UnknownFunction []
+[2020.04.01-01.18.58:936][565]LogOutputDevice: Error: [Callstack] 0x00007ff84d1bca14 UE4Editor-Niagara.dll!UnknownFunction []
+[2020.04.01-01.18.58:936][565]LogOutputDevice: Error: [Callstack] 0x00007ff84d178e3a UE4Editor-Niagara.dll!UnknownFunction []
+[2020.04.01-01.18.58:936][565]LogOutputDevice: Error: [Callstack] 0x00007ff84d065c21 UE4Editor-Niagara.dll!UnknownFunction []
+[2020.04.01-01.18.58:936][565]LogOutputDevice: Error: [Callstack] 0x00007ff8727e1cc8 UE4Editor-Engine.dll!UnknownFunction []
+[2020.04.01-01.18.58:936][565]LogOutputDevice: Error: [Callstack] 0x00007ff872812c74 UE4Editor-Engine.dll!UnknownFunction []
+[2020.04.01-01.18.58:936][565]LogOutputDevice: Error: [Callstack] 0x00007ff873587223 UE4Editor-Engine.dll!UnknownFunction []
+[2020.04.01-01.18.58:936][565]LogOutputDevice: Error: [Callstack] 0x00007ff873595256 UE4Editor-Engine.dll!UnknownFunction []
+[2020.04.01-01.18.58:936][565]LogOutputDevice: Error: [Callstack] 0x00007ff875209ff2 UE4Editor-Core.dll!UnknownFunction []
+[2020.04.01-01.18.58:936][565]LogOutputDevice: Error: [Callstack] 0x00007ff87520a393 UE4Editor-Core.dll!UnknownFunction []
+[2020.04.01-01.18.58:936][565]LogOutputDevice: Error: [Callstack] 0x00007ff87521aa68 UE4Editor-Core.dll!UnknownFunction []
+[2020.04.01-01.18.58:936][565]LogOutputDevice: Error: [Callstack] 0x00007ff8735b38b0 UE4Editor-Engine.dll!UnknownFunction []
+[2020.04.01-01.18.58:936][565]LogOutputDevice: Error: [Callstack] 0x00007ff8735b97c2 UE4Editor-Engine.dll!UnknownFunction []
+[2020.04.01-01.18.58:936][565]LogOutputDevice: Error: [Callstack] 0x00007ff872d3a25f UE4Editor-Engine.dll!UnknownFunction []
+[2020.04.01-01.18.58:936][565]LogOutputDevice: Error: [Callstack] 0x00007ff872d45127 UE4Editor-Engine.dll!UnknownFunction []
+[2020.04.01-01.18.58:936][565]LogOutputDevice: Error: [Callstack] 0x00007ff84cb337c1 UE4Editor-NiagaraEditor.dll!UnknownFunction []
+[2020.04.01-01.18.58:936][565]LogOutputDevice: Error: [Callstack] 0x00007ff8689fb10a UE4Editor-UnrealEd.dll!UnknownFunction []
+[2020.04.01-01.18.58:936][565]LogOutputDevice: Error: [Callstack] 0x00007ff86925e476 UE4Editor-UnrealEd.dll!UnknownFunction []
+[2020.04.01-01.18.58:936][565]LogOutputDevice: Error: [Callstack] 0x00007ff645947f62 UE4Editor.exe!UnknownFunction []
+[2020.04.01-01.18.58:936][565]LogOutputDevice: Error: [Callstack] 0x00007ff64595c3ec UE4Editor.exe!UnknownFunction []
+[2020.04.01-01.18.58:936][565]LogOutputDevice: Error: [Callstack] 0x00007ff64595c4ca UE4Editor.exe!UnknownFunction []
+[2020.04.01-01.18.58:936][565]LogOutputDevice: Error: [Callstack] 0x00007ff64596ceae UE4Editor.exe!UnknownFunction []
+[2020.04.01-01.18.58:936][565]LogOutputDevice: Error: [Callstack] 0x00007ff64596fcbe UE4Editor.exe!UnknownFunction []
+[2020.04.01-01.18.58:936][565]LogOutputDevice: Error: [Callstack] 0x00007ff8e9f07bd4 KERNEL32.DLL!UnknownFunction []
+[2020.04.01-01.18.58:936][565]LogOutputDevice: Error: [Callstack] 0x00007ff8ea90ced1 ntdll.dll!UnknownFunction []
+[2020.04.01-01.18.58:936][565]LogOutputDevice: Error: 
+[2020.04.01-01.18.58:940][565]LogStats:                SubmitErrorReport -  0.000 s
+[2020.04.01-01.19.02:684][565]LogStats:                    SendNewReport -  3.744 s
+[2020.04.01-01.19.02:684][565]LogStats:             FDebug::EnsureFailed -  4.228 s
+[2020.04.01-01.19.02:684][565]LogOutputDevice: Warning: 
+
+Script Stack (0 frames):
+
+[2020.04.01-01.19.02:685][565]LogStats: FPlatformStackWalk::StackWalkAndDump -  0.001 s
+[2020.04.01-01.19.02:685][565]LogOutputDevice: Error: === Handled ensure: ===
+[2020.04.01-01.19.02:685][565]LogOutputDevice: Error: 
+[2020.04.01-01.19.02:685][565]LogOutputDevice: Error: Ensure condition failed: DataBuffer && Index >= 0 && (uint32)Index < DataBuffer->GetNumInstances() [File:d:\build\++ue4\sync\engine\plugins\fx\niagara\source\niagara\classes\NiagaraDataSet.h] [Line: 898]
+[2020.04.01-01.19.02:685][565]LogOutputDevice: Error: 
+[2020.04.01-01.19.02:685][565]LogOutputDevice: Error: Stack: 
+[2020.04.01-01.19.02:685][565]LogOutputDevice: Error: [Callstack] 0x00007ff84d24bf49 UE4Editor-Niagara.dll!UnknownFunction []
+[2020.04.01-01.19.02:685][565]LogOutputDevice: Error: [Callstack] 0x00007ff84d0867f4 UE4Editor-Niagara.dll!UnknownFunction []
+[2020.04.01-01.19.02:685][565]LogOutputDevice: Error: [Callstack] 0x00007ff84d0e8d79 UE4Editor-Niagara.dll!UnknownFunction []
+[2020.04.01-01.19.02:685][565]LogOutputDevice: Error: [Callstack] 0x00007ff84d0a5898 UE4Editor-Niagara.dll!UnknownFunction []
+[2020.04.01-01.19.02:685][565]LogOutputDevice: Error: [Callstack] 0x00007ff852f43599 UE4Editor-VectorVM.dll!UnknownFunction []
+[2020.04.01-01.19.02:685][565]LogOutputDevice: Error: [Callstack] 0x00007ff852f58f97 UE4Editor-VectorVM.dll!UnknownFunction []
+[2020.04.01-01.19.02:685][565]LogOutputDevice: Error: [Callstack] 0x00007ff852f575c2 UE4Editor-VectorVM.dll!UnknownFunction []
+[2020.04.01-01.19.02:685][565]LogOutputDevice: Error: [Callstack] 0x00007ff84d18351c UE4Editor-Niagara.dll!UnknownFunction []
+[2020.04.01-01.19.02:685][565]LogOutputDevice: Error: [Callstack] 0x00007ff84d15b269 UE4Editor-Niagara.dll!UnknownFunction []
+[2020.04.01-01.19.02:685][565]LogOutputDevice: Error: [Callstack] 0x00007ff84d1b8eaf UE4Editor-Niagara.dll!UnknownFunction []
+[2020.04.01-01.19.02:685][565]LogOutputDevice: Error: [Callstack] 0x00007ff84d186adc UE4Editor-Niagara.dll!UnknownFunction []
+[2020.04.01-01.19.02:685][565]LogOutputDevice: Error: [Callstack] 0x00007ff84d1ba2e7 UE4Editor-Niagara.dll!UnknownFunction []
+[2020.04.01-01.19.02:685][565]LogOutputDevice: Error: [Callstack] 0x00007ff84d1bca14 UE4Editor-Niagara.dll!UnknownFunction []
+[2020.04.01-01.19.02:685][565]LogOutputDevice: Error: [Callstack] 0x00007ff84d178e3a UE4Editor-Niagara.dll!UnknownFunction []
+[2020.04.01-01.19.02:685][565]LogOutputDevice: Error: [Callstack] 0x00007ff84d065c21 UE4Editor-Niagara.dll!UnknownFunction []
+[2020.04.01-01.19.02:685][565]LogOutputDevice: Error: [Callstack] 0x00007ff8727e1cc8 UE4Editor-Engine.dll!UnknownFunction []
+[2020.04.01-01.19.02:685][565]LogOutputDevice: Error: [Callstack] 0x00007ff872812c74 UE4Editor-Engine.dll!UnknownFunction []
+[2020.04.01-01.19.02:685][565]LogOutputDevice: Error: [Callstack] 0x00007ff873587223 UE4Editor-Engine.dll!UnknownFunction []
+[2020.04.01-01.19.02:685][565]LogOutputDevice: Error: [Callstack] 0x00007ff873595256 UE4Editor-Engine.dll!UnknownFunction []
+[2020.04.01-01.19.02:685][565]LogOutputDevice: Error: [Callstack] 0x00007ff875209ff2 UE4Editor-Core.dll!UnknownFunction []
+[2020.04.01-01.19.02:685][565]LogOutputDevice: Error: [Callstack] 0x00007ff87520a393 UE4Editor-Core.dll!UnknownFunction []
+[2020.04.01-01.19.02:685][565]LogOutputDevice: Error: [Callstack] 0x00007ff87521aa68 UE4Editor-Core.dll!UnknownFunction []
+[2020.04.01-01.19.02:685][565]LogOutputDevice: Error: [Callstack] 0x00007ff8735b38b0 UE4Editor-Engine.dll!UnknownFunction []
+[2020.04.01-01.19.02:685][565]LogOutputDevice: Error: [Callstack] 0x00007ff8735b97c2 UE4Editor-Engine.dll!UnknownFunction []
+[2020.04.01-01.19.02:685][565]LogOutputDevice: Error: [Callstack] 0x00007ff872d3a25f UE4Editor-Engine.dll!UnknownFunction []
+[2020.04.01-01.19.02:685][565]LogOutputDevice: Error: [Callstack] 0x00007ff872d45127 UE4Editor-Engine.dll!UnknownFunction []
+[2020.04.01-01.19.02:685][565]LogOutputDevice: Error: [Callstack] 0x00007ff84cb337c1 UE4Editor-NiagaraEditor.dll!UnknownFunction []
+[2020.04.01-01.19.02:685][565]LogOutputDevice: Error: [Callstack] 0x00007ff8689fb10a UE4Editor-UnrealEd.dll!UnknownFunction []
+[2020.04.01-01.19.02:685][565]LogOutputDevice: Error: [Callstack] 0x00007ff86925e476 UE4Editor-UnrealEd.dll!UnknownFunction []
+[2020.04.01-01.19.02:685][565]LogOutputDevice: Error: [Callstack] 0x00007ff645947f62 UE4Editor.exe!UnknownFunction []
+[2020.04.01-01.19.02:685][565]LogOutputDevice: Error: [Callstack] 0x00007ff64595c3ec UE4Editor.exe!UnknownFunction []
+[2020.04.01-01.19.02:685][565]LogOutputDevice: Error: [Callstack] 0x00007ff64595c4ca UE4Editor.exe!UnknownFunction []
+[2020.04.01-01.19.02:685][565]LogOutputDevice: Error: [Callstack] 0x00007ff64596ceae UE4Editor.exe!UnknownFunction []
+[2020.04.01-01.19.02:685][565]LogOutputDevice: Error: [Callstack] 0x00007ff64596fcbe UE4Editor.exe!UnknownFunction []
+[2020.04.01-01.19.02:685][565]LogOutputDevice: Error: [Callstack] 0x00007ff8e9f07bd4 KERNEL32.DLL!UnknownFunction []
+[2020.04.01-01.19.02:685][565]LogOutputDevice: Error: [Callstack] 0x00007ff8ea90ced1 ntdll.dll!UnknownFunction []
+[2020.04.01-01.19.02:685][565]LogOutputDevice: Error: 
+[2020.04.01-01.19.02:695][565]LogStats:                SubmitErrorReport -  0.000 s
