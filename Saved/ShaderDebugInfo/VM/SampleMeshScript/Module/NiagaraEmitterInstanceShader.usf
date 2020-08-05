@@ -1,0 +1,743 @@
+#line 1 "/Plugin/FX/Niagara/Private/NiagaraEmitterInstanceShader.usf"
+#line 6 "/Plugin/FX/Niagara/Private/NiagaraEmitterInstanceShader.usf"
+#pragma warning(disable:4008)
+#line 7 "/Plugin/FX/Niagara/Private/NiagaraEmitterInstanceShader.usf"
+#line 1 "/Engine/Public/Platform.ush"
+#line 9 "/Engine/Public/Platform.ush"
+#line 1 "FP16Math.ush"
+#line 10 "/Engine/Public/Platform.ush"
+#line 43 "/Engine/Public/Platform.ush"
+#line 1 "ShaderVersion.ush"
+#line 44 "/Engine/Public/Platform.ush"
+#line 595 "/Engine/Public/Platform.ush"
+float min3( float a, float b, float c )
+{
+	return min( a, min( b, c ) );
+}
+
+float max3( float a, float b, float c )
+{
+	return max( a, max( b, c ) );
+}
+
+float2 min3( float2 a, float2 b, float2 c )
+{
+	return float2(
+		min3( a.x, b.x, c.x ),
+		min3( a.y, b.y, c.y )
+	);
+}
+
+float2 max3( float2 a, float2 b, float2 c )
+{
+	return float2(
+		max3( a.x, b.x, c.x ),
+		max3( a.y, b.y, c.y )
+	);
+}
+
+float3 max3( float3 a, float3 b, float3 c )
+{
+	return float3(
+		max3( a.x, b.x, c.x ),
+		max3( a.y, b.y, c.y ),
+		max3( a.z, b.z, c.z )
+	);
+}
+
+float3 min3( float3 a, float3 b, float3 c )
+{
+	return float3(
+		min3( a.x, b.x, c.x ),
+		min3( a.y, b.y, c.y ),
+		min3( a.z, b.z, c.z )
+	);
+}
+
+float4 min3( float4 a, float4 b, float4 c )
+{
+	return float4(
+		min3( a.x, b.x, c.x ),
+		min3( a.y, b.y, c.y ),
+		min3( a.z, b.z, c.z ),
+		min3( a.w, b.w, c.w )
+	);
+}
+
+float4 max3( float4 a, float4 b, float4 c )
+{
+	return float4(
+		max3( a.x, b.x, c.x ),
+		max3( a.y, b.y, c.y ),
+		max3( a.z, b.z, c.z ),
+		max3( a.w, b.w, c.w )
+	);
+}
+
+
+
+
+float UnpackByte0(uint v) { return float(v & 0xff); }
+float UnpackByte1(uint v) { return float((v >> 8) & 0xff); }
+float UnpackByte2(uint v) { return float((v >> 16) & 0xff); }
+float UnpackByte3(uint v) { return float(v >> 24); }
+#line 8 "/Plugin/FX/Niagara/Private/NiagaraEmitterInstanceShader.usf"
+
+
+
+
+
+
+	const static float PI = 3.1415926535897932f;
+
+	const static float TWO_PI = 3.1415926535897932f*2.0f;
+#line 18 "/Plugin/FX/Niagara/Private/NiagaraEmitterInstanceShader.usf"
+#line 1 "/Engine/Private/Definitions.usf"
+#line 19 "/Plugin/FX/Niagara/Private/NiagaraEmitterInstanceShader.usf"
+
+
+float4 ModuloPrecise(float4 x, float4 y){ return x - y * trunc(x/y); }
+float3 ModuloPrecise(float3 x, float3 y){ return x - y * trunc(x/y); }
+float2 ModuloPrecise(float2 x, float2 y){ return x - y * trunc(x/y);}
+float ModuloPrecise(float x, float y){ return x - y * trunc(x/y); }
+int ModuloPrecise(int x, int y){ return x - y * (x/y); }
+int Modulo(int x, int y){ return x - y * (x/y); }
+
+
+
+float4 Reciprocal(float4 x){ return 1.0f/x;}
+float3 Reciprocal(float3 x){ return 1.0f/x; }
+float2 Reciprocal(float2 x){ return 1.0f/x;}
+float Reciprocal(float x){ return 1.0f/x; }
+
+
+
+bool NiagaraAll(bool b) { return b; }
+bool NiagaraAny(bool b) { return b; }
+
+
+
+
+
+
+
+
+
+bool NiagaraAll(bool2 b) { return b.x && b.y; }
+bool NiagaraAll(bool3 b) { return b.x && b.y && b.z; }
+bool NiagaraAll(bool4 b) { return b.x && b.y && b.z && b.w; }
+bool NiagaraAny(bool2 b) { return b.x || b.y; }
+bool NiagaraAny(bool3 b) { return b.x || b.y || b.z; }
+bool NiagaraAny(bool4 b) { return b.x || b.y || b.z || b.w; }
+#line 193 "/Plugin/FX/Niagara/Private/NiagaraEmitterInstanceShader.usf"
+float4 rand4(int Seed1, int Seed2, int Seed3, int Seed4)
+{
+	int4 v = int4(Seed4, Seed1, Seed2, Seed3) * 1664525 + 1013904223;
+
+	v.x += v.y*v.w;
+	v.y += v.z*v.x;
+	v.z += v.x*v.y;
+	v.w += v.y*v.z;
+	v.x += v.y*v.w;
+	v.y += v.z*v.x;
+	v.z += v.x*v.y;
+	v.w += v.y*v.z;
+
+
+
+
+
+
+	return float4((v >> 8) & 0x00ffffff) / 16777216.0;
+
+}
+
+
+
+
+
+
+
+float3 rand3(int Seed1, int Seed2, int Seed3, int Seed4)
+{
+	int3 v = int3(Seed1, Seed2, Seed4 | (Seed3 << 16)) * 1664525 + 1013904223;
+
+	v.x += v.y*v.z;
+	v.y += v.z*v.x;
+	v.z += v.x*v.y;
+	v.x += v.y*v.z;
+	v.y += v.z*v.x;
+	v.z += v.x*v.y;
+
+	return float3((v >> 8) & 0x00ffffff) / 16777216.0;
+}
+
+
+static int RandomCounterDeterministic = 0;
+
+
+float rand(float x, int Seed1, int Seed2, int Seed3)
+{
+	RandomCounterDeterministic += 1;
+	return rand3(Seed1, Seed2, Seed3, RandomCounterDeterministic).x * x;
+}
+
+
+float2 rand(float2 x, int Seed1, int Seed2, int Seed3)
+{
+	RandomCounterDeterministic += 1;
+	return rand3(Seed1, Seed2, Seed3, RandomCounterDeterministic).xy * x;
+}
+
+
+float3 rand(float3 x, int Seed1, int Seed2, int Seed3)
+{
+	RandomCounterDeterministic += 1;
+	return rand3(Seed1, Seed2, Seed3, RandomCounterDeterministic).xyz * x;
+}
+
+
+float4 rand(float4 x, int Seed1, int Seed2, int Seed3)
+{
+	RandomCounterDeterministic += 1;
+	return rand4(Seed1, Seed2, Seed3, RandomCounterDeterministic).xyzw * x;
+}
+
+
+int rand(int x, int Seed1, int Seed2, int Seed3)
+{
+
+
+	RandomCounterDeterministic += 1;
+	return int(rand3(Seed1, Seed2, Seed3, RandomCounterDeterministic).x * (x+1));
+}
+#line 323 "/Plugin/FX/Niagara/Private/NiagaraEmitterInstanceShader.usf"
+	float rand(float x);
+
+	float2 rand(float2 x)
+	{
+		return float2(rand(x.x), rand(x.y));
+	}
+
+	float3 rand(float3 x)
+	{
+		return float3(rand(x.x), rand(x.y), rand(x.z));
+	}
+
+	float4 rand(float4 x)
+	{
+		return float4(rand(x.x), rand(x.y), rand(x.z), rand(x.w));
+	}
+
+	int rand(int x);
+
+
+
+float rand_float(float x)
+{
+	return rand(x.x);
+}
+
+float2 rand_float(float2 x)
+{
+	return float2(rand_float(x.x), rand_float(x.y));
+}
+
+float3 rand_float(float3 x)
+{
+	return float3(rand_float(x.x), rand_float(x.y), rand_float(x.z));
+}
+
+float4 rand_float(float4 x)
+{
+	return float4(rand_float(x.x), rand_float(x.y), rand_float(x.z), rand_float(x.w));
+}
+
+int rand_int(int x)
+{
+
+
+
+	return rand_float(x.x);
+}
+
+
+float rand_float(float x, int Seed1, int Seed2, int Seed3)
+{
+	return rand(x.x, Seed1, Seed2, Seed3);
+}
+
+float2 rand_float(float2 x, int Seed1, int Seed2, int Seed3)
+{
+	return rand(x, Seed1, Seed2, Seed3);
+}
+
+float3 rand_float(float3 x, int Seed1, int Seed2, int Seed3)
+{
+	return rand(x, Seed1, Seed2, Seed3);
+}
+
+float4 rand_float(float4 x, int Seed1, int Seed2, int Seed3)
+{
+	return rand(x, Seed1, Seed2, Seed3);
+}
+
+int rand_int(int x, int Seed1, int Seed2, int Seed3)
+{
+
+
+	return rand(x.x-1, Seed1, Seed2, Seed3);
+}
+#line 405 "/Plugin/FX/Niagara/Private/NiagaraEmitterInstanceShader.usf"
+	float noise(float x);
+	float noise(float2 x);
+	float noise(float3 x);
+
+
+
+	float4 Modulo(float4 x, float4 y);
+	float3 Modulo(float3 x, float3 y);
+	float2 Modulo(float2 x, float2 y);
+	float Modulo(float x, float y);
+
+
+	int ExecIndex();
+
+
+
+	int AcquireIndex(int DataSetID, bool DoAcquire);
+
+	void AcquireID(int DataSetID, out int IDIndex, out int IDAcquireTag);
+	void UpdateID(int DataSetID, int IDIndex, int InstanceIndex);
+
+	float InputDataFloat(int DataSetIndex, int RegisterIdx);
+	int InputDataInt(int DataSetIndex, int RegisterIdx);
+	bool InputDataBool(int DataSetIndex, int RegisterIdx);
+
+	float InputDataNoadvanceFloat(int DataSetIndex, int RegisterIdx);
+	int InputDataNoadvanceInt(int DataSetIndex, int RegisterIdx);
+	bool InputDataNoadvanceBool(int DataSetIndex, int RegisterIdx);
+
+	void OutputDataFloat(int DataSetIndex, int RegisterIndex, int InstanceIndex, float Value);
+	void OutputDataInt(int DataSetIndex, int RegisterIndex, int InstanceIndex, int Value);
+	void OutputDataBool(int DataSetIndex, int RegisterIndex, int InstanceIndex, bool Value);
+#line 683 "/Plugin/FX/Niagara/Private/NiagaraEmitterInstanceShader.usf"
+	int OutputIndex(const int DataSetID, const bool bStageKillsParticles, const bool bIsValid)
+	{
+#line 698 "/Plugin/FX/Niagara/Private/NiagaraEmitterInstanceShader.usf"
+			return AcquireIndex(DataSetID, bIsValid);
+	}
+#line 702 "/Plugin/FX/Niagara/Private/NiagaraEmitterInstanceShader.usf"
+#line 1 "/Engine/Generated/NiagaraEmitterInstance.ush"
+
+
+
+
+struct MeshTriCoordinate
+{
+	int Tri;
+	float3 BaryCoord;
+};
+
+struct NiagaraID
+{
+	int Index;
+	int AcquireTag;
+};
+
+cbuffer FNiagaraGlobalParameters
+{
+	float Engine_DeltaTime;
+	float Engine_InverseDeltaTime;
+	float Engine_Time;
+	float Engine_RealTime;
+}
+
+cbuffer FNiagaraSystemParameters
+{
+	float Engine_Owner_TimeSinceRendered;
+	float Engine_Owner_LODDistance;
+	float Engine_Owner_LODDistanceFraction;
+	float Engine_System_Age;
+	int Engine_Owner_ExecutionState;
+	int Engine_System_TickCount;
+	int Engine_System_NumEmitters;
+	int Engine_System_NumEmittersAlive;
+}
+
+cbuffer FNiagaraOwnerParameters
+{
+	float4x4 Engine_Owner_SystemLocalToWorld;
+	float4x4 Engine_Owner_SystemWorldToLocal;
+	float4x4 Engine_Owner_SystemLocalToWorldTransposed;
+	float4x4 Engine_Owner_SystemWorldToLocalTransposed;
+	float4x4 Engine_Owner_SystemLocalToWorldNoScale;
+	float4x4 Engine_Owner_SystemWorldToLocalNoScale;
+	float4 Engine_Owner_Rotation;
+	float4 Engine_Owner_Position;
+	float4 Engine_Owner_Velocity;
+	float4 Engine_Owner_SystemXAxis;
+	float4 Engine_Owner_SystemYAxis;
+	float4 Engine_Owner_SystemZAxis;
+	float4 Engine_Owner_Scale;
+}
+
+cbuffer FNiagaraEmitterParameters
+{
+	int Engine_Emitter_NumParticles;
+	int Engine_Emitter_TotalSpawnedParticles;
+	float Engine_Emitter_SpawnCountScale;
+	float Emitter_Age;
+	int Emitter_RandomSeed;
+	int Engine_Emitter_PaddingInt32_0;
+	int Engine_Emitter_PaddingInt32_1;
+	int Engine_Emitter_PaddingInt32_2;
+}
+
+cbuffer FNiagaraExternalParameters
+{
+}
+
+struct FParamMap0_Particles
+{
+	float3 NewPosition;
+	int UniqueID;
+};
+
+struct FParamMap0_Engine_System
+{
+	float Age;
+	int NumEmitters;
+	int NumEmittersAlive;
+	int TickCount;
+};
+
+struct FParamMap0_Engine_Owner
+{
+	int ExecutionState;
+	float LODDistance;
+	float LODDistanceFraction;
+	float3 Position;
+	float4 Rotation;
+	float3 Scale;
+	float4x4 SystemLocalToWorld;
+	float4x4 SystemLocalToWorldNoScale;
+	float4x4 SystemLocalToWorldTransposed;
+	float4x4 SystemWorldToLocal;
+	float4x4 SystemWorldToLocalNoScale;
+	float4x4 SystemWorldToLocalTransposed;
+	float3 SystemXAxis;
+	float3 SystemYAxis;
+	float3 SystemZAxis;
+	float TimeSinceRendered;
+	float3 Velocity;
+};
+
+struct FParamMap0_Engine_Emitter
+{
+	int NumParticles;
+	int PaddingInt32_0;
+	int PaddingInt32_1;
+	int PaddingInt32_2;
+	float SpawnCountScale;
+	int TotalSpawnedParticles;
+};
+
+struct FParamMap0_Engine
+{
+	float DeltaTime;
+	FParamMap0_Engine_Emitter Emitter;
+	float InverseDeltaTime;
+	FParamMap0_Engine_Owner Owner;
+	float RealTime;
+	FParamMap0_Engine_System System;
+	float Time;
+};
+
+struct FParamMap0_Emitter
+{
+	float Age;
+	bool LocalSpace;
+	int RandomSeed;
+};
+
+struct FParamMap0
+{
+	FParamMap0_Emitter Emitter;
+	FParamMap0_Engine Engine;
+	FParamMap0_Particles Particles;
+};
+
+struct FSimulationContext
+{
+	FParamMap0 Map;
+};
+
+static float HackSpawnInterp = 1.0;
+void RandomTriCoord_ParticlesStaticMesh(int In_InstanceData, out MeshTriCoordinate Out_Coord);
+void GetTriPositionWS_ParticlesStaticMesh(int In_InstanceData, MeshTriCoordinate In_Coord, out float3 Out_Position);
+void TransformBase_Func_(int In_SourceSpace, int In_DestinationSpace, float4x4 In_LocalToWorldTransform, float4x4 In_WorldToLocalTransform, bool In_bLocalSpace, out bool Out_bUseOriginal, out float4x4 Out_OutTransform, inout FSimulationContext Context);
+void TransformPosition_Emitter_Func_(float3 In_InPosition, int In_SourceSpace, int In_DestinationSpace, bool In_ApplyScale, out float3 Out_OutPosition, inout FSimulationContext Context);
+void SelectV3Channel_Func_(float3 In_VECTOR_VAR, int In_TargetChannel, out float Out_Float, inout FSimulationContext Context);
+void SmoothLerpOverTime_Func_(float In_SmoothValue, float In_TargetValue, float In_ConvergenceRate, float In_DeltaTime, out float Out_NewSmoothValue, inout FSimulationContext Context);
+void RandomTriCoord_ParticlesStaticMesh2(int In_InstanceData, out MeshTriCoordinate Out_Coord);
+void GetTriPositionWS_ParticlesStaticMesh2(int In_InstanceData, MeshTriCoordinate In_Coord, out float3 Out_Position);
+void SmoothLerpOverTime_Func_(float3 In_SmoothValue, float3 In_TargetValue, float In_ConvergenceRate, float In_DeltaTime, out float3 Out_NewSmoothValue, inout FSimulationContext Context);
+void RandomTriCoord_ParticlesStaticMesh3(int In_InstanceData, out MeshTriCoordinate Out_Coord);
+void GetTriPositionWS_ParticlesStaticMesh3(int In_InstanceData, MeshTriCoordinate In_Coord, out float3 Out_Position);
+float GetSpawnInterpolation();
+void TransformBase_Func_(int In_SourceSpace, int In_DestinationSpace, float4x4 In_LocalToWorldTransform, float4x4 In_WorldToLocalTransform, bool In_bLocalSpace, out bool Out_bUseOriginal, out float4x4 Out_OutTransform, inout FSimulationContext Context)
+{
+	int Constant4 = 0;
+	bool Result = NiagaraAll(In_SourceSpace == Constant4);
+	int Constant5 = 0;
+	bool Result1 = NiagaraAll(In_DestinationSpace == Constant5);
+	bool Result2 = Result && Result1;
+	int Constant6 = 1;
+	bool Result3 = NiagaraAll(In_SourceSpace == Constant6);
+	int Constant7 = 1;
+	bool Result4 = NiagaraAll(In_DestinationSpace == Constant7);
+	bool Result5 = Result3 && Result4;
+	bool Result6 = Result2 || Result5;
+	int Constant8 = 2;
+	bool Result7 = NiagaraAll(In_SourceSpace == Constant8);
+	int Constant9 = 2;
+	bool Result8 = NiagaraAll(In_DestinationSpace == Constant9);
+	bool Result9 = Result7 && Result8;
+	bool Result10 = Result6 || Result9;
+	bool Result11 = Result && Result8;
+	bool Result12 = Result7 && Result1;
+	bool Result13 = Result11 || Result12;
+	bool Result14 = In_bLocalSpace && Result13;
+	bool Result15 = Result10 || Result14;
+	bool Result16 = !In_bLocalSpace;
+	bool Result17 = Result && Result4;
+	bool Result18 = Result3 && Result1;
+	bool Result19 = Result17 || Result18;
+	bool Result20 = Result16 && Result19;
+	bool Result21 = Result15 || Result20;
+	bool Result22 = In_bLocalSpace && Result17;
+	bool Result23 = Result7 && Result4;
+	bool Result24 = Result22 || Result23;
+	bool Result25 = Result16 && Result12;
+	bool Result26 = Result24 || Result25;
+	float4x4 Matrix_IfResult1;
+	if(Result26)
+	{
+	Matrix_IfResult1 = In_LocalToWorldTransform;
+	}
+	else
+	{
+	Matrix_IfResult1 = In_WorldToLocalTransform;
+	}
+	Out_bUseOriginal = Result21;
+	Out_OutTransform = Matrix_IfResult1;
+}
+
+void TransformPosition_Emitter_Func_(float3 In_InPosition, int In_SourceSpace, int In_DestinationSpace, bool In_ApplyScale, out float3 Out_OutPosition, inout FSimulationContext Context)
+{
+	bool Constant3 = false;
+	float4x4 Matrix_IfResult;
+	float4x4 Matrix001_IfResult;
+	if(In_ApplyScale)
+	{
+	Matrix_IfResult = Context.Map.Engine.Owner.SystemLocalToWorld;
+	Matrix001_IfResult = Context.Map.Engine.Owner.SystemWorldToLocal;
+	}
+	else
+	{
+	Matrix_IfResult = Context.Map.Engine.Owner.SystemLocalToWorldNoScale;
+	Matrix001_IfResult = Context.Map.Engine.Owner.SystemWorldToLocalNoScale;
+	}
+	bool TransformBase_Func_Output_bUseOriginal;
+	float4x4 TransformBase_Func_Output_OutTransform;
+	TransformBase_Func_(In_SourceSpace, In_DestinationSpace, Matrix_IfResult, Matrix001_IfResult, Constant3, TransformBase_Func_Output_bUseOriginal, TransformBase_Func_Output_OutTransform, Context);
+	float3 Result27 = mul(float4(In_InPosition,1.0),TransformBase_Func_Output_OutTransform).xyz;
+	float3 Vector_IfResult;
+	if(TransformBase_Func_Output_bUseOriginal)
+	{
+	Vector_IfResult = In_InPosition;
+	}
+	else
+	{
+	Vector_IfResult = Result27;
+	}
+	Out_OutPosition = Vector_IfResult;
+}
+
+void SelectV3Channel_Func_(float3 In_VECTOR_VAR, int In_TargetChannel, out float Out_Float, inout FSimulationContext Context)
+{
+	int Constant11 = 0;
+	bool Result28 = NiagaraAll(In_TargetChannel == Constant11);
+	float X;
+	float Y;
+	float Z;
+	X = In_VECTOR_VAR.x;
+	Y = In_VECTOR_VAR.y;
+	Z = In_VECTOR_VAR.z;
+	int Constant12 = 1;
+	bool Result29 = NiagaraAll(In_TargetChannel == Constant12);
+	float float_IfResult;
+	if(Result29)
+	{
+	float_IfResult = Y;
+	}
+	else
+	{
+	float_IfResult = Z;
+	}
+	float float_IfResult1;
+	if(Result28)
+	{
+	float_IfResult1 = X;
+	}
+	else
+	{
+	float_IfResult1 = float_IfResult;
+	}
+	Out_Float = float_IfResult1;
+}
+
+void SmoothLerpOverTime_Func_(float In_SmoothValue, float In_TargetValue, float In_ConvergenceRate, float In_DeltaTime, out float Out_NewSmoothValue, inout FSimulationContext Context)
+{
+	float Result30 = In_ConvergenceRate * In_DeltaTime;
+	float Constant16 = 0;
+	float Constant17 = 1;
+	float Result31 = clamp(Result30,Constant16,Constant17);
+	float Result32 = lerp(In_SmoothValue,In_TargetValue,Result31);
+	Out_NewSmoothValue = Result32;
+}
+
+void SmoothLerpOverTime_Func_(float3 In_SmoothValue, float3 In_TargetValue, float In_ConvergenceRate, float In_DeltaTime, out float3 Out_NewSmoothValue, inout FSimulationContext Context)
+{
+	float Result36 = In_ConvergenceRate * In_DeltaTime;
+	float Constant21 = 0;
+	float Constant22 = 1;
+	float Result37 = clamp(Result36,Constant21,Constant22);
+	float3 Result38 = lerp(In_SmoothValue,In_TargetValue,Result37);
+	Out_NewSmoothValue = Result38;
+}
+
+float GetSpawnInterpolation()
+{
+	return 1.0f;}
+
+
+void ReadDataSets(inout FSimulationContext Context)
+{
+}
+
+void WriteDataSets(inout FSimulationContext Context)
+{
+}
+
+void Simulate(inout FSimulationContext Context)
+{
+	EnterStatScope(0 );
+
+
+	MeshTriCoordinate RandomTriCoord_ParticlesStaticMeshOutput_Coord;
+	RandomTriCoord_ParticlesStaticMesh(0, RandomTriCoord_ParticlesStaticMeshOutput_Coord);
+	float3 GetTriPositionWS_ParticlesStaticMeshOutput_Position;
+	GetTriPositionWS_ParticlesStaticMesh(0, RandomTriCoord_ParticlesStaticMeshOutput_Coord, GetTriPositionWS_ParticlesStaticMeshOutput_Position);
+	int Constant = 1;
+	int Constant1 = 2;
+	bool Constant2 = false;
+	float3 TransformPosition_Emitter_Func_Output_OutPosition;
+	TransformPosition_Emitter_Func_(GetTriPositionWS_ParticlesStaticMeshOutput_Position, Constant, Constant1, Constant2, TransformPosition_Emitter_Func_Output_OutPosition, Context);
+	int Constant10 = 2;
+	float SelectV3Channel_Func_Output_Float;
+	SelectV3Channel_Func_(TransformPosition_Emitter_Func_Output_OutPosition, Constant10, SelectV3Channel_Func_Output_Float, Context);
+	float Constant13 = 0;
+	float Output1;
+	Output1 = Constant13;
+	float Constant14 = 200;
+	float Output11;
+	Output11 = Constant14;
+	float Constant15 = 0.5;
+	float SmoothLerpOverTime_Func_Output_NewSmoothValue;
+	SmoothLerpOverTime_Func_(Output1, Output11, Constant15, Context.Map.Emitter.Age, SmoothLerpOverTime_Func_Output_NewSmoothValue, Context);
+	bool Result33 = NiagaraAll(SelectV3Channel_Func_Output_Float < SmoothLerpOverTime_Func_Output_NewSmoothValue);
+	float3 Vector_IfResult1;
+	if(Result33)
+	{
+	Vector_IfResult1 = GetTriPositionWS_ParticlesStaticMeshOutput_Position;
+	}
+	else
+	{
+	Vector_IfResult1 = Context.Map.Engine.Owner.Position;
+	}
+	MeshTriCoordinate RandomTriCoord_ParticlesStaticMesh2Output_Coord;
+	RandomTriCoord_ParticlesStaticMesh2(1, RandomTriCoord_ParticlesStaticMesh2Output_Coord);
+	float3 GetTriPositionWS_ParticlesStaticMesh2Output_Position;
+	GetTriPositionWS_ParticlesStaticMesh2(1, RandomTriCoord_ParticlesStaticMesh2Output_Coord, GetTriPositionWS_ParticlesStaticMesh2Output_Position);
+	float Constant18 = 1;
+	float Constant19 = 3;
+	float Output12;
+	Output12 = Constant19;
+	bool Result34 = NiagaraAll(Context.Map.Emitter.Age > Output12);
+	float Result35 = Context.Map.Emitter.Age - Output12;
+	float Constant20 = 0;
+	float float_IfResult2;
+	if(Result34)
+	{
+	float_IfResult2 = Result35;
+	}
+	else
+	{
+	float_IfResult2 = Constant20;
+	}
+	float3 SmoothLerpOverTime_Func_Output_NewSmoothValue1;
+	SmoothLerpOverTime_Func_(Vector_IfResult1, GetTriPositionWS_ParticlesStaticMesh2Output_Position, Constant18, float_IfResult2, SmoothLerpOverTime_Func_Output_NewSmoothValue1, Context);
+	MeshTriCoordinate RandomTriCoord_ParticlesStaticMesh3Output_Coord;
+	RandomTriCoord_ParticlesStaticMesh3(2, RandomTriCoord_ParticlesStaticMesh3Output_Coord);
+	float3 GetTriPositionWS_ParticlesStaticMesh3Output_Position;
+	GetTriPositionWS_ParticlesStaticMesh3(2, RandomTriCoord_ParticlesStaticMesh3Output_Coord, GetTriPositionWS_ParticlesStaticMesh3Output_Position);
+	float Constant23 = 1;
+	float Constant24 = 6;
+	float Output13;
+	Output13 = Constant24;
+	bool Result39 = NiagaraAll(Context.Map.Emitter.Age > Output13);
+	float Result40 = Context.Map.Emitter.Age - Output13;
+	float Constant25 = 0;
+	float float_IfResult3;
+	if(Result39)
+	{
+	float_IfResult3 = Result40;
+	}
+	else
+	{
+	float_IfResult3 = Constant25;
+	}
+	float3 SmoothLerpOverTime_Func_Output_NewSmoothValue2;
+	SmoothLerpOverTime_Func_(SmoothLerpOverTime_Func_Output_NewSmoothValue1, GetTriPositionWS_ParticlesStaticMesh3Output_Position, Constant23, float_IfResult3, SmoothLerpOverTime_Func_Output_NewSmoothValue2, Context);
+	Context.Map.Particles.NewPosition = SmoothLerpOverTime_Func_Output_NewSmoothValue2;
+	ExitStatScope( );
+}
+void SimulateMain()
+{
+EnterStatScope(1 );
+
+	FSimulationContext Context = (FSimulationContext)0;
+	Context.Map.Emitter.Age = Emitter_Age;
+	Context.Map.Engine.Owner.Position = Engine_Owner_Position.xyz;
+	Context.Map.Engine.Owner.SystemLocalToWorld = Engine_Owner_SystemLocalToWorld;
+	Context.Map.Engine.Owner.SystemWorldToLocal = Engine_Owner_SystemWorldToLocal;
+	Context.Map.Engine.Owner.SystemLocalToWorldNoScale = Engine_Owner_SystemLocalToWorldNoScale;
+	Context.Map.Engine.Owner.SystemWorldToLocalNoScale = Engine_Owner_SystemWorldToLocalNoScale;
+	Context.Map.Engine.Emitter.TotalSpawnedParticles = Engine_Emitter_TotalSpawnedParticles;
+	Context.Map.Emitter.RandomSeed = Emitter_RandomSeed;
+	ReadDataSets(Context);
+	Simulate(Context);
+	WriteDataSets(Context);
+	{
+	int TmpWriteIndex = OutputIndex(0, false, true);
+	}
+ExitStatScope( );
+}
+#line 703 "/Plugin/FX/Niagara/Private/NiagaraEmitterInstanceShader.usf"
+
+#if 0 /*BEGIN_RESOURCE_TABLES*/
+NULL, 0
+NULL, NULL, 0, 0
+#endif /*END_RESOURCE_TABLES*/
